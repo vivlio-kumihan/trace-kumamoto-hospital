@@ -13,7 +13,7 @@
 
 <body <?php body_class(); ?>>
   <header>
-    <div class="wrapper">
+    <div class="menu-wrapper">
       <div class="global-menu site-map">
         <ul>
           <li>
@@ -96,8 +96,8 @@
     </div>
   </header>
 
-  <!-- SEO SIMPLE PACK 3.2.0 -->
-  <!-- <meta property="og:locale" content="ja_JP">
+<!-- SEO SIMPLE PACK 3.2.0 -->
+<!-- <meta property="og:locale" content="ja_JP">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://vansay.jp/wp/wp-content/themes/vansay/assets/config/ogp_kumamoto.png">
 <meta property="og:title" content="特定医療法人 萬生会 熊本第一病院">
@@ -105,4 +105,4 @@
 <meta property="og:url" content="https://vansay.jp/kumamoto/">
 <meta property="og:site_name" content="特定医療法人 萬生会">
 <meta name="twitter:card" content="summary_large_image"> -->
-  <!-- / SEO SIMPLE PACK -->
+<!-- / SEO SIMPLE PACK -->

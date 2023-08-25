@@ -1,2 +1,65 @@
 @use "../forwards" as fw
 
+.home
+  main
+    width: 1000px
+    margin: 0 auto
+    .latest-info
+      display: flex
+      width: 100%
+      padding: 48px
+      background-color: #fff
+      border-radius: 20px
+      h3
+        width: 25%
+        font-family: fw.$m-rd
+        font-size: 1.5rem
+        font-weight: 600
+        line-height: 1.4
+      .archive
+        width: 75%
+        .category-menu
+          display: flex
+          justify-content: flex-end
+          gap: 10px
+          li
+            border-radius: 9999px
+            background-color: fw.$gray-light
+            &:first-of-type
+              color: #fff
+              background-color: fw.$black
+            a
+              display: block
+              width: 100%
+              font-size: .85rem
+              line-height: 1
+              padding: 10px 15px
+              font-weight: 500
+        .post-archive
+          display: flex
+          flex-direction: column
+          justify-content: center
+          margin-top: 30px
+          > li
+            padding: 20px 0
+            border-top: 1px dotted fw.$black-light
+            &:last-of-type
+              border-bottom: 1px dotted fw.$black-light
+              
+            a
+              display: flex
+              align-items: center
+              gap: 40px
+              time
+                font-size: .8rem
+              .post-category
+                > li
+                  padding: 7px 20px
+                  font-size: .75rem
+                  font-weight: 400
+                  color: fw.$orange
+                  background-color: fw.$orange-gray-light
+                  border-radius: 9999px
+              .post-title
+                font-size: 0.8125rem
+                font-weight: 300

@@ -3,8 +3,47 @@
 <main>
   <section class="latest-info">
     <h3>当院からの<br>お知らせ</h3>
-    <!-- archive -->
-    <!-- 要素：日付、カテゴリー、タイトル -->
+    <div class="archive">
+      <ul class="category-menu">
+        <li><a href="/news">すべて</a></li>
+        <?php
+        $categories = get_categories();
+        if ($categories) {
+          foreach ($categories as $category) {
+            echo '<li><a href="">' . $category->name . '</a></li>';
+          }
+        }
+        ?>
+      </ul>
+  
+      <ul class="post-archive">
+        <?php
+        $recent_page = get_query_var('paged') ? get_query_var('paged') : 1;
+        $args = array(
+          'post_type' => 'post',
+          'posts_per_page' => 3,
+          'paged' => $recent_page,
+        );
+        $my_query = new WP_Query($args);
+        if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
+        ?>
+        <li>
+          <a href="<?php the_permalink(); ?>">
+            <time datetime="<?php echo get_the_date("Y-m-d") ?>"><?php echo get_the_date("Y.m.d") ?></time>
+            <ul class="post-category">
+              <?php
+              $category = get_the_category();
+              foreach ($category as $attr) {
+                echo '<li>' . $attr->name . '</li>';
+              }
+              ?>
+            </ul>
+            <div class="post-title"><?php the_title(); ?></div>
+          </a>
+        </li>
+        <?php endwhile; endif; ?>
+      </ul>
+    </div>
   </section>
 
   <section class="policy">

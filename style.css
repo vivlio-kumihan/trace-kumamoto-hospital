@@ -28,14 +28,14 @@ textarea {
 .home > header {
   position: relative;
   width: 100%;
-  height: 70vh;
+  height: 750px;
 }
 .home > header .hero {
   position: absolute;
   top: 135px;
   left: 80px;
   width: 100%;
-  z-index: 101;
+  z-index: 1002;
 }
 .home > header .hero h1 {
   width: 150px;
@@ -108,60 +108,65 @@ textarea {
   left: 6.5px;
   color: #fff;
 }
+.home > header .cover-graphic {
+  position: relative;
+  width: 100%;
+  height: 750px;
+}
 .home > header .cover-graphic .left-yel-1 {
   position: absolute;
-  top: 43%;
+  top: 37%;
   left: -30px;
   width: 125px;
 }
 .home > header .cover-graphic .left-org-1 {
   position: absolute;
-  top: 50%;
+  top: 44%;
   left: -60px;
   width: 280px;
   transform: rotate(8deg);
 }
 .home > header .cover-graphic .left-org-2 {
   position: absolute;
-  top: 57%;
+  top: 51%;
   left: -125px;
   width: 325px;
   transform: rotate(-10deg) scaleY(75%);
 }
 .home > header .cover-graphic .left-yel-2 {
   position: absolute;
-  top: 72%;
+  top: 63%;
   left: 10px;
   width: 100px;
   transform: rotate(5deg) scaleY(90%);
 }
 .home > header .cover-graphic .left-org-3 {
   position: absolute;
-  top: 70%;
+  top: 63%;
   left: -100px;
   width: 200px;
   transform: scaleY(90%);
 }
 .home > header .cover-graphic .right-org-1 {
   position: absolute;
-  top: 70%;
+  top: 62%;
   right: -25px;
   width: 280px;
 }
 .home > header .cover-graphic .right-org-2 {
   position: absolute;
-  top: 80%;
+  top: 72%;
   right: -30px;
   width: 350px;
   transform: scaleY(90%);
 }
 .home > header .cover-graphic .right-yel-1 {
   position: absolute;
-  top: 94%;
+  top: 85%;
   right: -20px;
   width: 150px;
 }
-.home > header .wrapper {
+.home > header .menu-wrapper {
   position: fixed;
   top: 30px;
   right: 30px;
@@ -173,11 +178,12 @@ textarea {
   font-weight: 500;
   line-height: 1;
   color: #5A5A5A;
+  z-index: 1001;
 }
-.home > header .wrapper .global-menu {
-  z-index: 103;
+.home > header .menu-wrapper .global-menu {
+  z-index: 1004;
 }
-.home > header .wrapper .global-menu > ul {
+.home > header .menu-wrapper .global-menu > ul {
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -185,23 +191,23 @@ textarea {
   background-color: #fff;
   border-radius: 9999px;
 }
-.home > header .wrapper .global-menu > ul > li + li {
+.home > header .menu-wrapper .global-menu > ul > li + li {
   margin-left: 28px;
 }
-.home > header .wrapper .global-menu > ul > li > a, .home > header .wrapper .global-menu > ul > li > .guide-title > a {
+.home > header .menu-wrapper .global-menu > ul > li > a, .home > header .menu-wrapper .global-menu > ul > li > .guide-title > a {
   display: block;
   height: 100%;
   padding: 30px 0;
   transition: 0.3s;
 }
-.home > header .wrapper .global-menu > ul > li > a:hover, .home > header .wrapper .global-menu > ul > li > .guide-title > a:hover {
+.home > header .menu-wrapper .global-menu > ul > li > a:hover, .home > header .menu-wrapper .global-menu > ul > li > .guide-title > a:hover {
   color: #F87700;
 }
-.home > header .wrapper .global-menu > ul > li .menu {
+.home > header .menu-wrapper .global-menu > ul > li .menu {
   position: relative;
   width: 100%;
 }
-.home > header .wrapper .global-menu > ul > li .menu > ul {
+.home > header .menu-wrapper .global-menu > ul > li .menu > ul {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -217,7 +223,7 @@ textarea {
   visibility: hidden;
   opacity: 0;
 }
-.home > header .wrapper .global-menu > ul > li .menu > ul::before {
+.home > header .menu-wrapper .global-menu > ul > li .menu > ul::before {
   content: "";
   display: inline-block;
   width: 0;
@@ -230,13 +236,13 @@ textarea {
   left: 50%;
   transform: translateX(-50%);
 }
-.home > header .wrapper .global-menu > ul > li .menu > ul > li {
+.home > header .menu-wrapper .global-menu > ul > li .menu > ul > li {
   position: relative;
   width: 100%;
   margin: 0;
   padding: 0 0 0 24px;
 }
-.home > header .wrapper .global-menu > ul > li .menu > ul > li::before {
+.home > header .menu-wrapper .global-menu > ul > li .menu > ul > li::before {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -247,16 +253,16 @@ textarea {
   left: 0;
   color: #a3a3a3;
 }
-.home > header .wrapper .global-menu > ul > li .menu > ul > li a {
+.home > header .menu-wrapper .global-menu > ul > li .menu > ul > li a {
   display: block;
   padding: 8px;
   font-weight: 400;
   letter-spacing: 0.04em;
 }
-.home > header .wrapper .sub-menu {
-  z-index: 102;
+.home > header .menu-wrapper .sub-menu {
+  z-index: 1003;
 }
-.home > header .wrapper .sub-menu ul {
+.home > header .menu-wrapper .sub-menu ul {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -271,7 +277,7 @@ textarea {
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
-.home > header .wrapper .sub-menu ul::before, .home > header .wrapper .sub-menu ul::after {
+.home > header .menu-wrapper .sub-menu ul::before, .home > header .menu-wrapper .sub-menu ul::after {
   position: absolute;
   top: 0;
   width: 16px;
@@ -280,17 +286,93 @@ textarea {
   background: url(./img/navigation_corner-orange.svg) no-repeat center;
   transform: rotate(90deg);
 }
-.home > header .wrapper .sub-menu ul::before {
+.home > header .menu-wrapper .sub-menu ul::before {
   left: -16px;
 }
-.home > header .wrapper .sub-menu ul::after {
+.home > header .menu-wrapper .sub-menu ul::after {
   right: -16px;
   transform: rotate(0deg);
 }
-.home > header .wrapper .sub-menu ul li a {
+.home > header .menu-wrapper .sub-menu ul li a {
   display: block;
   padding: 13px 0;
   font-size: 0.8125rem;
+}
+
+.home main {
+  width: 1000px;
+  margin: 0 auto;
+}
+.home main .latest-info {
+  display: flex;
+  width: 100%;
+  padding: 48px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.home main .latest-info h3 {
+  width: 25%;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.home main .latest-info .archive {
+  width: 75%;
+}
+.home main .latest-info .archive .category-menu {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.home main .latest-info .archive .category-menu li {
+  border-radius: 9999px;
+  background-color: #F0F0F0;
+}
+.home main .latest-info .archive .category-menu li:first-of-type {
+  color: #fff;
+  background-color: #5A5A5A;
+}
+.home main .latest-info .archive .category-menu li a {
+  display: block;
+  width: 100%;
+  font-size: 0.85rem;
+  line-height: 1;
+  padding: 10px 15px;
+  font-weight: 500;
+}
+.home main .latest-info .archive .post-archive {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 30px;
+}
+.home main .latest-info .archive .post-archive > li {
+  padding: 20px 0;
+  border-top: 1px dotted #a3a3a3;
+}
+.home main .latest-info .archive .post-archive > li:last-of-type {
+  border-bottom: 1px dotted #a3a3a3;
+}
+.home main .latest-info .archive .post-archive > li a {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.home main .latest-info .archive .post-archive > li a time {
+  font-size: 0.8rem;
+}
+.home main .latest-info .archive .post-archive > li a .post-category > li {
+  padding: 7px 20px;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #F87700;
+  background-color: #F8F8F8;
+  border-radius: 9999px;
+}
+.home main .latest-info .archive .post-archive > li a .post-title {
+  font-size: 0.8125rem;
+  font-weight: 300;
 }
 
 p {

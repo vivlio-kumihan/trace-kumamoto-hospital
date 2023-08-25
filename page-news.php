@@ -36,6 +36,7 @@
     if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
     ?>
         <li>
+          
           <a href="<?php the_permalink(); ?>">
             <div class="frame">
               <?php the_post_thumbnail(); ?>

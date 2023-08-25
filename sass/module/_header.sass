@@ -3,9 +3,8 @@
 .home
   > header
     position: relative
-    // padding: 134px 0 98px 80px
     width: 100%
-    height: 70vh
+    height: 750px
     .hero
       position: absolute
       top: 135px
@@ -66,54 +65,58 @@
             +fw.fontAwesome("\f04b", 0.4rem)
             left: 6.5px
             color: #fff
+
     .cover-graphic
+      position: relative
+      width: 100%
+      height: 750px
       .left-yel-1
         position: absolute
-        top: 43%
+        top: 37%
         left: -30px
         width: 125px
       .left-org-1
         position: absolute
-        top: 50%
+        top: 44%
         left: -60px
         width: 280px
         transform: rotate(8deg) // scaleY(75%)
       .left-org-2
         position: absolute
-        top: 57%
+        top: 51%
         left: -125px
         width: 325px
         transform: rotate(-10deg) scaleY(75%)
       .left-yel-2
         position: absolute
-        top: 72%
+        top: 63%
         left: 10px
         width: 100px
         transform: rotate(5deg) scaleY(90%)
       .left-org-3
         position: absolute
-        top: 70%
+        top: 63%
         left: -100px
         width: 200px
         transform: scaleY(90%)
       .right-org-1
         position: absolute
-        top: 70%
+        top: 62%
         right: -25px
         width: 280px
       .right-org-2
         position: absolute
-        top: 80%
+        top: 72%
         right: -30px
         width: 350px
         transform: scaleY(90%)
       .right-yel-1
         position: absolute
-        top: 94%
+        top: 85%
         right: -20px
         width: 150px
 
-    .wrapper
+    .menu-wrapper
       position: fixed
       top: 30px
       right: 30px
@@ -125,6 +128,7 @@
       font-weight: 500
       line-height: 1
       color: #5A5A5A
+      z-index: fw.set-index(menu-wrapper)
       .global-menu
         z-index: fw.set-index(global-menu)
         > ul
