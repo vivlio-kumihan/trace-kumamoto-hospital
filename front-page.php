@@ -15,7 +15,6 @@
         }
         ?>
       </ul>
-  
       <ul class="post-archive">
         <?php
         $recent_page = get_query_var('paged') ? get_query_var('paged') : 1;
@@ -27,33 +26,39 @@
         $my_query = new WP_Query($args);
         if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
         ?>
-        <li>
-          <a href="<?php the_permalink(); ?>">
-            <time datetime="<?php echo get_the_date("Y-m-d") ?>"><?php echo get_the_date("Y.m.d") ?></time>
-            <ul class="post-category">
-              <?php
-              $category = get_the_category();
-              foreach ($category as $attr) {
-                echo '<li>' . $attr->name . '</li>';
-              }
-              ?>
-            </ul>
-            <div class="post-title"><?php the_title(); ?></div>
-          </a>
-        </li>
-        <?php endwhile; endif; ?>
+            <li>
+              <a href="<?php the_permalink(); ?>">
+                <time datetime="<?php echo get_the_date("Y-m-d") ?>"><?php echo get_the_date("Y.m.d") ?></time>
+                <ul class="post-category">
+                  <?php
+                  $category = get_the_category();
+                  foreach ($category as $attr) {
+                    echo '<li>' . $attr->name . '</li>';
+                  }
+                  ?>
+                </ul>
+                <div class="post-title"><?php the_title(); ?></div>
+              </a>
+            </li>
+        <?php endwhile;
+        endif; ?>
       </ul>
     </div>
   </section>
+  <div class="wrapper">
+    <a class="read-more-link" href="">お知らせ一覧を見る</a>
+  </div>
 
   <section class="policy">
     <dl>
       <dt>
-        <img src="" alt="">
-        <div class="catch-copy">
-          地域の皆さまの<br>さまざまな症状を診察
+        <div class="frame">
+          <div class="bgimage outpatient"></div>
         </div>
-        <h3>外来</h3>
+        <div class="catch-copy">
+          <p><span>地域の皆さま</span>の<br>さまざまな症状を診察</p>
+        </div>
+        <h3><span>01</span>外来</h3>
       </dt>
       <dd>
         <p>診療時間・診療担当医・受診手続きについてご覧いただけます。</p>
@@ -62,27 +67,31 @@
     </dl>
     <dl>
       <dt>
-        <img src="" alt="">
-        <div class="catch-copy">
-          入院手続き・入院中の過ごし方・施設設備についてご覧いただけます。
+        <div class="frame">
+          <div class="bgimage hospitalization"></div>
         </div>
-        <h3>入院</h3>
+        <div class="catch-copy">
+          <p><span>思いやりを大切に</span><br>患者さまの回復を支援</p>
+        </div>
+        <h3><span>02</span>入院</h3>
       </dt>
       <dd>
-        <p>思いやりを大切に<br>患者さまの回復を支援</p>
+        <p>入院手続き・入院中の過ごし方・施設設備についてご覧いただけます。</p>
         <a class="read-more-link" href="">詳しく見る</a>
       </dd>
     </dl>
     <dl>
       <dt>
-        <img src="" alt="">
-        <div class="catch-copy">
-          当院の診療部・看護部・事務部についてご覧いただけます。
+        <div class="frame">
+          <div class="bgimage treatment-sct"></div>
         </div>
-        <h3>診療科・部門</h3>
+        <div class="catch-copy">
+          <p><span>患者さま</span>に<span>寄り添う</span><br>適切な診療を提供</p>
+        </div>
+        <h3><span>03</span>診療科・部門</h3>
       </dt>
       <dd>
-        <p>患者さまに寄り添う<br>適切な診療を提供</p>
+        <p>当院の診療部・看護部・事務部についてご覧いただけます。</p>
         <a class="read-more-link" href="">詳しく見る</a>
       </dd>
     </dl>

@@ -2,11 +2,12 @@
 
 .home
   main
-    width: 1000px
+    width: 100%  
     margin: 0 auto
     .latest-info
       display: flex
-      width: 100%
+      max-width: 1000px 
+      margin: 0 auto
       padding: 48px
       background-color: #fff
       border-radius: 20px
@@ -45,7 +46,6 @@
             border-top: 1px dotted fw.$black-light
             &:last-of-type
               border-bottom: 1px dotted fw.$black-light
-              
             a
               display: flex
               align-items: center
@@ -63,3 +63,84 @@
               .post-title
                 font-size: 0.8125rem
                 font-weight: 300
+    .wrapper
+      width: 1000px
+      margin: 0 auto
+      .read-more-link
+        +fw.read-more-link
+        margin-top: 35px
+        margin-left: auto
+    .policy
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      gap: 30px
+      margin-top: 70px
+      padding: 80px 8%
+      background-color: #fff
+      dl
+        dt
+          position: relative
+          .frame
+            width: 100%
+            aspect-ratio: 1/1.2
+            .bgimage
+              width: 100%
+              height: 100%
+              background: no-repeat center
+              background-size: cover
+              border-radius: 20px
+            .outpatient
+              background-image: url(/wp-content/themes/kumamoto-hospital/img/kumamoto_introduction01.jpg)
+            .hospitalization
+              background-image: url(/wp-content/themes/kumamoto-hospital/img/kumamoto_introduction02.jpg)
+            .treatment-sct
+              background-image: url(/wp-content/themes/kumamoto-hospital/img/kumamoto_introduction03.jpg)
+          .catch-copy
+            position: absolute
+            top: 30px
+            right: 20px
+            p
+              display: inline-block
+              position: relative
+              font-family: fw.$m-rd
+              font-size: 1.175rem
+              line-height: 2.75
+              font-weight: 500
+              letter-spacing: -0.05em
+              writing-mode: vertical-rl
+              span
+                color: fw.$orange
+          h3
+            position: absolute
+            bottom: 0px
+            font-family: fw.$m-rd
+            padding-top: 2.5rem
+            width: 87%
+            font-size: 1.375rem
+            font-weight: 500
+            line-height: 1
+            letter-spacing: 0.06em
+            color: fw.$orange
+            background-color: #fff
+            border-top-right-radius: 25px
+            &::before
+              top: 0
+              left: 0
+              width: 20px
+              height: 20px
+              content: ""
+              background: url(/wp-content/themes/kumamoto-hospital/img/corner_introduction.svg) no-repeat center 
+              background-size: cover
+            span
+              position: absolute
+              top: 10px
+              right: 25px
+              font-size: 2.65rem
+              letter-spacing: -0.05em
+              text-stroke: 1px fw.$orange-light
+              -webkit-text-stroke: 1px fw.$orange-light
+              color: #fff
+        dd
+          p
+          a
+            +fw.read-more-link

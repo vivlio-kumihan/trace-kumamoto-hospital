@@ -81,10 +81,12 @@ textarea {
 .home > header .hero .head-copy .read-more-link {
   display: block;
   position: relative;
-  margin-top: 30px;
   padding-left: 26px;
+  width: -moz-fit-content;
+  width: fit-content;
   font-size: 0.9rem;
   font-weight: 500;
+  margin-top: 30px;
 }
 .home > header .hero .head-copy .read-more-link::before {
   position: absolute;
@@ -300,12 +302,13 @@ textarea {
 }
 
 .home main {
-  width: 1000px;
+  width: 100%;
   margin: 0 auto;
 }
 .home main .latest-info {
   display: flex;
-  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 48px;
   background-color: #fff;
   border-radius: 20px;
@@ -373,6 +376,156 @@ textarea {
 .home main .latest-info .archive .post-archive > li a .post-title {
   font-size: 0.8125rem;
   font-weight: 300;
+}
+.home main .wrapper {
+  width: 1000px;
+  margin: 0 auto;
+}
+.home main .wrapper .read-more-link {
+  display: block;
+  position: relative;
+  padding-left: 26px;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 35px;
+  margin-left: auto;
+}
+.home main .wrapper .read-more-link::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 18px;
+  aspect-ratio: 1;
+  content: "";
+  background-color: #F87700;
+  border-radius: 50%;
+}
+.home main .wrapper .read-more-link::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "\f04b";
+  font-size: 0.4rem;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  left: 6.5px;
+  color: #fff;
+}
+.home main .policy {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 70px;
+  padding: 80px 8%;
+  background-color: #fff;
+}
+.home main .policy dl dt {
+  position: relative;
+}
+.home main .policy dl dt .frame {
+  width: 100%;
+  aspect-ratio: 1/1.2;
+}
+.home main .policy dl dt .frame .bgimage {
+  width: 100%;
+  height: 100%;
+  background: no-repeat center;
+  background-size: cover;
+  border-radius: 20px;
+}
+.home main .policy dl dt .frame .outpatient {
+  background-image: url(/wp-content/themes/kumamoto-hospital/img/kumamoto_introduction01.jpg);
+}
+.home main .policy dl dt .frame .hospitalization {
+  background-image: url(/wp-content/themes/kumamoto-hospital/img/kumamoto_introduction02.jpg);
+}
+.home main .policy dl dt .frame .treatment-sct {
+  background-image: url(/wp-content/themes/kumamoto-hospital/img/kumamoto_introduction03.jpg);
+}
+.home main .policy dl dt .catch-copy {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+}
+.home main .policy dl dt .catch-copy p {
+  display: inline-block;
+  position: relative;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 1.175rem;
+  line-height: 2.75;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  writing-mode: vertical-rl;
+}
+.home main .policy dl dt .catch-copy p span {
+  color: #F87700;
+}
+.home main .policy dl dt h3 {
+  position: absolute;
+  bottom: 0px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  padding-top: 2.5rem;
+  width: 87%;
+  font-size: 1.375rem;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  color: #F87700;
+  background-color: #fff;
+  border-top-right-radius: 25px;
+}
+.home main .policy dl dt h3::before {
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  content: "";
+  background: url(/wp-content/themes/kumamoto-hospital/img/corner_introduction.svg) no-repeat center;
+  background-size: cover;
+}
+.home main .policy dl dt h3 span {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 2.65rem;
+  letter-spacing: -0.05em;
+  text-stroke: 1px #FCBD83;
+  -webkit-text-stroke: 1px #FCBD83;
+  color: #fff;
+}
+.home main .policy dl dd a {
+  display: block;
+  position: relative;
+  padding-left: 26px;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+.home main .policy dl dd a::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 18px;
+  aspect-ratio: 1;
+  content: "";
+  background-color: #F87700;
+  border-radius: 50%;
+}
+.home main .policy dl dd a::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "\f04b";
+  font-size: 0.4rem;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  left: 6.5px;
+  color: #fff;
 }
 
 p {

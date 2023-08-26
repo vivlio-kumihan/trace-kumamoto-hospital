@@ -46,25 +46,8 @@
           font-weight: 300
           line-height: 1.9
         .read-more-link
-          display: block
-          position: relative
+          +fw.read-more-link
           margin-top: 30px 
-          padding-left: 26px
-          font-size: .9rem
-          font-weight: 500
-          &::before
-            +fw.positionAbsoluteCTL($top: true)
-            left: 0
-            width: 18px
-            aspect-ratio: 1
-            content: ""
-            background-color: fw.$orange
-            border-radius: 50%
-          &::after
-            +fw.positionAbsoluteCTL($top: true)
-            +fw.fontAwesome("\f04b", 0.4rem)
-            left: 6.5px
-            color: #fff
 
     .cover-graphic
       position: relative
