@@ -1,1 +1,86 @@
 @use "../forwards" as fw
+
+.news
+  main
+    .container
+      .category-menu
+        display: none
+        position: fixed
+        top: 280px
+        right: 0
+        width: 284px
+        padding: 48px
+        background-color: #fff
+        border-radius: 20px 0 0 20px
+        header
+          margin-bottom: 18px
+          padding-bottom: 24px
+          font-size: 1.125rem
+          font-weight: 600
+          line-height: 1.4
+          color: fw.$black
+          border-bottom: solid 1px fw.$black-light
+        ul
+          li
+            + li
+              margin-top: 30px
+            a
+              display: block
+              position: relative
+              padding-left: 32px
+              font-size: 0.875rem
+              color: fw.$black
+              &::before
+                +fw.positionAbsoluteCTL($top: true)
+                +fw.fontAwesome("\f061", 1rem)
+                left: 0
+                color: fw.$black-middle
+
+      .post-archive
+        width: 100%
+        padding: 80px 322px 80px 80px
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        gap: 35px
+        > li
+          &:nth-child(n+3) 
+            margin-top: 30px
+          a
+            display: block
+            .frame
+              width: 100%
+              img
+                width: 100%
+                height: 100%
+                aspect-ratio: 2/1.05
+                object-fit: cover
+                border-radius: 4px
+            .header-sub
+              display: flex
+              align-items: center
+              margin-top: 15px
+              .post-category
+                > li
+                  margin-right: 15px
+                  padding: 6px 10px
+                  font-size: .75rem
+                  font-weight: 400
+                  color: #fff
+                  background-color: fw.$orange
+                  border-radius: 9999px
+              time
+                font-size: .8rem
+                font-weight: 500
+            .post-title
+              margin-top: 10px
+              font-size: 1rem
+              font-weight: 700
+              line-height: 1.5
+              letter-spacing: 0.06em
+              color: fw.$black
+
+      .breadcrumbs
+        +fw.breadcrumbs
+
+
+

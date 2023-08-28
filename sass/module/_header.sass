@@ -1,211 +1,113 @@
 @use "../forwards" as fw
 
-.home
-  > header
-    position: relative
-    width: 100%
-    height: 750px
-    .hero
-      position: absolute
-      top: 135px
-      left: 80px
-      width: 100%
-      z-index: fw.set-index(hero)
-      h1
-        width: 150px
-        height: 160px
-        border-radius: 10px
-        background: url(./img/logo_kumamoto.svg) no-repeat center
-        background-size: 85%
+.home, .news
+  .menu-wrapper
+    position: fixed
+    top: 30px
+    right: 30px
+    display: flex
+    flex-direction: column
+    align-items: center
+    font-family: fw.$m-rd
+    font-size: 0.875rem
+    font-weight: 500
+    line-height: 1
+    color: #5A5A5A
+    z-index: fw.set-index(menu-wrapper)
+    .global-menu
+      z-index: fw.set-index(global-menu)
+      > ul
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        padding: 0 28px
         background-color: #fff
-        span
-          display: none
-      .head-copy
-        margin-top: 45px
-        .catch-copy
-          display: inline
-          padding: 0 10px
-          font-family: fw.$m-rd
-          font-size: 3.625rem
-          font-weight: 700
-          line-height: 1.525
-          color: fw.$orange 
-          background-color: #fff
-          border-radius: 5px
-          span
-            margin-right: 10px
-            font-size: calc(3.625rem * 0.9)
-            color: fw.$black
-            ~ span
-              margin-left: 10px
-              font-size: 3.625rem
-              color: fw.$orange 
-        .lead-copy
-          margin-top: 20px
-          font-size: 0.9375rem
-          font-weight: 300
-          line-height: 1.9
-        .read-more-link
-          +fw.read-more-link
-          margin-top: 30px 
-
-    .cover-graphic
-      position: relative
-      width: 100%
-      height: 750px
-      .left-yel-1
-        position: absolute
-        top: 37%
-        left: -30px
-        width: 125px
-      .left-org-1
-        position: absolute
-        top: 44%
-        left: -60px
-        width: 280px
-        transform: rotate(8deg) // scaleY(75%)
-      .left-org-2
-        position: absolute
-        top: 51%
-        left: -125px
-        width: 325px
-        transform: rotate(-10deg) scaleY(75%)
-      .left-yel-2
-        position: absolute
-        top: 63%
-        left: 10px
-        width: 100px
-        transform: rotate(5deg) scaleY(90%)
-      .left-org-3
-        position: absolute
-        top: 63%
-        left: -100px
-        width: 200px
-        transform: scaleY(90%)
-      .right-org-1
-        position: absolute
-        top: 62%
-        right: -25px
-        width: 280px
-      .right-org-2
-        position: absolute
-        top: 72%
-        right: -30px
-        width: 350px
-        transform: scaleY(90%)
-      .right-yel-1
-        position: absolute
-        top: 85%
-        right: -20px
-        width: 150px
-
-    .menu-wrapper
-      position: fixed
-      top: 30px
-      right: 30px
-      display: flex
-      flex-direction: column
-      align-items: center
-      font-family: fw.$m-rd
-      font-size: 0.875rem
-      font-weight: 500
-      line-height: 1
-      color: #5A5A5A
-      z-index: fw.set-index(menu-wrapper)
-      .global-menu
-        z-index: fw.set-index(global-menu)
-        > ul
-          display: flex
-          justify-content: flex-end
-          align-items: center
-          padding: 0 28px
-          background-color: #fff
-          border-radius: 9999px
-          > li
-            + li
-              margin-left: 28px
-            > a, > .guide-title > a
-              display: block
-              height: 100%
-              padding: 30px 0
-              transition: .3s
-              &:hover
-                color: fw.$orange
-            .menu
-              position: relative
-              width: 100%
-              > ul
-                +fw.positionAbsoluteCTL($left: true)
-                top:10px
-                display: flex
-                flex-direction: column
-                align-items: flex-start
-                justify-content: flex-start
-                padding: 18px 24px
-                width: 235px
-                background-color: #fff
-                border-radius: 10px
-                visibility: hidden
-                opacity: 0
+        border-radius: 9999px
+        > li
+          + li
+            margin-left: 28px
+          > a, > .guide-title > a
+            display: block
+            height: 100%
+            padding: 30px 0
+            transition: .3s
+            &:hover
+              color: fw.$orange
+          .menu
+            position: relative
+            width: 100%
+            > ul
+              +fw.positionAbsoluteCTL($left: true)
+              top:10px
+              display: flex
+              flex-direction: column
+              align-items: flex-start
+              justify-content: flex-start
+              padding: 18px 24px
+              width: 235px
+              background-color: #fff
+              border-radius: 10px
+              visibility: hidden
+              opacity: 0
+              &::before
+                content: ""
+                display: inline-block
+                width: 0
+                height: 0
+                border-style: solid
+                border-width: 0 15px 15px 15px
+                border-color: transparent transparent #fff transparent
+                position: absolute
+                top: -12px
+                left: 50%
+                -webkit-transform: translateX(-50%)
+                transform: translateX(-50%)
+              > li
+                position: relative
+                width: 100%
+                margin: 0
+                padding: 0 0 0 24px
                 &::before
-                  content: ""
-                  display: inline-block
-                  width: 0
-                  height: 0
-                  border-style: solid
-                  border-width: 0 15px 15px 15px
-                  border-color: transparent transparent #fff transparent
-                  position: absolute
-                  top: -12px
-                  left: 50%
-                  -webkit-transform: translateX(-50%)
-                  transform: translateX(-50%)
-                > li
-                  position: relative
-                  width: 100%
-                  margin: 0
-                  padding: 0 0 0 24px
-                  &::before
-                    +fw.positionAbsoluteCTL($top: true)
-                    +fw.fontAwesome("\f061", 13px)
-                    left: 0
-                    color: fw.$black-light
-                  a
-                    display: block
-                    padding: 8px
-                    font-weight: 400
-                    letter-spacing: 0.04em
-      .sub-menu
-        z-index: fw.set-index(sub-menu)
-        ul
-          display: flex
-          justify-content: center
-          align-items: center
-          gap: 24px
-          position: relative
-          padding: 0 24px
-          color: #fff
-          background-color: fw.$orange
-          border-radius: 9999px
-          border-top-left-radius: 0
-          border-top-right-radius: 0
-          border-bottom-left-radius: 20px
-          border-bottom-right-radius: 20px
-          &::before, &::after
-            position: absolute
-            top: 0
-            width: 16px
-            aspect-ratio: 1
-            content: ""
-            background: url(./img/navigation_corner-orange.svg) no-repeat center
-            transform: rotate(90deg)
-          &::before
-            left: -16px
-          &::after
-            right: -16px
-            transform: rotate(0deg)
-          li
-            a
-              display: block
-              padding: 13px 0
-              font-size: 0.8125rem
+                  +fw.positionAbsoluteCTL($top: true)
+                  +fw.fontAwesome("\f061", 13px)
+                  left: 0
+                  color: fw.$black-middle
+                a
+                  display: block
+                  padding: 8px
+                  font-weight: 400
+                  letter-spacing: 0.04em
+    .sub-menu
+      z-index: fw.set-index(sub-menu)
+      ul
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 24px
+        position: relative
+        padding: 0 24px
+        color: #fff
+        background-color: fw.$orange
+        border-radius: 9999px
+        border-top-left-radius: 0
+        border-top-right-radius: 0
+        border-bottom-left-radius: 20px
+        border-bottom-right-radius: 20px
+        &::before, &::after
+          position: absolute
+          top: 0
+          width: 16px
+          aspect-ratio: 1
+          content: ""
+          background: url(./img/navigation_corner-orange.svg) no-repeat center
+          transform: rotate(90deg)
+        &::before
+          left: -16px
+        &::after
+          right: -16px
+          transform: rotate(0deg)
+        li
+          a
+            display: block
+            padding: 13px 0
+            font-size: 0.8125rem

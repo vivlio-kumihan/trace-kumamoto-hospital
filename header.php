@@ -68,7 +68,7 @@
         </ul>
       </div>
     </div>
-
+<!-- 
     <div class="hero">
       <h1>
         <span>特定医療法人 萬生会 熊本第一病院</span>
@@ -93,7 +93,7 @@
         <img class="right-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange.svg" alt="">
         <img class="right-yel-1" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow.svg" alt="">
       </div>
-    </div>
+    </div> -->
   </header>
 
 <!-- SEO SIMPLE PACK 3.2.0 -->

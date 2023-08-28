@@ -1,0 +1,100 @@
+@use "../forwards" as fw
+
+.hero
+  position: absolute
+  top: 135px
+  left: 80px
+  width: 100%
+  z-index: fw.set-index(hero)
+  .site-title
+    +fw.site-title
+    width: 150px
+    height: 160px
+    border-radius: 10px
+    background-size: 85%
+    // width: 150px
+    // height: 160px
+    // border-radius: 10px
+    // background: url(./img/logo_kumamoto.svg) no-repeat center
+    // background-size: 85%
+    // background-color: #fff
+    span
+      display: none
+  .head-copy
+    margin-top: 45px
+    .catch-copy
+      display: inline
+      padding: 0 10px
+      font-family: fw.$m-rd
+      font-size: 3.625rem
+      font-weight: 700
+      line-height: 1.525
+      color: fw.$orange 
+      background-color: #fff
+      border-radius: 5px
+      span
+        margin-right: 10px
+        font-size: calc(3.625rem * 0.9)
+        color: fw.$black
+        ~ span
+          margin-left: 10px
+          font-size: 3.625rem
+          color: fw.$orange 
+    .lead-copy
+      margin-top: 20px
+      font-size: 0.9375rem
+      font-weight: 300
+      line-height: 1.9
+    .read-more-link
+      +fw.read-more-link
+      margin-top: 30px 
+
+.cover-graphic
+  position: relative
+  width: 100%
+  height: 750px
+  .left-yel-1
+    position: absolute
+    top: 37%
+    left: -30px
+    width: 125px
+  .left-org-1
+    position: absolute
+    top: 44%
+    left: -60px
+    width: 280px
+    transform: rotate(8deg) // scaleY(75%)
+  .left-org-2
+    position: absolute
+    top: 51%
+    left: -125px
+    width: 325px
+    transform: rotate(-10deg) scaleY(75%)
+  .left-yel-2
+    position: absolute
+    top: 63%
+    left: 10px
+    width: 100px
+    transform: rotate(5deg) scaleY(90%)
+  .left-org-3
+    position: absolute
+    top: 63%
+    left: -100px
+    width: 200px
+    transform: scaleY(90%)
+  .right-org-1
+    position: absolute
+    top: 62%
+    right: -25px
+    width: 280px
+  .right-org-2
+    position: absolute
+    top: 72%
+    right: -30px
+    width: 350px
+    transform: scaleY(90%)
+  .right-yel-1
+    position: absolute
+    top: 85%
+    right: -20px
+    width: 150px

@@ -1,6 +1,32 @@
 <?php get_header(); ?>
 
 <main>
+  <div class="hero">
+    <div class="site-title">
+      <span>特定医療法人 萬生会 熊本第一病院</span>
+    </div>
+    <div class="head-copy">
+      <div class="catch-copy">その人らしさ<span>を</span><br><span>支える手</span></div>
+      <div class="lead-copy">地域の皆さまの「その人らしい生き方」をささえるために、<br> 手をおしまない医療、手厚い看護、心をこめた介護を提供します。</div>
+      <a class="read-more-link" href="">当院の特徴をみる</a>
+    </div>
+  </div>
+
+  <div class="cover-graphic">
+    <div id="wrapper-left">
+      <img class="left-yel-1" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow_left.svg" alt="">
+      <img class="left-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
+      <img class="left-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
+      <img class="left-yel-2" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow_left.svg" alt="">
+      <img class="left-org-3" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
+    </div>
+    <div id="wrapper right">
+      <img class="right-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange.svg" alt="">
+      <img class="right-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange.svg" alt="">
+      <img class="right-yel-1" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow.svg" alt="">
+    </div>
+  </div>
+
   <section class="latest-info">
     <h3>当院からの<br>お知らせ</h3>
     <div class="archive">
