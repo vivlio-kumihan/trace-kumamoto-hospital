@@ -432,7 +432,7 @@ textarea {
   border-radius: 20px 0 0 20px;
 }
 .news main .container .category-menu header {
-  margin-bottom: 18px;
+  margin-bottom: 30px;
   padding-bottom: 24px;
   font-size: 1.125rem;
   font-weight: 600;
@@ -448,6 +448,7 @@ textarea {
   position: relative;
   padding-left: 32px;
   font-size: 0.875rem;
+  font-weight: 300;
   color: #5A5A5A;
 }
 .news main .container .category-menu ul li a::before {
@@ -825,62 +826,73 @@ p {
 }
 
 .cover-graphic {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
   height: 750px;
 }
 .cover-graphic .graphic {
   position: relative;
+  height: 100%;
+  width: 40vw;
 }
-.cover-graphic .left-yel-1 {
+.cover-graphic .graphic.left {
+  margin-top: 0;
+}
+.cover-graphic .graphic.left .left-yel-1 {
   position: absolute;
   top: 37%;
   left: -30px;
   width: 125px;
 }
-.cover-graphic .left-org-1 {
+.cover-graphic .graphic.left .left-org-1 {
   position: absolute;
   top: 44%;
   left: -60px;
   width: 280px;
   transform: rotate(8deg);
 }
-.cover-graphic .left-org-2 {
+.cover-graphic .graphic.left .left-org-2 {
   position: absolute;
   top: 51%;
   left: -125px;
   width: 325px;
   transform: rotate(-10deg) scaleY(75%);
 }
-.cover-graphic .left-yel-2 {
+.cover-graphic .graphic.left .left-yel-2 {
   position: absolute;
   top: 63%;
   left: 10px;
   width: 100px;
   transform: rotate(5deg) scaleY(90%);
 }
-.cover-graphic .left-org-3 {
+.cover-graphic .graphic.left .left-org-3 {
   position: absolute;
   top: 63%;
   left: -100px;
   width: 200px;
   transform: scaleY(90%);
 }
-.cover-graphic .right-org-1 {
+.cover-graphic .graphic.right {
+  margin-top: 0;
+  margin-left: auto;
+}
+.cover-graphic .graphic.right .right-org-1 {
   position: absolute;
-  top: 62%;
+  top: 58%;
   right: -25px;
   width: 280px;
 }
-.cover-graphic .right-org-2 {
+.cover-graphic .graphic.right .right-org-2 {
   position: absolute;
-  top: 72%;
+  top: 67%;
   right: -30px;
   width: 350px;
   transform: scaleY(90%);
 }
-.cover-graphic .right-yel-1 {
+.cover-graphic .graphic.right .right-yel-1 {
   position: absolute;
-  top: 85%;
+  top: 80%;
   right: -20px;
   width: 150px;
 }

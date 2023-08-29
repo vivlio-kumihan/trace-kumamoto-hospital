@@ -13,17 +13,17 @@
   </div>
 
   <div class="cover-graphic">
-    <div id="graphic left">
-      <!-- <img class="left-yel-1" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow_left.svg" alt="">
+    <div class="graphic left">
+      <img class="left-yel-1" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow_left.svg" alt="">
       <img class="left-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
       <img class="left-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
       <img class="left-yel-2" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow_left.svg" alt="">
-      <img class="left-org-3" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt=""> -->
+      <img class="left-org-3" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
     </div>
-    <div id="graphic right">
-      <!-- <img class="right-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange.svg" alt="">
+    <div class="graphic right">
+      <img class="right-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange.svg" alt="">
       <img class="right-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange.svg" alt="">
-      <img class="right-yel-1" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow.svg" alt=""> -->
+      <img class="right-yel-1" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow.svg" alt="">
     </div>
   </div>
 
