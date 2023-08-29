@@ -24,6 +24,16 @@ textarea {
   color: #5A5A5A;
   background-color: #FBFAF6;
 }
+:root body::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 5px;
+  height: 100vh;
+  background-color: #F87700;
+  z-index: 1000;
+}
 
 .home .menu-wrapper, .news .menu-wrapper {
   position: fixed;
@@ -278,6 +288,7 @@ textarea {
   margin-top: 70px;
   padding: 80px 8%;
   background-color: #fff;
+  border-top-left-radius: 90px;
 }
 .home main .policy dl dt {
   position: relative;
@@ -320,12 +331,17 @@ textarea {
 .home main .policy dl dt .catch-copy p span {
   color: #F87700;
 }
-.home main .policy dl dt h3 {
+.home main .policy dl dt .policy-title {
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
+  width: 100%;
+}
+.home main .policy dl dt .policy-title h3 {
+  position: relative;
   font-family: "M PLUS Rounded 1c", sans-serif;
   padding-top: 2.5rem;
   width: 87%;
+  height: 100%;
   font-size: 1.375rem;
   font-weight: 500;
   line-height: 1;
@@ -334,16 +350,29 @@ textarea {
   background-color: #fff;
   border-top-right-radius: 25px;
 }
-.home main .policy dl dt h3::before {
-  top: 0;
+.home main .policy dl dt .policy-title h3::before {
+  position: absolute;
+  top: -19px;
   left: 0;
   width: 20px;
   height: 20px;
   content: "";
-  background: url(/wp-content/themes/kumamoto-hospital/img/corner_introduction.svg) no-repeat center;
+  background: url(./img/corner_introduction.svg) no-repeat center;
   background-size: cover;
+  z-index: 100;
 }
-.home main .policy dl dt h3 span {
+.home main .policy dl dt .policy-title h3::after {
+  position: absolute;
+  bottom: -1px;
+  right: -20px;
+  width: 20px;
+  height: 20px;
+  content: "";
+  background: url(./img/corner_introduction.svg) no-repeat center;
+  background-size: cover;
+  z-index: 100;
+}
+.home main .policy dl dt .policy-title h3 span {
   position: absolute;
   top: 10px;
   right: 25px;
@@ -352,6 +381,14 @@ textarea {
   text-stroke: 1px #FCBD83;
   -webkit-text-stroke: 1px #FCBD83;
   color: #fff;
+}
+.home main .policy dl dd {
+  margin-top: 20px;
+}
+.home main .policy dl dd p {
+  margin-bottom: 30px;
+  font-weight: 300;
+  line-height: 1.7;
 }
 .home main .policy dl dd a {
   display: block;
@@ -386,7 +423,6 @@ textarea {
 }
 
 .news main .container .category-menu {
-  display: none;
   position: fixed;
   top: 280px;
   right: 0;
@@ -480,7 +516,7 @@ textarea {
 }
 .news main .container .breadcrumbs ul {
   position: relative;
-  padding: 40px 0;
+  padding: 35px 0;
   border-top: 1px solid #dbdbdb;
   border-bottom: 1px solid #dbdbdb;
 }
@@ -528,8 +564,8 @@ textarea {
   right: 75px;
   width: 20px;
   aspect-ratio: 1;
-  font-size: 8px;
-  padding: 6px 0 6px 7.5px;
+  font-size: 6.5px;
+  padding: 6.5px 0 0 8px;
   color: #fff;
   background-color: #F87700;
   border-radius: 50%;
@@ -540,131 +576,91 @@ p {
 }
 
 .home footer, .news footer {
-  padding: 17.5rem 0 19rem;
+  padding: 120px 80px;
+}
+.home footer h2, .news footer h2 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 22px;
 }
 .home footer .upper, .news footer .upper {
   display: flex;
   justify-content: space-between;
-  padding: 0 6rem;
 }
 .home footer .upper .hospital-address .site-title, .news footer .upper .hospital-address .site-title {
   background: url(./img/logo_kumamoto.svg) no-repeat center;
   background-color: #fff;
-  width: 100px;
-  aspect-ratio: 4/4;
+  width: 154px;
+  aspect-ratio: 1;
+  background-size: contain;
+  background-color: unset;
 }
 .home footer .upper .hospital-address .site-title span, .news footer .upper .hospital-address .site-title span {
   display: none;
 }
 .home footer .upper .hospital-address address, .news footer .upper .hospital-address address {
   font-size: 0.875rem;
-  line-height: 1.2;
+  font-weight: 300;
+  line-height: 1.7;
+  margin-top: 10px;
 }
-.home footer .upper .logo.landscape, .news footer .upper .logo.landscape {
-  width: 20rem;
-  height: 3.3rem;
-  background: url(./img/logo_footer.svg) no-repeat left top;
-  background-size: contain;
+.home footer .upper .wrapper, .news footer .upper .wrapper {
+  display: flex;
+  padding-top: 60px;
 }
-.home footer .upper .contents-link, .news footer .upper .contents-link {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  width: calc(100% - 26rem);
-}
-.home footer .upper .contents-link ul li:first-of-type, .news footer .upper .contents-link ul li:first-of-type {
-  display: inline-block;
-  margin-bottom: 10px;
-}
-.home footer .upper .contents-link ul li:first-of-type a, .news footer .upper .contents-link ul li:first-of-type a {
-  padding-bottom: 2px;
-  font-size: 1.6rem;
-  line-height: 1;
-  border-bottom: 1px solid #333;
-  color: #5A5A5A;
-}
-.home footer .upper .contents-link ul li.top-item a, .news footer .upper .contents-link ul li.top-item a {
-  display: inline-block;
-  font-size: 1.6rem;
-  line-height: 1;
-  color: #5A5A5A;
-  border-bottom: 1px solid #333;
-}
-.home footer .upper .contents-link ul li.top-item:not(:last-of-type), .news footer .upper .contents-link ul li.top-item:not(:last-of-type) {
-  margin-top: 30px;
-}
-.home footer .upper .contents-link ul li a, .news footer .upper .contents-link ul li a {
+.home footer .upper .wrapper .site-map ul li a, .home footer .upper .wrapper .group-link ul li a, .news footer .upper .wrapper .site-map ul li a, .news footer .upper .wrapper .group-link ul li a {
+  position: relative;
   display: block;
-  margin-bottom: 15px;
-  font-size: 1.2rem;
-  line-height: 1;
-  color: #5A5A5A;
+  padding-left: 30px;
+  font-size: 0.875rem;
+  font-weight: 300;
 }
-.home footer .middle, .news footer .middle {
-  display: flex;
-  gap: 15%;
-  margin-top: 9rem;
-  padding: 10rem 6rem 20rem;
-  border-top: 1px solid #5A5A5A;
+.home footer .upper .wrapper .site-map ul li a::before, .home footer .upper .wrapper .group-link ul li a::before, .news footer .upper .wrapper .site-map ul li a::before, .news footer .upper .wrapper .group-link ul li a::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "\f04b";
+  font-size: 1rem;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  left: 0;
+  width: 20px;
+  aspect-ratio: 1;
+  font-size: 6.5px;
+  padding: 6px 0 0 7.5px;
+  color: #F87700;
+  background-color: transparent;
+  border: 1px solid #F87700;
+  border-radius: 50%;
 }
-.home footer .middle .link-another, .news footer .middle .link-another {
-  order: 2;
-}
-.home footer .middle .link-another ul li, .news footer .middle .link-another ul li {
-  margin-bottom: 20px;
-}
-.home footer .middle .link-another ul li a, .news footer .middle .link-another ul li a {
-  display: inline-block;
-  padding-bottom: 2px;
-  font-size: 1.4rem;
-  line-height: 1;
-  color: #5A5A5A;
-  border-bottom: 1px solid #333;
-}
-.home footer .middle .link-another ul.change-lang, .news footer .middle .link-another ul.change-lang {
-  display: flex;
-  margin-top: 40px;
-}
-.home footer .middle .link-another ul.change-lang li + li, .news footer .middle .link-another ul.change-lang li + li {
-  margin-left: 10px;
-}
-.home footer .middle .link-address, .news footer .middle .link-address {
-  order: 1;
+.home footer .upper .wrapper .site-map > ul, .news footer .upper .wrapper .site-map > ul {
   display: grid;
-  grid-template-rows: repeat(2, 1fr);
-  row-gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   -moz-column-gap: 60px;
        column-gap: 60px;
   grid-auto-flow: column;
 }
-.home footer .middle .link-address dt, .home footer .middle .link-address dd, .news footer .middle .link-address dt, .news footer .middle .link-address dd {
-  font-size: 1.2rem;
+.home footer .upper .wrapper .site-map > ul li, .news footer .upper .wrapper .site-map > ul li {
+  margin-bottom: 25px;
 }
-.home footer .middle .link-address dt, .news footer .middle .link-address dt {
-  font-weight: 500;
+.home footer .upper .wrapper .group-link, .news footer .upper .wrapper .group-link {
+  margin-left: 70px;
 }
-.home footer .middle .link-address dd, .news footer .middle .link-address dd {
-  margin-top: 10px;
-  line-height: 1.5;
-  color: #5A5A5A;
+.home footer .upper .wrapper .group-link li, .news footer .upper .wrapper .group-link li {
+  margin-bottom: 25px;
 }
 .home footer .lower, .news footer .lower {
-  display: flex;
-  padding: 0 6rem;
+  margin-top: 40px;
+  color: #828282;
+  font-weight: 100;
 }
-.home footer .lower a, .home footer .lower small, .news footer .lower a, .news footer .lower small {
-  display: inline-block;
-  font-size: 1.2rem;
-  line-height: 1;
-  color: #5A5A5A;
-}
-.home footer .lower a, .news footer .lower a {
-  order: 2;
-  margin-left: 40px;
-  padding-bottom: 2px;
-  border-bottom: 1px solid #5A5A5A;
+.home footer .lower p, .news footer .lower p {
+  margin-bottom: 5px;
+  font-size: 0.8rem;
 }
 .home footer .lower small, .news footer .lower small {
-  order: 1;
+  font-size: 0.75rem;
 }
 
 .swiper {
@@ -829,9 +825,11 @@ p {
 }
 
 .cover-graphic {
-  position: relative;
   width: 100%;
   height: 750px;
+}
+.cover-graphic .graphic {
+  position: relative;
 }
 .cover-graphic .left-yel-1 {
   position: absolute;

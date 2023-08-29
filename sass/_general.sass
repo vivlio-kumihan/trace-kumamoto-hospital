@@ -26,3 +26,12 @@ textarea
     font-feature-settings: "palt"
     color: fw.$black
     background-color: fw.$bg-color
+    &::before
+      position: fixed
+      top: 0
+      left: 0
+      content: ""
+      width: 5px
+      height: 100vh
+      background-color: fw.$orange
+      z-index: 1000

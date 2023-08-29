@@ -13,17 +13,17 @@
   </div>
 
   <div class="cover-graphic">
-    <div id="wrapper-left">
-      <img class="left-yel-1" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow_left.svg" alt="">
+    <div id="graphic left">
+      <!-- <img class="left-yel-1" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow_left.svg" alt="">
       <img class="left-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
       <img class="left-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
       <img class="left-yel-2" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow_left.svg" alt="">
-      <img class="left-org-3" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
+      <img class="left-org-3" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt=""> -->
     </div>
-    <div id="wrapper right">
-      <img class="right-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange.svg" alt="">
+    <div id="graphic right">
+      <!-- <img class="right-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange.svg" alt="">
       <img class="right-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange.svg" alt="">
-      <img class="right-yel-1" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow.svg" alt="">
+      <img class="right-yel-1" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow.svg" alt=""> -->
     </div>
   </div>
 
@@ -84,7 +84,9 @@
         <div class="catch-copy">
           <p><span>地域の皆さま</span>の<br>さまざまな症状を診察</p>
         </div>
-        <h3><span>01</span>外来</h3>
+        <div class="policy-title">
+          <h3><span>01</span>外来</h3>
+        </div>
       </dt>
       <dd>
         <p>診療時間・診療担当医・受診手続きについてご覧いただけます。</p>
@@ -99,7 +101,9 @@
         <div class="catch-copy">
           <p><span>思いやりを大切に</span><br>患者さまの回復を支援</p>
         </div>
-        <h3><span>02</span>入院</h3>
+        <div class="policy-title">
+          <h3><span>02</span>入院</h3>
+        </div>
       </dt>
       <dd>
         <p>入院手続き・入院中の過ごし方・施設設備についてご覧いただけます。</p>
@@ -114,7 +118,9 @@
         <div class="catch-copy">
           <p><span>患者さま</span>に<span>寄り添う</span><br>適切な診療を提供</p>
         </div>
-        <h3><span>03</span>診療科・部門</h3>
+        <div class="policy-title">
+          <h3><span>03</span>診療科・部門</h3>
+        </div>
       </dt>
       <dd>
         <p>当院の診療部・看護部・事務部についてご覧いただけます。</p>
