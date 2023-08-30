@@ -436,7 +436,7 @@ textarea {
   color: #fff;
 }
 
-.news main .container .category-menu {
+.news main .container .section-link-menu {
   position: fixed;
   top: 280px;
   right: 0;
@@ -445,7 +445,9 @@ textarea {
   background-color: #fff;
   border-radius: 20px 0 0 20px;
 }
-.news main .container .category-menu header {
+.news main .container .section-link-menu ul li a {
+  display: block;
+  width: 100%;
   margin-bottom: 30px;
   padding-bottom: 24px;
   font-size: 1.125rem;
@@ -454,10 +456,10 @@ textarea {
   color: #5A5A5A;
   border-bottom: solid 1px #dbdbdb;
 }
-.news main .container .category-menu ul li + li {
+.news main .container .section-link-menu ul li ul li + li {
   margin-top: 30px;
 }
-.news main .container .category-menu ul li a {
+.news main .container .section-link-menu ul li ul li a {
   display: block;
   position: relative;
   padding-left: 32px;
@@ -465,7 +467,7 @@ textarea {
   font-weight: 300;
   color: #5A5A5A;
 }
-.news main .container .category-menu ul li a::before {
+.news main .container .section-link-menu ul li ul li a::before {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -588,6 +590,49 @@ textarea {
 
 p {
   font-size: 14px;
+}
+
+.page .section-link-menu {
+  position: fixed;
+  top: 280px;
+  right: 0;
+  width: 284px;
+  padding: 48px;
+  background-color: #fff;
+  border-radius: 20px 0 0 20px;
+}
+.page .section-link-menu ul li a {
+  display: block;
+  width: 100%;
+  margin-bottom: 30px;
+  padding-bottom: 24px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #5A5A5A;
+  border-bottom: solid 1px #dbdbdb;
+}
+.page .section-link-menu ul li ul li + li {
+  margin-top: 30px;
+}
+.page .section-link-menu ul li ul li a {
+  display: block;
+  position: relative;
+  padding-left: 32px;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #5A5A5A;
+}
+.page .section-link-menu ul li ul li a::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "\f061";
+  font-size: 1rem;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  left: 0;
+  color: #a3a3a3;
 }
 
 .home footer, .news footer, .single footer, .page footer, .archive footer {
@@ -911,14 +956,14 @@ p {
   width: 150px;
 }
 
-.news main .front {
+.page main .front {
   position: relative;
   width: 100%;
-  height: 40.6vw;
-  background: url(./img/bg_hero01.jpg) no-repeat center;
-  background-size: 100%;
+  height: 40vw;
+  background: url(./img/bg_hero01.jpg) no-repeat center bottom;
+  background-size: cover;
 }
-.news main .front .site-title {
+.page main .front .site-title {
   background: url(./img/logo_kumamoto.svg) no-repeat center;
   background-color: #fff;
   position: relative;
@@ -929,10 +974,10 @@ p {
   border-bottom-right-radius: 10px;
   background-size: 85%;
 }
-.news main .front .site-title span {
+.page main .front .site-title span {
   display: none;
 }
-.news main .front .site-title::before, .news main .front .site-title::after {
+.page main .front .site-title::before, .page main .front .site-title::after {
   display: inline-block;
   position: absolute;
   top: 0px;
@@ -942,20 +987,20 @@ p {
   background: url(./img/logo_corner.svg) no-repeat center;
   background-size: cover;
 }
-.news main .front .site-title::before {
+.page main .front .site-title::before {
   left: -10px;
   transform: rotate(90deg);
 }
-.news main .front .site-title::after {
+.page main .front .site-title::after {
   right: -10px;
 }
-.news main .front h2 {
+.page main .front h2 {
   position: absolute;
   top: 20.5vw;
   left: 84px;
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 3.375rem;
   font-weight: 700;
-  letter-spacing: -0.05em;
+  letter-spacing: 0.025em;
   color: #fff;
 }/*# sourceMappingURL=style.css.map */

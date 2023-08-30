@@ -11,7 +11,8 @@
 
   <div class="container">
 
-    <div class="category-menu">
+    <div class="section-link-menu">
+
       <header>記事カテゴリー</header>
       <ul>
         <li><a href="#" data-cat-id="all">すべて</a></li>

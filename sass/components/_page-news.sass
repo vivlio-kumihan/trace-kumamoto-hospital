@@ -3,40 +3,8 @@
 .news
   main
     .container
-      .category-menu
-        // display: none
-        position: fixed
-        top: 280px
-        right: 0
-        width: 284px
-        padding: 48px
-        background-color: #fff
-        border-radius: 20px 0 0 20px
-        header
-          margin-bottom: 30px
-          padding-bottom: 24px
-          font-size: 1.125rem
-          font-weight: 600
-          line-height: 1.4
-          color: fw.$black
-          border-bottom: solid 1px fw.$black-light
-        ul
-          li
-            + li
-              margin-top: 30px
-            a
-              display: block
-              position: relative
-              padding-left: 32px
-              font-size: 0.875rem
-              font-weight: 300
-              color: fw.$black
-              &::before
-                +fw.positionAbsoluteCTL($top: true)
-                +fw.fontAwesome("\f061", 1rem)
-                left: 0
-                color: fw.$black-middle
-
+      .section-link-menu
+        +fw.section-link-menu
       .post-archive
         width: 100%
         padding: 80px 322px 80px 80px
