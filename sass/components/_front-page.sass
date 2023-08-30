@@ -44,8 +44,10 @@
           > li
             padding: 20px 0
             border-top: 1px dotted fw.$black-middle
-            &:last-of-type
+            &:nth-of-type(3)
               border-bottom: 1px dotted fw.$black-middle
+            &.hidden-list
+              display: none
             a
               display: flex
               align-items: center
@@ -97,18 +99,24 @@
             .treatment-sct
               background-image: url(/wp-content/themes/kumamoto-hospital/img/kumamoto_introduction03.jpg)
           .catch-copy
+            display: flex
+            align-items: flex-start
+            flex-direction: row-reverse
+            gap: 10px
             position: absolute
             top: 30px
-            right: 20px
+            right: 25px
             p
               display: inline-block
-              position: relative
+              padding: 10px 0
               font-family: fw.$m-rd
               font-size: 1.175rem
-              line-height: 2.75
+              line-height: 1.75
               font-weight: 500
               letter-spacing: -0.05em
               writing-mode: vertical-rl
+              background-color: #fff
+              border-radius: 8px
               span
                 color: fw.$orange
           .policy-title

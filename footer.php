@@ -12,19 +12,17 @@
     <div class="wrapper">
       <div class="site-map">
         <h2>サイトマップ</h2>
-        <ul>
-          <li><a href="">病院案内</a></li>
-          <li><a href="">診療科・部門</a></li>
-          <li><a href="">受診案内</a></li>
-          <li><a href="">アクセス</a></li>
-          <li><a href="">お知らせ</a></li>
-          <li><a href="">Vansay +</a></li>
-          <li><a href="">お問い合わせ</a></li>
-        </ul>
+        <?php
+        wp_nav_menu(array(
+          'theme_location' => 'site-map',
+          'container'      => '',
+          'depth'          => 1,
+        ));
+        ?>
       </div>
-  
+
       <div class="group-link">
-        <h2><a href="">萬生会グループリンク</a></h2>
+        <h2>萬生会グループリンク</h2>
         <ul>
           <li><a href="">萬生会総合トップ</a></li>
           <li><a href="">熊本第一病院</a></li>

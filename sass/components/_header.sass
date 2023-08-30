@@ -1,6 +1,6 @@
 @use "../forwards" as fw
 
-.home, .news
+.home, .single, .page, .archive
   .menu-wrapper
     position: fixed
     top: 30px
@@ -12,71 +12,74 @@
     font-size: 0.875rem
     font-weight: 500
     line-height: 1
-    color: #5A5A5A
+    color: fw.$black
     z-index: fw.set-index(menu-wrapper)
     .global-menu
       z-index: fw.set-index(global-menu)
-      > ul
+      > ul.menu
         display: flex
-        justify-content: flex-end
         align-items: center
         padding: 0 28px
         background-color: #fff
         border-radius: 9999px
         > li
+          position: relative
+          &.active > ul.sub-menu
+            top: 90px
+            visibility: visible
+            opacity: 1
           + li
             margin-left: 28px
-          > a, > .guide-title > a
+          > a
             display: block
             height: 100%
             padding: 30px 0
             transition: .3s
             &:hover
               color: fw.$orange
-          .menu
-            position: relative
+          > ul.sub-menu
+            +fw.positionAbsoluteCTL($left: true)
+            top: 100px
             width: 100%
-            > ul
-              +fw.positionAbsoluteCTL($left: true)
-              top:10px
-              display: flex
-              flex-direction: column
-              align-items: flex-start
-              justify-content: flex-start
-              padding: 18px 24px
-              width: 235px
-              background-color: #fff
-              border-radius: 10px
-              visibility: hidden
-              opacity: 0
+            display: flex
+            flex-direction: column
+            align-items: flex-start
+            justify-content: flex-start
+            padding: 18px 24px
+            width: 235px
+            background-color: #fff
+            border-radius: 10px
+            transition: .5s
+            visibility: hidden
+            opacity: 0
+            &::before
+              content: ""
+              display: inline-block
+              width: 0
+              height: 0
+              border-style: solid
+              border-width: 0 15px 15px 15px
+              border-color: transparent transparent #fff transparent
+              position: absolute
+              top: -12px
+              left: 50%
+              -webkit-transform: translateX(-50%)
+              transform: translateX(-50%)
+            > li
+              position: relative
+              width: 100%
+              margin: 0
+              padding: 0 0 0 24px
               &::before
-                content: ""
-                display: inline-block
-                width: 0
-                height: 0
-                border-style: solid
-                border-width: 0 15px 15px 15px
-                border-color: transparent transparent #fff transparent
-                position: absolute
-                top: -12px
-                left: 50%
-                -webkit-transform: translateX(-50%)
-                transform: translateX(-50%)
-              > li
-                position: relative
-                width: 100%
-                margin: 0
-                padding: 0 0 0 24px
-                &::before
-                  +fw.positionAbsoluteCTL($top: true)
-                  +fw.fontAwesome("\f061", 13px)
-                  left: 0
-                  color: fw.$black-middle
-                a
-                  display: block
-                  padding: 8px
-                  font-weight: 400
-                  letter-spacing: 0.04em
+                +fw.positionAbsoluteCTL($top: true)
+                +fw.fontAwesome("\f061", 13px)
+                left: 0
+                color: fw.$black-middle
+              a
+                display: block
+                padding: 8px
+                font-weight: 400
+                letter-spacing: 0.04em
     .sub-menu
       z-index: fw.set-index(sub-menu)
       ul

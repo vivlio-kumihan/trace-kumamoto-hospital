@@ -36,7 +36,7 @@
         $categories = get_categories();
         if ($categories) {
           foreach ($categories as $category) {
-            echo '<li><a href="">' . $category->name . '</a></li>';
+            echo '<li><a data-category="' . $category->slug . '" href="">' . $category->name . '</a></li>';
           }
         }
         ?>
@@ -46,28 +46,32 @@
         $recent_page = get_query_var('paged') ? get_query_var('paged') : 1;
         $args = array(
           'post_type' => 'post',
-          'posts_per_page' => 3,
+          'posts_per_page' => -1,
           'paged' => $recent_page,
         );
         $my_query = new WP_Query($args);
         if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
+            $category = get_the_category();
+            $category_names = '';
+            foreach ($category as $attr) {
+              $category_names .= ' ' . $attr->slug;
+            }
         ?>
-            <li>
-              <a href="<?php the_permalink(); ?>">
-                <time datetime="<?php echo get_the_date("Y-m-d") ?>"><?php echo get_the_date("Y.m.d") ?></time>
-                <ul class="post-category">
-                  <?php
-                  $category = get_the_category();
-                  foreach ($category as $attr) {
-                    echo '<li>' . $attr->name . '</li>';
-                  }
-                  ?>
-                </ul>
-                <div class="post-title"><?php the_title(); ?></div>
-              </a>
-            </li>
-        <?php endwhile;
-        endif; ?>
+        <li class="wrapper<?php echo $category_names; ?>">
+          <a href="<?php the_permalink(); ?>">
+            <time datetime="<?php echo get_the_date("Y-m-d") ?>"><?php echo get_the_date("Y.m.d") ?></time>
+            <ul class="post-category">
+              <?php
+              $category = get_the_category();
+              foreach ($category as $attr) {
+                echo '<li>' . $attr->name . '</li>';
+              }
+              ?>
+            </ul>
+            <div class="post-title"><?php the_title(); ?></div>
+          </a>
+        </li>
+        <?php endwhile; endif; ?>
       </ul>
     </div>
   </section>
@@ -82,7 +86,8 @@
           <div class="bgimage outpatient"></div>
         </div>
         <div class="catch-copy">
-          <p><span>地域の皆さま</span>の<br>さまざまな症状を診察</p>
+          <p><span>地域の皆さま</span>の</p>
+          <p>さまざまな症状を診察</p>
         </div>
         <div class="policy-title">
           <h3><span>01</span>外来</h3>
@@ -99,7 +104,8 @@
           <div class="bgimage hospitalization"></div>
         </div>
         <div class="catch-copy">
-          <p><span>思いやりを大切に</span><br>患者さまの回復を支援</p>
+          <p><span>思いやりを大切に</span></p>
+          <p>患者さまの回復を支援</p>
         </div>
         <div class="policy-title">
           <h3><span>02</span>入院</h3>
@@ -116,7 +122,8 @@
           <div class="bgimage treatment-sct"></div>
         </div>
         <div class="catch-copy">
-          <p><span>患者さま</span>に<span>寄り添う</span><br>適切な診療を提供</p>
+          <p><span>患者さま</span>に<span>寄り添う</span></p>
+          <p>適切な診療を提供</p>
         </div>
         <div class="policy-title">
           <h3><span>03</span>診療科・部門</h3>
@@ -183,6 +190,34 @@
     </dl>
   </section>
 
+  <ul class="post-archive">
+    <?php
+    $recent_page = get_query_var('paged') ? get_query_var('paged') : 1;
+    $args = array(
+      'post_type' => 'media-post',
+      'posts_per_page' => 3,
+      'paged' => $recent_page,
+    );
+    $my_query = new WP_Query($args);
+    if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
+    ?>
+        <li>
+          <a href="<?php the_permalink(); ?>">
+            <time datetime="<?php echo get_the_date("Y-m-d") ?>"><?php echo get_the_date("Y.m.d") ?></time>
+            <ul class="post-category">
+              <?php
+              $terms = get_the_terms(get_the_ID(), 'media-post-category');
+              foreach ($terms as $attr) {
+                echo '<li>' . $attr->name . '</li>';
+              }
+              ?>
+            </ul>
+            <div class="post-title"><?php the_title(); ?></div>
+          </a>
+        </li>
+    <?php endwhile;
+    endif; ?>
+  </ul>
   <section class="posts-archive">
     <header>
       <div class="catch-copy">

@@ -14,8 +14,15 @@
 <body <?php body_class(); ?>>
   <header>
     <div class="menu-wrapper">
-      <div class="global-menu site-map">
-        <ul>
+      <div class="global-menu">
+        <?php
+        wp_nav_menu(array(
+          'theme_location' => 'global-menu',
+          'container'      => '',
+          'depth'          => 2,
+        ));
+        ?>
+        <!-- <ul>
           <li>
             <div class="guide-title"><a href="">病院案内</a></div>
             <div class="menu">
@@ -59,19 +66,22 @@
           <li><a href="">アクセス</a></li>
           <li><a href="">お知らせ</a></li>
           <li><a href="">採用情報</a></li>
-        </ul>
+        </ul> -->
       </div>
       <div class="sub-menu">
-        <ul>
-          <li><a href="">医療関係の皆様へ</a></li>
-          <li><a href="">お問い合わせ</a></li>
-        </ul>
+        <?php
+        wp_nav_menu(array(
+          'theme_location' => 'sub-menu',
+          'container'      => '',
+          'depth'          => 2,
+        ));
+        ?>
       </div>
     </div>
   </header>
 
-<!-- SEO SIMPLE PACK 3.2.0 -->
-<!-- <meta property="og:locale" content="ja_JP">
+  <!-- SEO SIMPLE PACK 3.2.0 -->
+  <!-- <meta property="og:locale" content="ja_JP">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://vansay.jp/wp/wp-content/themes/vansay/assets/config/ogp_kumamoto.png">
 <meta property="og:title" content="特定医療法人 萬生会 熊本第一病院">
@@ -79,4 +89,4 @@
 <meta property="og:url" content="https://vansay.jp/kumamoto/">
 <meta property="og:site_name" content="特定医療法人 萬生会">
 <meta name="twitter:card" content="summary_large_image"> -->
-<!-- / SEO SIMPLE PACK -->
+  <!-- / SEO SIMPLE PACK -->

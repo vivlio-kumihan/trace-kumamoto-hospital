@@ -9,6 +9,17 @@ function theme_slug_widgets_init()
 }
 add_action('widgets_init', 'theme_slug_widgets_init');
 
+// メニューのカスタマイズ
+function menu_setup()
+{
+  register_nav_menus(array(
+    'global-menu' => 'グローバル・メニュー',
+    'sub-menu' => 'サブ・メニュー',
+    'site-map' => 'サイト・マップ',
+  ));
+}
+add_action('after_setup_theme', 'menu_setup');
+
 // アイキャッチ画像
 add_theme_support('post-thumbnails');
 
@@ -29,6 +40,7 @@ function post_has_archive($args, $post_type)
 {
   if ('post' == $post_type) {
     $args['rewrite'] = true;
+    // $args['label'] = 'archive';
     // 任意のスラッグ名を登録←アーカイブページが有効になる。
     $args['has_archive'] = 'archive';
   }

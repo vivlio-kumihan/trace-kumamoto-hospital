@@ -1,5 +1,3 @@
-<?php /* Template Name: お知らせ　*/ ?>
-
 <?php get_header(); ?>
 
 <main>
@@ -14,12 +12,12 @@
     <div class="category-menu">
       <header>記事カテゴリー</header>
       <ul>
-        <li><a href="">すべて</a></li>
+        <li><a href="#" data-cat-id="all">すべて</a></li>
         <?php
         $categories = get_categories();
         if ($categories) {
           foreach ($categories as $category) {
-            echo '<li><a href="">' . $category->name . '</a></li>';
+            echo '<li><a href="#" data-cat-id="' . $category->term_id . '">' . $category->name . '</a></li>';
           }
         }
         ?>
@@ -29,30 +27,32 @@
     <ul class="post-archive">
       <?php
       $recent_page = get_query_var('paged') ? get_query_var('paged') : 1;
+      $term_object = get_queried_object();
+      $term_slug = $term_object->slug;
+
       $args = array(
-        'post_type' => 'post',
         'posts_per_page' => 10,
         'paged' => $recent_page,
+        'taxonomy' => 'media-post-category',
+        'term' => $term_slug,
+        'post_type' => 'media-post',
       );
+
       $my_query = new WP_Query($args);
+
       if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
       ?>
           <li>
             <a href="<?php the_permalink(); ?>">
-              <div class="frame">
-                <?php the_post_thumbnail(); ?>
-              </div>
-              <div class="header-sub">
-                <ul class="post-category">
-                  <?php
-                  $category = get_the_category();
-                  foreach ($category as $attr) {
-                    echo '<li>' . $attr->name . '</li>';
-                  }
-                  ?>
-                </ul>
-                <time datetime="<?php echo get_the_date("Y-m-d") ?>"><?php echo get_the_date("Y年m月d日") ?></time>
-              </div>
+              <time datetime="<?php echo get_the_date("Y-m-d") ?>"><?php echo get_the_date("Y.m.d") ?></time>
+              <ul class="post-category">
+                <?php
+                $terms = get_the_terms(get_the_ID(), 'media-post-category');
+                foreach ($terms as $attr) {
+                  echo '<li>' . $attr->name . '</li>';
+                }
+                ?>
+              </ul>
               <div class="post-title"><?php the_title(); ?></div>
             </a>
           </li>
