@@ -30,8 +30,8 @@
   <section class="latest-info">
     <h3>当院からの<br>お知らせ</h3>
     <div class="archive">
-      <ul class="category-menu">
-        <li><a href="/news">すべて</a></li>
+      <ul id="category-menu" class="category-menu">
+        <li><a href="">すべて</a></li>
         <?php
         $categories = get_categories();
         if ($categories) {
@@ -41,7 +41,7 @@
         }
         ?>
       </ul>
-      <ul class="post-archive">
+      <ul id="post-archive" class="post-archive">
         <?php
         $recent_page = get_query_var('paged') ? get_query_var('paged') : 1;
         $args = array(

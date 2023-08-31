@@ -219,17 +219,12 @@ textarea {
   flex-direction: column;
   justify-content: center;
   margin-top: 30px;
+  border-top: 1px dotted #a3a3a3;
 }
 .home main .latest-info .archive .post-archive > li {
   width: 100%;
   padding: 20px 0;
-  border-top: 1px dotted #a3a3a3;
-}
-.home main .latest-info .archive .post-archive > li:nth-of-type(3) {
   border-bottom: 1px dotted #a3a3a3;
-}
-.home main .latest-info .archive .post-archive > li.hidden-list {
-  display: none;
 }
 .home main .latest-info .archive .post-archive > li a {
   display: flex;

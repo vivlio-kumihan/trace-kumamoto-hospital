@@ -41,14 +41,16 @@
           flex-direction: column
           justify-content: center
           margin-top: 30px
+          border-top: 1px dotted fw.$black-middle
           > li
             width: 100%
             padding: 20px 0
-            border-top: 1px dotted fw.$black-middle
-            &:nth-of-type(3)
-              border-bottom: 1px dotted fw.$black-middle
-            &.hidden-list
-              display: none
+            border-bottom: 1px dotted fw.$black-middle
+            // &:nth-of-type(3)
+            //   border-bottom: 1px dotted fw.$black-middle
+            // &.hidden-list
+            //   visibility: hidden
+            //   opacity: 0
             a
               display: flex
               align-items: center

@@ -15,12 +15,12 @@
 
       <header>記事カテゴリー</header>
       <ul>
-        <li><a href="#" data-cat-id="all">すべて</a></li>
+        <li><a href="/news/">すべて</a></li>
         <?php
         $categories = get_categories();
         if ($categories) {
           foreach ($categories as $category) {
-            echo '<li><a href="#" data-cat-id="' . $category->term_id . '">' . $category->name . '</a></li>';
+            echo '<li><a href="/category/' . $category->slug . '">' . $category->name . '</a></li>';
           }
         }
         ?>
