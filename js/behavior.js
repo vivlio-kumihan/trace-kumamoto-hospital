@@ -54,8 +54,6 @@ catList.forEach(elem => {
       postAll.forEach(post => {
         if (!post.classList.contains(targetCategory)) {
           post.style.display = 'none'
-        } else {
-          post.style.display = 'hidden'
         }
       })
     }

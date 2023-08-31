@@ -31,7 +31,7 @@
     <h3>当院からの<br>お知らせ</h3>
     <div class="archive">
       <ul id="category-menu" class="category-menu">
-        <li><a href="">すべて</a></li>
+        <li><a data-category="all" href="">すべて</a></li>
         <?php
         $categories = get_categories();
         if ($categories) {
@@ -48,6 +48,7 @@
           'post_type' => 'post',
           'posts_per_page' => -1,
           'paged' => $recent_page,
+          'cat' => 'all'
         );
         $my_query = new WP_Query($args);
         if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
@@ -76,11 +77,21 @@
       </ul>
     </div>
   </section>
-  <div class="wrapper">
-    <a class="read-more-link" href="">お知らせ一覧を見る</a>
+
+  <div class="wrapper to-archive">
+    <a class="read-more-link" href="/news/">お知らせ一覧を見る</a>
   </div>
 
   <section class="policy">
+    <div class="cover-graphic under">
+      <div class="graphic left">
+        <img class="item left-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
+      </div>
+      <div class="graphic right">
+        <img class="item right-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange2_2.svg" alt="">
+        <img class="item right-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange2_1.svg" alt="">
+      </div>
+    </div>
     <dl>
       <dt>
         <div class="frame">
@@ -135,59 +146,73 @@
         <a class="read-more-link" href="">詳しく見る</a>
       </dd>
     </dl>
+    <div class="cover-graphic upper">
+      <div class="graphic left">
+        <img class="item left-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
+        <img class="item left-yel-1" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow_left.svg" alt="">
+      </div>
+    </div>
   </section>
 
-  <section class="outpatient-care">
-    <h3>外来受診のご案内</h3>
-    <dl>
-      <div>
-        <dt>外来診療日</dt>
-        <dd>
-          <p>月曜日〜金曜（午前・午後）</p>
-          <p>休診日：土曜、日曜、祝祭日、年末年始</p>
-        </dd>
+  <section class="information">
+    <div class="bg-image"></div>
+    <div class="outpatient-care">
+      <div class="wrapper">
+        <div class="wrapper-inner">
+          <h3>外来受診のご案内</h3>
+          <dl>
+            <div>
+              <dt>外来診療日</dt>
+              <dd>
+                <p>月曜日〜金曜<span>（午前・午後）</span></p>
+                <p>休診日：土曜、日曜、祝祭日、年末年始</p>
+              </dd>
+            </div>
+            <div>
+              <dt>受付時間</dt>
+              <dd>
+                <p>8:30-11:30/13:00-16:00</p>
+                <p class="color-red">診療時間：9:30-12:00 / 13:30-17:00</p>
+                <p class="color-red">金曜日は 14:00- 受付開始</p>
+              </dd>
+            </div>
+          </dl>
+          <div class="to-patient-guidance">
+            <a href="">外来診療担当医表</a>
+          </div>
+        </div>
       </div>
-      <div>
-        <dt>受付時間</dt>
-        <dd>
-          8:30-11:30/13:00-16:00
-          診療時間：9:30-12:00 / 13:30-17:00
-          金曜日は 14:00- 受付開始
-        </dd>
-      </div>
-    </dl>
-    <div class="to-patient-guidance">
-      <a href="">外来診療担当医表</a>
     </div>
+
   </section>
 
   <section class="about-us">
     <h3>当院について</h3>
     <dl>
-      <div>
+      <a href="/philosophy/">
         <dt>病院概要</dt>
         <dd>当院の基本方針・患者様の権利についてご覧いただけます。</dd>
-      </div>
-      <div>
+      </a>
+      <a href="/result/">
         <dt>治療実績・退院実績</dt>
         <dd>当院の主な治療実績・退院実績についてご覧いただけます。</dd>
-      </div>
-      <div>
+      </a>
+      <a href="/disaster/">
         <dt>災害に強い病院</dt>
         <dd>当院の災害時のライフライン対策についてご覧いただけます。</dd>
-      </div>
-      <div>
+      </a>
+      <a href="/message/">
         <dt>ご挨拶</dt>
         <dd>病院長メッセージをご覧いただけます。</dd>
-      </div>
-      <div>
+      </a>
+      <a href="/introduction/">
         <dt>医療関係の皆様へ</dt>
         <dd>当院から医療関係の皆様へ向けたご案内・お知らせをご覧いただけます。</dd>
-      </div>
-      <div>
+      </a>
+      <a href="/recruit/">
         <dt>当法人で働きたい方へ</dt>
         <dd>ご自身の経験を活かしてみませんか？仕事への意欲をお持ちの方をお待ちしています。</dd>
-      </div>
+      </a>
     </dl>
   </section>
 
