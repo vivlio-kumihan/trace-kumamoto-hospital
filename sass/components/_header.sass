@@ -19,17 +19,18 @@
       > ul.menu
         display: flex
         align-items: center
+        gap: 28px
         padding: 0 28px
         background-color: #fff
         border-radius: 9999px
         > li
           position: relative
           &.active > ul.sub-menu
-            top: 90px
+            top: 82px
             visibility: visible
             opacity: 1
-          + li
-            margin-left: 28px
+          // + li
+          //   margin-left: 28px
           > a
             display: block
             height: 100%
@@ -61,7 +62,7 @@
               border-width: 0 15px 15px 15px
               border-color: transparent transparent #fff transparent
               position: absolute
-              top: -12px
+              top: -8px
               left: 50%
               -webkit-transform: translateX(-50%)
               transform: translateX(-50%)

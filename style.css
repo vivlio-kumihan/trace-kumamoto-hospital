@@ -47,14 +47,15 @@ textarea {
   font-weight: 500;
   line-height: 1;
   color: #5A5A5A;
-  z-index: 1001;
+  z-index: 103;
 }
 .home .menu-wrapper .global-menu, .single .menu-wrapper .global-menu, .page .menu-wrapper .global-menu, .archive .menu-wrapper .global-menu {
-  z-index: 1004;
+  z-index: 105;
 }
 .home .menu-wrapper .global-menu > ul.menu, .single .menu-wrapper .global-menu > ul.menu, .page .menu-wrapper .global-menu > ul.menu, .archive .menu-wrapper .global-menu > ul.menu {
   display: flex;
   align-items: center;
+  gap: 28px;
   padding: 0 28px;
   background-color: #fff;
   border-radius: 9999px;
@@ -63,12 +64,9 @@ textarea {
   position: relative;
 }
 .home .menu-wrapper .global-menu > ul.menu > li.active > ul.sub-menu, .single .menu-wrapper .global-menu > ul.menu > li.active > ul.sub-menu, .page .menu-wrapper .global-menu > ul.menu > li.active > ul.sub-menu, .archive .menu-wrapper .global-menu > ul.menu > li.active > ul.sub-menu {
-  top: 90px;
+  top: 82px;
   visibility: visible;
   opacity: 1;
-}
-.home .menu-wrapper .global-menu > ul.menu > li + li, .single .menu-wrapper .global-menu > ul.menu > li + li, .page .menu-wrapper .global-menu > ul.menu > li + li, .archive .menu-wrapper .global-menu > ul.menu > li + li {
-  margin-left: 28px;
 }
 .home .menu-wrapper .global-menu > ul.menu > li > a, .single .menu-wrapper .global-menu > ul.menu > li > a, .page .menu-wrapper .global-menu > ul.menu > li > a, .archive .menu-wrapper .global-menu > ul.menu > li > a {
   display: block;
@@ -106,7 +104,7 @@ textarea {
   border-width: 0 15px 15px 15px;
   border-color: transparent transparent #fff transparent;
   position: absolute;
-  top: -12px;
+  top: -8px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -134,7 +132,7 @@ textarea {
   letter-spacing: 0.04em;
 }
 .home .menu-wrapper .sub-menu, .single .menu-wrapper .sub-menu, .page .menu-wrapper .sub-menu, .archive .menu-wrapper .sub-menu {
-  z-index: 1003;
+  z-index: 104;
 }
 .home .menu-wrapper .sub-menu ul, .single .menu-wrapper .sub-menu ul, .page .menu-wrapper .sub-menu ul, .archive .menu-wrapper .sub-menu ul {
   display: flex;
@@ -223,6 +221,7 @@ textarea {
   margin-top: 30px;
 }
 .home main .latest-info .archive .post-archive > li {
+  width: 100%;
   padding: 20px 0;
   border-top: 1px dotted #a3a3a3;
 }
@@ -444,8 +443,9 @@ textarea {
   padding: 48px;
   background-color: #fff;
   border-radius: 20px 0 0 20px;
+  z-index: 102;
 }
-.news main .container .section-link-menu ul li a {
+.news main .container .section-link-menu > ul.menu > li > a {
   display: block;
   width: 100%;
   margin-bottom: 30px;
@@ -456,10 +456,10 @@ textarea {
   color: #5A5A5A;
   border-bottom: solid 1px #dbdbdb;
 }
-.news main .container .section-link-menu ul li ul li + li {
+.news main .container .section-link-menu > ul.menu > li ul.sub-menu li + li {
   margin-top: 30px;
 }
-.news main .container .section-link-menu ul li ul li a {
+.news main .container .section-link-menu > ul.menu > li ul.sub-menu li a {
   display: block;
   position: relative;
   padding-left: 32px;
@@ -467,7 +467,7 @@ textarea {
   font-weight: 300;
   color: #5A5A5A;
 }
-.news main .container .section-link-menu ul li ul li a::before {
+.news main .container .section-link-menu > ul.menu > li ul.sub-menu li a::before {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -600,8 +600,9 @@ p {
   padding: 48px;
   background-color: #fff;
   border-radius: 20px 0 0 20px;
+  z-index: 102;
 }
-.page .section-link-menu ul li a {
+.page .section-link-menu > ul.menu > li > a {
   display: block;
   width: 100%;
   margin-bottom: 30px;
@@ -612,10 +613,10 @@ p {
   color: #5A5A5A;
   border-bottom: solid 1px #dbdbdb;
 }
-.page .section-link-menu ul li ul li + li {
+.page .section-link-menu > ul.menu > li ul.sub-menu li + li {
   margin-top: 30px;
 }
-.page .section-link-menu ul li ul li a {
+.page .section-link-menu > ul.menu > li ul.sub-menu li a {
   display: block;
   position: relative;
   padding-left: 32px;
@@ -623,7 +624,7 @@ p {
   font-weight: 300;
   color: #5A5A5A;
 }
-.page .section-link-menu ul li ul li a::before {
+.page .section-link-menu > ul.menu > li ul.sub-menu li a::before {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -804,8 +805,8 @@ p {
   position: absolute;
   top: 135px;
   left: 80px;
-  width: 100%;
-  z-index: 1002;
+  width: calc(100% - 80px);
+  z-index: 101;
 }
 .hero .site-title {
   background: url(./img/logo_kumamoto.svg) no-repeat center;
@@ -887,70 +888,58 @@ p {
 .cover-graphic {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 100vw;
   height: 750px;
 }
 .cover-graphic .graphic {
   position: relative;
-  height: 100%;
   width: 40vw;
+  overflow: hidden;
 }
-.cover-graphic .graphic.left {
-  margin-top: 0;
+.cover-graphic .graphic .item {
+  position: absolute;
 }
 .cover-graphic .graphic.left .left-yel-1 {
-  position: absolute;
   top: 37%;
   left: -30px;
   width: 125px;
 }
 .cover-graphic .graphic.left .left-org-1 {
-  position: absolute;
   top: 44%;
   left: -60px;
   width: 280px;
   transform: rotate(8deg);
 }
 .cover-graphic .graphic.left .left-org-2 {
-  position: absolute;
   top: 51%;
   left: -125px;
   width: 325px;
   transform: rotate(-10deg) scaleY(75%);
 }
 .cover-graphic .graphic.left .left-yel-2 {
-  position: absolute;
   top: 63%;
   left: 10px;
   width: 100px;
   transform: rotate(5deg) scaleY(90%);
 }
 .cover-graphic .graphic.left .left-org-3 {
-  position: absolute;
   top: 63%;
   left: -100px;
   width: 200px;
   transform: scaleY(90%);
 }
-.cover-graphic .graphic.right {
-  margin-top: 0;
-  margin-left: auto;
-}
 .cover-graphic .graphic.right .right-org-1 {
-  position: absolute;
   top: 58%;
   right: -25px;
   width: 280px;
 }
 .cover-graphic .graphic.right .right-org-2 {
-  position: absolute;
   top: 67%;
   right: -30px;
   width: 350px;
   transform: scaleY(90%);
 }
 .cover-graphic .graphic.right .right-yel-1 {
-  position: absolute;
   top: 80%;
   right: -20px;
   width: 150px;

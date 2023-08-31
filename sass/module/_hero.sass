@@ -4,7 +4,7 @@
   position: absolute
   top: 135px
   left: 80px
-  width: 100%
+  width: calc(100% - 80px)
   z-index: fw.set-index(hero)
   .site-title
     +fw.site-title
@@ -12,12 +12,6 @@
     height: 160px
     border-radius: 10px
     background-size: 85%
-    // width: 150px
-    // height: 160px
-    // border-radius: 10px
-    // background: url(./img/logo_kumamoto.svg) no-repeat center
-    // background-size: 85%
-    // background-color: #fff
     span
       display: none
   .head-copy
@@ -52,59 +46,83 @@
 .cover-graphic
   display: flex
   justify-content: space-between
-  width: 100%
+  width: 100vw
   height: 750px
   .graphic
     position: relative
-    height: 100%
     width: 40vw
+    overflow: hidden
+    .item
+      position: absolute
     &.left
-      margin-top: 0
       .left-yel-1
-        position: absolute
         top: 37%
         left: -30px
         width: 125px
       .left-org-1
-        position: absolute
         top: 44%
         left: -60px
         width: 280px
         transform: rotate(8deg) // scaleY(75%)
       .left-org-2
-        position: absolute
         top: 51%
         left: -125px
         width: 325px
         transform: rotate(-10deg) scaleY(75%)
       .left-yel-2
-        position: absolute
         top: 63%
         left: 10px
         width: 100px
         transform: rotate(5deg) scaleY(90%)
       .left-org-3
-        position: absolute
         top: 63%
         left: -100px
         width: 200px
         transform: scaleY(90%)
     &.right
-      margin-top: 0
-      margin-left: auto
       .right-org-1
-        position: absolute
         top: 58%
         right: -25px
         width: 280px
       .right-org-2
-        position: absolute
         top: 67%
         right: -30px
         width: 350px
         transform: scaleY(90%)
       .right-yel-1
-        position: absolute
         top: 80%
         right: -20px
         width: 150px
+
+  // .graphic
+  //   width: 40vw
+    // &.left
+    //   .left-yel-1
+    //     position: absolute
+    //     top: 37%
+    //     left: -30px
+    //     width: 125px
+    //   .left-org-1
+    //     position: absolute
+    //     top: 44%
+    //     left: -60px
+    //     width: 280px
+    //     transform: rotate(8deg) // scaleY(75%)
+    //   .left-org-2
+    //     position: absolute
+    //     top: 51%
+    //     left: -125px
+    //     width: 325px
+    //     transform: rotate(-10deg) scaleY(75%)
+    //   .left-yel-2
+    //     position: absolute
+    //     top: 63%
+    //     left: 10px
+    //     width: 100px
+    //     transform: rotate(5deg) scaleY(90%)
+    //   .left-org-3
+    //     position: absolute
+    //     top: 63%
+    //     left: -100px
+    //     width: 200px
+    //     transform: scaleY(90%)

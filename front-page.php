@@ -14,16 +14,16 @@
 
   <div class="cover-graphic">
     <div class="graphic left">
-      <img class="left-yel-1" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow_left.svg" alt="">
-      <img class="left-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
-      <img class="left-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
-      <img class="left-yel-2" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow_left.svg" alt="">
-      <img class="left-org-3" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
+      <img class="item left-yel-1" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow_left.svg" alt="">
+      <img class="item left-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
+      <img class="item left-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
+      <img class="item left-yel-2" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow_left.svg" alt="">
+      <img class="item left-org-3" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
     </div>
     <div class="graphic right">
-      <img class="right-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange.svg" alt="">
-      <img class="right-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange.svg" alt="">
-      <img class="right-yel-1" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow.svg" alt="">
+      <img class="item right-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange.svg" alt="">
+      <img class="item right-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange.svg" alt="">
+      <img class="item right-yel-1" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow.svg" alt="">
     </div>
   </div>
 
@@ -57,21 +57,22 @@
               $category_names .= ' ' . $attr->slug;
             }
         ?>
-        <li class="wrapper<?php echo $category_names; ?>">
-          <a href="<?php the_permalink(); ?>">
-            <time datetime="<?php echo get_the_date("Y-m-d") ?>"><?php echo get_the_date("Y.m.d") ?></time>
-            <ul class="post-category">
-              <?php
-              $category = get_the_category();
-              foreach ($category as $attr) {
-                echo '<li>' . $attr->name . '</li>';
-              }
-              ?>
-            </ul>
-            <div class="post-title"><?php the_title(); ?></div>
-          </a>
-        </li>
-        <?php endwhile; endif; ?>
+            <li class="wrapper<?php echo $category_names; ?>">
+              <a href="<?php the_permalink(); ?>">
+                <time datetime="<?php echo get_the_date("Y-m-d") ?>"><?php echo get_the_date("Y.m.d") ?></time>
+                <ul class="post-category">
+                  <?php
+                  $category = get_the_category();
+                  foreach ($category as $attr) {
+                    echo '<li>' . $attr->name . '</li>';
+                  }
+                  ?>
+                </ul>
+                <div class="post-title"><?php the_title(); ?></div>
+              </a>
+            </li>
+        <?php endwhile;
+        endif; ?>
       </ul>
     </div>
   </section>
