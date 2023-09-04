@@ -7,7 +7,9 @@
   <title>Document</title>
   <link rel="stylesheet" href="https://unpkg.com/destyle.css@4.0.0/destyle.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <?php wp_head(); ?>
 </head>
 
@@ -35,8 +37,8 @@
     </div>
   </header>
 
-<!-- SEO SIMPLE PACK 3.2.0 -->
-<!-- <meta property="og:locale" content="ja_JP">
+  <!-- SEO SIMPLE PACK 3.2.0 -->
+  <!-- <meta property="og:locale" content="ja_JP">
 <meta property="og:type" content="article">
 <meta property="og:image" content="https://vansay.jp/wp/wp-content/themes/vansay/assets/config/ogp_kumamoto.png">
 <meta property="og:title" content="特定医療法人 萬生会 熊本第一病院">
@@ -44,9 +46,9 @@
 <meta property="og:url" content="https://vansay.jp/kumamoto/">
 <meta property="og:site_name" content="特定医療法人 萬生会">
 <meta name="twitter:card" content="summary_large_image"> -->
-<!-- / SEO SIMPLE PACK -->
+  <!-- / SEO SIMPLE PACK -->
 
-<!-- 
+  <!-- 
 <ul>
   <li>
     <div class="guide-title"><a href="">病院案内</a></div>

@@ -2,7 +2,7 @@
 
 .home, .news, .single, .page, .archive
   footer
-    padding: 120px 80px
+    padding: 90px 80px
     h2
       font-size: 0.75rem
       font-weight: 700
@@ -41,7 +41,7 @@
                   width: 20px
                   aspect-ratio: 1
                   font-size: 6.5px
-                  padding: 4px 0 0 6px 
+                  padding: 5px 0 0 7px 
                   color: fw.$orange
                   background-color: transparent
                   border: 1px solid fw.$orange
@@ -58,6 +58,17 @@
           margin-left: 70px
           li
             margin-bottom: 25px
+            a
+              display: inline-block
+              position: relative
+              width: fit-content
+              &::after
+                +fw.positionAbsoluteCTL($top: true)
+                +fw.fontAwesome("\f08e", .6rem)
+                right: -20px
+                color: fw.$black-middle
+
+              
     .lower
       margin-top: 40px
       color: fw.$black-deep

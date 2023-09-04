@@ -2,6 +2,7 @@
 /* Theme Name: general */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
 button,
 input,
 select,
@@ -123,7 +124,7 @@ textarea {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   left: 0;
-  color: #a3a3a3;
+  color: #c1c1c1;
 }
 .home .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li a, .single .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li a, .page .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li a, .archive .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li a {
   display: block;
@@ -178,7 +179,7 @@ textarea {
 .home main .latest-info {
   display: flex;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 750px auto 0;
   padding: 48px;
   background-color: #fff;
   border-radius: 20px;
@@ -221,12 +222,12 @@ textarea {
   height: 210px;
   overflow: hidden;
   margin-top: 30px;
-  border-top: 1px dotted #a3a3a3;
+  border-top: 1px dotted #c1c1c1;
 }
 .home main .latest-info .archive .post-archive > li {
   width: 100%;
   padding: 20px 0;
-  border-bottom: 1px dotted #a3a3a3;
+  border-bottom: 1px dotted #c1c1c1;
 }
 .home main .latest-info .archive .post-archive > li a {
   display: flex;
@@ -440,6 +441,7 @@ textarea {
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 0;
 }
 .home main .policy .cover-graphic.upper .graphic.left .left-org-1, .home main .policy .cover-graphic.under .graphic.left .left-org-1 {
   top: 6px;
@@ -449,18 +451,16 @@ textarea {
 }
 .home main .policy .cover-graphic.upper .graphic.right, .home main .policy .cover-graphic.under .graphic.right {
   width: 50vw;
+  z-index: 0;
 }
 .home main .policy .cover-graphic.upper .graphic.right .right-org-2, .home main .policy .cover-graphic.under .graphic.right .right-org-2 {
   top: -45px;
-  right: 270px;
+  right: 45%;
   transform: scale(40%) rotate(5deg);
 }
 .home main .policy .cover-graphic.upper .graphic.right .right-org-1, .home main .policy .cover-graphic.under .graphic.right .right-org-1 {
   top: 220px;
-  right: 15px;
-}
-.home main .policy .cover-graphic.upper.upper, .home main .policy .cover-graphic.under.upper {
-  z-index: 100;
+  right: 5%;
 }
 .home main .policy .cover-graphic.upper.upper .graphic.left .left-org-2, .home main .policy .cover-graphic.under.upper .graphic.left .left-org-2 {
   top: 170px;
@@ -481,8 +481,8 @@ textarea {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: url(./img/bg_contact.png) no-repeat top;
+  height: 750px;
+  background: url(./img/bg_contact.jpg) no-repeat center;
   background-size: cover;
   border-radius: 0 100px 100px 0;
   z-index: -1;
@@ -492,7 +492,7 @@ textarea {
 }
 .home main .information .outpatient-care .wrapper {
   width: 100%;
-  padding: 80px 88px 220px 75px;
+  padding: 80px 88px 80px 75px;
 }
 .home main .information .outpatient-care .wrapper .wrapper-inner {
   padding: 48px 80px;
@@ -583,6 +583,247 @@ textarea {
   background: url(./img/icon_triangle-whiteinblack-fill.svg) no-repeat center;
   background-size: cover;
 }
+.home main .information .about-us {
+  padding: 0 80px;
+}
+.home main .information .about-us h3 {
+  margin-bottom: 40px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+.home main .information .about-us .wrapper {
+  display: block;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.home main .information .about-us .wrapper a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 40px;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.home main .information .about-us .wrapper a .frame-about-us {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.home main .information .about-us .wrapper a .frame-about-us:hover img {
+  transform: scale(110%);
+}
+.home main .information .about-us .wrapper a .frame-about-us img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: 0.5s;
+}
+.home main .information .about-us .wrapper a dl {
+  position: relative;
+  width: calc(100% - 200px);
+  margin-left: 30px;
+}
+.home main .information .about-us .wrapper a dl::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "\f178";
+  font-size: 1.25rem;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  right: -50px;
+  color: #dbdbdb;
+}
+.home main .information .about-us .wrapper a dl dt {
+  margin-bottom: 10px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #F87700;
+}
+.home main .information .about-us .wrapper a dl dd {
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+}
+.home main .information .vansayplus {
+  width: 100%;
+  padding-left: 80px;
+}
+.home main .information .vansayplus header {
+  padding: 100px 0 50px;
+  width: 263px;
+}
+.home main .information .vansayplus header .catch-copy {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.home main .information .vansayplus .content {
+  position: relative;
+  height: 350px;
+  padding: 50px;
+  background-color: #F87700;
+  border-radius: 30px 0 0 30px;
+}
+.home main .information .vansayplus .content .lead-copy {
+  width: 206px;
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+.home main .information .vansayplus .content .vansayplus-posts {
+  position: absolute;
+  top: -100px;
+  right: 0;
+}
+.home main .information .vansayplus .content .vansayplus-posts::after {
+  position: absolute;
+  top: -190px;
+  right: 0px;
+  content: "VANSAY";
+  font-family: "Raleway", sans-serif;
+  font-size: 15rem;
+  line-height: 1;
+  letter-spacing: -0.075em;
+  color: rgba(215, 215, 215, 0.3);
+  transform: scaleX(85%);
+  z-index: 0;
+}
+.home main .information .vansayplus .content .vansayplus-posts .read-more-link {
+  display: block;
+  position: relative;
+  padding-left: 26px;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.9rem;
+  font-weight: 500;
+  position: absolute;
+  right: 80px;
+  top: -50px;
+  z-index: 10;
+}
+.home main .information .vansayplus .content .vansayplus-posts .read-more-link::before {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 18px;
+  aspect-ratio: 1;
+  content: "";
+  background-color: #F87700;
+  border-radius: 50%;
+}
+.home main .information .vansayplus .content .vansayplus-posts .read-more-link::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "\f04b";
+  font-size: 0.4rem;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  left: 6.5px;
+  color: #fff;
+}
+.home main .information .another-info {
+  width: 100%;
+  padding: 80px 17.2vw;
+  background-color: #F4F2E9;
+  border-radius: 100px 0 0 0;
+}
+.home main .information .another-info .wrapper {
+  width: 100%;
+}
+.home main .information .another-info .wrapper:last-of-type {
+  margin-top: 60px;
+}
+.home main .information .another-info .wrapper h3 {
+  margin-bottom: 24px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+  color: #454545;
+}
+.home main .information .another-info .wrapper ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+.home main .information .another-info .wrapper ul li {
+  display: grid;
+  place-content: center;
+  position: relative;
+  width: 100%;
+  padding: 40px 0;
+  background-color: #fff;
+  border-radius: 20px;
+}
+.home main .information .another-info .wrapper ul li::before, .home main .information .another-info .wrapper ul li::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.home main .information .another-info .wrapper ul li::before {
+  left: 30px;
+  width: 34px;
+  height: 34px;
+  content: "";
+  background-color: #F87700;
+  background: no-repeat center;
+  background-size: contain;
+}
+.home main .information .another-info .wrapper ul li.nursing-dep::before {
+  background-image: url(/wp-content/themes/kumamoto-hospital/img/_icon_heart-orange.svg);
+}
+.home main .information .another-info .wrapper ul li.physical-exam::before {
+  background-image: url(/wp-content/themes/kumamoto-hospital/img/_icon_health-orange.svg);
+}
+.home main .information .another-info .wrapper ul li.book-tour::before {
+  background-image: url(/wp-content/themes/kumamoto-hospital/img/_icon_hospital-orange.svg);
+}
+.home main .information .another-info .wrapper ul li.image-koshi-daiiti-hospital::before {
+  background-image: url(/wp-content/themes/kumamoto-hospital/img/link_koshi.jpg);
+}
+.home main .information .another-info .wrapper ul li.image-house-division::before {
+  background-image: url(/wp-content/themes/kumamoto-hospital/img/link_zaitaku.jpg);
+}
+.home main .information .another-info .wrapper ul li::after {
+  content: "\f178";
+  font-size: 1.25rem;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  right: 30px;
+  color: #dbdbdb;
+}
+.home main .information .another-info .wrapper.service ul li {
+  place-content: center start;
+  padding-left: 90px;
+}
+.home main .information .another-info .wrapper.service ul li::before {
+  width: 48px;
+  height: 48px;
+  background-size: cover;
+  border-radius: 10px;
+}
+.home main .information .another-info .wrapper.service ul li::after {
+  content: "\f08e";
+  font-size: 0.9rem;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
 
 .news main .container .section-link-menu {
   position: fixed;
@@ -625,7 +866,7 @@ textarea {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   left: 0;
-  color: #a3a3a3;
+  color: #c1c1c1;
 }
 .news main .container .post-archive {
   width: 100%;
@@ -782,11 +1023,11 @@ p {
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
   left: 0;
-  color: #a3a3a3;
+  color: #c1c1c1;
 }
 
 .home footer, .news footer, .single footer, .page footer, .archive footer {
-  padding: 120px 80px;
+  padding: 90px 80px;
 }
 .home footer h2, .news footer h2, .single footer h2, .page footer h2, .archive footer h2 {
   font-size: 0.75rem;
@@ -837,7 +1078,7 @@ p {
   width: 20px;
   aspect-ratio: 1;
   font-size: 6.5px;
-  padding: 4px 0 0 6px;
+  padding: 5px 0 0 7px;
   color: #F87700;
   background-color: transparent;
   border: 1px solid #F87700;
@@ -860,6 +1101,23 @@ p {
 .home footer .upper .wrapper .group-link li, .news footer .upper .wrapper .group-link li, .single footer .upper .wrapper .group-link li, .page footer .upper .wrapper .group-link li, .archive footer .upper .wrapper .group-link li {
   margin-bottom: 25px;
 }
+.home footer .upper .wrapper .group-link li a, .news footer .upper .wrapper .group-link li a, .single footer .upper .wrapper .group-link li a, .page footer .upper .wrapper .group-link li a, .archive footer .upper .wrapper .group-link li a {
+  display: inline-block;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.home footer .upper .wrapper .group-link li a::after, .news footer .upper .wrapper .group-link li a::after, .single footer .upper .wrapper .group-link li a::after, .page footer .upper .wrapper .group-link li a::after, .archive footer .upper .wrapper .group-link li a::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "\f08e";
+  font-size: 0.6rem;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  right: -20px;
+  color: #c1c1c1;
+}
 .home footer .lower, .news footer .lower, .single footer .lower, .page footer .lower, .archive footer .lower {
   margin-top: 40px;
   color: #828282;
@@ -873,79 +1131,129 @@ p {
   font-size: 0.75rem;
 }
 
-.swiper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 85vh;
-  padding: 0 5%;
-  font-size: 3rem;
-  background-color: #f5f5f5;
-  overflow: visible;
-}
-.swiper .swiper-scrollbar {
+main .wrapper .swiper.main-visual {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 25%;
-  width: 90vw;
-  height: 1px;
-  background-color: #5A5A5A;
+  top: 10px;
+  left: 0;
+  width: 100vw;
+  z-index: 0;
 }
-.swiper .swiper-wrapper {
-  display: flex;
+main .wrapper .swiper.main-visual .swiper-wrapper {
+  transition-timing-function: linear;
 }
-.swiper .swiper-wrapper .swiper-slide {
+main .wrapper .swiper.main-visual .swiper-wrapper .swiper-slide {
+  height: 560px;
+}
+main .wrapper .swiper.main-visual .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+main .wrapper .frame-divider {
+  position: absolute;
+  top: 350px;
+  left: 0;
+  width: 100%;
+  height: 30vw;
+  overflow: hidden;
+  z-index: 1;
+}
+main .wrapper .frame-divider .divider {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.vansayplus-posts .swiper.vansayplus-slide {
+  width: 60vw;
+  overflow: hidden;
+}
+.vansayplus-posts .swiper.vansayplus-slide .swiper-wrapper.post-archive {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   width: 100%;
 }
-.swiper .swiper-wrapper .swiper-slide a {
+.vansayplus-posts .swiper.vansayplus-slide .swiper-wrapper.post-archive .swiper-slide a {
   display: block;
   width: 100%;
   height: 100%;
 }
-.swiper .swiper-wrapper .swiper-slide a .frame {
+.vansayplus-posts .swiper.vansayplus-slide .swiper-wrapper.post-archive .swiper-slide a .frame {
   width: 100%;
-  aspect-ratio: 1;
-  background-color: #fff;
+  aspect-ratio: 4/3;
 }
-.swiper .swiper-wrapper .swiper-slide a .frame img {
+.vansayplus-posts .swiper.vansayplus-slide .swiper-wrapper.post-archive .swiper-slide a .frame img {
+  border-radius: 20px;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.swiper .swiper-wrapper .swiper-slide a .header-sub .post-category {
-  margin: 3rem 0 2rem;
+.vansayplus-posts .swiper.vansayplus-slide .swiper-wrapper.post-archive .swiper-slide a .wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
 }
-.swiper-button-prev, .swiper-button-next {
+.vansayplus-posts .swiper.vansayplus-slide .swiper-wrapper.post-archive .swiper-slide a .wrapper time {
+  font-size: 0.8125rem;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: #fff;
+}
+.vansayplus-posts .swiper.vansayplus-slide .swiper-wrapper.post-archive .swiper-slide a .wrapper ul li {
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 0.625rem;
+  font-weight: 300;
+  letter-spacing: 0.06em;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 100px;
+}
+.vansayplus-posts .swiper.vansayplus-slide .swiper-wrapper.post-archive .swiper-slide a .post-title {
+  margin-top: 10px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.7;
+  color: #fff;
+}
+.vansayplus-posts .swiper-button-prev, .vansayplus-posts .swiper-button-next {
+  display: block;
   position: absolute;
-  top: 82%;
-  right: 5%;
-  width: 6rem;
-  height: 6rem;
+  top: 0;
+  margin: 0;
+  top: 370px;
+  right: 17%;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   background-color: #fff;
+  z-index: 100;
 }
-.swiper-button-prev::before, .swiper-button-next::before {
+.vansayplus-posts .swiper-button-prev::before, .vansayplus-posts .swiper-button-next::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   content: "\f178";
-  font-size: 2rem;
+  font-size: 1rem;
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
-  color: #5A5A5A;
+  color: #F87700;
 }
-.swiper-button-prev::after, .swiper-button-next::after {
+.vansayplus-posts .swiper-button-prev::after, .vansayplus-posts .swiper-button-next::after {
   display: none;
 }
-
-.swiper-button-prev {
-  left: 82%;
+.vansayplus-posts .swiper-button-prev {
+  left: 67%;
 }
-.swiper-button-prev::before {
+.vansayplus-posts .swiper-button-prev::before {
   content: "\f177";
-  font-size: 2rem;
+  font-size: 1rem;
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
 }
@@ -1037,8 +1345,12 @@ p {
 .cover-graphic {
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100vw;
   height: 750px;
+  z-index: 2;
 }
 .cover-graphic .graphic {
   position: relative;

@@ -1,19 +1,3 @@
-// document.addEventListener("DOMContentLoaded", () => {
-//   const checkLinks = document.querySelectorAll('.category-menu ul li a');
-//   // const postArchive = document.querySelector('.post-archive');
-  
-//   checkLinks.forEach(function(link) {
-//     link.addEventListener('click', function(e) {
-//       e.preventDefault();
-      
-//       const catId = this.getAttribute('data-cat-id');
-//       console.log(catId)
-      
-//     });
-//   });
-// });
-
-
 // 当院からのお知らせ
 // 4つ目以上の記事を非表示にする。
 // const latestInfo = Array.from(document.querySelectorAll('.latest-info .post-archive > li'));
@@ -60,6 +44,8 @@ catList.forEach(elem => {
   });
 });
 
+
+
 // グローバル・メニューのサブ・メニュー出現
 const subMenu = Array.from(document.querySelectorAll('.global-menu > ul.menu > li'));
 
@@ -71,3 +57,37 @@ subMenu.forEach(elem => {
     this.classList.remove('active');
   });
 })
+
+
+
+// swiper
+
+// スライドの動き等速にする設定は必須
+// .swiper-wrapper {
+//   transition-timing-function: linear;
+// }
+const mainSwiper = new Swiper(".swiper.main-visual", {
+  loop: true,
+  slidesPerView: 2,
+  spaceBetween: 10,
+  speed: 8000,
+  allowTouchMove: false, // swipeを無効にする。
+  autoplay: {
+    delay: 0
+    // reverseDirection: true, // 逆方向有効化
+  }
+});
+
+const vansayplusSwiper = new Swiper('.swiper.vansayplus-slide', {
+  // Optional parameters
+  loop: true,
+  direction: 'horizontal',
+  slidesPerView: 2,
+  spaceBetween: 30,
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});

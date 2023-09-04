@@ -1,60 +1,107 @@
 @use "../forwards" as fw
 
-.swiper
-  display: flex
-  justify-content: center
-  align-items: center
-  width: 100%
-  height: 85vh
-  padding: 0 5%
-  font-size: 3rem
-  background-color: #f5f5f5
-  overflow: visible
-  .swiper-scrollbar
-    +fw.positionAbsoluteCTL($left: true)
-    bottom: 25%
-    width: 90vw
-    height: 1px
-    background-color: fw.$black
-  .swiper-wrapper
-    display: flex
-    .swiper-slide
-      display: flex
-      flex-direction: column
-      width: 100%
-      a
-        display: block
-        width: 100%
-        height: 100%
-        .frame
-          width: 100%
-          aspect-ratio: 1
-          background-color: #fff
+main
+  .wrapper
+    .swiper.main-visual
+      position: absolute
+      top: 10px
+      left: 0
+      width: 100vw
+      z-index: 0
+      .swiper-wrapper
+        transition-timing-function: linear
+        .swiper-slide
+          height: 560px
           img
             width: 100%
-            height: 100%
+            height: auto
             object-fit: cover
-        .header-sub
-          .post-category
-            // +fw.post-category($bgColor: #fff)
-            margin: 3rem 0 2rem
-        .article-title
-          // +fw.article-title
+            border-radius: 20px
+    .frame-divider
+      position: absolute
+      top: 350px
+      left: 0
+      width: 100%
+      height: 30vw
+      overflow: hidden
+      z-index: 1
+      .divider
+        width: 100%
+        object-fit: cover
 
-.swiper-button-prev, .swiper-button-next
-  position: absolute
-  top: 82%
-  right: 5%
-  width: 6rem
-  height: 6rem
-  border-radius: 50%
-  background-color: #fff
-  &::before
-    +fw.fontAwesome("\f178", 2rem)
-    color: fw.$black
-  &::after
-    display: none
-.swiper-button-prev
-  left: 82%
-  &::before
-    +fw.fontAwesome("\f177", 2rem)
+        
+
+
+.vansayplus-posts
+  .swiper.vansayplus-slide
+    width: 60vw
+    overflow: hidden
+    .swiper-wrapper.post-archive
+      display: flex
+      justify-content: space-between
+      width: 100%
+      .swiper-slide
+        a
+          display: block
+          width: 100%
+          height: 100%
+          .frame
+            width: 100%
+            aspect-ratio: 4/3
+            img
+              border-radius: 20px
+              width: 100%
+              height: 100%
+              object-fit: cover
+          .wrapper
+            display: flex
+            align-items: center
+            gap: 15px
+            margin-top: 20px
+            time
+              font-size: 0.8125rem
+              font-weight: 300
+              letter-spacing: 0.06em
+              color: #fff
+            ul
+              li
+                display: inline-block
+                padding: 5px 10px
+                font-size: 0.625rem
+                font-weight: 300
+                letter-spacing: 0.06em
+                color: #fff
+                border: 1px solid  rgba(255, 255, 255, 0.3)
+                border-radius: 100px
+          .post-title
+            margin-top: 10px
+            font-family: fw.$m-rd
+            font-size: 1.125rem
+            font-weight: 500
+            line-height: 1.7
+            color: #fff
+
+  .swiper-button-prev, .swiper-button-next
+    display: block
+    position: absolute
+    // swiperの元のCSSを無効にする。
+    top: 0 // 記述の必要なし。あえて書いてる。
+    margin: 0
+    /////////////////////////////
+    top: 370px
+    right: 17%
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    background-color: #fff
+    z-index: 100
+    &::before
+      +fw.positionAbsoluteCTL
+      +fw.fontAwesome("\f178", 1rem)
+      color: fw.$orange
+    &::after
+      display: none
+  .swiper-button-prev
+    left: 67%
+    &::before
+      +fw.fontAwesome("\f177", 1rem)

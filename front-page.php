@@ -1,6 +1,20 @@
 <?php get_header(); ?>
 
 <main>
+  <div class="wrapper">
+    <div class="swiper main-visual">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_slide-kumamoto01.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_slide-kumamoto02.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_slide-kumamoto03.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_slide-kumamoto04.jpg" alt=""></div>
+      </div>
+    </div>
+    <div class="frame-divider">
+      <img class="divider" src="<?php echo get_template_directory_uri(); ?>/img/bg_mv_bottom.svg" alt="">
+    </div>
+  </div>
+
   <div class="hero">
     <div class="site-title">
       <span>特定医療法人 萬生会 熊本第一病院</span>
@@ -8,7 +22,7 @@
     <div class="head-copy">
       <div class="catch-copy">その人らしさ<span>を</span><br><span>支える手</span></div>
       <div class="lead-copy">地域の皆さまの「その人らしい生き方」をささえるために、<br> 手をおしまない医療、手厚い看護、心をこめた介護を提供します。</div>
-      <a class="read-more-link" href="">当院の特徴をみる</a>
+      <a class="read-more-link" href="<?php echo home_url('/about') ?>">当院の特徴をみる</a>
     </div>
   </div>
 
@@ -184,98 +198,137 @@
       </div>
     </div>
 
-  </section>
+    <div class="about-us">
+      <h3>当院について</h3>
+      <div class="wrapper">
+        <a href="/philosophy/">
+          <div class="frame-about-us">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/_info_01_link_about (1).jpg" alt="">
+          </div>
+          <dl>
+            <dt>病院概要</dt>
+            <dd>当院の基本方針・患者様の権利についてご覧いただけます。</dd>
+          </dl>
+        </a>
+        <a href="/result/">
+          <div class="frame-about-us">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/_info_02_link_achievement (1).jpg" alt="">
+          </div>
+          <dl>
+            <dt>治療実績・退院実績</dt>
+            <dd>当院の主な治療実績・退院実績についてご覧いただけます。</dd>
+          </dl>
+        </a>
+        <a href="/disaster/">
+          <div class="frame-about-us">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/_info_03_link_strong (1).jpg" alt="">
+          </div>
+          <dl>
+            <dt>災害に強い病院</dt>
+            <dd>当院の災害時のライフライン対策についてご覧いただけます。</dd>
+          </dl>
+        </a>
+        <a href="/message/">
+          <div class="frame-about-us">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/_info_04_link_greeting (1).jpg" alt="">
+          </div>
+          <dl>
+            <dt>ご挨拶</dt>
+            <dd>病院長メッセージをご覧いただけます。</dd>
+          </dl>
+        </a>
+        <a href="/introduction/">
+          <div class="frame-about-us">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/_info_05_link_concerned (1).jpg" alt="">
+          </div>
+          <dl>
+            <dt>医療関係の皆様へ</dt>
+            <dd>当院から医療関係の皆様へ向けたご案内・お知らせをご覧いただけます。</dd>
+          </dl>
+        </a>
+        <a href="/recruit/">
+          <div class="frame-about-us">
+            <img src="<?php echo get_template_directory_uri(); ?>/img/_info_06_link_recruit (1).jpg" alt="">
+          </div>
+          <dl>
+            <dt>当法人で働きたい方へ</dt>
+            <dd>ご自身の経験を活かしてみませんか？仕事への意欲をお持ちの方をお待ちしています。</dd>
+          </dl>
+        </a>
+      </div>
+    </div>
 
-  <section class="about-us">
-    <h3>当院について</h3>
-    <dl>
-      <a href="/philosophy/">
-        <dt>病院概要</dt>
-        <dd>当院の基本方針・患者様の権利についてご覧いただけます。</dd>
-      </a>
-      <a href="/result/">
-        <dt>治療実績・退院実績</dt>
-        <dd>当院の主な治療実績・退院実績についてご覧いただけます。</dd>
-      </a>
-      <a href="/disaster/">
-        <dt>災害に強い病院</dt>
-        <dd>当院の災害時のライフライン対策についてご覧いただけます。</dd>
-      </a>
-      <a href="/message/">
-        <dt>ご挨拶</dt>
-        <dd>病院長メッセージをご覧いただけます。</dd>
-      </a>
-      <a href="/introduction/">
-        <dt>医療関係の皆様へ</dt>
-        <dd>当院から医療関係の皆様へ向けたご案内・お知らせをご覧いただけます。</dd>
-      </a>
-      <a href="/recruit/">
-        <dt>当法人で働きたい方へ</dt>
-        <dd>ご自身の経験を活かしてみませんか？仕事への意欲をお持ちの方をお待ちしています。</dd>
-      </a>
-    </dl>
-  </section>
+    <div class="vansayplus">
+      <header>
+        <div class="catch-copy">
+          萬生会グループがお届けする<br>健康情報メディア
+        </div>
+        <img class="vansay-logo" src="<?php echo get_template_directory_uri(); ?>/img/logo_vansay-plus.svg"></img>
+      </header>
+      <div class="content">
+        <div class="lead-copy">
+          皆さまの暮らしに役立つ医療情報から生活の中で使えるコラムを掲載しております。
+        </div>
 
-  <ul class="post-archive">
-    <?php
-    $recent_page = get_query_var('paged') ? get_query_var('paged') : 1;
-    $args = array(
-      'post_type' => 'media-post',
-      'posts_per_page' => 3,
-      'paged' => $recent_page,
-    );
-    $my_query = new WP_Query($args);
-    if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
-    ?>
-        <li>
-          <a href="<?php the_permalink(); ?>">
-            <time datetime="<?php echo get_the_date("Y-m-d") ?>"><?php echo get_the_date("Y.m.d") ?></time>
-            <ul class="post-category">
+        <div class="vansayplus-posts">
+          <a class="read-more-link" href="<?php echo home_url('/vansayplus') ?>">記事一覧を見る</a>
+          <div class="swiper vansayplus-slide">
+            <ul class="post-archive swiper-wrapper">
               <?php
-              $terms = get_the_terms(get_the_ID(), 'media-post-category');
-              foreach ($terms as $attr) {
-                echo '<li>' . $attr->name . '</li>';
-              }
+              $recent_page = get_query_var('paged') ? get_query_var('paged') : 1;
+              $args = array(
+                'post_type' => 'vansayplus',
+                'posts_per_page' => -1,
+                'paged' => $recent_page,
+              );
+              $my_query = new WP_Query($args);
+              if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
               ?>
+                  <li class="swiper-slide">
+                    <a href="<?php the_permalink(); ?>">
+                      <div class="frame">
+                        <?php the_post_thumbnail(); ?>
+                      </div>
+                      <div class="wrapper">
+                        <time datetime="<?php echo get_the_date("Y-m-d") ?>"><?php echo get_the_date("Y.m.d") ?></time>
+                        <ul class="post-category">
+                          <?php
+                          $terms = get_the_terms(get_the_ID(), 'vansayplus-category');
+                          foreach ($terms as $attr) {
+                            echo '<li>' . $attr->name . '</li>';
+                          }
+                          ?>
+                        </ul>
+                      </div>
+                      <div class="post-title"><?php the_title(); ?></div>
+                    </a>
+                  </li>
+              <?php endwhile;
+              endif; ?>
             </ul>
-            <div class="post-title"><?php the_title(); ?></div>
-          </a>
-        </li>
-    <?php endwhile;
-    endif; ?>
-  </ul>
-  <section class="posts-archive">
-    <header>
-      <div class="catch-copy">
-        萬生会グループがお届けする<br>健康情報メディア
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
       </div>
-      <img class="vansay-logo" src=""></img>
-    </header>
-    <div class="content">
-      <div class="lead-copy">
-        皆さまの暮らしに役立つ医療情報から生活の中で使えるコラムを掲載しております。
-      </div>
-      <!-- archive -->
-      <!-- 要素：アイキャッチ画像、日付、カテゴリー、タイトル -->
-      <a class="read-more-link" href="">記事一覧を見る</a>
     </div>
-  </section>
 
-  <section class="another-info">
-    <div class="pick-up">
-      <h3>ピックアップ</h3>
-      <ul>
-        <li>看護部</li>
-        <li>健康診断</li>
-        <li>見学予約</li>
-      </ul>
-    </div>
-    <div class="service">
-      <h3>関連施設・サービス</h3>
-      <ul>
-        <li>合志第一病院</li>
-        <li>在宅事業部</li>
-      </ul>
+    <div class="another-info">
+      <div class="wrapper pick-up">
+        <h3>ピックアップ</h3>
+        <ul>
+          <li class="nursing-dep">看護部</li>
+          <li class="physical-exam">健康診断</li>
+          <li class="book-tour">見学予約</li>
+        </ul>
+      </div>
+      <div class="wrapper service">
+        <h3>関連施設・サービス</h3>
+        <ul>
+          <li class="image-koshi-daiiti-hospital">合志第一病院</li>
+          <li class="image-house-division">在宅事業部</li>
+        </ul>
+      </div>
     </div>
   </section>
 </main>
