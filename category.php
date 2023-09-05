@@ -3,21 +3,20 @@
 <main>
   <div class="front">
     <div class="site-title"><span>特定医療法人 萬生会 熊本第一病院</span></div>
-    <h2>お知らせ</h2>
-    <!-- <img class="divider" src="<?php echo get_template_directory_uri(); ?>/img/divider.png" alt=""> -->
+    <h2 class="page-title"><a href="/news/">お知らせ</a></h2>
+    <h3 class="cat-title"><?php single_cat_title(); ?></h3>
   </div>
 
   <div class="container">
-
-    <div class="category-menu">
-      <header>記事カテゴリー</header>
-      <ul>
-        <li><a href="#" data-cat-id="all">すべて</a></li>
+    <div class="category-link-menu">
+      <header data-cat-id="all">記事カテゴリー</header>
+      <ul class="sub-menu">
+        <li><a href="/news/">すべて</a></li>
         <?php
         $categories = get_categories();
         if ($categories) {
           foreach ($categories as $category) {
-            echo '<li><a href="#" data-cat-id="' . $category->term_id . '">' . $category->name . '</a></li>';
+            echo '<li><a href="/category/' . $category->slug . '">' . $category->name . '</a></li>';
           }
         }
         ?>
@@ -33,9 +32,7 @@
         'paged' => $recent_page,
         'category_name' => get_queried_object()->slug,
       );
-
       $my_query = new WP_Query($args);
-
       if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
       ?>
           <li class="post-item">

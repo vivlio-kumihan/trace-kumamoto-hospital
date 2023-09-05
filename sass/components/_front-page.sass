@@ -146,7 +146,6 @@
                 content: ""
                 background: url(./img/corner_introduction.svg) no-repeat center 
                 background-size: cover
-                z-index: 100
               &::after
                 position: absolute
                 bottom: -1px
@@ -174,42 +173,44 @@
             line-height: 1.7
           a
             +fw.read-more-link
-      .cover-graphic.upper, .cover-graphic.under
-        display: flex
-        justify-content: space-between
+      .graphic-lower
         position: absolute
         top: 0
         left: 0
-        width: 100%
+        width: 100vw
         height: 100%
-        z-index: 0
-        .graphic.left
-          .left-org-1
-            top: 6px
-            left: 30px
-            width: 300px
-            transform: rotate(140deg)
-        .graphic.right
-          width: 50vw
-          z-index: 0
-          .right-org-2
-            top: -45px
-            right: 45%
-            transform: scale(40%) rotate(5deg)
-          .right-org-1
-            top: 220px
-            right: 5%
-        &.upper
-          .graphic.left
-            .left-org-2
-              top: 170px
-              left: -162px
-              width: unset
-              transform: rotate(0deg) scale(31%)
-            .left-yel-1
-              top: 304px
-              left: 35px
-              transform:  rotate(-3deg) scale(75%)
+        .left-org-1
+          position: absolute
+          top: -5%
+          left: 2%
+          width: 300px
+          transform: rotate(145deg)
+        .right-org-2
+          position: absolute
+          top: 0%
+          right: 32%
+          transform: scale(115%) rotate(5deg)
+        .right-org-1
+          position: absolute
+          top: 35%
+          right: 2%
+      .graphic-upper.left
+        position: absolute
+        top: 0
+        left: 0
+        width: 50vw
+        height: 100%
+        .left-org-2
+          position: absolute
+          top: 15%
+          left: -50%
+          width: unset
+          transform: rotate(0deg) scale(20%)
+        .left-yel-1
+          position: absolute
+          top: 12%
+          left: -62%
+          transform:  rotate(-3deg) scale(10%)
 
     .information
       position: relative

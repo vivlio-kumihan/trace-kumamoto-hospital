@@ -97,74 +97,74 @@
   </div>
 
   <section class="policy">
-    <div class="cover-graphic under">
-      <div class="graphic left">
-        <img class="item left-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
-      </div>
-      <div class="graphic right">
-        <img class="item right-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange2_2.svg" alt="">
-        <img class="item right-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange2_1.svg" alt="">
-      </div>
+    <div class="graphic-lower">
+      <img class="item left-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
+      <img class="item right-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange2_2.svg" alt="">
+      <img class="item right-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange2_1.svg" alt="">
     </div>
     <dl>
-      <dt>
-        <div class="frame">
-          <div class="bgimage outpatient"></div>
-        </div>
-        <div class="catch-copy">
-          <p><span>地域の皆さま</span>の</p>
-          <p>さまざまな症状を診察</p>
-        </div>
-        <div class="policy-title">
-          <h3><span>01</span>外来</h3>
-        </div>
-      </dt>
-      <dd>
-        <p>診療時間・診療担当医・受診手続きについてご覧いただけます。</p>
-        <a class="read-more-link" href="">詳しく見る</a>
-      </dd>
+      <a href="<?php echo home_url('/') ?>">
+        <dt>
+          <div class="frame">
+            <div class="bgimage outpatient"></div>
+          </div>
+          <div class="catch-copy">
+            <p><span>地域の皆さま</span>の</p>
+            <p>さまざまな症状を診察</p>
+          </div>
+          <div class="policy-title">
+            <h3><span>01</span>外来</h3>
+          </div>
+        </dt>
+        <dd>
+          <p>診療時間・診療担当医・受診手続きについてご覧いただけます。</p>
+          <a class="read-more-link" href="">詳しく見る</a>
+        </dd>
+      </a>
     </dl>
     <dl>
-      <dt>
-        <div class="frame">
-          <div class="bgimage hospitalization"></div>
-        </div>
-        <div class="catch-copy">
-          <p><span>思いやりを大切に</span></p>
-          <p>患者さまの回復を支援</p>
-        </div>
-        <div class="policy-title">
-          <h3><span>02</span>入院</h3>
-        </div>
-      </dt>
-      <dd>
-        <p>入院手続き・入院中の過ごし方・施設設備についてご覧いただけます。</p>
-        <a class="read-more-link" href="">詳しく見る</a>
-      </dd>
+      <a href="<?php echo home_url('/') ?>">
+        <dt>
+          <div class="frame">
+            <div class="bgimage hospitalization"></div>
+          </div>
+          <div class="catch-copy">
+            <p><span>思いやりを大切に</span></p>
+            <p>患者さまの回復を支援</p>
+          </div>
+          <div class="policy-title">
+            <h3><span>02</span>入院</h3>
+          </div>
+        </dt>
+        <dd>
+          <p>入院手続き・入院中の過ごし方・施設設備についてご覧いただけます。</p>
+          <a class="read-more-link" href="">詳しく見る</a>
+        </dd>
+      </a>
     </dl>
     <dl>
-      <dt>
-        <div class="frame">
-          <div class="bgimage treatment-sct"></div>
-        </div>
-        <div class="catch-copy">
-          <p><span>患者さま</span>に<span>寄り添う</span></p>
-          <p>適切な診療を提供</p>
-        </div>
-        <div class="policy-title">
-          <h3><span>03</span>診療科・部門</h3>
-        </div>
-      </dt>
-      <dd>
-        <p>当院の診療部・看護部・事務部についてご覧いただけます。</p>
-        <a class="read-more-link" href="">詳しく見る</a>
-      </dd>
+      <a href="<?php echo home_url('/') ?>">
+        <dt>
+          <div class="frame">
+            <div class="bgimage treatment-sct"></div>
+          </div>
+          <div class="catch-copy">
+            <p><span>患者さま</span>に<span>寄り添う</span></p>
+            <p>適切な診療を提供</p>
+          </div>
+          <div class="policy-title">
+            <h3><span>03</span>診療科・部門</h3>
+          </div>
+        </dt>
+        <dd>
+          <p>当院の診療部・看護部・事務部についてご覧いただけます。</p>
+          <a class="read-more-link" href="">詳しく見る</a>
+        </dd>
+      </a>
     </dl>
-    <div class="cover-graphic upper">
-      <div class="graphic left">
-        <img class="item left-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
-        <img class="item left-yel-1" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow_left.svg" alt="">
-      </div>
+    <div class="graphic-upper left">
+      <img class="item left-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
+      <img class="item left-yel-1" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow_left.svg" alt="">
     </div>
   </section>
 

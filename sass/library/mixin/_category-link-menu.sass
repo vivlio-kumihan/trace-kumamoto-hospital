@@ -1,0 +1,40 @@
+@use '../../variables' as var
+@use './position-absolute-ctl' as ctl
+@use './fontawesome' as fa
+@use '../index-map' as im
+
+=category-link-menu
+  position: fixed
+  top: 280px
+  right: 0
+  width: 284px
+  padding: 48px
+  background-color: #fff
+  border-radius: 20px 0 0 20px
+  z-index: im.set_index(category-link-menu)
+  header
+    display: block
+    width: 100%
+    margin-bottom: 30px
+    padding-bottom: 24px
+    font-size: 1.125rem
+    font-weight: 600
+    line-height: 1.4
+    color: var.$black
+    border-bottom: solid 1px var.$black-light
+  ul.sub-menu
+    li
+      + li
+        margin-top: 30px
+      a
+        display: block
+        position: relative
+        padding-left: 32px
+        font-size: 0.875rem
+        font-weight: 300
+        color: var.$black
+        &::before
+          +ctl.positionAbsoluteCTL($top: true)
+          +fa.fontAwesome("\f061", 1rem)
+          left: 0
+          color: var.$black-middle
