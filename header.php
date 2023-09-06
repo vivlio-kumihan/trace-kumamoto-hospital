@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <!-- タイトルの関数 -->
+  <!-- <title>add_theme_support</title> -->
+  <!-- タイトルの関数 -->
   <link rel="stylesheet" href="https://unpkg.com/destyle.css@4.0.0/destyle.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />

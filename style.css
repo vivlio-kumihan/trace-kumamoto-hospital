@@ -3,16 +3,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap");
-button,
-input,
-select,
-textarea {
-  -webkit-appearance: auto;
-  -moz-appearance: auto;
-       appearance: auto;
-  border-width: 1px;
-}
-
 :root {
   font-size: 100%;
   scroll-behavior: smooth;
@@ -311,13 +301,13 @@ textarea {
   border-radius: 20px;
 }
 .home main .policy dl dt .frame .outpatient {
-  background-image: url(/wp-content/themes/kumamoto-hospital/img/kumamoto_introduction01.jpg);
+  background-image: url(img/kumamoto_introduction01.jpg);
 }
 .home main .policy dl dt .frame .hospitalization {
-  background-image: url(/wp-content/themes/kumamoto-hospital/img/kumamoto_introduction02.jpg);
+  background-image: url(img/kumamoto_introduction02.jpg);
 }
 .home main .policy dl dt .frame .treatment-sct {
-  background-image: url(/wp-content/themes/kumamoto-hospital/img/kumamoto_introduction03.jpg);
+  background-image: url(img/kumamoto_introduction03.jpg);
 }
 .home main .policy dl dt .catch-copy {
   display: flex;
@@ -790,19 +780,19 @@ textarea {
   background-size: contain;
 }
 .home main .information .another-info .wrapper ul li.nursing-dep::before {
-  background-image: url(/wp-content/themes/kumamoto-hospital/img/_icon_heart-orange.svg);
+  background-image: url(img/_icon_heart-orange.svg);
 }
 .home main .information .another-info .wrapper ul li.physical-exam::before {
-  background-image: url(/wp-content/themes/kumamoto-hospital/img/_icon_health-orange.svg);
+  background-image: url(img/_icon_health-orange.svg);
 }
 .home main .information .another-info .wrapper ul li.book-tour::before {
-  background-image: url(/wp-content/themes/kumamoto-hospital/img/_icon_hospital-orange.svg);
+  background-image: url(img/_icon_hospital-orange.svg);
 }
 .home main .information .another-info .wrapper ul li.image-koshi-daiiti-hospital::before {
-  background-image: url(/wp-content/themes/kumamoto-hospital/img/link_koshi.jpg);
+  background-image: url(img/link_koshi.jpg);
 }
 .home main .information .another-info .wrapper ul li.image-house-division::before {
-  background-image: url(/wp-content/themes/kumamoto-hospital/img/link_zaitaku.jpg);
+  background-image: url(img/link_zaitaku.jpg);
 }
 .home main .information .another-info .wrapper ul li::after {
   content: "\f178";
