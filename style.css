@@ -168,11 +168,13 @@
 }
 .home main .latest-info {
   display: flex;
+  position: relative;
   max-width: 1000px;
   margin: 750px auto 0;
   padding: 48px;
   background-color: #fff;
   border-radius: 20px;
+  z-index: 10;
 }
 .home main .latest-info h3 {
   width: 25%;
@@ -239,42 +241,72 @@
   font-size: 0.8125rem;
   font-weight: 300;
 }
-.home main .wrapper {
-  width: 1000px;
+.home main .wrapper.to-archive {
+  display: flex;
+  justify-content: flex-end;
+  width: min(1000px, 100%);
   margin: 0 auto;
 }
-.home main .wrapper .read-more-link {
+.home main .wrapper.to-archive .read-more-link {
   display: block;
   position: relative;
-  padding-left: 26px;
+  font-size: 1rem;
+  transition: 0.3s;
+  margin-left: 26px;
   width: -moz-fit-content;
   width: fit-content;
   font-size: 0.9rem;
   font-weight: 500;
+  z-index: 10;
   margin-top: 35px;
-  margin-left: auto;
 }
-.home main .wrapper .read-more-link::before {
+.home main .wrapper.to-archive .read-more-link::before {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 0;
-  width: 18px;
+  left: -26px;
+  width: 20px;
   aspect-ratio: 1;
   content: "";
-  background-color: #F87700;
-  border-radius: 50%;
+  background: url(./img/arrow.svg) no-repeat center;
+  background-size: cover;
 }
-.home main .wrapper .read-more-link::after {
+.home main .wrapper.to-archive .read-more-link:hover {
+  color: #5A5A5A;
+  margin-left: 26px;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.9rem;
+  font-weight: 500;
+  z-index: 10;
+}
+.home main .wrapper.to-archive .read-more-link:hover::before {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  content: "\f04b";
-  font-size: 0.4rem;
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  left: 6.5px;
-  color: #fff;
+  left: -26px;
+  width: 20px;
+  aspect-ratio: 1;
+  content: "";
+  background: url(./img/arrow.svg) no-repeat center;
+  background-size: cover;
+}
+.home main .wrapper.to-archive .read-more-link::after {
+  position: absolute;
+  display: block;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  content: "";
+  background-color: #5A5A5A;
+  transform: scale(1, 1);
+  transform-origin: right top;
+  transition: transform 0.3s;
+}
+.home main .wrapper.to-archive .read-more-link:hover::after {
+  transform: scale(0, 1);
+  transform-origin: right top;
 }
 .home main .policy {
   display: grid;
@@ -391,36 +423,65 @@
   font-weight: 300;
   line-height: 1.7;
 }
-.home main .policy dl dd a {
+.home main .policy dl dd .read-more-link {
   display: block;
   position: relative;
-  padding-left: 26px;
+  font-size: 1rem;
+  transition: 0.3s;
+  margin-left: 26px;
   width: -moz-fit-content;
   width: fit-content;
   font-size: 0.9rem;
   font-weight: 500;
+  z-index: 10;
 }
-.home main .policy dl dd a::before {
+.home main .policy dl dd .read-more-link::before {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 0;
-  width: 18px;
+  left: -26px;
+  width: 20px;
   aspect-ratio: 1;
   content: "";
-  background-color: #F87700;
-  border-radius: 50%;
+  background: url(./img/arrow.svg) no-repeat center;
+  background-size: cover;
 }
-.home main .policy dl dd a::after {
+.home main .policy dl dd .read-more-link:hover {
+  color: #5A5A5A;
+  margin-left: 26px;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.9rem;
+  font-weight: 500;
+  z-index: 10;
+}
+.home main .policy dl dd .read-more-link:hover::before {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  content: "\f04b";
-  font-size: 0.4rem;
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  left: 6.5px;
-  color: #fff;
+  left: -26px;
+  width: 20px;
+  aspect-ratio: 1;
+  content: "";
+  background: url(./img/arrow.svg) no-repeat center;
+  background-size: cover;
+}
+.home main .policy dl dd .read-more-link::after {
+  position: absolute;
+  display: block;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  content: "";
+  background-color: #5A5A5A;
+  transform: scale(1, 1);
+  transform-origin: right top;
+  transition: transform 0.3s;
+}
+.home main .policy dl dd .read-more-link:hover::after {
+  transform: scale(0, 1);
+  transform-origin: right top;
 }
 .home main .policy .graphic-lower {
   position: absolute;
@@ -697,37 +758,68 @@
 .home main .information .vansayplus .content .vansayplus-posts .read-more-link {
   display: block;
   position: relative;
-  padding-left: 26px;
+  font-size: 1rem;
+  transition: 0.3s;
+  margin-left: 26px;
   width: -moz-fit-content;
   width: fit-content;
   font-size: 0.9rem;
   font-weight: 500;
+  z-index: 10;
   position: absolute;
   right: 80px;
   top: -50px;
-  z-index: 10;
 }
 .home main .information .vansayplus .content .vansayplus-posts .read-more-link::before {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 0;
-  width: 18px;
+  left: -26px;
+  width: 20px;
   aspect-ratio: 1;
   content: "";
-  background-color: #F87700;
-  border-radius: 50%;
+  background: url(./img/arrow.svg) no-repeat center;
+  background-size: cover;
 }
-.home main .information .vansayplus .content .vansayplus-posts .read-more-link::after {
+.home main .information .vansayplus .content .vansayplus-posts .read-more-link:hover {
+  color: #5A5A5A;
+  margin-left: 26px;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.9rem;
+  font-weight: 500;
+  z-index: 10;
+  position: absolute;
+  right: 80px;
+  top: -50px;
+}
+.home main .information .vansayplus .content .vansayplus-posts .read-more-link:hover::before {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  content: "\f04b";
-  font-size: 0.4rem;
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  left: 6.5px;
-  color: #fff;
+  left: -26px;
+  width: 20px;
+  aspect-ratio: 1;
+  content: "";
+  background: url(./img/arrow.svg) no-repeat center;
+  background-size: cover;
+}
+.home main .information .vansayplus .content .vansayplus-posts .read-more-link::after {
+  position: absolute;
+  display: block;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  content: "";
+  background-color: #5A5A5A;
+  transform: scale(1, 1);
+  transform-origin: right top;
+  transition: transform 0.3s;
+}
+.home main .information .vansayplus .content .vansayplus-posts .read-more-link:hover::after {
+  transform: scale(0, 1);
+  transform-origin: right top;
 }
 .home main .information .another-info {
   width: 100%;
@@ -1413,34 +1505,63 @@ main .wrapper .frame-divider .divider {
 .hero .head-copy .read-more-link {
   display: block;
   position: relative;
-  padding-left: 26px;
+  font-size: 1rem;
+  transition: 0.3s;
+  margin-left: 26px;
   width: -moz-fit-content;
   width: fit-content;
   font-size: 0.9rem;
   font-weight: 500;
+  z-index: 10;
   margin-top: 30px;
 }
 .hero .head-copy .read-more-link::before {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 0;
-  width: 18px;
+  left: -26px;
+  width: 20px;
   aspect-ratio: 1;
   content: "";
-  background-color: #F87700;
-  border-radius: 50%;
+  background: url(./img/arrow.svg) no-repeat center;
+  background-size: cover;
 }
-.hero .head-copy .read-more-link::after {
+.hero .head-copy .read-more-link:hover {
+  color: #5A5A5A;
+  margin-left: 26px;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.9rem;
+  font-weight: 500;
+  z-index: 10;
+}
+.hero .head-copy .read-more-link:hover::before {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  content: "\f04b";
-  font-size: 0.4rem;
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  left: 6.5px;
-  color: #fff;
+  left: -26px;
+  width: 20px;
+  aspect-ratio: 1;
+  content: "";
+  background: url(./img/arrow.svg) no-repeat center;
+  background-size: cover;
+}
+.hero .head-copy .read-more-link::after {
+  position: absolute;
+  display: block;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  content: "";
+  background-color: #5A5A5A;
+  transform: scale(1, 1);
+  transform-origin: right top;
+  transition: transform 0.3s;
+}
+.hero .head-copy .read-more-link:hover::after {
+  transform: scale(0, 1);
+  transform-origin: right top;
 }
 
 .cover-graphic {

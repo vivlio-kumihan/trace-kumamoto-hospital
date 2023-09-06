@@ -48,9 +48,7 @@
         a, ul li
           position: relative
         a::after, ul li::after
-          position: absolute
-          top: 50%
-          transform: translateY(-50%)
+          +fw.positionAbsoluteCTL($top: true)
           content: "\f04b"
           font-size: 1rem
           font-family: "Font Awesome 6 Free"

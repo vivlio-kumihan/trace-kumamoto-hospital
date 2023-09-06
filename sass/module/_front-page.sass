@@ -6,11 +6,13 @@
     margin: 0 auto
     .latest-info
       display: flex
+      position: relative
       max-width: 1000px 
       margin: 750px auto 0
       padding: 48px
       background-color: #fff
       border-radius: 20px
+      z-index: 10
       h3
         width: 25%
         font-family: fw.$m-rd
@@ -65,13 +67,14 @@
               .post-title
                 font-size: 0.8125rem
                 font-weight: 300
-    .wrapper
-      width: 1000px
+    .wrapper.to-archive
+      display: flex
+      justify-content: flex-end
+      width: min(1000px, 100%)
       margin: 0 auto
       .read-more-link
         +fw.read-more-link
         margin-top: 35px
-        margin-left: auto
     .policy
       display: grid
       grid-template-columns: repeat(3, 1fr)
@@ -94,7 +97,6 @@
               background-size: cover
               border-radius: 20px
             .outpatient
-              // 思い込み
               background-image: url(img/kumamoto_introduction01.jpg)
             .hospitalization
               background-image: url(img/kumamoto_introduction02.jpg)
@@ -172,7 +174,7 @@
             margin-bottom: 30px
             font-weight: 300
             line-height: 1.7
-          a
+          .read-more-link
             +fw.read-more-link
       .graphic-lower
         position: absolute
@@ -398,10 +400,9 @@
               z-index: 0
             .read-more-link
               +fw.read-more-link
-              position: absolute
-              right: 80px
-              top: -50px
-              z-index: 10
+                position: absolute
+                right: 80px
+                top: -50px
 
       .another-info
         width: 100%

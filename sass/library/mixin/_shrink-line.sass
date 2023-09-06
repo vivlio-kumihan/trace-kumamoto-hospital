@@ -1,0 +1,46 @@
+@use '../../variables' as var
+
+// 収縮する下線を持つ見出し
+// どのような方向で下線が変化するかを指定するオプション
+// 左から伸びて、左へ縮まる
+$left_left: left, left
+// 右から伸びて、右へ縮まる
+$right_right: right, right
+// 右へ伸びて、左から縮まる
+$left_right: right, left
+// 左へ伸びて、右から縮まる
+$right_left: left, right
+// 中央から伸びて、中央へ縮まる
+$center: center, center
+
+// arg説明:
+//   $fontSize: 適宜
+//   $bottom: 適宜
+//   $lineHeight: 適宜
+//   $boderColor: var.$colorHoverLink
+//   $direction: $left_right  
+
+=shrinkLine($fontSize: 1rem, $bottom: -4px, $lineHeight: 1px, $boderColor: var.$colorHoverLink, $direction: $right_right)
+  display: block
+  position: relative
+  font-size: $fontSize
+  transition: .3s
+  @content
+  &:hover
+    color: var.$colorHoverLink
+    @content
+  &::after
+    position: absolute
+    display: block
+    bottom: $bottom
+    left: 0
+    width: 100%
+    height: $lineHeight
+    content: ""
+    background-color: $boderColor
+    transform: scale(1, 1)
+    transform-origin: nth($direction, 1) top
+    transition: transform .3s
+  &:hover::after
+    transform: scale(0, 1)
+    transform-origin: nth($direction, 2) top
