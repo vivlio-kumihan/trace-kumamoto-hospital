@@ -4,7 +4,40 @@
   main
     .container
       .category-link-menu
-        +fw.category-link-menu
+        position: fixed
+        top: 280px
+        right: 0
+        width: 284px
+        padding: 48px
+        background-color: #fff
+        border-radius: 20px 0 0 20px
+        z-index: fw.set_index(category-link-menu)
+        header
+          display: block
+          width: 100%
+          margin-bottom: 30px
+          padding-bottom: 24px
+          font-size: 1.125rem
+          font-weight: 600
+          line-height: 1.4
+          color: fw.$black
+          border-bottom: solid 1px fw.$black-light
+        ul.sub-menu
+          li
+            + li
+              margin-top: 30px
+            a
+              display: block
+              position: relative
+              padding-left: 32px
+              font-size: 0.875rem
+              font-weight: 300
+              color: fw.$black
+              &::before
+                +fw.positionAbsoluteCTL($top: true)
+                +fw.fontAwesome("\f061", 1rem)
+                left: 0
+                color: fw.$black-middle
       .post-archive
         width: 100%
         padding: 80px 322px 80px 80px
@@ -48,4 +81,46 @@
               letter-spacing: 0.06em
               color: fw.$black
       .breadcrumbs
-        +fw.breadcrumbs
+        padding: 0 322px 0 80px
+        ul
+          position: relative
+          padding: 35px 0
+          border-top: 1px solid fw.$black-light
+          border-bottom: 1px solid fw.$black-light
+          li
+            display: inline-block
+            &:first-of-type
+              margin-right: 10px
+            span, a
+              display: grid
+              place-items: center
+              width: 28px
+              height: 30px
+              font-size: 0.875rem
+              font-weight: 600
+              background-color: fw.$gray-light
+              border-radius: 4px
+              &.current
+                color: #fff
+                background-color: fw.$orange
+            a
+              &.prev, &.next
+                +fw.positionAbsoluteCTL($top: true)
+                right: 0
+                width: fit-content
+                height: auto
+                font-size: 0.875rem
+                font-weight: 500
+                color: #5A5A5A
+                background-color: unset
+                &::after
+                  +fw.positionAbsoluteCTL($top: true)
+                  +fw.fontAwesome("\f04b", 1rem)
+                  right: 75px
+                  width: 20px
+                  aspect-ratio: 1
+                  font-size: 6.5px
+                  padding: 6.5px 0 0 8px 
+                  color: #fff
+                  background-color: fw.$orange
+                  border-radius: 50%

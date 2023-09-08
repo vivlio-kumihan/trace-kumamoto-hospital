@@ -1,3 +1,47 @@
+// ホーム用
+// swiper
+if (document.querySelector('body.home')) {
+  const mainSwiper = new Swiper(".swiper.main-visual", {
+    loop: true,
+    // スライドの数に対して半分に設定しないと途中ですぐに止まる。
+    slidesPerView: 2.5,
+    breakpoints: {
+      // スライドの表示枚数：500px以上の場合
+      1500: {
+        slidesPerView: 3.5,
+      }
+    },
+    spaceBetween: 10,
+    speed: 9000,
+    allowTouchMove: false, // swipeを無効にする。
+    autoplay: {
+      delay: 0
+      // reverseDirection: true, // 逆方向有効化
+    }
+  });
+  // スライドの動き等速にするCSSの必須設定。JS設定をしたら忘れずに。
+  // .swiper-wrapper {
+  //   transition-timing-function: linear;
+  // }
+
+
+  const vansayplusSwiper = new Swiper('.swiper.vansayplus-slide', {
+    // Optional parameters
+    loop: true,
+    direction: 'horizontal',
+    slidesPerView: 2,
+    spaceBetween: 30,
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
+}
+
+
+
 // 当院からのお知らせ
 // 4つ目以上の記事を非表示にする。
 // const latestInfo = Array.from(document.querySelectorAll('.latest-info .post-archive > li'));
@@ -58,38 +102,32 @@ subMenu.forEach(elem => {
 })
 
 
-// swiper
+// 当院からのお知らせのメニュー
+const menu = document.getElementById('category-menu');
+const menuList = Array.from(menu.children);
 
-// ホーム用
-if (document.querySelector('body.home')) {
-  const mainSwiper = new Swiper(".swiper.main-visual", {
-    loop: true,
-    slidesPerView: 2.5,
-    spaceBetween: 10,
-    speed: 8000,
-    allowTouchMove: false, // swipeを無効にする。
-    autoplay: {
-      delay: 0
-      // reverseDirection: true, // 逆方向有効化
-    }
+menuList.forEach(elem => {
+  elem.addEventListener('click', () => {
+    // すべてのリスト項目から 'active' クラスを削除
+    menuList.forEach(item => {
+      item.classList.remove('active');
+    });
+
+    // クリックされたリスト項目に 'active' クラスを追加
+    elem.classList.add('active');
   });
-  // スライドの動き等速にするCSSの必須設定。JS設定をしたら忘れずに。
-  // .swiper-wrapper {
-  //   transition-timing-function: linear;
-  // }
+});
 
+// // ボタン要素を取得
+// const buttons = document.querySelectorAll('.button');
 
-  const vansayplusSwiper = new Swiper('.swiper.vansayplus-slide', {
-    // Optional parameters
-    loop: true,
-    direction: 'horizontal',
-    slidesPerView: 2,
-    spaceBetween: 30,
-
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-}
+// // 各ボタンにクリックイベントリスナーを追加
+// buttons.forEach(button => {
+//     button.addEventListener('click', () => {
+//         // クリックされたボタンにactiveクラスを追加し、他のボタンからactiveクラスを削除
+//         buttons.forEach(btn => {
+//             btn.classList.remove('active');
+//         });
+//         button.classList.add('active');
+//     });
+// });

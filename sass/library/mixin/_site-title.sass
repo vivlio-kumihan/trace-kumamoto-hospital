@@ -1,5 +1,7 @@
+@use './background-image' as bgi
+
 =site-title
-  background: url(./img/logo_kumamoto.svg) no-repeat center
+  +bgi.background-image("./img/logo_kumamoto.svg", $size: cover, $position: center)
   background-color: #fff
   @content
   span

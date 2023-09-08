@@ -29,8 +29,6 @@
             top: 82px
             visibility: visible
             opacity: 1
-          // + li
-          //   margin-left: 28px
           > a
             display: block
             height: 100%
@@ -67,18 +65,22 @@
               -webkit-transform: translateX(-50%)
               transform: translateX(-50%)
             > li
+              +fw.shrink-line-reverse
+              display: inline-block
               position: relative
-              width: 100%
-              margin: 0
-              padding: 0 0 0 24px
+              margin-left: 25px
+              padding: 0
               &::before
                 +fw.positionAbsoluteCTL($top: true)
                 +fw.fontAwesome("\f061", 13px)
-                left: 0
+                left: -25px
                 color: fw.$black-middle
+                transition: .3s
+              &:hover::before
+                left: -18px
               a
                 display: block
-                padding: 8px
+                padding: 14px 0
                 font-weight: 400
                 letter-spacing: 0.04em
     .sub-menu
@@ -98,12 +100,12 @@
         border-bottom-left-radius: 20px
         border-bottom-right-radius: 20px
         &::before, &::after
+          +fw.background-image("./img/navigation_corner-orange.svg", $size: cover, $position: center)
           position: absolute
           top: 0
           width: 16px
           aspect-ratio: 1
           content: ""
-          background: url(./img/navigation_corner-orange.svg) no-repeat center
           transform: rotate(90deg)
         &::before
           left: -16px

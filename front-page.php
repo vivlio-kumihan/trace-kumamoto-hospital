@@ -8,6 +8,10 @@
         <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_slide-kumamoto02.jpg" alt=""></div>
         <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_slide-kumamoto03.jpg" alt=""></div>
         <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_slide-kumamoto04.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_slide-kumamoto01.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_slide-kumamoto02.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_slide-kumamoto03.jpg" alt=""></div>
+        <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_slide-kumamoto04.jpg" alt=""></div>
       </div>
     </div>
     <div class="frame-divider">
@@ -45,7 +49,7 @@
     <h3>当院からの<br>お知らせ</h3>
     <div class="archive">
       <ul id="category-menu" class="category-menu">
-        <li><a data-category="all" href="">すべて</a></li>
+        <li class="active"><a data-category="all" href="">すべて</a></li>
         <?php
         $categories = get_categories();
         if ($categories) {
