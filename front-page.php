@@ -101,14 +101,14 @@
   </div>
 
   <section class="policy">
-    <div class="graphic-lower">
-      <img class="item left-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
-      <img class="item right-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange2_2.svg" alt="">
-      <img class="item right-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange2_1.svg" alt="">
-    </div>
+    <img class="item left-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
+    <img class="item right-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange2_2.svg" alt="">
+    <img class="item right-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange2_1.svg" alt="">
+    <img class="item left-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
+    <img class="item left-yel-1" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow_left.svg" alt="">
     <dl>
-      <a href="<?php echo home_url('/') ?>">
-        <dt>
+      <dt>
+        <a href="<?php echo home_url('/outpatient') ?>">
           <div class="frame">
             <div class="bgimage outpatient"></div>
           </div>
@@ -119,16 +119,18 @@
           <div class="policy-title">
             <h3><span>01</span>外来</h3>
           </div>
-        </dt>
-        <dd>
+        </a>
+      </dt>
+      <dd>
+        <a href="<?php echo home_url('/outpatient') ?>">
           <p>診療時間・診療担当医・受診手続きについてご覧いただけます。</p>
-          <a class="read-more-link" href="">詳しく見る</a>
-        </dd>
-      </a>
+          <div class="read-more-link hover-area">詳しく見る</div>
+        </a>
+      </dd>
     </dl>
     <dl>
-      <a href="<?php echo home_url('/') ?>">
-        <dt>
+      <dt>
+        <a href="<?php echo home_url('/hospitalization'); ?>">
           <div class="frame">
             <div class="bgimage hospitalization"></div>
           </div>
@@ -139,16 +141,19 @@
           <div class="policy-title">
             <h3><span>02</span>入院</h3>
           </div>
-        </dt>
-        <dd>
+        </a>
+      </dt>
+      <dd>
+        <a href="<?php echo home_url('/hospitalization'); ?>">
           <p>入院手続き・入院中の過ごし方・施設設備についてご覧いただけます。</p>
-          <a class="read-more-link" href="">詳しく見る</a>
-        </dd>
-      </a>
+          <div class="read-more-link hover-area">詳しく見る</div>
+        </a>
+      </dd>
     </dl>
+    </a>
     <dl>
-      <a href="<?php echo home_url('/') ?>">
-        <dt>
+      <dt>
+        <a href="<?php echo home_url('/departments') ?>">
           <div class="frame">
             <div class="bgimage treatment-sct"></div>
           </div>
@@ -159,37 +164,39 @@
           <div class="policy-title">
             <h3><span>03</span>診療科・部門</h3>
           </div>
-        </dt>
-        <dd>
+        </a>
+      </dt>
+      <dd>
+        <a href="<?php echo home_url('/departments') ?>">
           <p>当院の診療部・看護部・事務部についてご覧いただけます。</p>
-          <a class="read-more-link" href="">詳しく見る</a>
-        </dd>
-      </a>
+          <div class="read-more-link hover-area">詳しく見る</div>
+        </a>
+      </dd>
     </dl>
-    <div class="graphic-upper left">
-      <img class="item left-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
-      <img class="item left-yel-1" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow_left.svg" alt="">
-    </div>
   </section>
 
   <section class="information">
     <div class="bg-image"></div>
     <div class="outpatient-care">
-      <div class="wrapper">
+      <div class="wrapper-outpatient-care">
         <div class="wrapper-inner">
           <h3>外来受診のご案内</h3>
           <dl>
             <div>
-              <dt>外来診療日</dt>
+              <dt>
+                <p>外来診療日</p>
+              </dt>
               <dd>
                 <p>月曜日〜金曜<span>（午前・午後）</span></p>
                 <p>休診日：土曜、日曜、祝祭日、年末年始</p>
               </dd>
             </div>
             <div>
-              <dt>受付時間</dt>
+              <dt>
+                <p class="clock-icon">受付時間</p>
+              </dt>
               <dd>
-                <p>8:30-11:30/13:00-16:00</p>
+                <p class="font-size-1dot7-lg">8:30-11:30/13:00-16:00</p>
                 <p class="color-red">診療時間：9:30-12:00 / 13:30-17:00</p>
                 <p class="color-red">金曜日は 14:00- 受付開始</p>
               </dd>
@@ -204,7 +211,7 @@
 
     <div class="about-us">
       <h3>当院について</h3>
-      <div class="wrapper">
+      <div class="wrapper-about-us">
         <a href="/philosophy/">
           <div class="frame-about-us">
             <img src="<?php echo get_template_directory_uri(); ?>/img/_info_01_link_about (1).jpg" alt="">

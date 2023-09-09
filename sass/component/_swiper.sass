@@ -2,6 +2,9 @@
 
 main
   .wrapper
+    position: relative
+    width: 100%
+    height: 93vh
     .swiper.main-visual
       position: absolute
       top: 10px
@@ -13,31 +16,30 @@ main
         .swiper-slide
           img
             width: 100%
-            height: 77vh
+            height: 90vh
             object-fit: cover
             border-radius: 20px
     .frame-divider
       position: absolute
-      top: 350px
+      top: 56%
       left: 0
-      width: 100%
-      height: 30vw
+      width: 100vw
+      // height: 50vh
       overflow: hidden
       z-index: 1
       .divider
         width: 100%
         object-fit: cover
 
-        
-
-
 .vansayplus-posts
   .swiper.vansayplus-slide
-    width: 60vw
+    position: absolute
+    top: -100px
+    left: 350px
+    width: 50vw
     overflow: hidden
-    .swiper-wrapper.post-archive
+    .post-archive.swiper-wrapper
       display: flex
-      justify-content: space-between
       width: 100%
       .swiper-slide
         a
@@ -47,15 +49,18 @@ main
           .frame
             width: 100%
             aspect-ratio: 4/3
+            overflow: hidden
+            border-radius: 20px
             img
-              border-radius: 20px
               width: 100%
               height: 100%
               object-fit: cover
+              transition: .3s
           .wrapper
             display: flex
             align-items: center
             gap: 15px
+            height: auto
             margin-top: 20px
             time
               font-size: 0.8125rem
@@ -73,12 +78,33 @@ main
                 border: 1px solid  rgba(255, 255, 255, 0.3)
                 border-radius: 100px
           .post-title
+            display: inline-block
+            position: relative
             margin-top: 10px
             font-family: fw.$m-rd
             font-size: 1.125rem
             font-weight: 500
             line-height: 1.7
             color: #fff
+            transition: .3s
+            &::after
+              position: absolute
+              bottom: 0
+              left: 0
+              width: 100%
+              height: 1px
+              content: ""
+              background-color: #fff
+              transform: scale(1, 1)
+              transform-origin: nth(right right, 1) top
+              transition: transform .3s
+        &:hover .post-title::after
+          transform: scale(0, 1)
+          transform-origin: nth(right right, 2) top
+        &:hover img
+          scale: 120%
+        // &:hover .post-title
+
 
   .swiper-button-prev, .swiper-button-next
     display: block

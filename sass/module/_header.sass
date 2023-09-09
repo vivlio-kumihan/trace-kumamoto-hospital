@@ -7,7 +7,7 @@
     right: 30px
     display: flex
     flex-direction: column
-    align-items: center
+    align-items: flex-end
     font-family: fw.$m-rd
     font-size: 0.875rem
     font-weight: 500
@@ -19,10 +19,11 @@
       > ul.menu
         display: flex
         align-items: center
-        gap: 28px
-        padding: 0 28px
+        gap: 30px
+        padding: 0 40px
         background-color: #fff
         border-radius: 9999px
+        box-shadow: 0 -5px 15px fw.$black-light
         > li
           position: relative
           &.active > ul.sub-menu
@@ -39,7 +40,6 @@
           > ul.sub-menu
             +fw.positionAbsoluteCTL($left: true)
             top: 100px
-            width: 100%
             display: flex
             flex-direction: column
             align-items: flex-start
@@ -83,8 +83,9 @@
                 padding: 14px 0
                 font-weight: 400
                 letter-spacing: 0.04em
-    .sub-menu
-      z-index: fw.set-index(sub-menu)
+    .lower-menu
+      margin-right: 50px
+      z-index: fw.set-index(lower-menu)
       ul
         display: flex
         justify-content: center

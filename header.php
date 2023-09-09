@@ -24,7 +24,7 @@
         ));
         ?>
       </div>
-      <div class="sub-menu">
+      <div class="lower-menu">
         <?php
         wp_nav_menu(array(
           'theme_location' => 'sub-menu',
