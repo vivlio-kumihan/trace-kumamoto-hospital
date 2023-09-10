@@ -10,6 +10,7 @@
     .upper
       display: flex
       justify-content: space-between
+      padding-right: 80px
       .hospital-address
         .site-title
           +fw.site-title
@@ -25,19 +26,21 @@
       .wrapper
         display: flex
         padding-top: 60px
+        gap: 120px
         .site-map, .group-link
           ul
             li
+              +fw.shrink($padding: 5px, $color: fw.$orange, $start: left, $end: left)
+              margin-left: 30px
               a
                 position: relative
                 display: block
-                padding-left: 30px 
                 font-size: 0.875rem
                 font-weight: 300
                 &::before
                   +fw.positionAbsoluteCTL($top: true)
                   +fw.fontAwesome("\f04b", 1rem)
-                  left: 0
+                  left: -30px
                   width: 20px
                   aspect-ratio: 1
                   font-size: 6.5px
@@ -46,16 +49,21 @@
                   background-color: transparent
                   border: 1px solid fw.$orange
                   border-radius: 50%
+                  transition: .3s
+            li:hover a::before
+              color: #fff
+              background-color: fw.$orange
+              border: transperent
+
         .site-map > ul
           display: grid
           grid-template-columns: repeat(2, 1fr)
           grid-template-rows: repeat(4, 1fr)
-          column-gap: 60px
+          column-gap: 120px
           grid-auto-flow: column
           li
             margin-bottom: 25px
         .group-link
-          margin-left: 70px
           li
             margin-bottom: 25px
             a

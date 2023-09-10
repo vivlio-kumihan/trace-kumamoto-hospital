@@ -1407,6 +1407,7 @@
 .home footer .upper, .news footer .upper, .single footer .upper, .page footer .upper, .archive footer .upper {
   display: flex;
   justify-content: space-between;
+  padding-right: 80px;
 }
 .home footer .upper .hospital-address .site-title, .news footer .upper .hospital-address .site-title, .single footer .upper .hospital-address .site-title, .page footer .upper .hospital-address .site-title, .archive footer .upper .hospital-address .site-title {
   background-image: url(./img/logo_kumamoto.svg);
@@ -1431,11 +1432,32 @@
 .home footer .upper .wrapper, .news footer .upper .wrapper, .single footer .upper .wrapper, .page footer .upper .wrapper, .archive footer .upper .wrapper {
   display: flex;
   padding-top: 60px;
+  gap: 120px;
+}
+.home footer .upper .wrapper .site-map ul li, .home footer .upper .wrapper .group-link ul li, .news footer .upper .wrapper .site-map ul li, .news footer .upper .wrapper .group-link ul li, .single footer .upper .wrapper .site-map ul li, .single footer .upper .wrapper .group-link ul li, .page footer .upper .wrapper .site-map ul li, .page footer .upper .wrapper .group-link ul li, .archive footer .upper .wrapper .site-map ul li, .archive footer .upper .wrapper .group-link ul li {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-bottom: 5px;
+  margin-left: 30px;
+}
+.home footer .upper .wrapper .site-map ul li::before, .home footer .upper .wrapper .group-link ul li::before, .news footer .upper .wrapper .site-map ul li::before, .news footer .upper .wrapper .group-link ul li::before, .single footer .upper .wrapper .site-map ul li::before, .single footer .upper .wrapper .group-link ul li::before, .page footer .upper .wrapper .site-map ul li::before, .page footer .upper .wrapper .group-link ul li::before, .archive footer .upper .wrapper .site-map ul li::before, .archive footer .upper .wrapper .group-link ul li::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  inset: 0;
+  border-bottom: 1px solid #F87700;
+  scale: 0 1;
+  transform-origin: left;
+  transition: scale 0.4s ease-out;
+}
+.home footer .upper .wrapper .site-map ul li:hover::before, .home footer .upper .wrapper .group-link ul li:hover::before, .news footer .upper .wrapper .site-map ul li:hover::before, .news footer .upper .wrapper .group-link ul li:hover::before, .single footer .upper .wrapper .site-map ul li:hover::before, .single footer .upper .wrapper .group-link ul li:hover::before, .page footer .upper .wrapper .site-map ul li:hover::before, .page footer .upper .wrapper .group-link ul li:hover::before, .archive footer .upper .wrapper .site-map ul li:hover::before, .archive footer .upper .wrapper .group-link ul li:hover::before {
+  scale: 1;
+  transform-origin: left;
 }
 .home footer .upper .wrapper .site-map ul li a, .home footer .upper .wrapper .group-link ul li a, .news footer .upper .wrapper .site-map ul li a, .news footer .upper .wrapper .group-link ul li a, .single footer .upper .wrapper .site-map ul li a, .single footer .upper .wrapper .group-link ul li a, .page footer .upper .wrapper .site-map ul li a, .page footer .upper .wrapper .group-link ul li a, .archive footer .upper .wrapper .site-map ul li a, .archive footer .upper .wrapper .group-link ul li a {
   position: relative;
   display: block;
-  padding-left: 30px;
   font-size: 0.875rem;
   font-weight: 300;
 }
@@ -1447,7 +1469,7 @@
   font-size: 1rem;
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
-  left: 0;
+  left: -30px;
   width: 20px;
   aspect-ratio: 1;
   font-size: 6.5px;
@@ -1456,20 +1478,23 @@
   background-color: transparent;
   border: 1px solid #F87700;
   border-radius: 50%;
+  transition: 0.3s;
+}
+.home footer .upper .wrapper .site-map ul li:hover a::before, .home footer .upper .wrapper .group-link ul li:hover a::before, .news footer .upper .wrapper .site-map ul li:hover a::before, .news footer .upper .wrapper .group-link ul li:hover a::before, .single footer .upper .wrapper .site-map ul li:hover a::before, .single footer .upper .wrapper .group-link ul li:hover a::before, .page footer .upper .wrapper .site-map ul li:hover a::before, .page footer .upper .wrapper .group-link ul li:hover a::before, .archive footer .upper .wrapper .site-map ul li:hover a::before, .archive footer .upper .wrapper .group-link ul li:hover a::before {
+  color: #fff;
+  background-color: #F87700;
+  border: transperent;
 }
 .home footer .upper .wrapper .site-map > ul, .news footer .upper .wrapper .site-map > ul, .single footer .upper .wrapper .site-map > ul, .page footer .upper .wrapper .site-map > ul, .archive footer .upper .wrapper .site-map > ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  -moz-column-gap: 60px;
-       column-gap: 60px;
+  -moz-column-gap: 120px;
+       column-gap: 120px;
   grid-auto-flow: column;
 }
 .home footer .upper .wrapper .site-map > ul li, .news footer .upper .wrapper .site-map > ul li, .single footer .upper .wrapper .site-map > ul li, .page footer .upper .wrapper .site-map > ul li, .archive footer .upper .wrapper .site-map > ul li {
   margin-bottom: 25px;
-}
-.home footer .upper .wrapper .group-link, .news footer .upper .wrapper .group-link, .single footer .upper .wrapper .group-link, .page footer .upper .wrapper .group-link, .archive footer .upper .wrapper .group-link {
-  margin-left: 70px;
 }
 .home footer .upper .wrapper .group-link li, .news footer .upper .wrapper .group-link li, .single footer .upper .wrapper .group-link li, .page footer .upper .wrapper .group-link li, .archive footer .upper .wrapper .group-link li {
   margin-bottom: 25px;
