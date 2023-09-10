@@ -96,6 +96,13 @@
     </div>
   </section>
 
+  <section>
+    <div class="shrink l-l">Left Left</div>
+    <div class="shrink r-l">Right Left</div>
+    <div class="shrink l-r">left Right</div>
+    <div class="shrink r-r">Right Right</div>
+  </section>
+  
   <div class="wrapper to-archive">
     <a class="read-more-link" href="/news/">お知らせ一覧を見る</a>
   </div>

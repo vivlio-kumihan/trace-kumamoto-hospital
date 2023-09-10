@@ -112,6 +112,31 @@
         +fw.read-more-link
         +fw.shrink-line
         margin-top: 35px
+    .shrink.r-l
+      +fw.shrink($padding: 5px, $color: red, $start: right, $end: left)
+      font-size: 2rem
+      font-weight: 900
+      margin: 0 auto 20px
+      text-align: center
+    .shrink.l-l
+      +fw.shrink($padding: 5px, $color: red, $start: left, $end: left)
+      font-size: 2rem
+      font-weight: 900
+      margin: 0 auto 20px
+      text-align: center
+    .shrink.l-r
+      +fw.shrink($padding: 5px, $color: red, $start: left, $end: right)
+      font-size: 2rem
+      font-weight: 900
+      margin: 0 auto 20px
+      text-align: center
+    .shrink.r-r
+      +fw.shrink($padding: 5px, $color: red, $start: right, $end: right)
+      font-size: 2rem
+      font-weight: 900
+      margin: 0 auto 20px
+      text-align: center
+
 
     .policy
       display: grid

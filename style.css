@@ -364,6 +364,102 @@
   transform: scale(0, 1);
   transform-origin: right top;
 }
+.home main .shrink.r-l {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-bottom: 5px;
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+.home main .shrink.r-l::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  inset: 0;
+  border-bottom: 1px solid red;
+  scale: 0 1;
+  transform-origin: right;
+  transition: scale 0.4s ease-out;
+}
+.home main .shrink.r-l:hover::before {
+  scale: 1;
+  transform-origin: left;
+}
+.home main .shrink.l-l {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-bottom: 5px;
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+.home main .shrink.l-l::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  inset: 0;
+  border-bottom: 1px solid red;
+  scale: 0 1;
+  transform-origin: left;
+  transition: scale 0.4s ease-out;
+}
+.home main .shrink.l-l:hover::before {
+  scale: 1;
+  transform-origin: left;
+}
+.home main .shrink.l-r {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-bottom: 5px;
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+.home main .shrink.l-r::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  inset: 0;
+  border-bottom: 1px solid red;
+  scale: 0 1;
+  transform-origin: left;
+  transition: scale 0.4s ease-out;
+}
+.home main .shrink.l-r:hover::before {
+  scale: 1;
+  transform-origin: right;
+}
+.home main .shrink.r-r {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-bottom: 5px;
+  font-size: 2rem;
+  font-weight: 900;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+.home main .shrink.r-r::before {
+  display: inline-block;
+  position: absolute;
+  content: "";
+  inset: 0;
+  border-bottom: 1px solid red;
+  scale: 0 1;
+  transform-origin: right;
+  transition: scale 0.4s ease-out;
+}
+.home main .shrink.r-r:hover::before {
+  scale: 1;
+  transform-origin: right;
+}
 .home main .policy {
   display: grid;
   grid-template-columns: repeat(3, 1fr);

@@ -1,0 +1,39 @@
+// オプションの方向の付け方、
+// 言葉と感覚が違うので注意。
+// 起点『左』
+// 左『から』伸びて => 左『へ』縮む
+//   $start: left, $end: left
+
+// 起点『左』
+// 左『から』伸びて => 右『へ』縮む
+//   $start: right, $end: left
+
+// 起点『右』
+// 右『から』伸びて => 右『へ』縮む
+//   $start: left, $end: right
+
+// 起点『右』
+// 右『から』伸びて => 左『へ』縮む
+//   $start: right, $end: right
+
+  
+
+
+  
+=shrink($padding: 5px, $color: #333, $start: right, $end: left )
+  position: relative
+  width: fit-content
+  padding-bottom: $padding
+  @content
+  &::before
+    display: inline-block
+    position: absolute
+    content: ""
+    inset: 0
+    border-bottom: 1px solid $color
+    scale: 0 1
+    transform-origin: $start
+    transition: scale .4s ease-out
+  &:hover::before
+    scale: 1
+    transform-origin: $end
