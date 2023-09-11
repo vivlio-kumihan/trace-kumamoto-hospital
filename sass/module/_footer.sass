@@ -75,14 +75,36 @@
                 +fw.fontAwesome("\f08e", .6rem)
                 right: -20px
                 color: fw.$black-middle
-
+                transition: .5s
+            &:hover a::after
+              color: fw.$orange
               
     .lower
       margin-top: 40px
       color: fw.$black-deep
       font-weight: 100
-      p
+      a
+        display: block
+        position: relative
+        width: fit-content
         margin-bottom: 5px
         font-size: .8rem
+        cursor: pointer
+        transition: .3s
+        &::after
+          position: absolute
+          display: block
+          bottom: -3px
+          left: 0
+          width: 100%
+          height: 1px
+          content: ""
+          background-color: fw.$black-deep
+          transform: scale(1, 1)
+          transform-origin: nth(right right, 1) top
+          transition: transform .3s
+        &:hover::after
+          transform: scale(0, 1)
+          transform-origin: nth(right right, 2) top
       small
         font-size: .75rem

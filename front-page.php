@@ -96,13 +96,6 @@
     </div>
   </section>
 
-  <section>
-    <div class="shrink l-l">Left Left</div>
-    <div class="shrink r-l">Right Left</div>
-    <div class="shrink l-r">left Right</div>
-    <div class="shrink r-r">Right Right</div>
-  </section>
-  
   <div class="wrapper to-archive">
     <a class="read-more-link" href="/news/">お知らせ一覧を見る</a>
   </div>
@@ -183,10 +176,15 @@
   </section>
 
   <section class="information">
-    <div class="bg-image"></div>
+    <div class="bg-image">
+    </div>
     <div class="outpatient-care">
       <div class="wrapper-outpatient-care">
         <div class="wrapper-inner">
+          <img class="left-org" src="<?php echo get_template_directory_uri(); ?>/img/左org.svg"></img>
+          <img class="left-yel" src="<?php echo get_template_directory_uri(); ?>/img/左yel.svg"></img>
+          <img class="right-org" src="<?php echo get_template_directory_uri(); ?>/img/右org.svg"></img>
+          <img class="right-yel" src="<?php echo get_template_directory_uri(); ?>/img/右yel.svg"></img>
           <h3>外来受診のご案内</h3>
           <dl>
             <div>
@@ -325,8 +323,10 @@
               endif; ?>
             </ul>
           </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+          <div class="wrapper-button">
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
         </div>
       </div>
     </div>
@@ -343,8 +343,18 @@
       <div class="wrapper service">
         <h3>関連施設・サービス</h3>
         <ul>
-          <li class="image-koshi-daiiti-hospital">合志第一病院</li>
-          <li class="image-house-division">在宅事業部</li>
+          <li>
+            <div class="frame">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/link_koshi.jpg" alt="">
+            </div>
+            合志第一病院
+          </li>
+          <li>
+            <div class="frame">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/link_zaitaku.jpg" alt="">
+            </div>
+            在宅事業部
+          </li>
         </ul>
       </div>
     </div>

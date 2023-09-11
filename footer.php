@@ -34,7 +34,7 @@
   </div>
 
   <div class="lower">
-    <p>プライバシーポリシー</p>
+    <a href="/privacy-policy">プライバシーポリシー</a>
     <small>© vansay.</small>
   </div>
 </footer>

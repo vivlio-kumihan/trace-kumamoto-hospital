@@ -32,6 +32,11 @@ main
         object-fit: cover
 
 .vansayplus-posts
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
   .swiper.vansayplus-slide
     position: absolute
     top: -100px
@@ -104,29 +109,27 @@ main
         &:hover img
           scale: 120%
         // &:hover .post-title
-
-
-  .swiper-button-prev, .swiper-button-next
-    display: block
+  .wrapper-button
+    display: flex
+    align-items: center
+    gap: 30px
     position: absolute
-    // swiperの元のCSSを無効にする。
-    top: 0 // 記述の必要なし。あえて書いてる。
-    margin: 0
-    /////////////////////////////
-    top: 370px
-    right: 17%
-    width: 50px
-    height: 50px
-    border-radius: 50%
-    background-color: #fff
-    z-index: 100
-    &::before
-      +fw.positionAbsoluteCTL
-      +fw.fontAwesome("\f178", 1rem)
-      color: fw.$orange
-    &::after
-      display: none
-  .swiper-button-prev
-    left: 67%
-    &::before
-      +fw.fontAwesome("\f177", 1rem)
+    top: calc(100% - 70px)
+    right: 100px
+    .swiper-button-prev, .swiper-button-next
+      position: relative
+      margin: 0
+      width: 50px
+      height: 50px
+      border-radius: 50%
+      background-color: #fff
+      z-index: 100
+      &::before
+        +fw.positionAbsoluteCTL
+        +fw.fontAwesome("\f178", 1rem)
+        color: fw.$orange
+      &::after
+        display: none
+    .swiper-button-prev
+      &::before
+        +fw.fontAwesome("\f177", 1rem)

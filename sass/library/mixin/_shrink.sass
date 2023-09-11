@@ -16,16 +16,13 @@
 // 右『から』伸びて => 左『へ』縮む
 //   $start: right, $end: right
 
-  
 
-
-  
 =shrink($padding: 5px, $color: #333, $start: right, $end: left )
   position: relative
   width: fit-content
   padding-bottom: $padding
   @content
-  &::before
+  &::after
     display: inline-block
     position: absolute
     content: ""
@@ -34,6 +31,6 @@
     scale: 0 1
     transform-origin: $start
     transition: scale .4s ease-out
-  &:hover::before
+  &:hover::after
     scale: 1
     transform-origin: $end
