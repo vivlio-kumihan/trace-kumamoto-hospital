@@ -132,3 +132,13 @@ subMenu.forEach(elem => {
 //         button.classList.add('active');
 //     });
 // });
+
+if (document.querySelector('body.archive')) {
+  const ul = document.querySelector('#breadcrumbs ul')
+  if (!ul) {
+    document.querySelector('#breadcrumbs')
+      .insertAdjacentHTML('afterbegin', 
+      '<ul class="page-numbers"><li><span aria-current="page" class="page-numbers current">1</span></li></ul>')
+  }
+}
+

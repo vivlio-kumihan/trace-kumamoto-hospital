@@ -3,21 +3,21 @@
 <main>
   <div class="front">
     <div class="site-title"><span>特定医療法人 萬生会 熊本第一病院</span></div>
-    <h2>お知らせ</h2>
-    <!-- <img class="divider" src="<?php echo get_template_directory_uri(); ?>/img/divider.png" alt=""> -->
+    <h2>hello vansayplus</h2>
+    <h3 class="cat-title"><?php single_cat_title(); ?></h3>
   </div>
 
   <div class="container">
-
-    <div class="category-menu">
+    <div class="category-link-menu">
       <header>記事カテゴリー</header>
-      <ul>
-        <li><a href="#" data-cat-id="all">すべて</a></li>
+      <ul class="sub-menu">
+        <li><a href="/vansayplus/">すべて</a></li>
         <?php
-        $categories = get_categories();
-        if ($categories) {
-          foreach ($categories as $category) {
-            echo '<li><a href="#" data-cat-id="' . $category->term_id . '">' . $category->name . '</a></li>';
+        $taxonomy = 'vansayplus-category'; // タクソノミーの名前を指定
+        $terms = get_terms($taxonomy);
+        if ($terms) {
+          foreach ($terms as $term) {
+            echo '<li><a href="' . get_term_link($term) . '">' . $term->name . '</a></li>';
           }
         }
         ?>
@@ -33,26 +33,29 @@
       $args = array(
         'posts_per_page' => 10,
         'paged' => $recent_page,
-        'taxonomy' => 'media-post-category',
+        'taxonomy' => 'vansayplus-category',
         'term' => $term_slug,
-        'post_type' => 'media-post',
+        'post_type' => 'vansayplus',
       );
-
       $my_query = new WP_Query($args);
-
       if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
       ?>
-          <li>
+          <li class="post-item">
             <a href="<?php the_permalink(); ?>">
-              <time datetime="<?php echo get_the_date("Y-m-d") ?>"><?php echo get_the_date("Y.m.d") ?></time>
-              <ul class="post-category">
-                <?php
-                $terms = get_the_terms(get_the_ID(), 'media-post-category');
-                foreach ($terms as $attr) {
-                  echo '<li>' . $attr->name . '</li>';
-                }
-                ?>
-              </ul>
+              <div class="frame">
+                <?php the_post_thumbnail(); ?>
+              </div>
+              <div class="header-sub">
+                <ul class="post-category">
+                  <?php
+                  $terms = get_the_terms(get_the_ID(), 'vansayplus-category');
+                  foreach ($terms as $attr) {
+                    echo '<li>' . $attr->name . '</li>';
+                  }
+                  ?>
+                </ul>
+                <time datetime="<?php echo get_the_date("Y-m-d") ?>"><?php echo get_the_date("Y.m.d") ?></time>
+              </div>
               <div class="post-title"><?php the_title(); ?></div>
             </a>
           </li>

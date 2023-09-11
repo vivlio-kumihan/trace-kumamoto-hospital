@@ -1121,6 +1121,7 @@
 .news main .container .post-archive > li a .frame, .category main .container .post-archive > li a .frame, .single main .container .post-archive > li a .frame, .archive main .container .post-archive > li a .frame {
   width: 100%;
   overflow: hidden;
+  border-radius: 4px;
 }
 .news main .container .post-archive > li a .frame img, .category main .container .post-archive > li a .frame img, .single main .container .post-archive > li a .frame img, .archive main .container .post-archive > li a .frame img {
   width: 100%;
@@ -1128,7 +1129,6 @@
   aspect-ratio: 2/1.05;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 4px;
   transition: 0.3s;
 }
 .news main .container .post-archive > li a .header-sub, .category main .container .post-archive > li a .header-sub, .single main .container .post-archive > li a .header-sub, .archive main .container .post-archive > li a .header-sub {
