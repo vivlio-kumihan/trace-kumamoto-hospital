@@ -4,12 +4,17 @@ if (document.querySelector('body.home')) {
   const mainSwiper = new Swiper(".swiper.main-visual", {
     loop: true,
     // スライドの数に対して半分に設定しないと途中ですぐに止まる。
-    slidesPerView: 2.5,
+    slidesPerView: 1,
     breakpoints: {
-      // スライドの表示枚数：500px以上の場合
+      750: {
+        slidesPerView: 1.8,
+      },
+      1100: {
+        slidesPerView: 2.2,
+      },
       1500: {
-        slidesPerView: 3.5,
-      }
+        slidesPerView: 2.8,
+      },
     },
     spaceBetween: 10,
     speed: 9000,

@@ -3,35 +3,25 @@
 <main>
   <div class="front">
     <div class="site-title"><span>特定医療法人 萬生会 熊本第一病院</span></div>
-    <h2>お知らせ</h2>
-    <!-- <img class="divider" src="<?php echo get_template_directory_uri(); ?>/img/divider.png" alt=""> -->
+    <h2>Vansay +</h2>
   </div>
 
   <div class="container">
-
-    <div class="section-link-menu">
-
+    <div class="category-link-menu">
       <header>記事カテゴリー</header>
-
-
-
-
-      <h2>どっちがいいのかわからない。とりあえず後回し</h2>
-      <hr>
-      <!-- <ul>
-      <?php
-      $taxonomy = 'vansayplus-category'; // タクソノミーの名前を指定
-      $terms = get_terms($taxonomy);
-
-      if (!empty($terms)) {
-        foreach ($terms as $term) {
-          echo '<a href="' . get_term_link($term) . '">' . $term->name . '</a><br>';
+      <ul class="sub-menu">
+        <?php
+        $taxonomy = 'vansayplus-category'; // タクソノミーの名前を指定
+        $terms = get_terms($taxonomy);
+        if (!empty($terms)) {
+          foreach ($terms as $term) {
+            echo '<li><a href="' . get_term_link($term) . '"></li>' . $term->name . '</a><br>';
+          }
         }
-      }
-      ?>
-    </ul> -->
-
-      <!-- <ul>
+        ?>
+      </ul>
+<!-- 
+      <ul class="post-archive">
         <?php
         $id = $post->ID; // 投稿ID
         $taxonomy = 'vansayplus-category'; // タクソノミースラッグ
