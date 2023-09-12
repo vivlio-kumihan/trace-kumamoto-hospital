@@ -63,7 +63,7 @@
       endif; ?>
     </ul>
 
-    <div class="breadcrumbs">
+    <div id="breadcrumbs" class="breadcrumbs">
       <?php
       $args = array(
         'type' => 'list',

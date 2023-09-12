@@ -329,6 +329,10 @@
           </div>
         </div>
       </div>
+      <img class="fig one" src="<?php echo get_template_directory_uri(); ?>/img/01左orange.svg" alt="">
+      <img class="fig two" src="<?php echo get_template_directory_uri(); ?>/img/02左orange.svg" alt="">
+      <img class="fig three" src="<?php echo get_template_directory_uri(); ?>/img/03左orange.svg" alt="">
+      <img class="fig four" src="<?php echo get_template_directory_uri(); ?>/img/04左yellow.svg" alt="">
     </div>
 
     <div class="another-info">

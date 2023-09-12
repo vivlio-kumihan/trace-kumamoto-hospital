@@ -837,15 +837,21 @@
   color: #F87700;
 }
 .home main .information .vansayplus {
+  position: relative;
   width: 100%;
+  margin-top: 300px;
   padding-left: 80px;
 }
 .home main .information .vansayplus header {
+  position: absolute;
+  top: -300px;
+  left: 80px;
   padding: 100px 0 50px;
   width: 263px;
+  z-index: 10;
 }
 .home main .information .vansayplus header .catch-copy {
-  margin-bottom: 15px;
+  margin-bottom: 40px;
   text-align: center;
   font-size: 0.9rem;
   font-weight: 500;
@@ -932,6 +938,31 @@
   transform: scale(0, 1);
   transform-origin: right top;
 }
+.home main .information .vansayplus .fig {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: scaleX(-1);
+  z-index: 10;
+}
+.home main .information .vansayplus .fig.fig.one {
+  bottom: 30px;
+  left: -30px;
+}
+.home main .information .vansayplus .fig.fig.two {
+  bottom: 188px;
+  left: -133px;
+  width: 200px;
+}
+.home main .information .vansayplus .fig.fig.three {
+  width: 200px;
+  bottom: -20px;
+  left: -58px;
+}
+.home main .information .vansayplus .fig.fig.four {
+  bottom: 75px;
+  left: -60px;
+}
 .home main .information .another-info {
   width: 100%;
   padding: 80px 17.2vw;
@@ -943,7 +974,7 @@
   height: auto;
 }
 .home main .information .another-info .wrapper:last-of-type {
-  margin-top: 60px;
+  margin-top: 40px;
 }
 .home main .information .another-info .wrapper h3 {
   margin-bottom: 24px;
@@ -1009,7 +1040,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding-left: 30px;
+  padding: 25px 0 25px 30px;
 }
 .home main .information .another-info .wrapper.service ul li .frame {
   width: 48px;
@@ -1106,7 +1137,8 @@
   color: #F87700;
 }
 .news main .container .post-archive, .category main .container .post-archive, .single main .container .post-archive, .archive main .container .post-archive {
-  width: 100%;
+  width: min(1600px, 100%);
+  margin: 0 auto;
   padding: 80px 322px 80px 80px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1321,6 +1353,83 @@
   gap: 30px;
 }
 
+.single.single-vansayplus main .front.single {
+  height: 23vw;
+  background-image: none;
+}
+.single.single-vansayplus main .container {
+  margin: 0 322px 0 80px;
+}
+.single.single-vansayplus main .container .post-content .header-sub {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+.single.single-vansayplus main .container .post-content .header-sub .post-category > li {
+  margin-right: 15px;
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #fff;
+  background-color: #F87700;
+  border-radius: 9999px;
+}
+.single.single-vansayplus main .container .post-content .header-sub time {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+.single.single-vansayplus main .container .post-content h2 {
+  margin: 20px 0 30px;
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: #5A5A5A;
+}
+.single.single-vansayplus main .container .post-content p {
+  font-size: 0.875rem;
+  font-weight: 300;
+  line-height: 2.5;
+  letter-spacing: 0.04em;
+}
+.single.single-vansayplus main .container .page-direction {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #5A5A5A;
+  border-top: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
+}
+.single.single-vansayplus main .container .page-direction a, .single.single-vansayplus main .container .page-direction ul li {
+  position: relative;
+}
+.single.single-vansayplus main .container .page-direction a::after, .single.single-vansayplus main .container .page-direction ul li::after {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "\f04b";
+  font-size: 1rem;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  right: 75px;
+  width: 20px;
+  aspect-ratio: 1;
+  font-size: 6.5px;
+  padding: 6.5px 0 0 8px;
+  color: #fff;
+  background-color: #F87700;
+  border-radius: 50%;
+}
+.single.single-vansayplus main .container .page-direction a {
+  display: block;
+  margin-left: 30px;
+  padding: 35px 0;
+}
+.single.single-vansayplus main .container .page-direction ul {
+  display: flex;
+  gap: 30px;
+}
+
 .page .section-link-menu {
   position: fixed;
   top: 280px;
@@ -1435,34 +1544,18 @@
   padding-top: 60px;
   gap: 120px;
 }
-.home footer .upper .wrapper .site-map ul li, .home footer .upper .wrapper .group-link ul li, .news footer .upper .wrapper .site-map ul li, .news footer .upper .wrapper .group-link ul li, .single footer .upper .wrapper .site-map ul li, .single footer .upper .wrapper .group-link ul li, .page footer .upper .wrapper .site-map ul li, .page footer .upper .wrapper .group-link ul li, .archive footer .upper .wrapper .site-map ul li, .archive footer .upper .wrapper .group-link ul li {
-  position: relative;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding-bottom: 5px;
+.home footer .upper .wrapper .site-map ul li, .home footer .upper .wrapper .group-link.footerz ul li, .news footer .upper .wrapper .site-map ul li, .news footer .upper .wrapper .group-link.footerz ul li, .single footer .upper .wrapper .site-map ul li, .single footer .upper .wrapper .group-link.footerz ul li, .page footer .upper .wrapper .site-map ul li, .page footer .upper .wrapper .group-link.footerz ul li, .archive footer .upper .wrapper .site-map ul li, .archive footer .upper .wrapper .group-link.footerz ul li {
   margin-left: 30px;
 }
-.home footer .upper .wrapper .site-map ul li::after, .home footer .upper .wrapper .group-link ul li::after, .news footer .upper .wrapper .site-map ul li::after, .news footer .upper .wrapper .group-link ul li::after, .single footer .upper .wrapper .site-map ul li::after, .single footer .upper .wrapper .group-link ul li::after, .page footer .upper .wrapper .site-map ul li::after, .page footer .upper .wrapper .group-link ul li::after, .archive footer .upper .wrapper .site-map ul li::after, .archive footer .upper .wrapper .group-link ul li::after {
-  display: inline-block;
-  position: absolute;
-  content: "";
-  inset: 0;
-  border-bottom: 1px solid #F87700;
-  scale: 0 1;
-  transform-origin: left;
-  transition: scale 0.4s ease-out;
-}
-.home footer .upper .wrapper .site-map ul li:hover::after, .home footer .upper .wrapper .group-link ul li:hover::after, .news footer .upper .wrapper .site-map ul li:hover::after, .news footer .upper .wrapper .group-link ul li:hover::after, .single footer .upper .wrapper .site-map ul li:hover::after, .single footer .upper .wrapper .group-link ul li:hover::after, .page footer .upper .wrapper .site-map ul li:hover::after, .page footer .upper .wrapper .group-link ul li:hover::after, .archive footer .upper .wrapper .site-map ul li:hover::after, .archive footer .upper .wrapper .group-link ul li:hover::after {
-  scale: 1;
-  transform-origin: left;
-}
-.home footer .upper .wrapper .site-map ul li a, .home footer .upper .wrapper .group-link ul li a, .news footer .upper .wrapper .site-map ul li a, .news footer .upper .wrapper .group-link ul li a, .single footer .upper .wrapper .site-map ul li a, .single footer .upper .wrapper .group-link ul li a, .page footer .upper .wrapper .site-map ul li a, .page footer .upper .wrapper .group-link ul li a, .archive footer .upper .wrapper .site-map ul li a, .archive footer .upper .wrapper .group-link ul li a {
+.home footer .upper .wrapper .site-map ul li a, .home footer .upper .wrapper .group-link.footerz ul li a, .news footer .upper .wrapper .site-map ul li a, .news footer .upper .wrapper .group-link.footerz ul li a, .single footer .upper .wrapper .site-map ul li a, .single footer .upper .wrapper .group-link.footerz ul li a, .page footer .upper .wrapper .site-map ul li a, .page footer .upper .wrapper .group-link.footerz ul li a, .archive footer .upper .wrapper .site-map ul li a, .archive footer .upper .wrapper .group-link.footerz ul li a {
   position: relative;
   display: block;
+  width: -moz-fit-content;
+  width: fit-content;
   font-size: 0.875rem;
   font-weight: 300;
 }
-.home footer .upper .wrapper .site-map ul li a::before, .home footer .upper .wrapper .group-link ul li a::before, .news footer .upper .wrapper .site-map ul li a::before, .news footer .upper .wrapper .group-link ul li a::before, .single footer .upper .wrapper .site-map ul li a::before, .single footer .upper .wrapper .group-link ul li a::before, .page footer .upper .wrapper .site-map ul li a::before, .page footer .upper .wrapper .group-link ul li a::before, .archive footer .upper .wrapper .site-map ul li a::before, .archive footer .upper .wrapper .group-link ul li a::before {
+.home footer .upper .wrapper .site-map ul li a::before, .home footer .upper .wrapper .group-link.footerz ul li a::before, .news footer .upper .wrapper .site-map ul li a::before, .news footer .upper .wrapper .group-link.footerz ul li a::before, .single footer .upper .wrapper .site-map ul li a::before, .single footer .upper .wrapper .group-link.footerz ul li a::before, .page footer .upper .wrapper .site-map ul li a::before, .page footer .upper .wrapper .group-link.footerz ul li a::before, .archive footer .upper .wrapper .site-map ul li a::before, .archive footer .upper .wrapper .group-link.footerz ul li a::before {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -1481,10 +1574,33 @@
   border-radius: 50%;
   transition: 0.3s;
 }
-.home footer .upper .wrapper .site-map ul li:hover a::before, .home footer .upper .wrapper .group-link ul li:hover a::before, .news footer .upper .wrapper .site-map ul li:hover a::before, .news footer .upper .wrapper .group-link ul li:hover a::before, .single footer .upper .wrapper .site-map ul li:hover a::before, .single footer .upper .wrapper .group-link ul li:hover a::before, .page footer .upper .wrapper .site-map ul li:hover a::before, .page footer .upper .wrapper .group-link ul li:hover a::before, .archive footer .upper .wrapper .site-map ul li:hover a::before, .archive footer .upper .wrapper .group-link ul li:hover a::before {
+.home footer .upper .wrapper .site-map ul li a::after, .home footer .upper .wrapper .group-link.footerz ul li a::after, .news footer .upper .wrapper .site-map ul li a::after, .news footer .upper .wrapper .group-link.footerz ul li a::after, .single footer .upper .wrapper .site-map ul li a::after, .single footer .upper .wrapper .group-link.footerz ul li a::after, .page footer .upper .wrapper .site-map ul li a::after, .page footer .upper .wrapper .group-link.footerz ul li a::after, .archive footer .upper .wrapper .site-map ul li a::after, .archive footer .upper .wrapper .group-link.footerz ul li a::after {
+  position: absolute;
+  display: block;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  content: "";
+  background-color: #F87700;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform 0.3s;
+}
+.home footer .upper .wrapper .site-map ul li a:hover, .home footer .upper .wrapper .group-link.footerz ul li a:hover, .news footer .upper .wrapper .site-map ul li a:hover, .news footer .upper .wrapper .group-link.footerz ul li a:hover, .single footer .upper .wrapper .site-map ul li a:hover, .single footer .upper .wrapper .group-link.footerz ul li a:hover, .page footer .upper .wrapper .site-map ul li a:hover, .page footer .upper .wrapper .group-link.footerz ul li a:hover, .archive footer .upper .wrapper .site-map ul li a:hover, .archive footer .upper .wrapper .group-link.footerz ul li a:hover {
+  color: #F87700;
+}
+.home footer .upper .wrapper .site-map ul li a:hover::after, .home footer .upper .wrapper .group-link.footerz ul li a:hover::after, .news footer .upper .wrapper .site-map ul li a:hover::after, .news footer .upper .wrapper .group-link.footerz ul li a:hover::after, .single footer .upper .wrapper .site-map ul li a:hover::after, .single footer .upper .wrapper .group-link.footerz ul li a:hover::after, .page footer .upper .wrapper .site-map ul li a:hover::after, .page footer .upper .wrapper .group-link.footerz ul li a:hover::after, .archive footer .upper .wrapper .site-map ul li a:hover::after, .archive footer .upper .wrapper .group-link.footerz ul li a:hover::after {
+  transform: scale(1, 1);
+  transform-origin: left top;
+}
+.home footer .upper .wrapper .site-map ul li:hover a::before, .home footer .upper .wrapper .group-link.footerz ul li:hover a::before, .news footer .upper .wrapper .site-map ul li:hover a::before, .news footer .upper .wrapper .group-link.footerz ul li:hover a::before, .single footer .upper .wrapper .site-map ul li:hover a::before, .single footer .upper .wrapper .group-link.footerz ul li:hover a::before, .page footer .upper .wrapper .site-map ul li:hover a::before, .page footer .upper .wrapper .group-link.footerz ul li:hover a::before, .archive footer .upper .wrapper .site-map ul li:hover a::before, .archive footer .upper .wrapper .group-link.footerz ul li:hover a::before {
   color: #fff;
   background-color: #F87700;
   border: transperent;
+}
+.home footer .upper .wrapper .group-link.footerz ul li a::after, .news footer .upper .wrapper .group-link.footerz ul li a::after, .single footer .upper .wrapper .group-link.footerz ul li a::after, .page footer .upper .wrapper .group-link.footerz ul li a::after, .archive footer .upper .wrapper .group-link.footerz ul li a::after {
+  bottom: 0;
 }
 .home footer .upper .wrapper .site-map > ul, .news footer .upper .wrapper .site-map > ul, .single footer .upper .wrapper .site-map > ul, .page footer .upper .wrapper .site-map > ul, .archive footer .upper .wrapper .site-map > ul {
   display: grid;
@@ -1891,7 +2007,7 @@ main .wrapper .frame-divider .divider {
   width: 150px;
 }
 
-.page main .front, .category main .front, .single main .front {
+.page main .front, .category main .front, .single main .front, .category.archive main .front {
   background-image: url(./img/bg_hero01.jpg);
   background-size: cover;
   background-position: bottom;
@@ -1900,24 +2016,25 @@ main .wrapper .frame-divider .divider {
   width: 100%;
   height: 40vw;
 }
-.page main .front .site-title, .category main .front .site-title, .single main .front .site-title {
+.page main .front .site-title, .category main .front .site-title, .single main .front .site-title, .category.archive main .front .site-title {
   background-image: url(./img/logo_kumamoto.svg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #fff;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 80px;
   width: 150px;
   height: 160px;
-  margin-left: 80px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   background-size: 85%;
 }
-.page main .front .site-title span, .category main .front .site-title span, .single main .front .site-title span {
+.page main .front .site-title span, .category main .front .site-title span, .single main .front .site-title span, .category.archive main .front .site-title span {
   display: none;
 }
-.page main .front .site-title::before, .page main .front .site-title::after, .category main .front .site-title::before, .category main .front .site-title::after, .single main .front .site-title::before, .single main .front .site-title::after {
+.page main .front .site-title::before, .page main .front .site-title::after, .category main .front .site-title::before, .category main .front .site-title::after, .single main .front .site-title::before, .single main .front .site-title::after, .category.archive main .front .site-title::before, .category.archive main .front .site-title::after {
   display: inline-block;
   position: absolute;
   top: 0px;
@@ -1929,14 +2046,14 @@ main .wrapper .frame-divider .divider {
   background-position: bottom;
   background-repeat: no-repeat;
 }
-.page main .front .site-title::before, .category main .front .site-title::before, .single main .front .site-title::before {
+.page main .front .site-title::before, .category main .front .site-title::before, .single main .front .site-title::before, .category.archive main .front .site-title::before {
   left: -10px;
   transform: rotate(90deg);
 }
-.page main .front .site-title::after, .category main .front .site-title::after, .single main .front .site-title::after {
+.page main .front .site-title::after, .category main .front .site-title::after, .single main .front .site-title::after, .category.archive main .front .site-title::after {
   right: -10px;
 }
-.page main .front h2, .category main .front h2, .single main .front h2 {
+.page main .front h2, .category main .front h2, .single main .front h2, .category.archive main .front h2 {
   position: absolute;
   top: 20.5vw;
   left: 84px;
@@ -1947,35 +2064,108 @@ main .wrapper .frame-divider .divider {
   color: #fff;
 }
 
-.archive main .front {
+.category.archive.category-patient-common main .front .page-title, .category.archive.category-recruit main .front .page-title, .category.archive.category-documents main .front .page-title {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.3s;
+  position: relative;
+  width: fit-content;
+  transition: 0.3s;
+  position: absolute;
+  top: 280px;
+  left: 84px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  color: #fff;
+}
+.category.archive.category-patient-common main .front .page-title:hover, .category.archive.category-recruit main .front .page-title:hover, .category.archive.category-documents main .front .page-title:hover {
+  color: #F87700;
+}
+.category.archive.category-patient-common main .front .page-title::after, .category.archive.category-recruit main .front .page-title::after, .category.archive.category-documents main .front .page-title::after {
+  position: absolute;
+  display: block;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  content: "";
+  background-color: #333;
+  transform: scale(1, 1);
+  transform-origin: right top;
+  transition: transform 0.3s;
+}
+.category.archive.category-patient-common main .front .page-title:hover::after, .category.archive.category-recruit main .front .page-title:hover::after, .category.archive.category-documents main .front .page-title:hover::after {
+  transform: scale(0, 1);
+  transform-origin: right top;
+}
+.category.archive.category-patient-common main .front .page-title:hover, .category.archive.category-recruit main .front .page-title:hover, .category.archive.category-documents main .front .page-title:hover {
+  color: #fff;
+}
+.category.archive.category-patient-common main .front .page-title::after, .category.archive.category-recruit main .front .page-title::after, .category.archive.category-documents main .front .page-title::after {
+  position: absolute;
+  display: block;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  content: "";
+  background-color: #fff;
+  transform: scale(1, 1);
+  transform-origin: right top;
+  transition: transform 0.3s;
+}
+.category.archive.category-patient-common main .front .page-title:hover::after, .category.archive.category-recruit main .front .page-title:hover::after, .category.archive.category-documents main .front .page-title:hover::after {
+  transform: scale(0, 1);
+  transform-origin: right top;
+}
+.category.archive.category-patient-common main .front .cat-title, .category.archive.category-recruit main .front .cat-title, .category.archive.category-documents main .front .cat-title {
+  position: absolute;
+  top: 330px;
+  left: 84px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+  font-size: 3.375rem;
+  font-weight: 700;
+  letter-spacing: 0.025em;
+  color: #fff;
+}
+
+.post-type-archive-vansayplus main .front {
   background-image: url(./img/mask_hero.svg);
-  background-size: cover;
-  background-position: bottom;
+  background-size: 103%;
+  background-position: top;
   background-repeat: no-repeat;
-  background-color: #F87700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: relative;
   width: 100%;
-  height: 40vw;
+  height: 510px;
+  background-color: #F87700;
   opacity: 0.8;
 }
-.archive main .front .site-title {
+.post-type-archive-vansayplus main .front .site-title {
   background-image: url(./img/logo_kumamoto.svg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #fff;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: 80px;
   width: 150px;
   height: 160px;
-  margin-left: 80px;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   background-size: 85%;
 }
-.archive main .front .site-title span {
+.post-type-archive-vansayplus main .front .site-title span {
   display: none;
 }
-.archive main .front .site-title::before, .archive main .front .site-title::after {
+.post-type-archive-vansayplus main .front .site-title::before, .post-type-archive-vansayplus main .front .site-title::after {
   display: inline-block;
   position: absolute;
   top: 0px;
@@ -1987,20 +2177,18 @@ main .wrapper .frame-divider .divider {
   background-position: bottom;
   background-repeat: no-repeat;
 }
-.archive main .front .site-title::before {
+.post-type-archive-vansayplus main .front .site-title::before {
   left: -10px;
   transform: rotate(90deg);
 }
-.archive main .front .site-title::after {
+.post-type-archive-vansayplus main .front .site-title::after {
   right: -10px;
 }
-.archive main .front h2 {
-  position: absolute;
-  top: 20.5vw;
-  left: 84px;
-  font-family: "M PLUS Rounded 1c", sans-serif;
-  font-size: 3.375rem;
-  font-weight: 700;
-  letter-spacing: 0.025em;
+.post-type-archive-vansayplus main .front .catch-copy {
+  margin-bottom: 15px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.6;
+  text-align: center;
   color: #fff;
 }/*# sourceMappingURL=style.css.map */

@@ -18,23 +18,23 @@ $right_left: left right
 // 中央へ縮み、中央から広がる
 $center: center center
 
-=shrink-line($direction: right right)
+=shrink-line($direction: right right, $gap: -5px, $line-color: #333, $hover-color: var.$color-hover-link)
   position: relative
   width: fit-content
   transition: .3s
   @content
   &:hover
-    color: var.$color-hover-link
+    color: $hover-color
     @content
   &::after
     position: absolute
     display: block
-    bottom: -5px
+    bottom: $gap
     left: 0
     width: 100%
     height: 1px
     content: ""
-    background-color: #333
+    background-color: $line-color
     transform: scale(1, 1)
     transform-origin: nth($direction, 1) top
     transition: transform .3s

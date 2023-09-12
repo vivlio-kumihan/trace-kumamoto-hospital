@@ -1,6 +1,6 @@
 @use "../forwards" as fw
 
-.page, .category, .single
+.page, .category, .single, .category.archive
   main
     .front
       +fw.background-image("./img/bg_hero01.jpg", $size: cover, $position: bottom)
@@ -9,10 +9,11 @@
       height: 40vw
       .site-title
         +fw.site-title
-        position: relative
+        position: absolute
+        top: 0
+        left: 80px
         width: 150px
         height: 160px
-        margin-left: 80px
         border-bottom-left-radius: 10px
         border-bottom-right-radius: 10px 
         background-size: 85%
@@ -38,3 +39,28 @@
         font-weight: 700
         letter-spacing: 0.025em
         color: #fff
+
+.category.archive.category-patient-common, .category.archive.category-recruit, .category.archive.category-documents
+  main
+    .front
+      .page-title
+        +fw.shrink-line
+        +fw.shrink-line($direction: right right, $gap: -1px, $line-color: #fff, $hover-color: #fff)
+        position: absolute
+        top: 280px
+        left: 84px
+        font-family: fw.$m-rd
+        font-size: 1.35rem
+        font-weight: 700
+        letter-spacing: 0.025em
+        color: #fff
+      .cat-title
+        position: absolute
+        top: 330px
+        left: 84px
+        font-family: fw.$m-rd
+        font-size: 3.375rem
+        font-weight: 700
+        letter-spacing: 0.025em
+        color: #fff
+

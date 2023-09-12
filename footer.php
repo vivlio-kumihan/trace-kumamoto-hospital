@@ -21,7 +21,7 @@
         ?>
       </div>
 
-      <div class="group-link">
+      <div class="group-link footerz">
         <h2>萬生会グループリンク</h2>
         <ul>
           <li><a href="/vansay-top">萬生会総合トップ</a></li>
@@ -42,3 +42,28 @@
 </body>
 
 </html>
+
+
+
+<header>
+  <div class="menu-wrapper">
+    <div class="global-menu">
+      <?php
+      wp_nav_menu(array(
+        'theme_location' => 'global-menu',
+        'container'      => '',
+        'depth'          => 2,
+      ));
+      ?>
+    </div>
+    <div class="lower-menu">
+      <?php
+      wp_nav_menu(array(
+        'theme_location' => 'sub-menu',
+        'container'      => '',
+        'depth'          => 2,
+      ));
+      ?>
+    </div>
+  </div>
+</header>

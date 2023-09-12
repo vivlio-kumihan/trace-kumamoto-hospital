@@ -459,17 +459,27 @@
             &:hover dl::after
               color: fw.$orange
       .vansayplus
+        position: relative
         width: 100%
+        margin-top: 300px
         padding-left: 80px
+
         header
+          position: absolute
+          top: -300px
+          left: 80px
           padding: 100px 0 50px
           width: 263px
+          z-index: 10
           .catch-copy
-            margin-bottom: 15px
+            margin-bottom: 40px
             text-align: center
             font-size: .9rem
             font-weight: 500
             line-height: 1.5
+          // .vansay-logo
+          //   display: block
+
         .content
           position: relative
           height: 350px
@@ -505,6 +515,26 @@
                 right: 80px
                 top: -150px
 
+        .fig
+          position: absolute
+          bottom: 0
+          left: 0
+          transform: scaleX(-1)
+          z-index: 10
+          &.fig.one
+            bottom: 30px
+            left: -30px
+          &.fig.two
+            bottom: 188px
+            left: -133px
+            width: 200px
+          &.fig.three
+            width: 200px
+            bottom: -20px
+            left: -58px
+          &.fig.four
+            bottom: 75px
+            left: -60px
       .another-info
         width: 100%
         padding: 80px 17.2vw
@@ -514,7 +544,7 @@
           width: 100%
           height: auto
           &:last-of-type
-            margin-top: 60px
+            margin-top: 40px
           h3
             margin-bottom: 24px
             font-family: fw.$m-rd
@@ -566,7 +596,7 @@
               display: flex
               justify-content: flex-start
               align-items: center
-              padding-left: 30px
+              padding: 25px 0 25px 30px
               .frame
                 width: 48px
                 margin-right: 15px
