@@ -32,9 +32,9 @@ if (document.querySelector('body.home')) {
   const vansayplusSwiper = new Swiper('.swiper.vansayplus-slide', {
     // Optional parameters
     loop: true,
-    direction: 'horizontal',
-    slidesPerView: 2,
+    slidesPerView: 2.8,
     spaceBetween: 30,
+    // loopAdditionalSlides: 2,
 
     // Navigation arrows
     navigation: {
@@ -108,9 +108,9 @@ if (document.querySelector('body.home')) {
 
 // グローバル・メニューのサブ・メニュー出現
 const subMenu = Array.from(document.querySelectorAll('.global-menu > ul > li'));
-
 subMenu.forEach(elem => {
   elem.addEventListener('mouseenter', function() {
+    console.log("hello")
     this.classList.add('active');
   });
   elem.addEventListener('mouseleave', function() {

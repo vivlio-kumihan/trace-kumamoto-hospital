@@ -2,7 +2,7 @@
 
 <main>
   <div class="front single">
-    <div class="site-title"><span>特定医療法人 萬生会 熊本第一病院</span></div>
+    <div class="site-title"><a href="<?php echo home_url('/') ?>"><span>特定医療法人 萬生会 熊本第一病院</span></a></div>
   </div>
 
   <div class="container">
@@ -34,8 +34,8 @@
         <time datetime="<?php echo get_the_date("Y-m-d") ?>"><?php echo get_the_date("Y年m月d日") ?></time>
       </div>
       <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <h2><?php the_title(); ?></h2>
-        <p><?php echo the_content(); ?></p>
+          <h2><?php the_title(); ?></h2>
+          <p><?php echo the_content(); ?></p>
       <?php endwhile;
       endif; ?>
 

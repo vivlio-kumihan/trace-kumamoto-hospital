@@ -2,9 +2,11 @@
 
 <main>
   <div class="front">
-    <div class="site-title"><span>特定医療法人 萬生会 熊本第一病院</span></div>
-    <h2>hello vansayplus</h2>
-    <h3 class="cat-title"><?php single_cat_title(); ?></h3>
+    <div class="site-title"><a href="<?php echo home_url('/') ?>"><span>特定医療法人 萬生会 熊本第一病院</span></a></div>
+    <div class="catch-copy">萬生会グループがお届けする<br>健康情報メディア</div>
+    <img class="title-logo" src="<?php echo get_template_directory_uri(); ?>/img/logo_vansay-white.svg" alt="vansay-plusのロゴ">
+    <!-- <h2>hello vansayplushellohelloehllo</h2>
+    <h3 class="cat-title"><?php single_cat_title(); ?></h3> -->
   </div>
 
   <div class="container">

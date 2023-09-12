@@ -289,7 +289,7 @@
         <div class="vansayplus-posts">
           <a class="read-more-link" href="<?php echo home_url('/vansayplus') ?>">記事一覧を見る</a>
           <div class="swiper vansayplus-slide">
-            <ul class="post-archive swiper-wrapper">
+            <div class="post-archive swiper-wrapper">
               <?php
               $recent_page = get_query_var('paged') ? get_query_var('paged') : 1;
               $args = array(
@@ -300,7 +300,7 @@
               $my_query = new WP_Query($args);
               if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
               ?>
-                  <li class="swiper-slide">
+                  <div class="swiper-slide">
                     <a href="<?php the_permalink(); ?>">
                       <div class="frame">
                         <?php the_post_thumbnail(); ?>
@@ -318,10 +318,10 @@
                       </div>
                       <div class="post-title"><?php the_title(); ?></div>
                     </a>
-                  </li>
+                  </div>
               <?php endwhile;
               endif; ?>
-            </ul>
+            </div>
           </div>
           <div class="wrapper-button">
             <div class="swiper-button-prev"></div>

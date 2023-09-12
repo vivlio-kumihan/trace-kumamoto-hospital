@@ -2,7 +2,7 @@
 
 <main>
   <div class="front single">
-    <div class="site-title"><span>特定医療法人 萬生会 熊本第一病院</span></div>
+    <div class="site-title"><a href="<?php echo home_url('/') ?>"><span>特定医療法人 萬生会 熊本第一病院</span></a></div>
   </div>
 
   <div class="container">

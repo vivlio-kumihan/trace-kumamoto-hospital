@@ -44,7 +44,7 @@
                   width: 20px
                   aspect-ratio: 1
                   font-size: 6.5px
-                  padding: 5px 0 0 7px 
+                  padding: 4px 0 0 6px 
                   color: fw.$orange
                   background-color: transparent
                   border: 1px solid fw.$orange
@@ -71,8 +71,6 @@
               color: #fff
               background-color: fw.$orange
               border: transperent  
-        .group-link.footerz ul li a::after
-          bottom: 0
 
         .site-map > ul
           display: grid
@@ -90,7 +88,6 @@
               position: relative
               width: fit-content
               &::after
-                +fw.positionAbsoluteCTL($top: true)
                 +fw.fontAwesome("\f08e", .6rem)
                 right: -20px
                 color: fw.$black-middle

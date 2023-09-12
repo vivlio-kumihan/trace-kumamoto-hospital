@@ -859,15 +859,16 @@
 }
 .home main .information .vansayplus .content {
   position: relative;
-  height: 350px;
-  padding: 50px;
   background-color: #F87700;
   border-radius: 30px 0 0 30px;
-  padding: 48px 0 32px 56px;
+  padding: 0 0 32px 56px;
   margin: 48px 0 0;
 }
 .home main .information .vansayplus .content .lead-copy {
-  width: 206px;
+  position: absolute;
+  top: 48px;
+  left: 56px;
+  width: 20%;
   font-size: 0.875rem;
   font-weight: 300;
   line-height: 1.8;
@@ -1567,7 +1568,7 @@
   width: 20px;
   aspect-ratio: 1;
   font-size: 6.5px;
-  padding: 5px 0 0 7px;
+  padding: 4px 0 0 6px;
   color: #F87700;
   background-color: transparent;
   border: 1px solid #F87700;
@@ -1599,9 +1600,6 @@
   background-color: #F87700;
   border: transperent;
 }
-.home footer .upper .wrapper .group-link.footerz ul li a::after, .news footer .upper .wrapper .group-link.footerz ul li a::after, .single footer .upper .wrapper .group-link.footerz ul li a::after, .page footer .upper .wrapper .group-link.footerz ul li a::after, .archive footer .upper .wrapper .group-link.footerz ul li a::after {
-  bottom: 0;
-}
 .home footer .upper .wrapper .site-map > ul, .news footer .upper .wrapper .site-map > ul, .single footer .upper .wrapper .site-map > ul, .page footer .upper .wrapper .site-map > ul, .archive footer .upper .wrapper .site-map > ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1623,9 +1621,6 @@
   width: fit-content;
 }
 .home footer .upper .wrapper .group-link li a::after, .news footer .upper .wrapper .group-link li a::after, .single footer .upper .wrapper .group-link li a::after, .page footer .upper .wrapper .group-link li a::after, .archive footer .upper .wrapper .group-link li a::after {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
   content: "\f08e";
   font-size: 0.6rem;
   font-family: "Font Awesome 6 Free";
@@ -1714,19 +1709,12 @@ main .wrapper .frame-divider .divider {
   }
 }
 
-.vansayplus-posts {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
 .vansayplus-posts .swiper.vansayplus-slide {
-  position: absolute;
-  top: -100px;
-  left: 350px;
-  width: 50vw;
+  width: 70%;
+  margin-right: 0;
+  margin-left: auto;
   overflow: hidden;
+  translate: 0 -20%;
 }
 .vansayplus-posts .swiper.vansayplus-slide .post-archive.swiper-wrapper {
   display: flex;
@@ -2016,7 +2004,10 @@ main .wrapper .frame-divider .divider {
   width: 100%;
   height: 40vw;
 }
-.page main .front .site-title, .category main .front .site-title, .single main .front .site-title, .category.archive main .front .site-title {
+.page main .front .site-title a, .category main .front .site-title a, .single main .front .site-title a, .category.archive main .front .site-title a {
+  display: block;
+  width: 100%;
+  height: 100%;
   background-image: url(./img/logo_kumamoto.svg);
   background-size: cover;
   background-position: center;
@@ -2031,10 +2022,10 @@ main .wrapper .frame-divider .divider {
   border-bottom-right-radius: 10px;
   background-size: 85%;
 }
-.page main .front .site-title span, .category main .front .site-title span, .single main .front .site-title span, .category.archive main .front .site-title span {
+.page main .front .site-title a span, .category main .front .site-title a span, .single main .front .site-title a span, .category.archive main .front .site-title a span {
   display: none;
 }
-.page main .front .site-title::before, .page main .front .site-title::after, .category main .front .site-title::before, .category main .front .site-title::after, .single main .front .site-title::before, .single main .front .site-title::after, .category.archive main .front .site-title::before, .category.archive main .front .site-title::after {
+.page main .front .site-title a::before, .page main .front .site-title a::after, .category main .front .site-title a::before, .category main .front .site-title a::after, .single main .front .site-title a::before, .single main .front .site-title a::after, .category.archive main .front .site-title a::before, .category.archive main .front .site-title a::after {
   display: inline-block;
   position: absolute;
   top: 0px;
@@ -2046,11 +2037,11 @@ main .wrapper .frame-divider .divider {
   background-position: bottom;
   background-repeat: no-repeat;
 }
-.page main .front .site-title::before, .category main .front .site-title::before, .single main .front .site-title::before, .category.archive main .front .site-title::before {
+.page main .front .site-title a::before, .category main .front .site-title a::before, .single main .front .site-title a::before, .category.archive main .front .site-title a::before {
   left: -10px;
   transform: rotate(90deg);
 }
-.page main .front .site-title::after, .category main .front .site-title::after, .single main .front .site-title::after, .category.archive main .front .site-title::after {
+.page main .front .site-title a::after, .category main .front .site-title a::after, .single main .front .site-title a::after, .category.archive main .front .site-title a::after {
   right: -10px;
 }
 .page main .front h2, .category main .front h2, .single main .front h2, .category.archive main .front h2 {
@@ -2132,7 +2123,7 @@ main .wrapper .frame-divider .divider {
   color: #fff;
 }
 
-.post-type-archive-vansayplus main .front {
+.post-type-archive-vansayplus main .front, .tax-vansayplus-category main .front {
   background-image: url(./img/mask_hero.svg);
   background-size: 103%;
   background-position: top;
@@ -2147,7 +2138,7 @@ main .wrapper .frame-divider .divider {
   background-color: #F87700;
   opacity: 0.8;
 }
-.post-type-archive-vansayplus main .front .site-title {
+.post-type-archive-vansayplus main .front .site-title, .tax-vansayplus-category main .front .site-title {
   background-image: url(./img/logo_kumamoto.svg);
   background-size: cover;
   background-position: center;
@@ -2162,10 +2153,10 @@ main .wrapper .frame-divider .divider {
   border-bottom-right-radius: 10px;
   background-size: 85%;
 }
-.post-type-archive-vansayplus main .front .site-title span {
+.post-type-archive-vansayplus main .front .site-title span, .tax-vansayplus-category main .front .site-title span {
   display: none;
 }
-.post-type-archive-vansayplus main .front .site-title::before, .post-type-archive-vansayplus main .front .site-title::after {
+.post-type-archive-vansayplus main .front .site-title::before, .post-type-archive-vansayplus main .front .site-title::after, .tax-vansayplus-category main .front .site-title::before, .tax-vansayplus-category main .front .site-title::after {
   display: inline-block;
   position: absolute;
   top: 0px;
@@ -2177,14 +2168,14 @@ main .wrapper .frame-divider .divider {
   background-position: bottom;
   background-repeat: no-repeat;
 }
-.post-type-archive-vansayplus main .front .site-title::before {
+.post-type-archive-vansayplus main .front .site-title::before, .tax-vansayplus-category main .front .site-title::before {
   left: -10px;
   transform: rotate(90deg);
 }
-.post-type-archive-vansayplus main .front .site-title::after {
+.post-type-archive-vansayplus main .front .site-title::after, .tax-vansayplus-category main .front .site-title::after {
   right: -10px;
 }
-.post-type-archive-vansayplus main .front .catch-copy {
+.post-type-archive-vansayplus main .front .catch-copy, .tax-vansayplus-category main .front .catch-copy {
   margin-bottom: 15px;
   font-size: 1.125rem;
   font-weight: 500;
