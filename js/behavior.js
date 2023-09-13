@@ -106,17 +106,19 @@ if (document.querySelector('body.home')) {
   });
 }
 
-// グローバル・メニューのサブ・メニュー出現
-const subMenu = Array.from(document.querySelectorAll('.global-menu > ul > li'));
-subMenu.forEach(elem => {
-  elem.addEventListener('mouseenter', function() {
-    console.log("hello")
-    this.classList.add('active');
-  });
-  elem.addEventListener('mouseleave', function() {
-    this.classList.remove('active');
-  });
-})
+
+// CSSで代替のため不要
+// // グローバル・メニューのサブ・メニュー出現
+// const subMenu = Array.from(document.querySelectorAll('.global-menu > ul > li'));
+// subMenu.forEach(elem => {
+//   elem.addEventListener('mouseenter', function() {
+//     console.log(this)
+//     this.classList.add('active');
+//   });
+//   elem.addEventListener('mouseleave', function() {
+//     this.classList.remove('active');
+//   });
+// })
 
 
 // // ボタン要素を取得

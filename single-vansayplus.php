@@ -26,7 +26,6 @@
       <?php while (have_posts()) : the_post(); ?>
         <?php $terms = get_the_terms($post->ID, 'tax_news'); ?>
         <div class="header-sub">
-          <div class="post-title"><?php the_title(); ?></div>
           <ul class="post-category">
             <?php
             $terms = get_the_terms(get_the_ID(), 'vansayplus-category');
@@ -37,15 +36,22 @@
           </ul>
           <time datetime="<?php echo get_the_date("Y-m-d") ?>"><?php echo get_the_date("Y年m月d日") ?></time>
         </div>
+        <h2><?php the_title(); ?></h2>
         <p><?php the_content(); ?></p>
       <?php endwhile; ?>
     </div>
-
+    
     <div class="page-direction">
       <a href="<?php echo home_url('/vansayplus') ?>">記事一覧へ</a>
       <ul>
-        <li><?php previous_post_link('%link', '前の記事へ', true); ?></li>
-        <li><?php next_post_link('%link', '次の記事へ', true); ?></li>
+        <?php if (get_previous_post() !== '') : ?>
+          <!-- カスタム投稿はtrueを外すと効くということ。一刻も早くWPを卒業すべきだ。 -->
+          <li><?php previous_post_link('%link', '前の記事へ'); ?></li>
+          <?php endif; ?>
+          <?php if (get_next_post() !== '') : ?>
+          <!-- カスタム投稿はtrueを外すと効くということ。一刻も早くWPを卒業すべきだ。 -->
+          <li><?php next_post_link('%link', '次の記事へ'); ?></li>
+        <?php endif; ?>
       </ul>
     </div>
   </div>

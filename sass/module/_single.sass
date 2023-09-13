@@ -1,6 +1,6 @@
 @use "../forwards" as fw
 
-.single
+.single, .single-vansayplus
   main
     .front.single
       height: 23vw
@@ -40,6 +40,7 @@
         display: flex
         justify-content: space-between
         margin-top: 60px
+        padding: 35px 0
         font-size: 0.875rem
         font-weight: 500
         color: fw.$black
@@ -47,7 +48,7 @@
         border-bottom: 1px solid fw.$black-light
         a, ul li
           position: relative
-        a::after, ul li::after
+        a:before, ul li:before
           +fw.positionAbsoluteCTL($top: true)
           content: "\f04b"
           font-size: 1rem
@@ -64,7 +65,8 @@
         a
           display: block
           margin-left: 30px
-          padding: 35px 0
         ul
           display: flex
           gap: 30px
+        a, ul li a
+          +fw.shrink-line($direction: right right, $gap: -5px, $line-color: fw.$black, $hover-color: fw.$orange)
