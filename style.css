@@ -201,7 +201,7 @@
   display: flex;
   position: relative;
   width: min(1120px, 90%);
-  margin: 0 auto;
+  margin: 45px auto 0;
   padding: 48px;
   background-color: #fff;
   border-radius: 20px;
@@ -249,7 +249,6 @@
   border-top: 1px dotted #c1c1c1;
 }
 .home main .latest-info .archive .post-archive > li {
-  position: relative;
   width: 100%;
   border-bottom: 1px dotted #c1c1c1;
   transition: 0.5s;
@@ -257,7 +256,18 @@
 .home main .latest-info .archive .post-archive > li:hover {
   background-color: #FCFCFC;
 }
-.home main .latest-info .archive .post-archive > li::after {
+.home main .latest-info .archive .post-archive > li:hover a::after {
+  right: 10px;
+  color: #F87700;
+}
+.home main .latest-info .archive .post-archive > li a {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  position: relative;
+  padding: 25px 20px;
+}
+.home main .latest-info .archive .post-archive > li a::after {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -270,16 +280,6 @@
   aspect-ratio: 1;
   color: #dbdbdb;
   transition: 0.5s;
-}
-.home main .latest-info .archive .post-archive > li:hover::after {
-  right: 10px;
-  color: #F87700;
-}
-.home main .latest-info .archive .post-archive > li a {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  padding: 25px 20px;
 }
 .home main .latest-info .archive .post-archive > li a time {
   font-size: 0.8rem;
@@ -1554,7 +1554,8 @@
   width: 20px;
   aspect-ratio: 1;
   color: #F87700;
-  background-color: transparent;
+  visibility: visible;
+  opacity: 1;
   transition: 0.3s;
 }
 .home footer .upper .wrapper .site-map ul li a::after, .home footer .upper .wrapper .group-link.footerz ul li a::after, .news footer .upper .wrapper .site-map ul li a::after, .news footer .upper .wrapper .group-link.footerz ul li a::after, .single footer .upper .wrapper .site-map ul li a::after, .single footer .upper .wrapper .group-link.footerz ul li a::after, .page footer .upper .wrapper .site-map ul li a::after, .page footer .upper .wrapper .group-link.footerz ul li a::after, .archive footer .upper .wrapper .site-map ul li a::after, .archive footer .upper .wrapper .group-link.footerz ul li a::after {
@@ -1685,11 +1686,6 @@ main .wrapper .frame-divider .divider {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-}
-@media screen and (min-width: 577px) {
-  main .wrapper .frame-divider {
-    width: max(1100px, 100%);
-  }
 }
 
 .home main .information .vansayplus {
