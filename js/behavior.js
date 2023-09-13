@@ -32,8 +32,8 @@ if (document.querySelector('body.home')) {
   const vansayplusSwiper = new Swiper('.swiper.vansayplus-slide', {
     // Optional parameters
     loop: true,
-    slidesPerView: 2.8,
-    spaceBetween: 30,
+    slidesPerView: 2.9,
+    spaceBetween: 40,
     // loopAdditionalSlides: 2,
 
     // Navigation arrows

@@ -39,16 +39,13 @@
                 font-weight: 300
                 &::before
                   +fw.positionAbsoluteCTL($top: true)
-                  +fw.fontAwesome("\f04b", 1rem)
+                  +fw.fontAwesome("\f35a", $fontSize: 1.15rem, $fontWeight: regular)
                   left: -30px
                   width: 20px
                   aspect-ratio: 1
-                  font-size: 6.5px
-                  padding: 4px 0 0 6px 
+                  // padding: 4px 0 0 6px 
                   color: fw.$orange
                   background-color: transparent
-                  border: 1px solid fw.$orange
-                  border-radius: 50%
                   transition: .3s
                 &::after
                   position: absolute
@@ -64,13 +61,11 @@
                   transition: transform .3s
                 &:hover
                   color: fw.$orange
+                &:hover::before
+                  +fw.fontAwesome("\f35a", $fontSize: 1.15rem)
                 &:hover::after
                   transform: scale(1, 1)
                   transform-origin: nth(left left, 2) top
-            li:hover a::before
-              color: #fff
-              background-color: fw.$orange
-              border: transperent  
 
         .site-map > ul
           display: grid
