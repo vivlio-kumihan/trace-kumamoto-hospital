@@ -274,22 +274,22 @@
       </div>
     </div>
 
+    <div class="vansayplus-image">VANSAY</div>
     <div class="vansayplus">
       <header>
         <div class="catch-copy">
-          萬生会グループがお届けする<br>健康情報メディア
+          <p>萬生会グループがお届けする<br>健康情報メディア</p>
+          <img class="vansay-logo" src="<?php echo get_template_directory_uri(); ?>/img/logo_vansay-plus.svg"></img>
         </div>
-        <img class="vansay-logo" src="<?php echo get_template_directory_uri(); ?>/img/logo_vansay-plus.svg"></img>
-      </header>
-      <div class="content">
         <div class="lead-copy">
           皆さまの暮らしに役立つ医療情報から生活の中で使えるコラムを掲載しております。
         </div>
-
+      </header>
+      <div class="content">
         <div class="vansayplus-posts">
           <a class="read-more-link" href="<?php echo home_url('/vansayplus') ?>">記事一覧を見る</a>
           <div class="swiper vansayplus-slide">
-            <div class="post-archive swiper-wrapper">
+            <div class="swiper-wrapper post-archive">
               <?php
               $recent_page = get_query_var('paged') ? get_query_var('paged') : 1;
               $args = array(
@@ -305,67 +305,7 @@
                       <div class="frame">
                         <?php the_post_thumbnail(); ?>
                       </div>
-                      <div class="wrapper">
-                        <time datetime="<?php echo get_the_date("Y-m-d") ?>"><?php echo get_the_date("Y.m.d") ?></time>
-                        <ul class="post-category">
-                          <?php
-                          $terms = get_the_terms(get_the_ID(), 'vansayplus-category');
-                          foreach ($terms as $attr) {
-                            echo '<li>' . $attr->name . '</li>';
-                          }
-                          ?>
-                        </ul>
-                      </div>
-                      <div class="post-title"><?php the_title(); ?></div>
-                    </a>
-                  </div>
-              <?php endwhile;
-              endif; ?>
-            </div>
-          </div>
-          <div class="wrapper-button">
-            <div class="swiper-button-prev"></div>
-            <div class="swiper-button-next"></div>
-          </div>
-        </div>
-      </div>
-      <img class="fig one" src="<?php echo get_template_directory_uri(); ?>/img/01左orange.svg" alt="">
-      <img class="fig two" src="<?php echo get_template_directory_uri(); ?>/img/02左orange.svg" alt="">
-      <img class="fig three" src="<?php echo get_template_directory_uri(); ?>/img/03左orange.svg" alt="">
-      <img class="fig four" src="<?php echo get_template_directory_uri(); ?>/img/04左yellow.svg" alt="">
-    </div>
-
-    <div class="vansayplus">
-      <header>
-        <div class="catch-copy">
-          萬生会グループがお届けする<br>健康情報メディア
-        </div>
-        <img class="vansay-logo" src="<?php echo get_template_directory_uri(); ?>/img/logo_vansay-plus.svg"></img>
-        <div class="lead-copy">
-          皆さまの暮らしに役立つ医療情報から生活の中で使えるコラムを掲載しております。
-        </div>
-      </header>
-      <div class="content">
-        <div class="vansayplus-posts">
-          <a class="read-more-link" href="<?php echo home_url('/vansayplus') ?>">記事一覧を見る</a>
-          <div class="swiper vansayplus-slide">
-            <div class="post-archive swiper-wrapper">
-              <?php
-              $recent_page = get_query_var('paged') ? get_query_var('paged') : 1;
-              $args = array(
-                'post_type' => 'vansayplus',
-                'posts_per_page' => -1,
-                'paged' => $recent_page,
-              );
-              $my_query = new WP_Query($args);
-              if ($my_query->have_posts()) : while ($my_query->have_posts()) : $my_query->the_post();
-              ?>
-                  <div class="swiper-slide">
-                    <a href="<?php the_permalink(); ?>">
-                      <div class="frame">
-                        <?php the_post_thumbnail(); ?>
-                      </div>
-                      <div class="wrapper">
+                      <div class="header-sub">
                         <time datetime="<?php echo get_the_date("Y-m-d") ?>"><?php echo get_the_date("Y.m.d") ?></time>
                         <ul class="post-category">
                           <?php

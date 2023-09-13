@@ -33,100 +33,97 @@ main
         width: max(1100px, 100%)
         // top: 400px
 
-.vansayplus-posts
-  .swiper.vansayplus-slide
-    width: 77%
-    margin-right: 0
-    margin-left: auto
-    // overflow: hidden
-    translate: 0 -35%
-    .post-archive.swiper-wrapper
-      display: flex
-      width: 100%
-      .swiper-slide
-        a
-          display: block
-          width: 100%
-          height: 100%
-          .frame
-            width: 30vw
-            height: 20vh
-            overflow: hidden
-            border-radius: 20px
-            img
-              width: 100%
-              height: 100%
-              object-fit: cover
-              transition: .3s
-          .wrapper
-            display: flex
-            align-items: center
-            gap: 15px
-            height: auto
-            margin-top: 20px
-            time
-              font-size: 0.8125rem
-              font-weight: 300
-              letter-spacing: 0.06em
-              color: #fff
-            ul
-              li
-                display: inline-block
-                padding: 5px 10px
-                font-size: 0.625rem
-                font-weight: 300
-                letter-spacing: 0.06em
-                color: #fff
-                border: 1px solid  rgba(255, 255, 255, 0.3)
-                border-radius: 100px
-          .post-title
-            display: inline-block
-            position: relative
-            margin-top: 10px
-            font-family: fw.$m-rd
-            font-size: 1.125rem
-            font-weight: 500
-            line-height: 1.7
-            color: #fff
-            transition: .3s
-            &::after
+.home
+  main
+    .information
+      .vansayplus
+        overflow: hidden
+        .content
+          .vansayplus-posts
+            .swiper.vansayplus-slide
+              .swiper-wrapper.post-archive
+                .swiper-slide
+                  width: 350px
+                  padding-bottom: 5px
+                  color: #fff
+                  a
+                    display: block
+                    width: 100%
+                    height: 100%
+                    .frame
+                      width: 100%
+                      aspect-ratio: 3/2
+                      overflow: hidden
+                      border-radius: 20px
+                      img
+                        width: 100%
+                        height: 100%
+                        object-fit: cover
+                        transition: .3s
+                    .header-sub
+                      display: flex
+                      gap: 15px
+                      align-items: center
+                      margin-top: 15px
+                      time
+                        font-size: .8rem
+                        font-weight: 500
+                      .post-category
+                        > li
+                          padding: 6px 10px
+                          font-size: .75rem
+                          font-weight: 400
+                          color: #fff
+                          border: 1px solid #fff
+                          border-radius: 9999px
+                    .post-title
+                      position: relative
+                      width: fit-content
+                      margin-top: 10px
+                      font-size: 1rem
+                      font-weight: 700
+                      line-height: 1.5
+                      letter-spacing: 0.06em
+                      transition: .3s
+                      &::after
+                        position: absolute
+                        display: block
+                        bottom: -2px
+                        left: 0
+                        width: 100%
+                        height: 1px
+                        content: ""
+                        background-color: #fff
+                        transform: scale(1, 1)
+                        transform-origin: nth(right right, 1) top
+                        transition: transform .3s
+                  &:hover > a > .post-title::after
+                    transform: scale(0, 1)
+                    transform-origin: nth(right right, 2) top
+                  &:hover img
+                    transform: scale(115%)
+
+            .wrapper-button
+              display: flex
+              align-items: center
+              gap: 30px
               position: absolute
-              bottom: 0
-              left: 0
-              width: 100%
-              height: 1px
-              content: ""
-              background-color: #fff
-              transform: scale(1, 1)
-              transform-origin: nth(right right, 1) top
-              transition: transform .3s
-        &:hover .post-title::after
-          transform: scale(0, 1)
-          transform-origin: nth(right right, 2) top
-        &:hover img
-          scale: 120%
-        // &:hover .post-title
-  .wrapper-button
-    display: flex
-    align-items: center
-    gap: 30px
-    position: absolute
-    bottom: 25px
-    right: 100px
-    .swiper-button-prev, .swiper-button-next
-      position: relative
-      margin: 0
-      width: 50px
-      height: 50px
-      border-radius: 50%
-      background-color: #fff
-      z-index: 100
-      &::before
-        +fw.positionAbsoluteCTL
-        +fw.fontAwesome("\f178", 1rem)
-        color: fw.$orange
-      &::after
-        display: none
-    .swiper-button-prev
-      &::before
-        +fw.fontAwesome("\f177", 1rem)
+              bottom: 25px
+              right: 100px
+              .swiper-button-prev, .swiper-button-next
+                position: relative
+                margin: 0
+                width: 50px
+                height: 50px
+                border-radius: 50%
+                background-color: #fff
+                z-index: 100
+                &::before
+                  +fw.positionAbsoluteCTL
+                  +fw.fontAwesome("\f178", 1rem)
+                  color: fw.$orange
+                &::after
+                  display: none
+              .swiper-button-prev
+                &::before
+                  +fw.fontAwesome("\f177", 1rem)

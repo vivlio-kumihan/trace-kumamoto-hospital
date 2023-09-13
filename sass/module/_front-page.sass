@@ -458,64 +458,69 @@
               color: fw.$orange  
             &:hover dl::after
               color: fw.$orange
-      .vansayplus
-        position: relative
-        width: 100%
-        margin-top: 300px
-        padding-left: 80px
 
-        header
+      .vansayplus-image
+        position: relative
+        z-index: 0
+        padding-right: 80px
+        text-align: right
+        font-family: fw.$rale
+        font-size: 15rem
+        line-height: 1
+        letter-spacing: -0.075em
+        color: rgba(215, 215, 215, 0.3)
+
+      .vansayplus
+        display: grid
+        grid-template-columns: 20% 80%
+        gap: 80px
+        position: relative
+        margin-top: -135px
+        padding-left: 80px
+        z-index: 1
+        &::after
           position: absolute
-          top: -300px
-          left: 80px
-          padding: 100px 0 50px
-          width: 263px
-          z-index: 10
+          bottom: 0%
+          right: 0
+          width: calc(100% - 80px)
+          height: 340px
+          content: ""
+          background-color: fw.$orange
+          border-radius: 30px 0 0 30px
+          z-index: 0
+        header
+          position: relative
+          z-index: 1
           .catch-copy
-            margin-bottom: 15px
+            position: absolute
+            top: 0
+            left: 0
             text-align: center
             font-size: .9rem
             font-weight: 500
             line-height: 1.5
-          // .vansay-logo
-          //   display: block
-
-        .content
-          position: relative
-          // padding: 50px
-          background-color: fw.$orange
-          border-radius: 30px 0 0 30px
-          padding: 0 0 32px 56px
-          margin: 48px 0 0
+            p
+              margin-bottom: 20px
           .lead-copy
             position: absolute
-            top: 48px
-            left: 56px
-            width: 15%
+            top: 220px
+            left: 30px
+            width: min(240px, 100%) 
             font-size: 0.875rem
             font-weight: 300
             line-height: 1.8
             letter-spacing: 0.04em
             color: #fff
+        .content
+          margin-top: 90px
+          margin-bottom: 120px
           .vansayplus-posts
-            &::after
-              position: absolute
-              top: -320px
-              right: 0px
-              content: "VANSAY"
-              font-family: fw.$rale
-              font-size: 15rem
-              line-height: 1
-              letter-spacing: -0.075em
-              color: rgba(215, 215, 215, 0.3)
-              transform: scaleX(85%)
-              z-index: 0
             .read-more-link
               +fw.read-more-link
               +fw.shrink-line
                 position: absolute
                 right: 80px
-                top: -180px
+                top: 40px
 
         .fig
           position: absolute
