@@ -1686,7 +1686,6 @@ main .wrapper .frame-divider .divider {
   width: 77%;
   margin-right: 0;
   margin-left: auto;
-  overflow: hidden;
   translate: 0 -35%;
 }
 .vansayplus-posts .swiper.vansayplus-slide .post-archive.swiper-wrapper {
@@ -1699,8 +1698,8 @@ main .wrapper .frame-divider .divider {
   height: 100%;
 }
 .vansayplus-posts .swiper.vansayplus-slide .post-archive.swiper-wrapper .swiper-slide a .frame {
-  width: 100%;
-  aspect-ratio: 4/3;
+  width: 30vw;
+  height: 20vh;
   overflow: hidden;
   border-radius: 20px;
 }
