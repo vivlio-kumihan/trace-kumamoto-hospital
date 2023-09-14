@@ -76,8 +76,6 @@
   top: 85px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
   padding: 18px 24px;
   width: 235px;
   background-color: #fff;
@@ -102,31 +100,10 @@
   transform: translateX(-50%);
 }
 .home .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li, .single .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li, .page .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li, .category .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li, .archive .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li {
-  transition: 0.3s;
-  display: inline-block;
+  display: block;
   position: relative;
   margin-left: 25px;
   padding: 0;
-}
-.home .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li:hover, .single .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li:hover, .page .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li:hover, .category .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li:hover, .archive .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li:hover {
-  color: #F87700;
-}
-.home .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li::after, .single .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li::after, .page .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li::after, .category .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li::after, .archive .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li::after {
-  position: absolute;
-  display: inline-block;
-  bottom: 10px;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  content: "";
-  background-color: #F87700;
-  transform: scale(0, 1);
-  transform-origin: left top;
-  transition: transform 0.3s;
-}
-.home .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li:hover::after, .single .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li:hover::after, .page .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li:hover::after, .category .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li:hover::after, .archive .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li:hover::after {
-  transform: scale(1, 1);
-  transform-origin: left top;
 }
 .home .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li::before, .single .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li::before, .page .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li::before, .category .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li::before, .archive .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li::before {
   position: absolute;
@@ -142,12 +119,32 @@
 }
 .home .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li:hover::before, .single .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li:hover::before, .page .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li:hover::before, .category .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li:hover::before, .archive .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li:hover::before {
   left: -18px;
+  color: #F87700;
 }
 .home .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li a, .single .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li a, .page .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li a, .category .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li a, .archive .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li a {
-  display: block;
+  display: inline-block;
+  position: relative;
   padding: 14px 0;
   font-weight: 400;
   letter-spacing: 0.04em;
+  transition: 0.3s;
+}
+.home .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li a::after, .single .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li a::after, .page .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li a::after, .category .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li a::after, .archive .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li a::after {
+  position: absolute;
+  display: inline-block;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  content: "";
+  background-color: #F87700;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: 0.3s;
+}
+.home .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li:hover a::after, .single .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li:hover a::after, .page .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li:hover a::after, .category .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li:hover a::after, .archive .menu-wrapper .global-menu > ul.menu > li > ul.sub-menu > li:hover a::after {
+  transform: scale(1, 1);
+  transform-origin: left top;
 }
 .home .menu-wrapper .lower-menu, .single .menu-wrapper .lower-menu, .page .menu-wrapper .lower-menu, .category .menu-wrapper .lower-menu, .archive .menu-wrapper .lower-menu {
   margin-right: 50px;
@@ -1531,10 +1528,45 @@
   padding-top: 60px;
   gap: 120px;
 }
-.home footer .upper .wrapper .site-map ul li, .home footer .upper .wrapper .group-link.footerz ul li, .news footer .upper .wrapper .site-map ul li, .news footer .upper .wrapper .group-link.footerz ul li, .single footer .upper .wrapper .site-map ul li, .single footer .upper .wrapper .group-link.footerz ul li, .page footer .upper .wrapper .site-map ul li, .page footer .upper .wrapper .group-link.footerz ul li, .archive footer .upper .wrapper .site-map ul li, .archive footer .upper .wrapper .group-link.footerz ul li {
+.home footer .upper .wrapper .site-map ul li, .home footer .upper .wrapper .group-link ul li, .news footer .upper .wrapper .site-map ul li, .news footer .upper .wrapper .group-link ul li, .single footer .upper .wrapper .site-map ul li, .single footer .upper .wrapper .group-link ul li, .page footer .upper .wrapper .site-map ul li, .page footer .upper .wrapper .group-link ul li, .archive footer .upper .wrapper .site-map ul li, .archive footer .upper .wrapper .group-link ul li {
+  position: relative;
   margin-left: 30px;
 }
-.home footer .upper .wrapper .site-map ul li a, .home footer .upper .wrapper .group-link.footerz ul li a, .news footer .upper .wrapper .site-map ul li a, .news footer .upper .wrapper .group-link.footerz ul li a, .single footer .upper .wrapper .site-map ul li a, .single footer .upper .wrapper .group-link.footerz ul li a, .page footer .upper .wrapper .site-map ul li a, .page footer .upper .wrapper .group-link.footerz ul li a, .archive footer .upper .wrapper .site-map ul li a, .archive footer .upper .wrapper .group-link.footerz ul li a {
+.home footer .upper .wrapper .site-map ul li span, .home footer .upper .wrapper .group-link ul li span, .news footer .upper .wrapper .site-map ul li span, .news footer .upper .wrapper .group-link ul li span, .single footer .upper .wrapper .site-map ul li span, .single footer .upper .wrapper .group-link ul li span, .page footer .upper .wrapper .site-map ul li span, .page footer .upper .wrapper .group-link ul li span, .archive footer .upper .wrapper .site-map ul li span, .archive footer .upper .wrapper .group-link ul li span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: block;
+  left: -30px;
+  content: "";
+  width: 20px;
+  height: 20px;
+  padding: 5px 0 0 6px;
+  font-size: 8px;
+  color: #F87700;
+  border: 1px solid #F87700;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+.home footer .upper .wrapper .site-map ul li span::after, .home footer .upper .wrapper .group-link ul li span::after, .news footer .upper .wrapper .site-map ul li span::after, .news footer .upper .wrapper .group-link ul li span::after, .single footer .upper .wrapper .site-map ul li span::after, .single footer .upper .wrapper .group-link ul li span::after, .page footer .upper .wrapper .site-map ul li span::after, .page footer .upper .wrapper .group-link ul li span::after, .archive footer .upper .wrapper .site-map ul li span::after, .archive footer .upper .wrapper .group-link ul li span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "\f04b";
+  font-size: 6px;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  transition: 0.5s;
+}
+.home footer .upper .wrapper .site-map ul li:hover span, .home footer .upper .wrapper .group-link ul li:hover span, .news footer .upper .wrapper .site-map ul li:hover span, .news footer .upper .wrapper .group-link ul li:hover span, .single footer .upper .wrapper .site-map ul li:hover span, .single footer .upper .wrapper .group-link ul li:hover span, .page footer .upper .wrapper .site-map ul li:hover span, .page footer .upper .wrapper .group-link ul li:hover span, .archive footer .upper .wrapper .site-map ul li:hover span, .archive footer .upper .wrapper .group-link ul li:hover span {
+  background-color: #F87700;
+  border: transparent;
+}
+.home footer .upper .wrapper .site-map ul li:hover span::after, .home footer .upper .wrapper .group-link ul li:hover span::after, .news footer .upper .wrapper .site-map ul li:hover span::after, .news footer .upper .wrapper .group-link ul li:hover span::after, .single footer .upper .wrapper .site-map ul li:hover span::after, .single footer .upper .wrapper .group-link ul li:hover span::after, .page footer .upper .wrapper .site-map ul li:hover span::after, .page footer .upper .wrapper .group-link ul li:hover span::after, .archive footer .upper .wrapper .site-map ul li:hover span::after, .archive footer .upper .wrapper .group-link ul li:hover span::after {
+  color: #fff;
+}
+.home footer .upper .wrapper .site-map ul li a, .home footer .upper .wrapper .group-link ul li a, .news footer .upper .wrapper .site-map ul li a, .news footer .upper .wrapper .group-link ul li a, .single footer .upper .wrapper .site-map ul li a, .single footer .upper .wrapper .group-link ul li a, .page footer .upper .wrapper .site-map ul li a, .page footer .upper .wrapper .group-link ul li a, .archive footer .upper .wrapper .site-map ul li a, .archive footer .upper .wrapper .group-link ul li a {
   position: relative;
   display: block;
   width: -moz-fit-content;
@@ -1542,23 +1574,7 @@
   font-size: 0.875rem;
   font-weight: 300;
 }
-.home footer .upper .wrapper .site-map ul li a::before, .home footer .upper .wrapper .group-link.footerz ul li a::before, .news footer .upper .wrapper .site-map ul li a::before, .news footer .upper .wrapper .group-link.footerz ul li a::before, .single footer .upper .wrapper .site-map ul li a::before, .single footer .upper .wrapper .group-link.footerz ul li a::before, .page footer .upper .wrapper .site-map ul li a::before, .page footer .upper .wrapper .group-link.footerz ul li a::before, .archive footer .upper .wrapper .site-map ul li a::before, .archive footer .upper .wrapper .group-link.footerz ul li a::before {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  content: "\f35a";
-  font-size: 1.15rem;
-  font-family: "Font Awesome 6 Free";
-  font-weight: regular;
-  left: -30px;
-  width: 20px;
-  aspect-ratio: 1;
-  color: #F87700;
-  visibility: visible;
-  opacity: 1;
-  transition: 0.3s;
-}
-.home footer .upper .wrapper .site-map ul li a::after, .home footer .upper .wrapper .group-link.footerz ul li a::after, .news footer .upper .wrapper .site-map ul li a::after, .news footer .upper .wrapper .group-link.footerz ul li a::after, .single footer .upper .wrapper .site-map ul li a::after, .single footer .upper .wrapper .group-link.footerz ul li a::after, .page footer .upper .wrapper .site-map ul li a::after, .page footer .upper .wrapper .group-link.footerz ul li a::after, .archive footer .upper .wrapper .site-map ul li a::after, .archive footer .upper .wrapper .group-link.footerz ul li a::after {
+.home footer .upper .wrapper .site-map ul li a::after, .home footer .upper .wrapper .group-link ul li a::after, .news footer .upper .wrapper .site-map ul li a::after, .news footer .upper .wrapper .group-link ul li a::after, .single footer .upper .wrapper .site-map ul li a::after, .single footer .upper .wrapper .group-link ul li a::after, .page footer .upper .wrapper .site-map ul li a::after, .page footer .upper .wrapper .group-link ul li a::after, .archive footer .upper .wrapper .site-map ul li a::after, .archive footer .upper .wrapper .group-link ul li a::after {
   position: absolute;
   display: block;
   bottom: -5px;
@@ -1571,16 +1587,10 @@
   transform-origin: left top;
   transition: transform 0.3s;
 }
-.home footer .upper .wrapper .site-map ul li a:hover, .home footer .upper .wrapper .group-link.footerz ul li a:hover, .news footer .upper .wrapper .site-map ul li a:hover, .news footer .upper .wrapper .group-link.footerz ul li a:hover, .single footer .upper .wrapper .site-map ul li a:hover, .single footer .upper .wrapper .group-link.footerz ul li a:hover, .page footer .upper .wrapper .site-map ul li a:hover, .page footer .upper .wrapper .group-link.footerz ul li a:hover, .archive footer .upper .wrapper .site-map ul li a:hover, .archive footer .upper .wrapper .group-link.footerz ul li a:hover {
+.home footer .upper .wrapper .site-map ul li a:hover, .home footer .upper .wrapper .group-link ul li a:hover, .news footer .upper .wrapper .site-map ul li a:hover, .news footer .upper .wrapper .group-link ul li a:hover, .single footer .upper .wrapper .site-map ul li a:hover, .single footer .upper .wrapper .group-link ul li a:hover, .page footer .upper .wrapper .site-map ul li a:hover, .page footer .upper .wrapper .group-link ul li a:hover, .archive footer .upper .wrapper .site-map ul li a:hover, .archive footer .upper .wrapper .group-link ul li a:hover {
   color: #F87700;
 }
-.home footer .upper .wrapper .site-map ul li a:hover::before, .home footer .upper .wrapper .group-link.footerz ul li a:hover::before, .news footer .upper .wrapper .site-map ul li a:hover::before, .news footer .upper .wrapper .group-link.footerz ul li a:hover::before, .single footer .upper .wrapper .site-map ul li a:hover::before, .single footer .upper .wrapper .group-link.footerz ul li a:hover::before, .page footer .upper .wrapper .site-map ul li a:hover::before, .page footer .upper .wrapper .group-link.footerz ul li a:hover::before, .archive footer .upper .wrapper .site-map ul li a:hover::before, .archive footer .upper .wrapper .group-link.footerz ul li a:hover::before {
-  content: "\f35a";
-  font-size: 1.15rem;
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-}
-.home footer .upper .wrapper .site-map ul li a:hover::after, .home footer .upper .wrapper .group-link.footerz ul li a:hover::after, .news footer .upper .wrapper .site-map ul li a:hover::after, .news footer .upper .wrapper .group-link.footerz ul li a:hover::after, .single footer .upper .wrapper .site-map ul li a:hover::after, .single footer .upper .wrapper .group-link.footerz ul li a:hover::after, .page footer .upper .wrapper .site-map ul li a:hover::after, .page footer .upper .wrapper .group-link.footerz ul li a:hover::after, .archive footer .upper .wrapper .site-map ul li a:hover::after, .archive footer .upper .wrapper .group-link.footerz ul li a:hover::after {
+.home footer .upper .wrapper .site-map ul li a:hover::after, .home footer .upper .wrapper .group-link ul li a:hover::after, .news footer .upper .wrapper .site-map ul li a:hover::after, .news footer .upper .wrapper .group-link ul li a:hover::after, .single footer .upper .wrapper .site-map ul li a:hover::after, .single footer .upper .wrapper .group-link ul li a:hover::after, .page footer .upper .wrapper .site-map ul li a:hover::after, .page footer .upper .wrapper .group-link ul li a:hover::after, .archive footer .upper .wrapper .site-map ul li a:hover::after, .archive footer .upper .wrapper .group-link ul li a:hover::after {
   transform: scale(1, 1);
   transform-origin: left top;
 }
@@ -1596,22 +1606,31 @@
   margin-bottom: 25px;
 }
 .home footer .upper .wrapper .group-link li, .news footer .upper .wrapper .group-link li, .single footer .upper .wrapper .group-link li, .page footer .upper .wrapper .group-link li, .archive footer .upper .wrapper .group-link li {
+  width: -moz-fit-content;
+  width: fit-content;
   margin-bottom: 25px;
+}
+.home footer .upper .wrapper .group-link li::after, .news footer .upper .wrapper .group-link li::after, .single footer .upper .wrapper .group-link li::after, .page footer .upper .wrapper .group-link li::after, .archive footer .upper .wrapper .group-link li::after {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  content: "\f08e";
+  font-size: 0.6rem;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  right: -18px;
+  color: #c1c1c1;
+  transition: 0.5s;
+}
+.home footer .upper .wrapper .group-link li:hover::after, .news footer .upper .wrapper .group-link li:hover::after, .single footer .upper .wrapper .group-link li:hover::after, .page footer .upper .wrapper .group-link li:hover::after, .archive footer .upper .wrapper .group-link li:hover::after {
+  color: #F87700;
 }
 .home footer .upper .wrapper .group-link li a, .news footer .upper .wrapper .group-link li a, .single footer .upper .wrapper .group-link li a, .page footer .upper .wrapper .group-link li a, .archive footer .upper .wrapper .group-link li a {
   display: inline-block;
   position: relative;
   width: -moz-fit-content;
   width: fit-content;
-}
-.home footer .upper .wrapper .group-link li a::after, .news footer .upper .wrapper .group-link li a::after, .single footer .upper .wrapper .group-link li a::after, .page footer .upper .wrapper .group-link li a::after, .archive footer .upper .wrapper .group-link li a::after {
-  content: "\f08e";
-  font-size: 0.6rem;
-  font-family: "Font Awesome 6 Free";
-  font-weight: 900;
-  right: -20px;
-  color: #c1c1c1;
-  transition: 0.5s;
 }
 .home footer .upper .wrapper .group-link li:hover a::after, .news footer .upper .wrapper .group-link li:hover a::after, .single footer .upper .wrapper .group-link li:hover a::after, .page footer .upper .wrapper .group-link li:hover a::after, .archive footer .upper .wrapper .group-link li:hover a::after {
   color: #F87700;

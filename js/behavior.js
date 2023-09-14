@@ -146,4 +146,4 @@ if (document.querySelector('body.archive')) {
 
 // footerのアローマーク
 const li = Array.from(document.querySelectorAll('footer .site-map ul li'))
-li.map(l => {l.insertAdjacentHTML('afterbegin', '<span class="arrow-mark">')})
+li.map(l => {l.insertAdjacentHTML('afterbegin', '<span></span>')})

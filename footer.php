@@ -21,13 +21,13 @@
         ?>
       </div>
 
-      <div class="group-link footerz">
+      <div class="group-link">
         <h2>萬生会グループリンク</h2>
         <ul>
-          <li><a href="/vansay-top">萬生会総合トップ</a></li>
-          <li><a href="/kumamoto-hospital">熊本第一病院</a></li>
-          <li><a href="/koshi-hospital">合志第一病院</a></li>
-          <li><a href="/zaitaku">在宅事業部</a></li>
+          <li><span></span><a href="/vansay-top">萬生会総合トップ</a></li>
+          <li><span></span><a href="/kumamoto-hospital">熊本第一病院</a></li>
+          <li><span></span><a href="/koshi-hospital">合志第一病院</a></li>
+          <li><span></span><a href="/zaitaku">在宅事業部</a></li>
         </ul>
       </div>
     </div>

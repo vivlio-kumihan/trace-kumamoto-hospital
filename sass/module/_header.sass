@@ -42,8 +42,6 @@
             top: 85px
             display: flex
             flex-direction: column
-            align-items: flex-start
-            justify-content: flex-start
             padding: 18px 24px
             width: 235px
             background-color: #fff
@@ -67,8 +65,7 @@
               -webkit-transform: translateX(-50%)
               transform: translateX(-50%)
             > li
-              +fw.shrink-line-reverse
-              display: inline-block
+              display: block
               position: relative
               margin-left: 25px
               padding: 0
@@ -80,11 +77,30 @@
                 transition: .3s
               &:hover::before
                 left: -18px
+                color: fw.$orange
               a
-                display: block
+                display: inline-block
+                position: relative
                 padding: 14px 0
                 font-weight: 400
                 letter-spacing: 0.04em
+                transition: .3s
+                &::after
+                  position: absolute
+                  display: inline-block
+                  bottom: 10px
+                  left: 0
+                  width: 100%
+                  height: 1px
+                  content: ""
+                  background-color: fw.$orange
+                  transform: scale(0, 1)
+                  transform-origin: nth(left left, 1) top
+                  transition: .3s
+              &:hover a::after
+                transform: scale(1, 1)
+                transform-origin: nth(left left, 2) top
+
     .lower-menu
       margin-right: 50px
       z-index: fw.set-index(lower-menu)
