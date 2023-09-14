@@ -2128,7 +2128,7 @@ main .wrapper .frame-divider .divider {
 
 .post-type-archive-vansayplus main .front, .tax-vansayplus-category main .front {
   background-image: url(./img/mask_hero.svg);
-  background-size: 103%;
+  background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
   display: flex;

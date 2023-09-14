@@ -23,7 +23,7 @@
     <div class="site-title">
       <span>特定医療法人 萬生会 熊本第一病院</span>
     </div>
-    <div class="head-copy">
+    <div id="head-copy" class="head-copy">
       <div class="catch-copy">その人らしさ<span>を</span><br><span>支える手</span></div>
       <div class="lead-copy">地域の皆さまの「その人らしい生き方」をささえるために、<br> 手をおしまない医療、手厚い看護、心をこめた介護を提供します。</div>
       <a class="read-more-link" href="<?php echo home_url('/about') ?>">当院の特徴をみる</a>
@@ -45,7 +45,7 @@
     </div>
   </div>
 
-  <section class="latest-info">
+  <section id="latest-info" class="latest-info">
     <h3>当院からの<br>お知らせ</h3>
     <div class="archive">
       <ul id="category-menu" class="category-menu">
@@ -100,7 +100,7 @@
     <a class="read-more-link" href="/news/">お知らせ一覧を見る</a>
   </div>
 
-  <section class="policy">
+  <section id="policy" class="policy">
     <img class="item left-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
     <img class="item right-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange2_2.svg" alt="">
     <img class="item right-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange2_1.svg" alt="">
@@ -176,9 +176,9 @@
   </section>
 
   <section class="information">
-    <div class="bg-image">
+    <div id="outpatient-care-bg-image" class="outpatient-care bg-image">
     </div>
-    <div class="outpatient-care">
+    <div id="outpatient-care" class="outpatient-care">
       <div class="wrapper-outpatient-care">
         <div class="wrapper-inner">
           <img class="left-org" src="<?php echo get_template_directory_uri(); ?>/img/左org.svg"></img>
@@ -274,8 +274,8 @@
       </div>
     </div>
 
-    <div class="vansayplus-image">VANSAY</div>
-    <div class="vansayplus">
+    <div id="vansayplus-image" class="vansayplus-image">VANSAY</div>
+    <div id="vansayplus" class="vansayplus">
       <header>
         <div class="catch-copy">
           <p>萬生会グループがお届けする<br>健康情報メディア</p>
@@ -332,7 +332,7 @@
     </div>
 
     <div class="another-info">
-      <div class="wrapper pick-up">
+      <div id="wrapper-pick-up" class="wrapper pick-up">
         <h3>ピックアップ</h3>
         <ul>
           <li class="nursing-dep">看護部</li>
@@ -340,7 +340,7 @@
           <li class="book-tour">見学予約</li>
         </ul>
       </div>
-      <div class="wrapper service">
+      <div id="wrapper-service" class="wrapper service">
         <h3>関連施設・サービス</h3>
         <ul>
           <li>

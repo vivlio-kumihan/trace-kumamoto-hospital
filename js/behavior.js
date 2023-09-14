@@ -1,4 +1,84 @@
 // ホーム用
+
+// // ローディング
+// function loaded() {
+//   const loading = document.getElementById('openning-action')
+//   loading.classList.add('action')
+// }
+// // ウィンドウを読み込んで2秒後には次に遷移する。
+// window.addEventListener('load', () => {
+//   // setTimeout(loaded, 0)
+//   setTimeout(loaded, 2000)
+// })
+// // 最低でも５秒後には表示
+// // setTimeout(loaded, 5000)
+
+// setTimeout(() => {
+//   const headCopy = document.getElementById('head-copy')
+//   const latestInfo = document.getElementById('latest-info')
+
+//   gsap.fromTo(headCopy.children, .3, {
+//       y: 100,
+//       opacity: 0,
+//     }, {
+//       y: 0,
+//       opacity: 1,
+//       ease: Power1.easeInOut,
+//       stagger: .2 
+//     }
+//   )
+  
+//   gsap.fromTo(latestInfo, .3, {
+//       y: 100,
+//       opacity: 0,
+//     }, {
+//       y: 0,
+//       opacity: 1,
+//     }
+//   )
+// }, 1000)
+
+const sections = ['policy', 
+                  'outpatient-care-bg-image', 
+                  'outpatient-care', 
+                  'vansayplus-image', 
+                  'vansayplus',
+                  'wrapper-pick-up',
+                  'wrapper-service']
+sections.forEach(elem => {
+  const sec = document.getElementById(elem)
+  gsap.fromTo(sec, 1, {
+    y: 100,
+    opacity: 0,
+  }, {
+    y: 0,
+    opacity: 1,
+    ease: 'power1.easeInOut',
+    scrollTrigger: {
+      trigger: sec,
+      start: 'top 90%',
+      markers: true
+    }
+  })
+})
+
+// const oneAfterAnotherRow = document.querySelectorAll('#one-after-another-row')
+// oneAfterAnotherRow.forEach(elem => {
+//   // 要素の子要素へアクセスはこれだけ。超絶賢い。
+//   gsap.from(elem.children, .7, {
+//     opacity: 0,
+//     ease: 'power3.easeOut',
+//     // ↓ 0.25秒ずつ延滞させて処理する。これだけ。
+//     stagger: .25,
+//     scrollTrigger: {
+//       trigger: elem,
+//       start: 'top 80%',
+//       // markers: true,
+//     },
+//   })
+// })
+
+
 // swiper
 if (document.querySelector('body.home')) {
   const mainSwiper = new Swiper(".swiper.main-visual", {
