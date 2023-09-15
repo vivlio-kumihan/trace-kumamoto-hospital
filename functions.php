@@ -16,6 +16,7 @@ function menu_setup()
     'global-menu' => 'グローバル・メニュー',
     'sub-menu' => 'サブ・メニュー',
     'site-map' => 'サイト・マップ',
+    'hamburger-menu' => 'ハンバーガー・メニュー',
     'about' => '病院案内',
     'consultation' => '受診案内',
     'departments' => '診療科・部門',

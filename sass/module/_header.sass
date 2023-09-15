@@ -1,138 +1,309 @@
 @use "../forwards" as fw
 
 .home, .single, .page, .category, .archive
-  .menu-wrapper
-    position: fixed
-    top: 30px
-    right: 30px
-    display: flex
-    flex-direction: column
-    align-items: flex-end
-    font-family: fw.$m-rd
-    font-size: 0.875rem
-    font-weight: 500
-    line-height: 1
-    color: fw.$black
-    z-index: fw.set-index(menu-wrapper)
-    .global-menu
-      z-index: fw.set-index(global-menu)
-      > ul.menu
-        display: flex
-        align-items: center
-        gap: 30px
-        padding: 0 40px
-        background-color: #fff
-        border-radius: 9999px
-        box-shadow: 0 -5px 15px fw.$black-light
-        > li
+  header
+    .menu-wrapper
+      display: flex
+      flex-direction: column
+      align-items: flex-end
+      position: fixed
+      top: 30px
+      right: 30px
+      font-family: fw.$m-rd
+      font-size: 0.875rem
+      font-weight: 500
+      line-height: 1
+      color: fw.$black
+      z-index: fw.set-index(menu-wrapper)
+      .menu-toggle-btn
+        display: none
+      .logo-landscape
+        display: none
+      .global-menu
+        z-index: fw.set-index(global-menu)
+        > .menu
+          display: flex
+          align-items: center
+          gap: 30px
+          padding: 0 40px
+          background-color: #fff
+          border-radius: 9999px
+          box-shadow: 0 -5px 15px fw.$black-light
+          > li
+            position: relative
+            &:hover > ul.sub-menu
+              top: 82px
+              visibility: visible
+              opacity: 1
+            > a
+              display: block
+              height: 100%
+              padding: 30px 0
+              transition: .3s
+              &:hover
+                color: fw.$orange
+            > .sub-menu
+              +fw.positionAbsoluteCTL($left: true)
+              top: 85px
+              display: flex
+              flex-direction: column
+              padding: 18px 24px
+              width: 235px
+              background-color: #fff
+              border-radius: 10px
+              box-shadow: 0 0 20px fw.$gray-light
+              transition: .5s
+              visibility: hidden
+              opacity: 0
+              z-index: fw.set_index(sub-menu)
+              &::before
+                content: ""
+                display: inline-block
+                width: 0
+                height: 0
+                border-style: solid
+                border-width: 0 15px 15px 15px
+                border-color: transparent transparent #fff transparent
+                position: absolute
+                top: -8px
+                left: 50%
+                -webkit-transform: translateX(-50%)
+                transform: translateX(-50%)
+              > li
+                display: block
+                position: relative
+                margin-left: 25px
+                padding: 0
+                &::before
+                  +fw.positionAbsoluteCTL($top: true)
+                  +fw.fontAwesome("\f061", 13px)
+                  left: -25px
+                  color: fw.$black-middle
+                  transition: .3s
+                &:hover::before
+                  left: -18px
+                  color: fw.$orange
+                a
+                  display: inline-block
+                  position: relative
+                  padding: 14px 0
+                  font-weight: 400
+                  letter-spacing: 0.04em
+                  transition: .3s
+                  &::before
+                    position: absolute
+                    display: inline-block
+                    bottom: 10px
+                    left: 0
+                    width: 100%
+                    height: 1px
+                    content: ""
+                    background-color: fw.$orange
+                    transform: scale(0, 1)
+                    transform-origin: nth(left left, 1) top
+                    transition: .3s
+                &:hover a::before
+                  transform: scale(1, 1)
+                  transform-origin: nth(left left, 2) top
+
+      .lower-menu
+        margin-right: 50px
+        z-index: fw.set-index(lower-menu)
+        ul
+          display: flex
+          justify-content: center
+          align-items: center
+          gap: 24px
           position: relative
-          &:hover > ul.sub-menu
-            top: 82px
+          padding: 0 24px
+          color: #fff
+          background-color: fw.$orange
+          border-radius: 9999px
+          border-top-left-radius: 0
+          border-top-right-radius: 0
+          border-bottom-left-radius: 20px
+          border-bottom-right-radius: 20px
+          &::before, &::after
+            +fw.background-image("./img/navigation_corner-orange.svg", $size: cover, $position: center)
+            position: absolute
+            top: 0
+            width: 16px
+            aspect-ratio: 1
+            content: ""
+            transform: rotate(90deg)
+          &::before
+            left: -16px
+          &::after
+            right: -16px
+            transform: rotate(0deg)
+          li
+            a
+              display: block
+              padding: 13px 0
+              font-size: 0.8125rem
+
+      .hamburger-menu, .hospital-address
+        display: none
+
+  
+// media query
+:root body::before
+  +fw.media(sm)
+    opacity: 0
+
+.home, .single, .page, .category, .archive
+  +fw.media(sm)
+    header
+      position: fixed // scrollさせるための設定
+      top: 0
+      left: 0
+      width: 100%
+      // transform: translateX(100%)
+      z-index: fw.set-index(header)
+      .menu-toggle-btn
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+        position: fixed
+        top: 20px
+        right: 20px
+        width: 60px
+        aspect-ratio: 1
+        background-color: fw.$orange
+        border-radius: 50%
+        z-index: 1000
+        span
+          +fw.positionAbsoluteCTL($left: true)
+          width: 30px
+          height: 2px
+          background-color: #fff
+          transition: .3s
+          &:first-of-type
+            top: 35%
+          &:nth-of-type(2)
+            top: 50%
             visibility: visible
             opacity: 1
-          > a
-            display: block
-            height: 100%
-            padding: 30px 0
-            transition: .3s
-            &:hover
-              color: fw.$orange
-          > ul.sub-menu
-            +fw.positionAbsoluteCTL($left: true)
-            top: 85px
-            display: flex
-            flex-direction: column
-            padding: 18px 24px
-            width: 235px
-            background-color: #fff
-            border-radius: 10px
-            box-shadow: 0 0 20px fw.$gray-light
-            transition: .5s
-            visibility: hidden
-            opacity: 0
-            z-index: fw.set_index(sub-menu)
-            &::before
-              content: ""
-              display: inline-block
-              width: 0
-              height: 0
-              border-style: solid
-              border-width: 0 15px 15px 15px
-              border-color: transparent transparent #fff transparent
-              position: absolute
-              top: -8px
-              left: 50%
-              -webkit-transform: translateX(-50%)
-              transform: translateX(-50%)
-            > li
-              display: block
-              position: relative
-              margin-left: 25px
-              padding: 0
-              &::before
-                +fw.positionAbsoluteCTL($top: true)
-                +fw.fontAwesome("\f061", 13px)
-                left: -25px
-                color: fw.$black-middle
-                transition: .3s
-              &:hover::before
-                left: -18px
-                color: fw.$orange
-              a
-                display: inline-block
-                position: relative
-                padding: 14px 0
-                font-weight: 400
-                letter-spacing: 0.04em
-                transition: .3s
-                &::after
-                  position: absolute
-                  display: inline-block
-                  bottom: 10px
-                  left: 0
-                  width: 100%
-                  height: 1px
-                  content: ""
-                  background-color: fw.$orange
-                  transform: scale(0, 1)
-                  transform-origin: nth(left left, 1) top
-                  transition: .3s
-              &:hover a::after
-                transform: scale(1, 1)
-                transform-origin: nth(left left, 2) top
+          &:last-of-type
+            bottom: 30%
+      .menu-toggle-btn.flag span
+        &:first-of-type
+          top: 47.5%
+          left: 25%
+          transform: rotate(45deg)
+        &:nth-of-type(2)
+          visibility: hidden
+          opacity: 0
+        &:last-of-type
+          bottom: 47.5%
+          transform: rotate(-45deg)
+          left: 25%
+      .menu-wrapper
+        display: block
+        position: unset
+        width: 100%
+        padding: 15px
+        max-height: 100vh // scrollさせるための設定
+        overflow-y: auto  // scrollさせるための設定
+        background-color: fw.$bg-color
+        transform: translateX(100%)
+        transition: .7s
+        &.flag
+          transform: translateX(0)
 
-    .lower-menu
-      margin-right: 50px
-      z-index: fw.set-index(lower-menu)
-      ul
-        display: flex
-        justify-content: center
-        align-items: center
-        gap: 24px
-        position: relative
-        padding: 0 24px
-        color: #fff
-        background-color: fw.$orange
-        border-radius: 9999px
-        border-top-left-radius: 0
-        border-top-right-radius: 0
-        border-bottom-left-radius: 20px
-        border-bottom-right-radius: 20px
-        &::before, &::after
-          +fw.background-image("./img/navigation_corner-orange.svg", $size: cover, $position: center)
-          position: absolute
-          top: 0
-          width: 16px
-          aspect-ratio: 1
-          content: ""
-          transform: rotate(90deg)
-        &::before
-          left: -16px
-        &::after
-          right: -16px
-          transform: rotate(0deg)
-        li
+        .logo-landscape
+          +fw.background-image("./img/logo_kumamoto-sp.svg", $size: contain)
+          display: block
+          margin: 15px auto 0 0
+          width: 180px
+          aspect-ratio: 3/1
+        .global-menu, .lower-menu
+          display: none
+        .hamburger-menu
+          display: block
+          width: 100%
+          margin-top: 20px
+          > .main-menu
+            > .menu
+              width: 100%
+              > li
+                padding-left: 35px
+                border-bottom: 1px solid fw.$black-light
+                &:first-of-type
+                  border-top: 1px solid fw.$black-light
+                &:nth-of-type(-n+3)
+                  padding: 0 0 25px 35px
+                > a
+                  display: block
+                  position: relative
+                  width: 100%
+                  padding: 25px 0
+                  font-size: 0.9rem
+                  line-height: 1em
+                  font-weight: 500
+                  letter-spacing: .05em
+                  color: fw.$black
+                  .leading-arrow
+                    +fw.leading-arrow
+                > .sub-menu
+                  > li
+                    + li
+                      margin-top: 13.5px
+                    > a
+                      font-size: 0.8rem
+                      line-height: 1em
+                      font-weight: 300
+                      color: fw.$black
+          > .group-link
+            margin-top: 30px
+            h2
+              font-size: .7rem
+              font-weight: 500
+            ul
+              margin-top: 20px
+              padding-left: 35px
+              li
+                a
+                  display: inline-block
+                  position: relative
+                  width: fit-content
+                  padding: 10px 0
+                  font-size: .85rem
+                  font-weight: 300
+                  .leading-arrow
+                    +fw.leading-arrow
+                  &::after
+                    +fw.positionAbsoluteCTL($top: true)
+                    +fw.fontAwesome("\f08e", .6rem)
+                    right: -18px
+                    color: fw.$black-middle
+        .hospital-address
+          display: block
+          margin-top: 40px
+          .site-title
+            +fw.site-title
+            width: 154px
+            margin: 0 auto
+            aspect-ratio: 1
+            background-size: contain
+            background-color: unset
+          address
+            font-size: 0.875rem
+            font-weight: 300
+            line-height: 1.7
+            margin-top: 10px
+            text-align: center
+        .lower
+          display: flex
+          flex-direction: column
+          align-items: center
+          font-weight: 300
           a
-            display: block
-            padding: 13px 0
-            font-size: 0.8125rem
+            margin: 30px 0 15px
+            padding-bottom: 3px
+            font-size: .8rem
+            border-bottom: 1px solid fw.$black
+          small
+            font-size: .75rem
+            padding-bottom: 40px

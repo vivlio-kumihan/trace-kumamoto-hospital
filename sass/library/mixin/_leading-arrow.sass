@@ -1,0 +1,25 @@
+@use '../../variables' as var
+@use './position-absolute-ctl' as ctl
+@use './fontawesome' as fa
+@use './background-image' as bgi
+
+=leading-arrow
+  +ctl.positionAbsoluteCTL($top: true)
+  display: block
+  left: -30px
+  content: ""
+  width: 20px
+  height: 20px
+  padding: 5px 0 0 6px
+  font-size: 8px
+  color: var.$orange
+  border: 1px solid var.$orange
+  border-radius: 50%
+  transition: 0.5s
+  @content
+  &::after
+    +ctl.positionAbsoluteCTL
+    +fa.fontAwesome("\f04b", $fontSize: .5rem)
+    line-height: 1em
+    transition: 0.5s
+    @content

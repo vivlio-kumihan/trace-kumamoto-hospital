@@ -40,10 +40,10 @@
       endif; ?>
 
       <div class="page-direction">
-        <a href="<?php echo home_url('/news') ?>">記事一覧へ</a>
+        <a class="to-index" href="<?php echo home_url('/news') ?>">記事一覧へ</a>
         <ul>
           <?php if (get_previous_post() !== '') : ?>
-            <li><?php previous_post_link('%link', '前の記事へ', true); ?></li>
+            <li class="previuos"><?php previous_post_link('%link', '前の記事へ', true); ?></li>
           <?php endif; ?>
           <?php if (get_next_post() !== '') : ?>
             <li><?php next_post_link('%link', '次の記事へ', true); ?></li>

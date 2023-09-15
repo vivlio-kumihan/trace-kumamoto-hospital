@@ -2,7 +2,8 @@
 
 <main>
   <div class="wrapper">
-    <div class="swiper main-visual">
+    <!-- escape -->
+    <!-- <div class="swiper main-visual">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_slide-kumamoto01.jpg" alt=""></div>
         <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_slide-kumamoto02.jpg" alt=""></div>
@@ -12,11 +13,12 @@
         <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_slide-kumamoto02.jpg" alt=""></div>
         <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_slide-kumamoto03.jpg" alt=""></div>
         <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_slide-kumamoto04.jpg" alt=""></div>
-      </div>
+      </div> -->
     </div>
-    <div class="frame-divider">
+    <!-- escape -->
+    <!-- <div class="frame-divider">
       <img class="divider" src="<?php echo get_template_directory_uri(); ?>/img/bg_mv_bottom.svg" alt="">
-    </div>
+    </div> -->
   </div>
 
   <div class="hero">
@@ -175,7 +177,7 @@
     </dl>
   </section>
 
-  <section class="information">
+  <!-- <section class="information">
     <div id="outpatient-care-bg-image" class="outpatient-care bg-image">
     </div>
     <div id="outpatient-care" class="outpatient-care">
@@ -330,7 +332,7 @@
         </div>
       </div>
     </div>
-
+    
     <div class="another-info">
       <div id="wrapper-pick-up" class="wrapper pick-up">
         <h3>ピックアップ</h3>
@@ -358,7 +360,7 @@
         </ul>
       </div>
     </div>
-  </section>
+  </section> -->
 </main>
 
 <?php get_footer(); ?>

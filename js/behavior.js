@@ -1,21 +1,21 @@
 // ホーム用
 
-// // ローディング
+// // ローディング 動きが不自然なので改良する。
 // function loaded() {
-//   const loading = document.getElementById('openning-action')
-//   loading.classList.add('action')
-// }
+//   const loading = document.getElementById('openning-action');
+//   loading.classList.add('action');
+// };
 // // ウィンドウを読み込んで2秒後には次に遷移する。
 // window.addEventListener('load', () => {
-//   // setTimeout(loaded, 0)
-//   setTimeout(loaded, 2000)
+//   // setTimeout(loaded, 0);
+//   setTimeout(loaded, 2000);
 // })
 // // 最低でも５秒後には表示
-// // setTimeout(loaded, 5000)
+// // setTimeout(loaded, 5000);
 
 // setTimeout(() => {
-//   const headCopy = document.getElementById('head-copy')
-//   const latestInfo = document.getElementById('latest-info')
+//   const headCopy = document.getElementById('head-copy');
+//   const latestInfo = document.getElementById('latest-info');
 
 //   gsap.fromTo(headCopy.children, .3, {
 //       y: 100,
@@ -25,8 +25,8 @@
 //       opacity: 1,
 //       ease: Power1.easeInOut,
 //       stagger: .2 
-//     }
-//   )
+//     };
+//   );
   
 //   gsap.fromTo(latestInfo, .3, {
 //       y: 100,
@@ -34,53 +34,12 @@
 //     }, {
 //       y: 0,
 //       opacity: 1,
-//     }
-//   )
-// }, 1000)
+//     };
+//   );
+// }, 1000);
 
-const sections = ['policy', 
-                  'outpatient-care-bg-image', 
-                  'outpatient-care', 
-                  'vansayplus-image', 
-                  'vansayplus',
-                  'wrapper-pick-up',
-                  'wrapper-service']
-sections.forEach(elem => {
-  const sec = document.getElementById(elem)
-  gsap.fromTo(sec, 1, {
-    y: 100,
-    opacity: 0,
-  }, {
-    y: 0,
-    opacity: 1,
-    ease: 'power1.easeInOut',
-    scrollTrigger: {
-      trigger: sec,
-      start: 'top 90%',
-      markers: true
-    }
-  })
-})
-
-// const oneAfterAnotherRow = document.querySelectorAll('#one-after-another-row')
-// oneAfterAnotherRow.forEach(elem => {
-//   // 要素の子要素へアクセスはこれだけ。超絶賢い。
-//   gsap.from(elem.children, .7, {
-//     opacity: 0,
-//     ease: 'power3.easeOut',
-//     // ↓ 0.25秒ずつ延滞させて処理する。これだけ。
-//     stagger: .25,
-//     scrollTrigger: {
-//       trigger: elem,
-//       start: 'top 80%',
-//       // markers: true,
-//     },
-//   })
-// })
-
-
-// swiper
 if (document.querySelector('body.home')) {
+  // swiper
   const mainSwiper = new Swiper(".swiper.main-visual", {
     loop: true,
     // スライドの数に対して半分に設定しないと途中ですぐに止まる。
@@ -127,7 +86,7 @@ if (document.querySelector('body.home')) {
   // 4つ目以上の記事を非表示にする。
   // const latestInfo = Array.from(document.querySelectorAll('.latest-info .post-archive > li'));
   // latestInfo.filter((elem, index) => index > 2)
-  //           .map(elem => elem.classList.add('hidden-list'))
+  //           .map(elem => elem.classList.add('hidden-list'));
 
   // 当院からのお知らせ
   const catList = document.querySelectorAll('#category-menu li a');
@@ -166,7 +125,48 @@ if (document.querySelector('body.home')) {
           }
         })
       }
+    }
+  )
+  // sectionをフワッと出す。
+  const sections = ['policy', 
+                'outpatient-care-bg-image', 
+                'outpatient-care', 
+                'vansayplus-image', 
+                'vansayplus',
+                'wrapper-pick-up',
+                'wrapper-service'];
+  sections.forEach(elem => {
+    const sec = document.getElementById(elem)
+    gsap.fromTo(sec, 1, {
+      y: 100,
+      opacity: 0,
+    }, {
+      y: 0,
+      opacity: 1,
+      ease: 'power1.easeInOut',
+      scrollTrigger: {
+        trigger: sec,
+        start: 'top 90%',
+        // markers: true
+      }
     });
+  });
+
+  // const oneAfterAnotherRow = document.querySelectorAll('#one-after-another-row');
+  // oneAfterAnotherRow.forEach(elem => {
+  //   // 要素の子要素へアクセスはこれだけ。超絶賢い。
+  //   gsap.from(elem.children, .7, {
+  //     opacity: 0,
+  //     ease: 'power3.easeOut',
+  //     // ↓ 0.25秒ずつ延滞させて処理する。これだけ。
+  //     stagger: .25,
+  //     scrollTrigger: {
+  //       trigger: elem,
+  //       start: 'top 80%',
+  //       // markers: true,
+  //     },
+  //   });
+  // });
   });
 
   // 当院からのお知らせのメニュー
@@ -184,46 +184,123 @@ if (document.querySelector('body.home')) {
       elem.classList.add('active');
     });
   });
+
+  // 一文字ずつ現れる
+  const para = document.querySelectorAll('.effect-para p');
+
+  const splitPara = () => {
+    Array.from(para).forEach((p) => {
+      p.innerHTML = p.textContent.split('')
+        .map((char) => {
+          return char === ' ' ? `<span>${ '&nbsp;' }</span>` : `<span>${ char }</span>`;
+        })
+        .join('');
+    });
+  };
+
+  splitPara(para);
+
+  para.forEach(elem => {
+    const tl = gsap.timeline({
+      defaults: {
+        opacity: 0,
+        ease: 'power1.inOut',
+        stagger: .1
+      },
+      scrollTrigger: {
+        trigger: elem,
+        start: 'top center',
+        // markers: true
+      }
+    })
+    tl.from(elem, {})
+      .from(elem.children, {}, '-=0.25')
+  })
 }
 
 
-// CSSで代替のため不要
-// // グローバル・メニューのサブ・メニュー出現
-// const subMenu = Array.from(document.querySelectorAll('.global-menu > ul > li'));
-// subMenu.forEach(elem => {
-//   elem.addEventListener('mouseenter', function() {
-//     console.log(this)
-//     this.classList.add('active');
-//   });
-//   elem.addEventListener('mouseleave', function() {
-//     this.classList.remove('active');
-//   });
-// })
+// ボタン
+const menuToggleBtn = document.getElementById('menu-toggle-btn');
+const menuWrapper = document.getElementById('menu-wrapper')
 
+menuToggleBtn.addEventListener('click', function() {
+  this.classList.toggle('flag')
+  menuWrapper.classList.toggle('flag')
+  
+    // this.classList.remove('active');
+    // menuToggleBtn.classList.add('active');
+});
 
-// // ボタン要素を取得
-// const buttons = document.querySelectorAll('.button');
+// ハンバーガー・メニュー
+const toSectionLinkBtn = document.getElementById('to-section-link-btn')
+const contentsLinks = document.getElementById('contents-links')
+const linksLi = document.getElementById('contents-links').children
 
-// // 各ボタンにクリックイベントリスナーを追加
-// buttons.forEach(button => {
-//     button.addEventListener('click', () => {
-//         // クリックされたボタンにactiveクラスを追加し、他のボタンからactiveクラスを削除
-//         buttons.forEach(btn => {
-//             btn.classList.remove('active');
-//         });
-//         button.classList.add('active');
-//     });
-// });
+// メニューの切り替え
+toSectionLinkBtn.addEventListener('click', function () {
+  this.classList.toggle('active')
+  this.nextElementSibling.classList.toggle('appear')
+})
+
+// リンクをクリックでページ内スクロールの際にメニューを閉じる。
+Array.from(linksLi).forEach(el => {
+  el.addEventListener('click', () => {
+    toSectionLinkBtn.classList.remove('active')
+    contentsLinks.classList.remove('appear')
+  })
+})
 
 if (document.querySelector('body.archive')) {
-  const ul = document.querySelector('#breadcrumbs ul')
+  const ul = document.querySelector('#breadcrumbs ul');
   if (!ul) {
     document.querySelector('#breadcrumbs')
       .insertAdjacentHTML('afterbegin', 
-      '<ul class="page-numbers"><li><span aria-current="page" class="page-numbers current">1</span></li></ul>')
+      '<ul class="page-numbers"><li><span aria-current="page" class="page-numbers current">1</span></li></ul>');
   }
 }
 
-// footerのアローマーク
-const li = Array.from(document.querySelectorAll('footer .site-map ul li'))
-li.map(l => {l.insertAdjacentHTML('afterbegin', '<span></span>')})
+// footer, hamburger-menuのアローマーク
+const li = Array.from(document.querySelectorAll(['footer .site-map ul li a', '.hamburger-menu > .main-menu > ul > li > a']));
+li.map(l => {l.insertAdjacentHTML('afterbegin', '<span class="leading-arrow"></span>')});
+
+
+
+// メニューを開く関数
+const slideDown = (elem) => {
+  elem.style.height = 'auto' //いったんautoに
+  let getHeight = elem.offsetHeight //autoにした要素から高さを取得
+  elem.style.height = getHeight + 'px'
+  elem.animate([ //高さ0から取得した高さまでのアニメーション
+    { height: 0 },
+    { height: getHeight + 'px' }
+  ], {
+    duration: 300, //アニメーションの時間（ms）
+  })
+}
+
+// メニューを閉じる関数
+const slideUp = (elem) => {
+  elem.style.height = 0
+}
+
+let activeIndex = null //開いているアコーディオンのindex
+
+//アコーディオンコンテナ全てで実行
+const accordions = document.querySelectorAll('.include-accordion')
+accordions.forEach((accordion) => {
+  //アコーディオンのトリガー全てで実行
+  const accordionTriggers = accordion.querySelectorAll('.job-type')
+  accordionTriggers.forEach((acoTrig, idx) => {
+    acoTrig.addEventListener('click', (e) => {
+      activeIndex = idx //クリックされたトリガーを把握
+      // parentNode => .job-type < li 
+      e.target.parentNode.classList.toggle('active') //トリガーの親要素（=ul>li)にクラスを付与／削除
+      const content = acoTrig.nextElementSibling //トリガーの次の要素（=ul>ul）
+      if(e.target.parentNode.classList.contains('active')){
+        slideDown(content) //クラス名がactive（＝閉じていた）なら上記で定義した開く関数を実行
+      }else{
+        slideUp(content) //クラス名にactiveがない（＝開いていた）なら上記で定義した閉じる関数を実行
+      }
+    })
+  })
+})

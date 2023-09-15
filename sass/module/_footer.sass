@@ -32,35 +32,19 @@
             li
               position: relative
               margin-left: 30px
-              span
-                +fw.positionAbsoluteCTL($top: true)
-                display: block
-                left: -30px
-                content: ""
-                width: 20px
-                height: 20px
-                padding: 5px 0 0 6px
-                font-size: 8px
-                color: fw.$orange
-                border: 1px solid fw.$orange
-                border-radius: 50%
-                transition: .5s
-                &::after
-                  +fw.positionAbsoluteCTL
-                  +fw.fontAwesome("\f04b", $fontSize: 6px)
-                  transition: .5s
-              &:hover span
-                background-color: fw.$orange
-                border: transparent
-              &:hover span::after
-                color: #fff
               a
                 position: relative
                 display: block
                 width: fit-content
                 font-size: 0.875rem
                 font-weight: 300
-                &::after
+                .leading-arrow
+                  +fw.leading-arrow
+                &:hover .leading-arrow
+                  background-color: fw.$orange
+                  &::after
+                    color: #fff
+                &::before
                   position: absolute
                   display: block
                   bottom: -5px
@@ -74,7 +58,7 @@
                   transition: transform .3s
                 &:hover
                   color: fw.$orange
-                &:hover::after
+                &:hover::before
                   transform: scale(1, 1)
                   transform-origin: nth(left left, 2) top
 
@@ -86,25 +70,25 @@
           grid-auto-flow: column
           li
             margin-bottom: 25px
+
         .group-link
-          li
-            width: fit-content
-            margin-bottom: 25px
-            &::after
-              position: absolute
-              +fw.positionAbsoluteCTL($top: true)
-              +fw.fontAwesome("\f08e", .6rem)
-              right: -18px
-              color: fw.$black-middle
-              transition: .5s
-            &:hover::after
-              color: fw.$orange
-            a
-              display: inline-block
-              position: relative
-              width: fit-content
-            &:hover a::after
-              color: fw.$orange
+          ul
+            li
+              margin-bottom: 25px
+              a
+                display: inline-block
+                position: relative
+                width: fit-content
+                &::after
+                  +fw.positionAbsoluteCTL($top: true)
+                  +fw.fontAwesome("\f08e", .6rem)
+                  right: -18px
+                  color: fw.$black-middle
+                  transition: .5s
+                &:hover::after
+                  color: fw.$orange
+              &:hover a::after
+                color: fw.$orange
               
     .lower
       margin-top: 40px

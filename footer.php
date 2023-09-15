@@ -9,7 +9,8 @@
       </address>
     </div>
 
-    <div class="wrapper">
+    <!-- escape point => style="overflow: hidden" -->
+    <div class="wrapper" style="overflow: hidden">
       <div class="site-map">
         <h2>サイトマップ</h2>
         <?php
@@ -24,10 +25,10 @@
       <div class="group-link">
         <h2>萬生会グループリンク</h2>
         <ul>
-          <li><span></span><a href="/vansay-top">萬生会総合トップ</a></li>
-          <li><span></span><a href="/kumamoto-hospital">熊本第一病院</a></li>
-          <li><span></span><a href="/koshi-hospital">合志第一病院</a></li>
-          <li><span></span><a href="/zaitaku">在宅事業部</a></li>
+          <li><a href="/vansay-top"><span class="leading-arrow"></span>萬生会総合トップ</a></li>
+          <li><a href="/kumamoto-hospital"><span class="leading-arrow"></span>熊本第一病院</a></li>
+          <li><a href="/koshi-hospital"><span class="leading-arrow"></span>合志第一病院</a></li>
+          <li><a href="/zaitaku"><span class="leading-arrow"></span>在宅事業部</a></li>
         </ul>
       </div>
     </div>
@@ -42,28 +43,3 @@
 </body>
 
 </html>
-
-
-
-<header>
-  <div class="menu-wrapper">
-    <div class="global-menu">
-      <?php
-      wp_nav_menu(array(
-        'theme_location' => 'global-menu',
-        'container'      => '',
-        'depth'          => 2,
-      ));
-      ?>
-    </div>
-    <div class="lower-menu">
-      <?php
-      wp_nav_menu(array(
-        'theme_location' => 'sub-menu',
-        'container'      => '',
-        'depth'          => 2,
-      ));
-      ?>
-    </div>
-  </div>
-</header>
