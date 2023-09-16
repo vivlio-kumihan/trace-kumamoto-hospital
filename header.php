@@ -42,7 +42,7 @@
         ?>
       </div>
 
-      <div class="hamburger-menu">
+      <div id="hamburger-menu" class="hamburger-menu">
         <div class="main-menu">
           <?php
           wp_nav_menu(array(

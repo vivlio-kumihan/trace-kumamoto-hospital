@@ -88,69 +88,69 @@ if (document.querySelector('body.home')) {
   // latestInfo.filter((elem, index) => index > 2)
   //           .map(elem => elem.classList.add('hidden-list'));
 
-  // 当院からのお知らせ
-  const catList = document.querySelectorAll('#category-menu li a');
-  const postAll = document.querySelectorAll('#post-archive > li');
-  catList.forEach(elem => {
-    elem.addEventListener('click', (e) =>{
-      // a要素の機能を無効化する。
-      e.preventDefault();
-      // data-categoryをjsで取りたい時、data-を抜いた名称になる。
-      const targetCategory = e.target.dataset.category;
-      // メソッドで返ってくる値
-      // console.log(e);
-      // => click { target: a, buttons: 0, clientX: 877, clientY: 463, layerX: 877, layerY: 815 }
+  // // 当院からのお知らせ
+  // const catList = document.querySelectorAll('#category-menu li a');
+  // const postAll = document.querySelectorAll('#post-archive > li');
+  // catList.forEach(elem => {
+  //   elem.addEventListener('click', (e) =>{
+  //     // a要素の機能を無効化する。
+  //     e.preventDefault();
+  //     // data-categoryをjsで取りたい時、data-を抜いた名称になる。
+  //     const targetCategory = e.target.dataset.category;
+  //     // メソッドで返ってくる値
+  //     // console.log(e);
+  //     // => click { target: a, buttons: 0, clientX: 877, clientY: 463, layerX: 877, layerY: 815 }
 
-      // console.log(e.target);
-      // => <a data-category="recruit" href="">
+  //     // console.log(e.target);
+  //     // => <a data-category="recruit" href="">
 
-      // console.log(e.target.dataset);
-      // => DOMStringMap { category → "recruit" }
+  //     // console.log(e.target.dataset);
+  //     // => DOMStringMap { category → "recruit" }
 
-      // console.log(targetCategory);
-      // => recruit
+  //     // console.log(targetCategory);
+  //     // => recruit
 
-      // 2段階の下拵え
-      // 前回かかっているかもしれないdisplay = 'none'を無効化する。
-      postAll.forEach(post => post.style.display = '')
-      // 前回つけた属性を解除する。
-      catList.forEach(a => a.classList.remove('active'))
+  //     // 2段階の下拵え
+  //     // 前回かかっているかもしれないdisplay = 'none'を無効化する。
+  //     postAll.forEach(post => post.style.display = '')
+  //     // 前回つけた属性を解除する。
+  //     catList.forEach(a => a.classList.remove('active'))
 
-      e.target.classList.add('active');
-      // data-category="all"で付与したall
-      if (targetCategory !== 'all') {
-        postAll.forEach(post => {
-          if (!post.classList.contains(targetCategory)) {
-            post.style.display = 'none'
-          }
-        })
-      }
-    }
-  )
-  // sectionをフワッと出す。
-  const sections = ['policy', 
-                'outpatient-care-bg-image', 
-                'outpatient-care', 
-                'vansayplus-image', 
-                'vansayplus',
-                'wrapper-pick-up',
-                'wrapper-service'];
-  sections.forEach(elem => {
-    const sec = document.getElementById(elem)
-    gsap.fromTo(sec, 1, {
-      y: 100,
-      opacity: 0,
-    }, {
-      y: 0,
-      opacity: 1,
-      ease: 'power1.easeInOut',
-      scrollTrigger: {
-        trigger: sec,
-        start: 'top 90%',
-        // markers: true
-      }
-    });
-  });
+  //     e.target.classList.add('active');
+  //     // data-category="all"で付与したall
+  //     if (targetCategory !== 'all') {
+  //       postAll.forEach(post => {
+  //         if (!post.classList.contains(targetCategory)) {
+  //           post.style.display = 'none'
+  //         }
+  //       })
+  //     }
+  //   }
+  // )
+  // // sectionをフワッと出す。
+  // const sections = ['policy', 
+  //               'outpatient-care-bg-image', 
+  //               'outpatient-care', 
+  //               'vansayplus-image', 
+  //               'vansayplus',
+  //               'wrapper-pick-up',
+  //               'wrapper-service'];
+  // sections.forEach(elem => {
+  //   const sec = document.getElementById(elem)
+  //   gsap.fromTo(sec, 1, {
+  //     y: 100,
+  //     opacity: 0,
+  //   }, {
+  //     y: 0,
+  //     opacity: 1,
+  //     ease: 'power1.easeInOut',
+  //     scrollTrigger: {
+  //       trigger: sec,
+  //       start: 'top 90%',
+  //       // markers: true
+  //     }
+  //   });
+  // });
 
   // const oneAfterAnotherRow = document.querySelectorAll('#one-after-another-row');
   // oneAfterAnotherRow.forEach(elem => {
@@ -167,7 +167,7 @@ if (document.querySelector('body.home')) {
   //     },
   //   });
   // });
-  });
+  // });
 
   // 当院からのお知らせのメニュー
   const menu = document.getElementById('category-menu');
@@ -226,29 +226,26 @@ const menuWrapper = document.getElementById('menu-wrapper')
 menuToggleBtn.addEventListener('click', function() {
   this.classList.toggle('flag')
   menuWrapper.classList.toggle('flag')
-  
-    // this.classList.remove('active');
-    // menuToggleBtn.classList.add('active');
 });
 
 // ハンバーガー・メニュー
-const toSectionLinkBtn = document.getElementById('to-section-link-btn')
-const contentsLinks = document.getElementById('contents-links')
-const linksLi = document.getElementById('contents-links').children
+// const toSectionLinkBtn = document.getElementById('to-section-link-btn')
+// const contentsLinks = document.getElementById('contents-links')
+// const linksLi = document.getElementById('contents-links').children
 
-// メニューの切り替え
-toSectionLinkBtn.addEventListener('click', function () {
-  this.classList.toggle('active')
-  this.nextElementSibling.classList.toggle('appear')
-})
+// // メニューの切り替え
+// toSectionLinkBtn.addEventListener('click', function () {
+//   this.classList.toggle('active')
+//   this.nextElementSibling.classList.toggle('appear')
+// })
 
-// リンクをクリックでページ内スクロールの際にメニューを閉じる。
-Array.from(linksLi).forEach(el => {
-  el.addEventListener('click', () => {
-    toSectionLinkBtn.classList.remove('active')
-    contentsLinks.classList.remove('appear')
-  })
-})
+// // リンクをクリックでページ内スクロールの際にメニューを閉じる。
+// Array.from(linksLi).forEach(el => {
+//   el.addEventListener('click', () => {
+//     toSectionLinkBtn.classList.remove('active')
+//     contentsLinks.classList.remove('appear')
+//   })
+// })
 
 if (document.querySelector('body.archive')) {
   const ul = document.querySelector('#breadcrumbs ul');
@@ -267,40 +264,49 @@ li.map(l => {l.insertAdjacentHTML('afterbegin', '<span class="leading-arrow"></s
 
 // メニューを開く関数
 const slideDown = (elem) => {
-  elem.style.height = 'auto' //いったんautoに
-  let getHeight = elem.offsetHeight //autoにした要素から高さを取得
-  elem.style.height = getHeight + 'px'
+  elem.style.height = 'auto'; //いったんautoに
+  let getHeight = elem.offsetHeight; //autoにした要素から高さを取得
+  elem.style.height = getHeight + 'px';
   elem.animate([ //高さ0から取得した高さまでのアニメーション
     { height: 0 },
     { height: getHeight + 'px' }
   ], {
     duration: 300, //アニメーションの時間（ms）
-  })
-}
+  });
+};
 
 // メニューを閉じる関数
 const slideUp = (elem) => {
-  elem.style.height = 0
-}
+  elem.style.height = 0;
+};
 
-let activeIndex = null //開いているアコーディオンのindex
+let activeIndex = null; //開いているアコーディオンのindex
 
 //アコーディオンコンテナ全てで実行
-const accordions = document.querySelectorAll('.include-accordion')
-accordions.forEach((accordion) => {
-  //アコーディオンのトリガー全てで実行
-  const accordionTriggers = accordion.querySelectorAll('.job-type')
-  accordionTriggers.forEach((acoTrig, idx) => {
-    acoTrig.addEventListener('click', (e) => {
-      activeIndex = idx //クリックされたトリガーを把握
-      // parentNode => .job-type < li 
-      e.target.parentNode.classList.toggle('active') //トリガーの親要素（=ul>li)にクラスを付与／削除
-      const content = acoTrig.nextElementSibling //トリガーの次の要素（=ul>ul）
-      if(e.target.parentNode.classList.contains('active')){
-        slideDown(content) //クラス名がactive（＝閉じていた）なら上記で定義した開く関数を実行
-      }else{
-        slideUp(content) //クラス名にactiveがない（＝開いていた）なら上記で定義した閉じる関数を実行
-      }
-    })
-  })
-})
+const menuList = Array.from(document.querySelectorAll('#hamburger-menu > .main-menu > .menu > li'));
+const accordionMenuList = menuList.filter(list => list.querySelector('ul') !== null)
+accordionMenuList.map(l => {l.insertAdjacentHTML('beforeend', '<button class="accordion-trigger-btn"><span></span><span></span></button>')});
+
+// accordionMenuList.forEach((list, idx) => {
+//   list.addEventListener('click', function(e) {
+//     this.classList.add('active')
+//   })
+
+// })
+// accordions.forEach((accordion) => {
+//   //アコーディオンのトリガー全てで実行
+//   const accordionTriggers = accordion.querySelectorAll('.job-type')
+//   accordionTriggers.forEach((acoTrig, idx) => {
+//     acoTrig.addEventListener('click', (e) => {
+//       activeIndex = idx //クリックされたトリガーを把握
+//       // parentNode => .job-type < li 
+//       e.target.parentNode.classList.toggle('active') //トリガーの親要素（=ul>li)にクラスを付与／削除
+//       const content = acoTrig.nextElementSibling //トリガーの次の要素（=ul>ul）
+//       if(e.target.parentNode.classList.contains('active')){
+//         slideDown(content) //クラス名がactive（＝閉じていた）なら上記で定義した開く関数を実行
+//       }else{
+//         slideUp(content) //クラス名にactiveがない（＝開いていた）なら上記で定義した閉じる関数を実行
+//       }
+//     })
+//   })
+// })
