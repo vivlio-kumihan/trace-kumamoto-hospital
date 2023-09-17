@@ -219,34 +219,7 @@ if (document.querySelector('body.home')) {
 }
 
 
-// ボタン
-const menuToggleBtn = document.getElementById('menu-toggle-btn');
-const menuWrapper = document.getElementById('menu-wrapper')
-
-menuToggleBtn.addEventListener('click', function() {
-  this.classList.toggle('flag')
-  menuWrapper.classList.toggle('flag')
-});
-
-// ハンバーガー・メニュー
-// const toSectionLinkBtn = document.getElementById('to-section-link-btn')
-// const contentsLinks = document.getElementById('contents-links')
-// const linksLi = document.getElementById('contents-links').children
-
-// // メニューの切り替え
-// toSectionLinkBtn.addEventListener('click', function () {
-//   this.classList.toggle('active')
-//   this.nextElementSibling.classList.toggle('appear')
-// })
-
-// // リンクをクリックでページ内スクロールの際にメニューを閉じる。
-// Array.from(linksLi).forEach(el => {
-//   el.addEventListener('click', () => {
-//     toSectionLinkBtn.classList.remove('active')
-//     contentsLinks.classList.remove('appear')
-//   })
-// })
-
+// パンくずリストのイレギュラーな処理
 if (document.querySelector('body.archive')) {
   const ul = document.querySelector('#breadcrumbs ul');
   if (!ul) {
@@ -256,11 +229,42 @@ if (document.querySelector('body.archive')) {
   }
 }
 
+// ハンバーガー・メニュー
+// ボタン
+const menuToggleBtn = document.getElementById('menu-toggle-btn');
+const menuWrapper = document.getElementById('menu-wrapper');
+const menu = document.querySelector('.hamburger-menu > .main-menu > .menu');
+const groupLink = document.querySelector('.hamburger-menu .group-link');
+let isMenuVisible = false;
+
+menuToggleBtn.addEventListener('click', function() {
+  // ボタンの表示を切り替える。
+  this.classList.toggle('flag')
+  // メニューを出現させる。
+  menuWrapper.classList.toggle('flag');
+
+  if (!isMenuVisible) {
+    // 項目を徐々に出す。
+    const tl = gsap.timeline({
+      defaults: {
+        scaleY: .75,
+        transformOrigin: '0 0',
+        opacity: 0,    // 初期状態: 不透明度0
+        duration: 1,   // アニメーションの時間（秒）
+        ease: "power3.inOut", // イージング
+        stagger: 0.1,  // 子要素ごとの遅延時間
+      }
+    })
+    tl.from(menu.children, {})
+      .from(groupLink.children, {}, '-=0.5')
+  }
+  isMenuVisible = !isMenuVisible;
+});
+
+
 // footer, hamburger-menuのアローマーク
 const li = Array.from(document.querySelectorAll(['footer .site-map ul li a', '.hamburger-menu > .main-menu > ul > li > a']));
 li.map(l => {l.insertAdjacentHTML('afterbegin', '<span class="leading-arrow"></span>')});
-
-
 
 // 収納されているメニューの高さを調べてメニューを開く。
 const slideDown = (elem) => {
@@ -290,7 +294,8 @@ accordionMenuList.map(l => {
 const accordionMenuListBtn = Array.from(document.querySelectorAll('.accordion-trigger-btn'));
 // トグル・ボタンをクリックしてメニューの開閉。
 accordionMenuListBtn.forEach((btn, idx) => {
-  btn.addEventListener('click', () => {
+  btn.addEventListener('click', function() {
+    this.classList.toggle('active');
     const toggledTarget = btn.previousElementSibling;
     const flag = toggledTarget.classList.toggle('active');
     if (flag) {
@@ -301,24 +306,3 @@ accordionMenuListBtn.forEach((btn, idx) => {
     accordionMenuList[idx].classList.toggle('plus-padding-bottom');
   });
 })
-
-
-
-// // })
-// accordions.forEach((accordion) => {
-//   //アコーディオンのトリガー全てで実行
-//   const accordionTriggers = accordion.querySelectorAll('.job-type')
-//   accordionTriggers.forEach((acoTrig, idx) => {
-//     acoTrig.addEventListener('click', (e) => {
-//       activeIndex = idx //クリックされたトリガーを把握
-//       // parentNode => .job-type < li 
-//       e.target.parentNode.classList.toggle('active') //トリガーの親要素（=ul>li)にクラスを付与／削除
-//       const content = acoTrig.nextElementSibling //トリガーの次の要素（=ul>ul）
-//       if(e.target.parentNode.classList.contains('active')){
-//         slideDown(content) //クラス名がactive（＝閉じていた）なら上記で定義した開く関数を実行
-//       }else{
-//         slideUp(content) //クラス名にactiveがない（＝開いていた）なら上記で定義した閉じる関数を実行
-//       }
-//     })
-//   })
-// })

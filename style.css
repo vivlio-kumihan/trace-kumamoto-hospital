@@ -315,6 +315,9 @@
     width: 20px;
     aspect-ratio: 1;
   }
+  .home header .menu-wrapper .hamburger-menu > .main-menu > .menu > li .accordion-trigger-btn.active span:first-of-type, .single header .menu-wrapper .hamburger-menu > .main-menu > .menu > li .accordion-trigger-btn.active span:first-of-type, .page header .menu-wrapper .hamburger-menu > .main-menu > .menu > li .accordion-trigger-btn.active span:first-of-type, .category header .menu-wrapper .hamburger-menu > .main-menu > .menu > li .accordion-trigger-btn.active span:first-of-type, .archive header .menu-wrapper .hamburger-menu > .main-menu > .menu > li .accordion-trigger-btn.active span:first-of-type {
+    opacity: 0;
+  }
   .home header .menu-wrapper .hamburger-menu > .main-menu > .menu > li .accordion-trigger-btn span, .single header .menu-wrapper .hamburger-menu > .main-menu > .menu > li .accordion-trigger-btn span, .page header .menu-wrapper .hamburger-menu > .main-menu > .menu > li .accordion-trigger-btn span, .category header .menu-wrapper .hamburger-menu > .main-menu > .menu > li .accordion-trigger-btn span, .archive header .menu-wrapper .hamburger-menu > .main-menu > .menu > li .accordion-trigger-btn span {
     position: absolute;
     position: absolute;
@@ -328,6 +331,7 @@
   .home header .menu-wrapper .hamburger-menu > .main-menu > .menu > li .accordion-trigger-btn span:first-of-type, .single header .menu-wrapper .hamburger-menu > .main-menu > .menu > li .accordion-trigger-btn span:first-of-type, .page header .menu-wrapper .hamburger-menu > .main-menu > .menu > li .accordion-trigger-btn span:first-of-type, .category header .menu-wrapper .hamburger-menu > .main-menu > .menu > li .accordion-trigger-btn span:first-of-type, .archive header .menu-wrapper .hamburger-menu > .main-menu > .menu > li .accordion-trigger-btn span:first-of-type {
     left: 0%;
     transform: rotate(90deg);
+    transition: 0.3s;
   }
   .home header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > a, .single header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > a, .page header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > a, .category header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > a, .archive header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > a {
     display: block;
@@ -339,6 +343,13 @@
     font-weight: 500;
     letter-spacing: 0.05em;
     color: #5A5A5A;
+    transition: 0.3s;
+    visibility: visible;
+    opacity: 1;
+  }
+  .home header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > a.active, .single header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > a.active, .page header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > a.active, .category header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > a.active, .archive header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > a.active {
+    visibility: hidden;
+    opacity: 0;
   }
   .home header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > a .leading-arrow, .single header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > a .leading-arrow, .page header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > a .leading-arrow, .category header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > a .leading-arrow, .archive header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > a .leading-arrow {
     position: absolute;
@@ -371,7 +382,7 @@
   .home header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > .sub-menu, .single header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > .sub-menu, .page header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > .sub-menu, .category header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > .sub-menu, .archive header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > .sub-menu {
     height: 0;
     overflow: hidden;
-    transition: 0.2s;
+    transition: 0.5s;
     visibility: hidden;
     opacity: 0;
   }
