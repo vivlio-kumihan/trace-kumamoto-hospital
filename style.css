@@ -309,10 +309,9 @@
   }
   .home header .menu-wrapper .hamburger-menu > .main-menu > .menu > li .accordion-trigger-btn, .single header .menu-wrapper .hamburger-menu > .main-menu > .menu > li .accordion-trigger-btn, .page header .menu-wrapper .hamburger-menu > .main-menu > .menu > li .accordion-trigger-btn, .category header .menu-wrapper .hamburger-menu > .main-menu > .menu > li .accordion-trigger-btn, .archive header .menu-wrapper .hamburger-menu > .main-menu > .menu > li .accordion-trigger-btn {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    display: block;
+    top: 20px;
     right: 10px;
+    display: block;
     width: 20px;
     aspect-ratio: 1;
   }
@@ -371,6 +370,7 @@
   }
   .home header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > .sub-menu, .single header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > .sub-menu, .page header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > .sub-menu, .category header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > .sub-menu, .archive header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > .sub-menu {
     height: 0;
+    overflow: hidden;
     transition: 0.2s;
     visibility: hidden;
     opacity: 0;

@@ -236,9 +236,10 @@
                 &.plus-padding-bottom
                   padding-bottom: 25px
                 .accordion-trigger-btn
-                  +fw.positionAbsoluteCTL($top: true)
-                  display: block
+                  position: absolute
+                  top: 20px
                   right: 10px
+                  display: block
                   width: 20px
                   aspect-ratio: 1
                   span
@@ -264,6 +265,7 @@
                     +fw.leading-arrow
                 > .sub-menu
                   height: 0
+                  overflow: hidden
                   transition: .2s
                   visibility: hidden
                   opacity: 0
