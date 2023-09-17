@@ -262,7 +262,7 @@ li.map(l => {l.insertAdjacentHTML('afterbegin', '<span class="leading-arrow"></s
 
 
 
-// メニューを開く関数
+// 収納されているメニューの高さを調べてメニューを開く。
 const slideDown = (elem) => {
   elem.style.height = 'auto'; //いったんautoに
   let getHeight = elem.offsetHeight; //autoにした要素から高さを取得
@@ -280,19 +280,31 @@ const slideUp = (elem) => {
   elem.style.height = 0;
 };
 
-let activeIndex = null; //開いているアコーディオンのindex
+// アコーディオン・メニューが仕込んであるリストを収集する。
+const accordionMenuList = Array.from(document.querySelectorAll('#hamburger-menu > .main-menu > .menu > li'))
+                          .filter(list => list.querySelector('ul') !== null);
+// アコーディオン・メニューにトグル・ボタンを設置する。
+accordionMenuList.map(l => {
+  l.insertAdjacentHTML('beforeend', '<button class="accordion-trigger-btn"><span></span><span></span></button>')});
+// 改めてトグル・ボタンを収集する。
+const accordionMenuListBtn = Array.from(document.querySelectorAll('.accordion-trigger-btn'));
+// トグル・ボタンをクリックしてメニューの開閉。
+accordionMenuListBtn.forEach((btn, idx) => {
+  btn.addEventListener('click', () => {
+    const toggledTarget = btn.previousElementSibling;
+    const flag = toggledTarget.classList.toggle('active');
+    if (flag) {
+      slideDown(toggledTarget);
+    } else {
+      slideUp(toggledTarget);
+    }
+    accordionMenuList[idx].classList.toggle('plus-padding-bottom');
+  });
+})
 
-//アコーディオンコンテナ全てで実行
-const menuList = Array.from(document.querySelectorAll('#hamburger-menu > .main-menu > .menu > li'));
-const accordionMenuList = menuList.filter(list => list.querySelector('ul') !== null)
-accordionMenuList.map(l => {l.insertAdjacentHTML('beforeend', '<button class="accordion-trigger-btn"><span></span><span></span></button>')});
 
-// accordionMenuList.forEach((list, idx) => {
-//   list.addEventListener('click', function(e) {
-//     this.classList.add('active')
-//   })
 
-// })
+// // })
 // accordions.forEach((accordion) => {
 //   //アコーディオンのトリガー全てで実行
 //   const accordionTriggers = accordion.querySelectorAll('.job-type')

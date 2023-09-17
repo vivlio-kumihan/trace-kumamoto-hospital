@@ -270,7 +270,7 @@
     overflow-y: auto;
     background-color: #FBFAF6;
     transform: translateX(100%);
-    transition: 0.7s;
+    transition: 0.3s;
   }
   .home header .menu-wrapper.flag, .single header .menu-wrapper.flag, .page header .menu-wrapper.flag, .category header .menu-wrapper.flag, .archive header .menu-wrapper.flag {
     transform: translateX(0);
@@ -304,13 +304,14 @@
   .home header .menu-wrapper .hamburger-menu > .main-menu > .menu > li:first-of-type, .single header .menu-wrapper .hamburger-menu > .main-menu > .menu > li:first-of-type, .page header .menu-wrapper .hamburger-menu > .main-menu > .menu > li:first-of-type, .category header .menu-wrapper .hamburger-menu > .main-menu > .menu > li:first-of-type, .archive header .menu-wrapper .hamburger-menu > .main-menu > .menu > li:first-of-type {
     border-top: 1px solid #dbdbdb;
   }
-  .home header .menu-wrapper .hamburger-menu > .main-menu > .menu > li:nth-of-type(-n+3).active, .single header .menu-wrapper .hamburger-menu > .main-menu > .menu > li:nth-of-type(-n+3).active, .page header .menu-wrapper .hamburger-menu > .main-menu > .menu > li:nth-of-type(-n+3).active, .category header .menu-wrapper .hamburger-menu > .main-menu > .menu > li:nth-of-type(-n+3).active, .archive header .menu-wrapper .hamburger-menu > .main-menu > .menu > li:nth-of-type(-n+3).active {
-    padding: 0 0 25px 35px;
+  .home header .menu-wrapper .hamburger-menu > .main-menu > .menu > li.plus-padding-bottom, .single header .menu-wrapper .hamburger-menu > .main-menu > .menu > li.plus-padding-bottom, .page header .menu-wrapper .hamburger-menu > .main-menu > .menu > li.plus-padding-bottom, .category header .menu-wrapper .hamburger-menu > .main-menu > .menu > li.plus-padding-bottom, .archive header .menu-wrapper .hamburger-menu > .main-menu > .menu > li.plus-padding-bottom {
+    padding-bottom: 25px;
   }
   .home header .menu-wrapper .hamburger-menu > .main-menu > .menu > li .accordion-trigger-btn, .single header .menu-wrapper .hamburger-menu > .main-menu > .menu > li .accordion-trigger-btn, .page header .menu-wrapper .hamburger-menu > .main-menu > .menu > li .accordion-trigger-btn, .category header .menu-wrapper .hamburger-menu > .main-menu > .menu > li .accordion-trigger-btn, .archive header .menu-wrapper .hamburger-menu > .main-menu > .menu > li .accordion-trigger-btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    display: block;
     right: 10px;
     width: 20px;
     aspect-ratio: 1;
@@ -370,6 +371,7 @@
   }
   .home header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > .sub-menu, .single header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > .sub-menu, .page header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > .sub-menu, .category header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > .sub-menu, .archive header .menu-wrapper .hamburger-menu > .main-menu > .menu > li > .sub-menu {
     height: 0;
+    transition: 0.2s;
     visibility: hidden;
     opacity: 0;
   }
