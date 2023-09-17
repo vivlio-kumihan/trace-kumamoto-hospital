@@ -44,18 +44,24 @@ if (document.querySelector('body.home')) {
     loop: true,
     // スライドの数に対して半分に設定しないと途中ですぐに止まる。
     slidesPerView: 1,
+    spaceBetween: 0,
     breakpoints: {
-      750: {
-        slidesPerView: 1.8,
+      576: {
+        slidesPerView: 1,
+      },
+      700: {
+        slidesPerView: 2.2,
+        spaceBetween: 10,
       },
       1100: {
         slidesPerView: 2.2,
+        spaceBetween: 10,
       },
       1500: {
         slidesPerView: 2.8,
+        spaceBetween: 10,
       },
     },
-    spaceBetween: 10,
     speed: 9000,
     allowTouchMove: false, // swipeを無効にする。
     autoplay: {
@@ -256,7 +262,7 @@ menuToggleBtn.addEventListener('click', function() {
       }
     })
     tl.from(menu.children, {})
-      .from(groupLink.children, {}, '-=0.5')
+      .from(groupLink.children, {}, '-=1')
   }
   isMenuVisible = !isMenuVisible;
 });

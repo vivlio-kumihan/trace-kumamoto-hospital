@@ -2,8 +2,7 @@
 
 <main>
   <div class="wrapper">
-    <!-- escape -->
-    <!-- <div class="swiper main-visual">
+    <div class="swiper main-visual">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_slide-kumamoto01.jpg" alt=""></div>
         <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_slide-kumamoto02.jpg" alt=""></div>
@@ -13,12 +12,9 @@
         <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_slide-kumamoto02.jpg" alt=""></div>
         <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_slide-kumamoto03.jpg" alt=""></div>
         <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_slide-kumamoto04.jpg" alt=""></div>
-      </div> -->
+      </div>
     </div>
-    <!-- escape -->
-    <!-- <div class="frame-divider">
-      <img class="divider" src="<?php echo get_template_directory_uri(); ?>/img/bg_mv_bottom.svg" alt="">
-    </div> -->
+    <div class="frame-divider"></div>
   </div>
 
   <div class="hero">
@@ -26,8 +22,9 @@
       <span>特定医療法人 萬生会 熊本第一病院</span>
     </div>
     <div id="head-copy" class="head-copy">
-      <div class="catch-copy">その人らしさ<span>を</span><br><span>支える手</span></div>
-      <div class="lead-copy">地域の皆さまの「その人らしい生き方」をささえるために、<br> 手をおしまない医療、手厚い看護、心をこめた介護を提供します。</div>
+      <div class="catch-copy">その人らしさ<span>を</span></div>
+      <div class="catch-copy">支える手</div>
+      <div class="lead-copy">地域の皆さまの「その人らしい生き方」をささえる<br class="for-smp">ために、<br class="for-pc"> 手をおしまない医療、手厚い看護、<br class="for-smp">心をこめた介護を提供します。</div>
       <a class="read-more-link" href="<?php echo home_url('/about') ?>">当院の特徴をみる</a>
     </div>
   </div>

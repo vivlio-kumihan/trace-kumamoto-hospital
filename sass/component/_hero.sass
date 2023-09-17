@@ -15,30 +15,34 @@
     span
       display: none
   .head-copy
+    display: flex
+    flex-direction: column
     margin-top: 45px
     .catch-copy
-      display: inline
-      padding: 0 10px
+      display: inline-block
+      width: fit-content
+      padding: 10px 10px
       font-family: fw.$m-rd
       font-size: 3.625rem
       font-weight: 700
-      line-height: 1.525
+      line-height: 1
       color: fw.$orange 
       background-color: #fff
       border-radius: 5px
+      + .catch-copy
+        margin-top: 7px
       span
-        margin-right: 10px
-        font-size: calc(3.625rem * 0.9)
+        font-size: calc(3.625rem * 0.85)
         color: fw.$black
-        ~ span
-          margin-left: 10px
-          font-size: 3.625rem
-          color: fw.$orange 
     .lead-copy
       margin-top: 20px
       font-size: 0.9375rem
       font-weight: 300
       line-height: 1.9
+      .for-pc
+        display: inline-block
+      .for-smp
+        display: none
     .read-more-link
       +fw.read-more-link
       +fw.shrink-line
@@ -98,3 +102,33 @@
         top: 80%
         right: -20px
         width: 150px
+
+.hero
+  +fw.media(sm)
+    top: 110px
+    left: 10px
+    .site-title
+      width: 100px
+      height: 120px
+      background-size: 70%
+    .head-copy
+      margin-top: 35px
+      .catch-copy
+        padding: 10px 12.5px
+        font-size: 2.25rem
+        // line-height: 1.7em
+      .catch-copy span
+        font-size: 1.875rem
+      .lead-copy
+        font-size: 0.8125rem
+        line-height: 1.7
+        .for-pc
+          display: none
+        .for-smp
+          display: inline-block
+      .read-more-link
+        +fw.read-more-link
+          font-size: .875rem
+        
+.cover-graphic
+  display: none

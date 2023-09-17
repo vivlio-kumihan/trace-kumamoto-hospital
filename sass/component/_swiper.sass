@@ -5,12 +5,12 @@ main
     position: relative
     width: 100%
     height: 79vh
+    z-index: 0
     .swiper.main-visual
       position: absolute
       top: 10px
       left: 0
       width: 100vw
-      z-index: 0
       .swiper-wrapper
         transition-timing-function: linear
         .swiper-slide
@@ -24,12 +24,10 @@ main
       top: 350px
       left: 0
       width: 100vw
-      overflow: hidden
+      aspect-ratio: 2/1
+      background: url(./img/bg_mv_bottom.svg) no-repeat center
+      background-size: cover
       z-index: 1
-      .divider
-        width: 100%
-        object-fit: cover
-
 .home
   main
     .information
@@ -124,3 +122,23 @@ main
               .swiper-button-prev
                 &::before
                   +fw.fontAwesome("\f177", 1rem)
+
+main
+  .wrapper
+    +fw.media(sm)
+      .swiper.main-visual
+        top: 0
+        aspect-ratio: 1/1
+        .swiper-wrapper
+          .swiper-slide
+            img
+              border-radius: 0
+      .frame-divider
+        top: 210px
+        background-size: 150%
+        background-position-x: 65%
+        background-position-y: 0
+              
+
+
+

@@ -2,6 +2,7 @@
 
 .home, .single, .page, .category, .archive
   header
+    height: 0
     .menu-wrapper
       display: flex
       flex-direction: column
@@ -141,7 +142,8 @@
               display: block
               padding: 13px 0
               font-size: 0.8125rem
-
+      .lower
+        display: none
       .hamburger-menu, .hospital-address
         display: none
 
@@ -158,7 +160,7 @@
       top: 0
       left: 0
       width: 100%
-      // transform: translateX(100%)
+      height: 0
       z-index: fw.set-index(header)
       .menu-toggle-btn 
         display: flex
