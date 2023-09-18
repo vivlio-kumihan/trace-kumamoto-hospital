@@ -13,6 +13,7 @@
       background-color: #fff
       border-radius: 20px
       z-index: 10
+      box-shadow: 0 0 20px fw.$gray-light
       h3
         width: 25%
         font-family: fw.$m-rd
@@ -70,21 +71,26 @@
                 aspect-ratio: 1
                 color: fw.$black-light
                 transition: .5s
-              time
-                font-size: .8rem
-              .post-category
-                > li
-                  padding: 7px 20px
-                  font-size: .75rem
-                  font-weight: 400
-                  color: fw.$orange
-                  background-color: fw.$orange-gray-light
-                  border-radius: 9999px
+              .header-sub
+                display: flex
+                align-items: center
+                gap: 30px
+                time
+                  font-size: .8rem
+                .post-category
+                  > li
+                    padding: 7px 20px
+                    font-size: .75rem
+                    font-weight: 400
+                    color: fw.$orange
+                    background-color: fw.$orange-gray-light
+                    border-radius: 9999px
               .post-title
                 display: inline-block
                 position: relative
                 font-size: 0.8125rem
                 font-weight: 300
+                line-height: 1.7
                 &::after
                   position: absolute
                   display: block
@@ -627,7 +633,82 @@
 // icon_triangle-orange-fill.svg
 
 
-
+.home
+  +fw.media(sm)
+    main
+      .latest-info
+        flex-direction: column
+        padding: 15px
+        h3
+          width: 100%
+          margin: 15px 0
+          font-size: 1.125rem
+        .archive
+          width: 100%
+          .category-menu
+            justify-content: flex-start
+            li
+              a
+                font-size: .6rem
+                padding: 8px 10px
+          .post-archive
+            > li
+              a
+                flex-direction: column
+                align-items: flex-start
+                gap: 12.5px
+                .header-sub
+                  gap: 10px
+      .wrapper.to-archive
+        .read-more-link
+          +fw.read-more-link
+            font-size: .85rem
+      .policy
+        grid-template-columns: 1fr
+        grid-template-rows: repeat(3, 1fr)
+        padding: 40px 20px 0
+        margin-top: 50px
+        border-radius: 50px 0 0 0
+        img.item
+          display: none
+        dl
+          dt
+            a
+              .frame
+                aspect-ratio: 3/2.5
+                .bgimage
+                  border-radius: 12.5px
+              .catch-copy
+                flex-direction: column
+                top: unset
+                right: unset
+                left: 20px
+                bottom: 90px
+                p
+                  display: block
+                  padding: 2px 8px
+                  font-size: 1.125rem
+                  writing-mode: horizontal-tb
+              .policy-title
+                h3
+                  padding: 2rem 0 .5rem
+                  font-size: 1.2rem
+                  span
+                    right: 17px
+                    font-size: 2.35rem
+          dd
+            width: 80%
+            padding-top: 5px
+            a
+              p
+                margin-bottom: 20px
+                font-size: .825rem
+              .read-more-link.hover-area
+                +fw.read-more-link
+                  font-size: .85rem
+        
+      
+  
 
 
 

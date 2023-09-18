@@ -1,0 +1,11 @@
+// 解決できない。230918
+@use "../forwards" as fw
+
+br.for-pc
+  display: inline-block
+  +fw.media(sm)
+    display: none
+br.for-smp
+  display: none
+  +fw.media(sm)
+    display: inline-block

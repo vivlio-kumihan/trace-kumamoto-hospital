@@ -45,7 +45,7 @@
   </div>
 
   <section id="latest-info" class="latest-info">
-    <h3>当院からの<br>お知らせ</h3>
+    <h3>当院からの<br class="for-pc">お知らせ</h3>
     <div class="archive">
       <ul id="category-menu" class="category-menu">
         <li class="active"><a data-category="all" href="">すべて</a></li>
@@ -77,15 +77,17 @@
         ?>
             <li class="wrapper<?php echo $category_names; ?>">
               <a href="<?php the_permalink(); ?>">
-                <time datetime="<?php echo get_the_date("Y-m-d") ?>"><?php echo get_the_date("Y.m.d") ?></time>
-                <ul class="post-category">
-                  <?php
-                  $category = get_the_category();
-                  foreach ($category as $attr) {
-                    echo '<li>' . $attr->name . '</li>';
-                  }
-                  ?>
-                </ul>
+                <div class="header-sub">
+                  <time datetime="<?php echo get_the_date("Y-m-d") ?>"><?php echo get_the_date("Y.m.d") ?></time>
+                  <ul class="post-category">
+                    <?php
+                    $category = get_the_category();
+                    foreach ($category as $attr) {
+                      echo '<li>' . $attr->name . '</li>';
+                    }
+                    ?>
+                  </ul>
+                </div>
                 <div class="post-title"><?php the_title(); ?></div>
               </a>
             </li>

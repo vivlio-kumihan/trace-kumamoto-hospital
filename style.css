@@ -523,6 +523,7 @@
   background-color: #fff;
   border-radius: 20px;
   z-index: 10;
+  box-shadow: 0 0 20px #F0F0F0;
 }
 .home main .latest-info h3 {
   width: 25%;
@@ -598,10 +599,15 @@
   color: #dbdbdb;
   transition: 0.5s;
 }
-.home main .latest-info .archive .post-archive > li a time {
+.home main .latest-info .archive .post-archive > li a .header-sub {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.home main .latest-info .archive .post-archive > li a .header-sub time {
   font-size: 0.8rem;
 }
-.home main .latest-info .archive .post-archive > li a .post-category > li {
+.home main .latest-info .archive .post-archive > li a .header-sub .post-category > li {
   padding: 7px 20px;
   font-size: 0.75rem;
   font-weight: 400;
@@ -614,6 +620,7 @@
   position: relative;
   font-size: 0.8125rem;
   font-weight: 300;
+  line-height: 1.7;
 }
 .home main .latest-info .archive .post-archive > li a .post-title::after {
   position: absolute;
@@ -1395,6 +1402,125 @@
 }
 .home main .information .another-info .wrapper.service ul li:hover img {
   scale: 115%;
+}
+
+@media screen and (max-width: 576px) {
+  .home main .latest-info {
+    flex-direction: column;
+    padding: 15px;
+  }
+  .home main .latest-info h3 {
+    width: 100%;
+    margin: 15px 0;
+    font-size: 1.125rem;
+  }
+  .home main .latest-info .archive {
+    width: 100%;
+  }
+  .home main .latest-info .archive .category-menu {
+    justify-content: flex-start;
+  }
+  .home main .latest-info .archive .category-menu li a {
+    font-size: 0.6rem;
+    padding: 8px 10px;
+  }
+  .home main .latest-info .archive .post-archive > li a {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12.5px;
+  }
+  .home main .latest-info .archive .post-archive > li a .header-sub {
+    gap: 10px;
+  }
+  .home main .wrapper.to-archive .read-more-link {
+    display: inline-block;
+    position: relative;
+    margin-left: 26px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    z-index: 10;
+    font-size: 0.85rem;
+  }
+  .home main .wrapper.to-archive .read-more-link::before {
+    background-image: url(./img/arrow.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -26px;
+    width: 20px;
+    aspect-ratio: 1;
+    content: "";
+  }
+  .home main .policy {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    padding: 40px 20px 0;
+    margin-top: 50px;
+    border-radius: 50px 0 0 0;
+  }
+  .home main .policy img.item {
+    display: none;
+  }
+  .home main .policy dl dt a .frame {
+    aspect-ratio: 3/2.5;
+  }
+  .home main .policy dl dt a .frame .bgimage {
+    border-radius: 12.5px;
+  }
+  .home main .policy dl dt a .catch-copy {
+    flex-direction: column;
+    top: unset;
+    right: unset;
+    left: 20px;
+    bottom: 90px;
+  }
+  .home main .policy dl dt a .catch-copy p {
+    display: block;
+    padding: 2px 8px;
+    font-size: 1.125rem;
+    writing-mode: horizontal-tb;
+  }
+  .home main .policy dl dt a .policy-title h3 {
+    padding: 2rem 0 0.5rem;
+    font-size: 1.2rem;
+  }
+  .home main .policy dl dt a .policy-title h3 span {
+    right: 17px;
+    font-size: 2.35rem;
+  }
+  .home main .policy dl dd {
+    width: 80%;
+    padding-top: 5px;
+  }
+  .home main .policy dl dd a p {
+    margin-bottom: 20px;
+    font-size: 0.825rem;
+  }
+  .home main .policy dl dd a .read-more-link.hover-area {
+    display: inline-block;
+    position: relative;
+    margin-left: 26px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    z-index: 10;
+    font-size: 0.85rem;
+  }
+  .home main .policy dl dd a .read-more-link.hover-area::before {
+    background-image: url(./img/arrow.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -26px;
+    width: 20px;
+    aspect-ratio: 1;
+    content: "";
+  }
 }
 
 .news main .container .category-link-menu, .category main .container .category-link-menu, .single main .container .category-link-menu, .archive main .container .category-link-menu {
@@ -2354,12 +2480,6 @@ main .wrapper .frame-divider {
   font-weight: 300;
   line-height: 1.9;
 }
-.hero .head-copy .lead-copy .for-pc {
-  display: inline-block;
-}
-.hero .head-copy .lead-copy .for-smp {
-  display: none;
-}
 .hero .head-copy .read-more-link {
   display: inline-block;
   position: relative;
@@ -2494,12 +2614,6 @@ main .wrapper .frame-divider {
   .hero .head-copy .lead-copy {
     font-size: 0.8125rem;
     line-height: 1.7;
-  }
-  .hero .head-copy .lead-copy .for-pc {
-    display: none;
-  }
-  .hero .head-copy .lead-copy .for-smp {
-    display: inline-block;
   }
   .hero .head-copy .read-more-link {
     display: inline-block;
@@ -2722,4 +2836,22 @@ main .wrapper .frame-divider {
   line-height: 1.6;
   text-align: center;
   color: #fff;
+}
+
+br.for-pc {
+  display: inline-block;
+}
+@media screen and (max-width: 576px) {
+  br.for-pc {
+    display: none;
+  }
+}
+
+br.for-smp {
+  display: none;
+}
+@media screen and (max-width: 576px) {
+  br.for-smp {
+    display: inline-block;
+  }
 }/*# sourceMappingURL=style.css.map */
