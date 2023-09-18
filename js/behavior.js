@@ -1,3 +1,4 @@
+// .home only start
 if (document.querySelector('body.home')) {
   // swiper
   const mainSwiper = new Swiper(".swiper.main-visual", {
@@ -39,8 +40,7 @@ if (document.querySelector('body.home')) {
     
     loop: true,
     slidesPerView: 'auto',
-    spaceBetween: 30,
-  
+    spaceBetween: 25,
     // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
@@ -75,6 +75,7 @@ if (document.querySelector('body.home')) {
   
   // 当院からのお知らせ
   const catList = document.querySelectorAll('#category-menu li a');
+  console.log(catList)
   const postAll = document.querySelectorAll('#post-archive > li');
   catList.forEach(elem => {
     elem.addEventListener('click', (e) =>{
@@ -113,7 +114,6 @@ if (document.querySelector('body.home')) {
     })
   })
   
-  
   // sectionをフワッと出す。
   const sections = ['policy', 
                 'outpatient-care-bg-image', 
@@ -139,6 +139,7 @@ if (document.querySelector('body.home')) {
     });
   });
 }
+// .home only end
 
 
 // パンくずリストのイレギュラーな処理

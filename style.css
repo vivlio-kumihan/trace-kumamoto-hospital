@@ -1093,7 +1093,6 @@
   color: #fff;
 }
 .home main .information .about-us .wrapper-about-us {
-  display: block;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
@@ -1109,7 +1108,7 @@
 }
 .home main .information .about-us .wrapper-about-us a .frame-about-us {
   width: 100px;
-  height: 100px;
+  aspect-ratio: 1;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -1520,6 +1519,162 @@
     width: 20px;
     aspect-ratio: 1;
     content: "";
+  }
+  .home main .information {
+    margin-top: 60px;
+  }
+  .home main .information .outpatient-care .wrapper-outpatient-care {
+    padding: 40px 20px;
+  }
+  .home main .information .outpatient-care .wrapper-outpatient-care .wrapper-inner {
+    padding: 40px 20px;
+  }
+  .home main .information .outpatient-care .wrapper-outpatient-care .wrapper-inner > img {
+    display: none;
+  }
+  .home main .information .outpatient-care .wrapper-outpatient-care .wrapper-inner h3 {
+    margin-bottom: 20px;
+    font-size: 1.15rem;
+  }
+  .home main .information .outpatient-care .wrapper-outpatient-care .wrapper-inner dl {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .home main .information .outpatient-care .wrapper-outpatient-care .wrapper-inner dl div {
+    height: auto;
+  }
+  .home main .information .outpatient-care .wrapper-outpatient-care .wrapper-inner dl div dt {
+    border-radius: 10px 10px 0 0;
+  }
+  .home main .information .outpatient-care .wrapper-outpatient-care .wrapper-inner dl div dt p {
+    font-size: 0.9rem;
+  }
+  .home main .information .outpatient-care .wrapper-outpatient-care .wrapper-inner dl div dd {
+    height: auto;
+    padding: 20px 0;
+  }
+  .home main .information .outpatient-care .wrapper-outpatient-care .wrapper-inner dl div dd p {
+    font-size: 0.6rem;
+  }
+  .home main .information .outpatient-care .wrapper-outpatient-care .wrapper-inner dl div dd p:first-of-type {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+  }
+  .home main .information .outpatient-care .wrapper-outpatient-care .wrapper-inner dl div dd p:first-of-type span {
+    font-size: 0.95rem;
+  }
+  .home main .information .outpatient-care .wrapper-outpatient-care .wrapper-inner dl div dd p:first-of-type.font-size-1dot7-lg {
+    font-size: 1.2rem;
+  }
+  .home main .information .bg-image {
+    border-radius: 0 50px 50px 0;
+  }
+  .home main .information .about-us {
+    padding: 0 20px;
+  }
+  .home main .information .about-us h3 {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+  }
+  .home main .information .about-us .wrapper-about-us {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .home main .information .about-us .wrapper-about-us a {
+    align-items: flex-start;
+    gap: 15px;
+    padding: 20px;
+  }
+  .home main .information .about-us .wrapper-about-us a .frame-about-us {
+    width: 60px;
+  }
+  .home main .information .about-us .wrapper-about-us a dl {
+    width: calc(100% - 100px);
+    margin-left: 0;
+  }
+  .home main .information .about-us .wrapper-about-us a dl::after {
+    right: -30px;
+  }
+  .home main .information .about-us .wrapper-about-us a dl dt {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  .home main .information .about-us .wrapper-about-us a dl dd {
+    font-size: 0.8rem;
+  }
+  .home main .information .vansayplus-image {
+    display: none;
+  }
+  .home main .information .vansayplus {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+    padding: 0;
+  }
+  .home main .information .vansayplus::after {
+    display: none;
+  }
+  .home main .information .vansayplus header {
+    position: unset;
+    height: auto;
+    margin: 0 auto;
+  }
+  .home main .information .vansayplus header .catch-copy {
+    position: unset;
+    font-size: 0.8rem;
+  }
+  .home main .information .vansayplus header .catch-copy img {
+    width: 45%;
+  }
+  .home main .information .vansayplus .content {
+    margin: 0;
+    background-color: #F87700;
+    border-radius: 20px 20px 0 0;
+  }
+  .home main .information .vansayplus .content .lead-copy {
+    padding: 30px 25px 20px;
+    width: 100%;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    font-weight: 300;
+    color: #fff;
+  }
+  .home main .information .vansayplus .content .vansayplus-posts .read-more-link {
+    display: none;
+  }
+  .home main .information .vansayplus .content .vansayplus-posts .to-link {
+    display: block;
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 30px auto;
+    padding: 20px 20px 20px 40px;
+    font-size: 0.8rem;
+    color: #fff;
+    background-color: #333;
+    border-radius: 9999px;
+  }
+  .home main .information .vansayplus .content .vansayplus-posts .to-link::before {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    display: block;
+    content: "";
+    width: 20px;
+    height: 20px;
+    padding: 5px 0 0 6px;
+    font-size: 8px;
+    color: #333;
+    background-color: #fff;
+    background: url(./img/arrow-white.svg) no-repeat center;
+    background-size: cover;
+    border-radius: 50%;
+    transition: 0.5s;
   }
 }
 
@@ -2299,6 +2454,9 @@ main .wrapper .frame-divider {
 .home main .information .vansayplus {
   overflow: hidden;
 }
+.home main .information .vansayplus .content .vansayplus-posts .swiper.vansayplus-slide {
+  margin-left: 20px;
+}
 .home main .information .vansayplus .content .vansayplus-posts .swiper.vansayplus-slide .swiper-wrapper.post-archive .swiper-slide {
   width: 350px;
   padding-bottom: 5px;
@@ -2311,7 +2469,7 @@ main .wrapper .frame-divider {
 }
 .home main .information .vansayplus .content .vansayplus-posts .swiper.vansayplus-slide .swiper-wrapper.post-archive .swiper-slide a .frame {
   width: 100%;
-  aspect-ratio: 3/2;
+  aspect-ratio: 4/2.7;
   overflow: hidden;
   border-radius: 20px;
 }
@@ -2422,6 +2580,31 @@ main .wrapper .frame-divider {
     background-size: 150%;
     background-position-x: 65%;
     background-position-y: 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .home main .information .vansayplus .content .vansayplus-posts .swiper.vansayplus-slide .swiper-wrapper.post-archive .swiper-slide {
+    width: 280px;
+  }
+  .home main .information .vansayplus .content .vansayplus-posts .swiper.vansayplus-slide .swiper-wrapper.post-archive .swiper-slide a .frame {
+    border-radius: 10px;
+  }
+  .home main .information .vansayplus .content .vansayplus-posts .swiper.vansayplus-slide .swiper-wrapper.post-archive .swiper-slide a .header-sub {
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .home main .information .vansayplus .content .vansayplus-posts .swiper.vansayplus-slide .swiper-wrapper.post-archive .swiper-slide a .header-sub time {
+    font-size: 0.6rem;
+  }
+  .home main .information .vansayplus .content .vansayplus-posts .swiper.vansayplus-slide .swiper-wrapper.post-archive .swiper-slide a .header-sub .post-category li {
+    font-size: 0.4rem;
+  }
+  .home main .information .vansayplus .content .vansayplus-posts .wrapper-button {
+    position: unset;
+    margin-top: 20px;
+    padding: 0 20px;
+    justify-content: flex-end;
   }
 }
 

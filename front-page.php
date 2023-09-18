@@ -176,7 +176,7 @@
     </dl>
   </section>
 
-  <!-- <section class="information">
+  <section class="information">
     <div id="outpatient-care-bg-image" class="outpatient-care bg-image">
     </div>
     <div id="outpatient-care" class="outpatient-care">
@@ -282,13 +282,12 @@
           <p>萬生会グループがお届けする<br>健康情報メディア</p>
           <img class="vansay-logo" src="<?php echo get_template_directory_uri(); ?>/img/logo_vansay-plus.svg"></img>
         </div>
+      </header>
+      <div class="content">
         <div class="lead-copy">
           皆さまの暮らしに役立つ医療情報から生活の中で使えるコラムを掲載しております。
         </div>
-      </header>
-      <div class="content">
         <div class="vansayplus-posts">
-          <a class="read-more-link" href="<?php echo home_url('/vansayplus') ?>">記事一覧を見る</a>
           <div class="swiper vansayplus-slide">
             <div class="swiper-wrapper post-archive">
               <?php
@@ -320,7 +319,7 @@
                       <div class="post-title"><?php the_title(); ?></div>
                     </a>
                   </div>
-              <?php endwhile;
+                  <?php endwhile;
               endif; ?>
             </div>
           </div>
@@ -328,6 +327,8 @@
             <div class="swiper-button-prev"></div>
             <div class="swiper-button-next"></div>
           </div>
+          <a class="read-more-link" href="<?php echo home_url('/vansayplus') ?>">記事一覧を見る</a>
+          <a class="to-link" href="<?php echo home_url('/vansayplus') ?>">記事一覧を見る</a>
         </div>
       </div>
     </div>
@@ -359,7 +360,7 @@
         </ul>
       </div>
     </div>
-  </section> -->
+  </section>
 </main>
 
 <?php get_footer(); ?>

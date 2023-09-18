@@ -414,7 +414,6 @@
           font-weight: 600
           color: #fff
         .wrapper-about-us
-          display: block
           display: grid
           grid-template-columns: repeat(2, 1fr)
           gap: 30px
@@ -428,7 +427,7 @@
             box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08)
             .frame-about-us
               width: 100px
-              height: 100px
+              aspect-ratio: 1
               border-radius: 10px
               overflow: hidden
               img
@@ -706,9 +705,124 @@
               .read-more-link.hover-area
                 +fw.read-more-link
                   font-size: .85rem
-        
-      
-  
-
-
-
+      .information
+        margin-top: 60px
+        .outpatient-care
+          .wrapper-outpatient-care
+            padding: 40px 20px
+            .wrapper-inner
+              padding: 40px 20px
+              > img
+                display: none
+              h3
+                margin-bottom: 20px
+                font-size: 1.15rem
+              dl
+                display: flex
+                flex-direction: column
+                gap: 20px
+                div
+                  height: auto
+                  dt
+                    border-radius: 10px 10px 0 0 
+                    p
+                      font-size: .9rem
+                  dd
+                    height: auto
+                    padding: 20px 0
+                    p
+                      font-size: .6rem
+                    p:first-of-type
+                      margin-bottom: 5px
+                      font-size: 1.2rem
+                      span
+                        font-size: .95rem
+                      &.font-size-1dot7-lg
+                        font-size: 1.2rem
+        .bg-image
+          border-radius: 0 50px 50px 0
+        .about-us
+          padding: 0 20px
+          h3
+            margin-bottom: 25px
+            font-size: 1.1rem
+          .wrapper-about-us
+            display: flex
+            flex-direction: column 
+            gap: 10px
+            a
+              align-items: flex-start
+              gap: 15px
+              padding: 20px
+              .frame-about-us
+                width: 60px
+              dl
+                width: calc(100% - 100px)
+                margin-left: 0
+                &::after
+                  right: -30px
+                dt
+                  margin-top: 5px
+                  font-size: .9rem
+                  font-weight: 500
+                dd
+                  font-size: .8rem
+        .vansayplus-image
+          display: none
+        .vansayplus
+          display: flex
+          flex-direction: column
+          gap: 30px
+          margin-top: 40px
+          padding: 0
+          &::after
+            display: none
+          header
+            position: unset
+            height: auto
+            margin: 0 auto
+            .catch-copy
+              position: unset
+              font-size: .8rem
+              img
+                width: 45%
+          .content
+            margin: 0
+            background-color: fw.$orange
+            border-radius: 20px 20px 0 0 
+            .lead-copy
+              padding: 30px 25px 20px
+              width: 100%
+              font-size: .85rem
+              line-height: 1.7
+              font-weight: 300
+              color: #fff
+            .vansayplus-posts
+              .read-more-link
+                display: none
+              .to-link
+                display: block
+                position: relative
+                width: fit-content
+                margin: 30px auto
+                padding: 20px 20px 20px 40px
+                font-size: .8rem
+                color: #fff
+                background-color: #333
+                border-radius: 9999px
+                &::before
+                  +fw.positionAbsoluteCTL($top: true)
+                  // +fw.fontAwesome("\f04b", $fontSize: 1rem)
+                  left: 15px
+                  display: block
+                  content: ""
+                  width: 20px
+                  height: 20px
+                  padding: 5px 0 0 6px
+                  font-size: 8px
+                  color: #333
+                  background-color: #fff
+                  background: url(./img/arrow-white.svg) no-repeat center
+                  background-size: cover
+                  border-radius: 50%
+                  transition: 0.5s

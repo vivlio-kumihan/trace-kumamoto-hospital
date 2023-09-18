@@ -36,6 +36,7 @@ main
         .content
           .vansayplus-posts
             .swiper.vansayplus-slide
+              margin-left: 20px
               .swiper-wrapper.post-archive
                 .swiper-slide
                   width: 350px
@@ -47,7 +48,7 @@ main
                     height: 100%
                     .frame
                       width: 100%
-                      aspect-ratio: 3/2
+                      aspect-ratio: 4/2.7
                       overflow: hidden
                       border-radius: 20px
                       img
@@ -138,7 +139,31 @@ main
         background-size: 150%
         background-position-x: 65%
         background-position-y: 0
-              
 
-
-
+.home
+  +fw.media(sm)
+    main
+      .information
+        .vansayplus
+          .content
+            .vansayplus-posts
+              .swiper.vansayplus-slide
+                .swiper-wrapper.post-archive
+                  .swiper-slide
+                    width: 280px
+                    a
+                      .frame
+                        border-radius: 10px
+                      .header-sub
+                        gap: 10px
+                        margin-top: 20px
+                        time
+                          font-size: .6rem
+                        .post-category
+                          li
+                            font-size: .4rem
+              .wrapper-button
+                position: unset
+                margin-top: 20px
+                padding: 0 20px
+                justify-content: flex-end
