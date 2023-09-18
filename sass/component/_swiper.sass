@@ -1,7 +1,7 @@
 @use "../forwards" as fw
 
 main
-  .wrapper
+  .swiper-container
     position: relative
     width: 100%
     height: 79vh
@@ -124,21 +124,24 @@ main
                 &::before
                   +fw.fontAwesome("\f177", 1rem)
 
-main
-  .wrapper
-    +fw.media(sm)
-      .swiper.main-visual
-        top: 0
-        aspect-ratio: 1/1
-        .swiper-wrapper
-          .swiper-slide
-            img
-              border-radius: 0
-      .frame-divider
-        top: 210px
-        background-size: 150%
-        background-position-x: 65%
-        background-position-y: 0
+.home
+  +fw.media(sm)
+    main
+        .swiper-container
+          height: 50vh
+          overflow: hidden
+          .swiper.main-visual
+            top: 0
+            aspect-ratio: 1
+            .swiper-wrapper
+              .swiper-slide
+                img
+                  border-radius: 0
+          .frame-divider
+            top: 210px
+            background-size: 150%
+            background-position-x: 65%
+            background-position-y: 0
 
 .home
   +fw.media(sm)

@@ -9,8 +9,7 @@
       </address>
     </div>
 
-    <!-- escape point => style="overflow: hidden" -->
-    <div class="wrapper" style="overflow: hidden">
+    <div class="wrapper">
       <div class="site-map">
         <h2>サイトマップ</h2>
         <?php
@@ -21,7 +20,19 @@
         ));
         ?>
       </div>
-
+      
+      <div id="hamburger-menu" class="hamburger-menu">
+        <h2>サイトマップ</h2>
+        <div class="main-menu">
+          <?php
+          wp_nav_menu(array(
+            'theme_location' => 'hamburger-menu',
+            'container'      => '',
+            'depth'          => 2,
+          ));
+          ?>
+        </div>
+      </div>
       <div class="group-link">
         <h2>萬生会グループリンク</h2>
         <ul>
@@ -33,7 +44,6 @@
       </div>
     </div>
   </div>
-
   <div class="lower">
     <a href="/privacy-policy">プライバシーポリシー</a>
     <small>© vansay.</small>

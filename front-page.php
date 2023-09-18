@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main>
-  <div class="wrapper">
+  <div class="swiper-container">
     <div class="swiper main-visual">
       <div class="swiper-wrapper">
         <div class="swiper-slide"><img src="<?php echo get_template_directory_uri(); ?>/img/mv_slide-kumamoto01.jpg" alt=""></div>
