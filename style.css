@@ -2142,51 +2142,51 @@
   color: #fff;
 }
 
-.contact {
+:root .contact {
   width: min(100%, 1100px);
   margin: 0 auto;
 }
-.contact header {
+:root .contact header {
   height: auto;
   padding: 80px 0;
   text-align: center;
   border-bottom: 1px solid #c4c4c4;
 }
-.contact header .logo {
+:root .contact header .logo {
   margin: 0 auto;
 }
-.contact header .logo img {
+:root .contact header .logo img {
   height: 130px;
 }
-.contact header h1 {
+:root .contact header h1 {
   margin-top: 24px;
   font-size: 20px;
   font-weight: 600;
 }
-.contact main {
+:root .contact main {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.contact main p {
+:root .contact main p {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.8;
 }
-.contact main p:first-of-type {
+:root .contact main p:first-of-type {
   margin: 70px 0 15px;
 }
-.contact main p:last-of-type {
+:root .contact main p:last-of-type {
   margin-bottom: 70px;
 }
-.contact main .form-wrapper {
+:root .contact main .form-wrapper {
   width: 890px;
   padding: 45px;
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0 0 40px #dbdbdb;
 }
-.contact main .form-wrapper h2 {
+:root .contact main .form-wrapper h2 {
   margin-bottom: 30px;
   padding: 24px;
   font-size: 1.1rem;
@@ -2194,20 +2194,20 @@
   background-color: #333;
   border-radius: 5px;
 }
-.contact main .form-wrapper .contact-form {
+:root .contact main .form-wrapper .contact-form {
   display: grid;
   gap: 30px;
 }
-.contact main .form-wrapper .contact-form div dt p, .contact main .form-wrapper .contact-form div dd p {
+:root .contact main .form-wrapper .contact-form div dt p, :root .contact main .form-wrapper .contact-form div dd p {
   margin: 0;
   font-size: 0.9rem;
 }
-.contact main .form-wrapper .contact-form div dt {
+:root .contact main .form-wrapper .contact-form div dt {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
-.contact main .form-wrapper .contact-form div dt p span {
+:root .contact main .form-wrapper .contact-form div dt p span {
   margin-right: 12px;
   padding: 5px 8px;
   font-size: 12px;
@@ -2215,49 +2215,49 @@
   background-color: #D41515;
   border-radius: 3px;
 }
-.contact main .form-wrapper .contact-form div dd {
+:root .contact main .form-wrapper .contact-form div dd {
   border: 1px solid #dbdbdb;
   border-radius: 5px;
   background-color: rgba(251, 251, 251, 0.6);
   transition: 0.3s;
 }
-.contact main .form-wrapper .contact-form div dd:hover {
+:root .contact main .form-wrapper .contact-form div dd:hover {
   border: 1px solid #5A5A5A;
 }
-.contact main .form-wrapper .contact-form div dd p span input {
+:root .contact main .form-wrapper .contact-form div dd p span input {
   padding: 15px;
   width: 100%;
   height: 100%;
   font-size: 1rem;
   font-weight: 300;
 }
-.contact main .form-wrapper .contact-form div dd p span input::-moz-placeholder {
+:root .contact main .form-wrapper .contact-form div dd p span input::-moz-placeholder {
   color: #c4c4c4;
 }
-.contact main .form-wrapper .contact-form div dd p span input::placeholder {
+:root .contact main .form-wrapper .contact-form div dd p span input::placeholder {
   color: #c4c4c4;
 }
-.contact main .form-wrapper .contact-form div dd p span input:focus {
+:root .contact main .form-wrapper .contact-form div dd p span input:focus {
   outline: none;
   border: unset;
 }
-.contact main .form-wrapper .contact-form div dd.input-contents {
+:root .contact main .form-wrapper .contact-form div dd.input-contents {
   height: 200px;
 }
-.contact main .form-wrapper .agreement {
+:root .contact main .form-wrapper .agreement {
   margin-top: 50px;
   padding-top: 50px;
   border-top: 1px solid #c4c4c4;
 }
-.contact main .form-wrapper .agreement:first-of-type p br {
+:root .contact main .form-wrapper .agreement:first-of-type p br {
   display: none;
 }
-.contact main .form-wrapper .agreement p {
+:root .contact main .form-wrapper .agreement p {
   margin: 0;
   text-align: center;
   font-size: 0.85rem;
 }
-.contact main .form-wrapper .agreement p button {
+:root .contact main .form-wrapper .agreement p button {
   display: inline-block;
   width: 80%;
   margin: 30px 0 10px;
@@ -2267,44 +2267,101 @@
   background-color: #333;
   border-radius: 4px;
 }
-.contact main .form-wrapper .agreement p:last-of-type {
+:root .contact main .form-wrapper .agreement p:last-of-type {
   font-size: 0.9rem;
   font-weight: 300;
   color: #c1c1c1;
 }
-.contact footer.footer-contact {
+:root .contact footer.footer-contact {
   padding: 60px 0 90px;
   text-align: center;
   font-size: 0.7rem;
   color: #828282;
 }
 
-.contact {
-  padding: 20px;
-}
-.contact header {
-  position: unset;
-  padding: 27.5px 0 40px;
-}
-.contact header .logo img {
-  height: 120px;
-}
-.contact header h1 {
-  font-size: 17px;
-}
-.contact main p {
-  padding: 0 30px;
-  font-size: 0.775rem;
-}
-.contact main p:first-of-type {
-  margin: 30px 0 20px;
-}
-.contact main p:last-of-type {
-  margin-bottom: 37.5px;
-}
-.contact main .form-wrapper {
-  width: calc(100% - 7.5px);
-  padding: 0;
+@media screen and (max-width: 576px) {
+  :root .contact {
+    padding: 20px;
+  }
+  :root .contact header {
+    position: unset;
+    padding: 27.5px 0 40px;
+  }
+  :root .contact header .logo img {
+    height: 120px;
+  }
+  :root .contact header h1 {
+    font-size: 17px;
+  }
+  :root .contact main p {
+    padding: 0 30px;
+    font-size: 0.775rem;
+  }
+  :root .contact main p:first-of-type {
+    margin: 30px 0 20px;
+  }
+  :root .contact main p:last-of-type {
+    margin-bottom: 37.5px;
+  }
+  :root .contact main .form-wrapper {
+    width: calc(100% - 7.5px);
+    padding: 20px 0;
+  }
+  :root .contact main .form-wrapper h2 {
+    margin: 10px 25px;
+    padding: 15px;
+    font-size: 0.875rem;
+  }
+  :root .contact main .form-wrapper .contact-form {
+    gap: 20px;
+    padding: 0 25px;
+  }
+  :root .contact main .form-wrapper .contact-form div dt {
+    justify-content: flex-start;
+    margin-bottom: 7px;
+  }
+  :root .contact main .form-wrapper .contact-form div dt p {
+    width: 100%;
+    padding: 0;
+    font-size: 1rem;
+  }
+  :root .contact main .form-wrapper .contact-form div dt p span {
+    margin-right: 8px;
+    padding: 4px 8px;
+    font-size: 0.6rem;
+  }
+  :root .contact main .form-wrapper .contact-form div dd p span input {
+    font-size: 0.9rem;
+  }
+  :root .contact main .form-wrapper .agreement {
+    margin-top: 25px;
+    padding-top: 25px;
+  }
+  :root .contact main .form-wrapper .agreement p:first-of-type {
+    padding: 0 25px;
+    font-size: 0.65rem;
+    text-align: justify;
+  }
+  :root .contact main .form-wrapper .agreement p:nth-of-type(2) {
+    margin: 20px 0;
+    padding: 0;
+  }
+  :root .contact main .form-wrapper .agreement p:nth-of-type(2) button {
+    width: 100%;
+    margin: 0;
+    padding: 20px 0;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  :root .contact main .form-wrapper .agreement p:last-of-type {
+    padding: 0 5px;
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+  :root .contact footer.footer-contact {
+    padding: 35px 0 25px;
+    font-size: 0.6rem;
+  }
 }
 
 .home footer, .news footer, .single footer, .page footer, .archive footer {
