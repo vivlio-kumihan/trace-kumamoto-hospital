@@ -8,7 +8,7 @@
       display: flex
       position: relative
       width: min(1120px, 90%)
-      margin: 45px auto 0
+      margin: 0 auto
       padding: 48px
       background-color: #fff
       border-radius: 20px
@@ -627,11 +627,6 @@
                 color: fw.$orange
               &:hover img
                 scale: 115%
-                
-                
-
-// icon_triangle-orange-fill.svg
-
 
 .home
   +fw.media(sm)
@@ -671,7 +666,7 @@
         margin-top: 50px
         border-radius: 50px 0 0 0
         img.item
-          display: none
+          // display: none
         dl
           dt
             a
@@ -793,6 +788,7 @@
             background-color: fw.$orange
             border-radius: 20px 20px 0 0 
             .lead-copy
+              position: unset
               padding: 30px 25px 20px
               width: 100%
               font-size: .85rem

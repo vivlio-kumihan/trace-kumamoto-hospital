@@ -518,7 +518,7 @@
   display: flex;
   position: relative;
   width: min(1120px, 90%);
-  margin: 45px auto 0;
+  margin: 0 auto;
   padding: 48px;
   background-color: #fff;
   border-radius: 20px;
@@ -1462,9 +1462,6 @@
     margin-top: 50px;
     border-radius: 50px 0 0 0;
   }
-  .home main .policy img.item {
-    display: none;
-  }
   .home main .policy dl dt a .frame {
     aspect-ratio: 3/2.5;
   }
@@ -1638,6 +1635,7 @@
     border-radius: 20px 20px 0 0;
   }
   .home main .information .vansayplus .content .lead-copy {
+    position: unset;
     padding: 30px 25px 20px;
     width: 100%;
     font-size: 0.85rem;
@@ -1781,7 +1779,7 @@
   color: #F87700;
 }
 .news main .container .post-archive, .category main .container .post-archive, .single main .container .post-archive, .archive main .container .post-archive {
-  width: min(1600px, 100%);
+  width: min(100%, 1600px);
   margin: 0 auto;
   padding: 80px 322px 80px 80px;
   display: grid;
@@ -1929,6 +1927,56 @@
   font-weight: 900;
 }
 
+@media screen and (max-width: 576px) {
+  .news main .container, .category main .container, .single main .container, .archive main .container {
+    margin: 40px 0 10px;
+  }
+  .news main .container .category-link-menu, .category main .container .category-link-menu, .single main .container .category-link-menu, .archive main .container .category-link-menu {
+    display: none;
+  }
+  .news main .container .post-archive, .category main .container .post-archive, .single main .container .post-archive, .archive main .container .post-archive {
+    gap: 15px;
+    padding: 0 20px;
+  }
+  .news main .container .post-archive > li a .frame img, .category main .container .post-archive > li a .frame img, .single main .container .post-archive > li a .frame img, .archive main .container .post-archive > li a .frame img {
+    aspect-ratio: 3/1.9;
+  }
+  .news main .container .post-archive > li a .header-sub, .category main .container .post-archive > li a .header-sub, .single main .container .post-archive > li a .header-sub, .archive main .container .post-archive > li a .header-sub {
+    margin-top: 10px;
+  }
+  .news main .container .post-archive > li a .header-sub .post-category > li, .category main .container .post-archive > li a .header-sub .post-category > li, .single main .container .post-archive > li a .header-sub .post-category > li, .archive main .container .post-archive > li a .header-sub .post-category > li {
+    margin-right: 5px;
+    font-size: 0.6rem;
+  }
+  .news main .container .post-archive > li a .header-sub time, .category main .container .post-archive > li a .header-sub time, .single main .container .post-archive > li a .header-sub time, .archive main .container .post-archive > li a .header-sub time {
+    font-size: 0.6rem;
+  }
+  .news main .container .post-archive > li a .post-title, .category main .container .post-archive > li a .post-title, .single main .container .post-archive > li a .post-title, .archive main .container .post-archive > li a .post-title {
+    font-size: 0.85rem;
+  }
+  .news main .container .breadcrumbs, .category main .container .breadcrumbs, .single main .container .breadcrumbs, .archive main .container .breadcrumbs {
+    margin: 30px 0 0;
+    padding: 0 20px;
+  }
+  .news main .container .breadcrumbs ul, .category main .container .breadcrumbs ul, .single main .container .breadcrumbs ul, .archive main .container .breadcrumbs ul {
+    padding: 25px 20px 65px 0;
+    text-align: center;
+  }
+  .news main .container .breadcrumbs ul li:first-of-type, .category main .container .breadcrumbs ul li:first-of-type, .single main .container .breadcrumbs ul li:first-of-type, .archive main .container .breadcrumbs ul li:first-of-type {
+    margin-right: 5px;
+  }
+  .news main .container .breadcrumbs ul li a.prev, .news main .container .breadcrumbs ul li a.next, .category main .container .breadcrumbs ul li a.prev, .category main .container .breadcrumbs ul li a.next, .single main .container .breadcrumbs ul li a.prev, .single main .container .breadcrumbs ul li a.next, .archive main .container .breadcrumbs ul li a.prev, .archive main .container .breadcrumbs ul li a.next {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 55%;
+    left: 55%;
+  }
+  .news main .container .breadcrumbs ul li a.next, .category main .container .breadcrumbs ul li a.next, .single main .container .breadcrumbs ul li a.next, .archive main .container .breadcrumbs ul li a.next {
+    left: 50%;
+  }
+}
+
 .single main .front.single, .single-vansayplus main .front.single {
   height: 23vw;
   background-image: none;
@@ -2066,6 +2114,12 @@
   transform-origin: right top;
 }
 
+@media screen and (max-width: 576px) {
+  .post-type-archive-vansayplus main .container .post-archive > li a .header-sub .post-category > li {
+    font-size: 0.55rem;
+  }
+}
+
 .page .section-link-menu {
   position: fixed;
   top: 280px;
@@ -2108,6 +2162,12 @@
   font-weight: 900;
   left: 0;
   color: #c1c1c1;
+}
+
+@media screen and (max-width: 576px) {
+  .page .section-link-menu {
+    display: none;
+  }
 }
 
 .category main .front h2.page-title {
@@ -2780,7 +2840,7 @@
 main .swiper-container {
   position: relative;
   width: 100%;
-  height: 79vh;
+  height: 75vh;
   z-index: 0;
 }
 main .swiper-container .swiper.main-visual {
@@ -2976,6 +3036,7 @@ main .swiper-container .frame-divider {
   top: 135px;
   left: 80px;
   width: calc(100% - 80px);
+  z-index: 1;
 }
 .hero .site-title {
   background-image: url(./img/logo_kumamoto.svg);
@@ -3081,7 +3142,7 @@ main .swiper-container .frame-divider {
   left: 0;
   width: 100vw;
   height: 750px;
-  z-index: 2;
+  z-index: 0;
 }
 .cover-graphic .graphic {
   position: relative;
@@ -3185,10 +3246,6 @@ main .swiper-container .frame-divider {
   }
 }
 
-.cover-graphic {
-  display: none;
-}
-
 .page main .front, .category main .front, .single main .front, .category.archive main .front {
   background-image: url(./img/bg_hero01.jpg);
   background-size: cover;
@@ -3199,14 +3256,14 @@ main .swiper-container .frame-divider {
   height: 40vw;
 }
 .page main .front .site-title a, .category main .front .site-title a, .single main .front .site-title a, .category.archive main .front .site-title a {
-  display: block;
-  width: 100%;
-  height: 100%;
   background-image: url(./img/logo_kumamoto.svg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #fff;
+  display: block;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 80px;
@@ -3318,8 +3375,34 @@ main .swiper-container .frame-divider {
 }
 
 @media screen and (max-width: 576px) {
-  .page main .front .site-title, .category main .front .site-title, .single main .front .site-title, .category.archive main .front .site-title {
+  .page main .front, .category main .front, .single main .front, .category.archive main .front {
+    background-image: url(./img/bg_hero01-sp.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: unset;
+    width: 100%;
+    height: 38vh;
+  }
+  .page main .front .site-title a, .category main .front .site-title a, .single main .front .site-title a, .category.archive main .front .site-title a {
+    background-image: url(./img/logo_kumamoto-sp.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-size: 85%;
+    left: 20px;
+    height: 55px;
+    border-radius: 0 0 5px 5px;
+  }
+  .page main .front .site-title a span, .category main .front .site-title a span, .single main .front .site-title a span, .category.archive main .front .site-title a span {
     display: none;
+  }
+  .page main .front h2, .category main .front h2, .single main .front h2, .category.archive main .front h2 {
+    top: 120px;
+    left: 20px;
+    font-size: 1.65rem;
+    font-weight: 500;
   }
 }
 
@@ -3338,12 +3421,15 @@ main .swiper-container .frame-divider {
   background-color: #F87700;
   opacity: 0.8;
 }
-.post-type-archive-vansayplus main .front .site-title, .tax-vansayplus-category main .front .site-title {
+.post-type-archive-vansayplus main .front .site-title a, .tax-vansayplus-category main .front .site-title a {
   background-image: url(./img/logo_kumamoto.svg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-color: #fff;
+  display: block;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 80px;
@@ -3353,10 +3439,10 @@ main .swiper-container .frame-divider {
   border-bottom-right-radius: 10px;
   background-size: 85%;
 }
-.post-type-archive-vansayplus main .front .site-title span, .tax-vansayplus-category main .front .site-title span {
+.post-type-archive-vansayplus main .front .site-title a span, .tax-vansayplus-category main .front .site-title a span {
   display: none;
 }
-.post-type-archive-vansayplus main .front .site-title::before, .post-type-archive-vansayplus main .front .site-title::after, .tax-vansayplus-category main .front .site-title::before, .tax-vansayplus-category main .front .site-title::after {
+.post-type-archive-vansayplus main .front .site-title a::before, .post-type-archive-vansayplus main .front .site-title a::after, .tax-vansayplus-category main .front .site-title a::before, .tax-vansayplus-category main .front .site-title a::after {
   display: inline-block;
   position: absolute;
   top: 0px;
@@ -3368,17 +3454,12 @@ main .swiper-container .frame-divider {
   background-position: bottom;
   background-repeat: no-repeat;
 }
-.post-type-archive-vansayplus main .front .site-title::before, .tax-vansayplus-category main .front .site-title::before {
+.post-type-archive-vansayplus main .front .site-title a::before, .tax-vansayplus-category main .front .site-title a::before {
   left: -10px;
   transform: rotate(90deg);
 }
-.post-type-archive-vansayplus main .front .site-title::after, .tax-vansayplus-category main .front .site-title::after {
+.post-type-archive-vansayplus main .front .site-title a::after, .tax-vansayplus-category main .front .site-title a::after {
   right: -10px;
-}
-.post-type-archive-vansayplus main .front .site-title a, .tax-vansayplus-category main .front .site-title a {
-  display: block;
-  width: 100%;
-  height: 100%;
 }
 .post-type-archive-vansayplus main .front .catch-copy, .tax-vansayplus-category main .front .catch-copy {
   margin-bottom: 15px;
@@ -3387,6 +3468,40 @@ main .swiper-container .frame-divider {
   line-height: 1.6;
   text-align: center;
   color: #fff;
+}
+
+@media screen and (max-width: 576px) {
+  .post-type-archive-vansayplus main .front, .tax-vansayplus-category main .front {
+    background-image: url(./img/mask_hero.svg);
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    position: unset;
+    width: 100%;
+    height: 38vh;
+    padding-top: 20px;
+  }
+  .post-type-archive-vansayplus main .front .site-title a, .tax-vansayplus-category main .front .site-title a {
+    background-image: url(./img/logo_vansay-sp.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    background-size: 80%;
+    left: 20px;
+    width: 110px;
+    height: 65px;
+    border-radius: 0 0 5px 5px;
+  }
+  .post-type-archive-vansayplus main .front .site-title a span, .tax-vansayplus-category main .front .site-title a span {
+    display: none;
+  }
+  .post-type-archive-vansayplus main .front .catch-copy, .tax-vansayplus-category main .front .catch-copy {
+    font-size: 0.8rem;
+  }
+  .post-type-archive-vansayplus main .front img, .tax-vansayplus-category main .front img {
+    height: 60px;
+  }
 }
 
 br.for-pc {

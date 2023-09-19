@@ -1,0 +1,63 @@
+@use "../forwards" as fw
+
+// .post-type-archive-vansayplus
+//   main
+//     .container
+//       .category-link-menu
+//         header
+//         ul.sub-menu
+//           li
+//             + li
+//             a
+//               &::before
+//               &:hover::before
+
+//       .post-archive
+//         > li
+//           &:nth-child(n+3) 
+//           a
+//             .frame
+//               img
+//             .header-sub
+//               .post-category
+//                 > li
+//               time
+//             .post-title
+//               &::after
+//           &:hover .post-title::after
+//           &:hover img
+        
+//       .breadcrumbs
+//         ul
+//           li
+//             &:first-of-type
+//             span, a
+//             a
+//               &.prev, &.next
+//                 &::before
+//                 &::after
+//               &.next::before
+
+.post-type-archive-vansayplus
+  +fw.media(sm)
+    main
+      .container
+        // .category-link-menu
+        .post-archive
+          > li
+            a
+              // .frame
+                // img
+              .header-sub
+                .post-category
+                  > li
+                    font-size: .55rem
+              //   time
+              // .post-title
+        // .breadcrumbs
+        //   ul
+        //     li:first-of-type
+        //     li
+        //       a
+        //         &.prev, &.next
+        //         &.next
