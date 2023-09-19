@@ -75,7 +75,6 @@ if (document.querySelector('body.home')) {
   
   // 当院からのお知らせ
   const catList = document.querySelectorAll('#category-menu li a');
-  console.log(catList)
   const postAll = document.querySelectorAll('#post-archive > li');
 
   function adjustWrapperHeight(targetCategory = 'all') {

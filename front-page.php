@@ -108,6 +108,9 @@
     <img class="item left-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
     <img class="item left-yel-1" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow_left.svg" alt="">
     <!-- 修正　変更箇所　dlからulへ　サイト参考 -->
+    <ul>
+      
+    </ul>
     <dl>
       <dt>
         <a href="<?php echo home_url('/outpatient') ?>">
