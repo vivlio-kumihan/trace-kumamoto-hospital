@@ -119,167 +119,166 @@
         margin-top: 35px
 
     .policy
-      display: grid
-      grid-template-columns: repeat(3, 1fr)
-      gap: 30px
       position: relative
-      margin-top: 70px
-      padding: 80px 80px 100px
-      background-color: #fff
-      border-radius: 90px 0 0 0
-      dl
+      > .item
+        position: absolute
+        z-index: 1
+        &.left-org-1
+          top: 0%
+          left: 2%
+          width: 300px
+          transform: rotate(147deg)
+        &.right-org-2
+          top: 1.5%
+          right: 20%
+          transform: scale(100%) rotate(5deg)
+        &.right-org-1
+          bottom: 35%
+          right: 0.5%
+        &.left-org-2
+          top: -48%
+          left: -85%
+          width: unset
+          transform: rotate(-10deg) scale(5.5%)
+          z-index: 3
+        &.left-yel-1
+          top: -52%
+          left: -90%
+          transform:  rotate(-3deg) scale(3%)
+          z-index: 3
+      ul
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 30px
         position: relative
-        z-index: 10
-        &:hover dt a .frame .bgimage
-          background-size: 110%
-        &:hover dd
-          color: fw.$orange
-        dd a .read-more-link.hover-area
-          +fw.read-more-link
-            position: relative
-            transition: .3s
-            &::after
-              position: absolute
-              display: block
-              bottom: -5px
-              left: 0
-              width: 100%
-              height: 1px
-              content: ""
-              background-color: #333
-              transform: scale(1, 1)
-              transform-origin: nth(right right, 1) top
-              transition: transform .3s
-        &:hover dd a .read-more-link.hover-area::after
-          transform: scale(0, 1)
-          transform-origin: nth(right right, 2) top
-        dt
+        margin-top: 70px
+        padding: 80px 80px 100px
+        background-color: #fff
+        border-radius: 90px 0 0 0
+        li
           position: relative
+          z-index: 2
           a
             display: block
-            .frame
-              width: 100%
-              aspect-ratio: 1/1.2
-              .bgimage
+            width: 100%
+            height: 100%
+            &:hover .header .frame .bgimage
+              background-size: 110%
+            &:hover .content
+              color: fw.$orange
+            .header
+              position: relative
+              .frame
                 width: 100%
-                height: 100%
-                background: no-repeat center
-                background-size: 100%
-                border-radius: 20px
-                transition: .3s
-              .outpatient
-                background-image: url(img/kumamoto_introduction01.jpg)
-              .hospitalization
-                background-image: url(img/kumamoto_introduction02.jpg)
-              .treatment-sct
-                background-image: url(img/kumamoto_introduction03.jpg)
-            .catch-copy
-              display: flex
-              align-items: flex-start
-              flex-direction: row-reverse
-              gap: 10px
-              position: absolute
-              top: 30px
-              right: 25px
-              p
-                display: inline-block
-                padding: 10px 0
-                font-family: fw.$m-rd
-                font-size: 1.175rem
-                line-height: 1.75
-                font-weight: 500
-                letter-spacing: -0.05em
-                writing-mode: vertical-rl
-                background-color: #fff
-                border-radius: 8px
-                span
+                aspect-ratio: 1/1.2
+                .bgimage
+                  width: 100%
+                  height: 100%
+                  background: no-repeat center
+                  background-size: 100%
+                  border-radius: 20px
+                  transition: .3s
+                .outpatient
+                  background-image: url(img/kumamoto_introduction01.jpg)
+                .hospitalization
+                  background-image: url(img/kumamoto_introduction02.jpg)
+                .treatment-sct
+                  background-image: url(img/kumamoto_introduction03.jpg)
+              .catch-copy
+                display: flex
+                align-items: flex-start
+                flex-direction: row-reverse
+                gap: 10px
+                position: absolute
+                top: 30px
+                right: 25px
+                p
+                  display: inline-block
+                  padding: 10px 0
+                  font-family: fw.$m-rd
+                  font-size: 1.175rem
+                  line-height: 1.75
+                  font-weight: 500
+                  letter-spacing: -0.05em
+                  writing-mode: vertical-rl
+                  background-color: #fff
+                  border-radius: 8px
+                  span
+                    color: fw.$orange
+              .policy-title
+                position: absolute
+                bottom: 0
+                width: 100%
+                h3
+                  position: relative
+                  font-family: fw.$m-rd
+                  padding-top: 2.5rem
+                  width: 87%
+                  height: 100%
+                  font-size: 1.375rem
+                  font-weight: 500
+                  line-height: 1
+                  letter-spacing: 0.06em
                   color: fw.$orange
-            .policy-title
-              position: absolute
-              bottom: 0
-              width: 100%
-              h3
+                  background-color: #fff
+                  border-top-right-radius: 25px
+                  &::before
+                    position: absolute
+                    top: -19px
+                    left: 0
+                    width: 20px
+                    height: 20px
+                    content: ""
+                    background: url(./img/corner_introduction.svg) no-repeat center 
+                    background-size: cover
+                  &::after
+                    position: absolute
+                    bottom: -1px
+                    right: -20px
+                    width: 20px
+                    height: 20px
+                    content: ""
+                    background: url(./img/corner_introduction.svg) no-repeat center 
+                    background-size: cover
+                    z-index: 100
+                  span
+                    position: absolute
+                    top: 10px
+                    right: 25px
+                    font-size: 2.65rem
+                    letter-spacing: -0.05em
+                    text-stroke: 1px fw.$orange-light
+                    -webkit-text-stroke: 1px fw.$orange-light
+                    color: #fff
+            .content
+              padding-top: 20px
+              background-color: #fff
+              p
+                margin-bottom: 30px
+                font-weight: 300
+                line-height: 1.7
+                transition: .3s
+              .read-more-link
+                +fw.read-more-link
+            .content .read-more-link.hover-area
+              +fw.read-more-link
                 position: relative
-                font-family: fw.$m-rd
-                padding-top: 2.5rem
-                width: 87%
-                height: 100%
-                font-size: 1.375rem
-                font-weight: 500
-                line-height: 1
-                letter-spacing: 0.06em
-                color: fw.$orange
-                background-color: #fff
-                border-top-right-radius: 25px
-                &::before
-                  position: absolute
-                  top: -19px
-                  left: 0
-                  width: 20px
-                  height: 20px
-                  content: ""
-                  background: url(./img/corner_introduction.svg) no-repeat center 
-                  background-size: cover
+                transition: .3s
                 &::after
                   position: absolute
-                  bottom: -1px
-                  right: -20px
-                  width: 20px
-                  height: 20px
+                  display: block
+                  bottom: -5px
+                  left: 0
+                  width: 100%
+                  height: 1px
                   content: ""
-                  background: url(./img/corner_introduction.svg) no-repeat center 
-                  background-size: cover
-                  z-index: 100
-                span
-                  position: absolute
-                  top: 10px
-                  right: 25px
-                  font-size: 2.65rem
-                  letter-spacing: -0.05em
-                  text-stroke: 1px fw.$orange-light
-                  -webkit-text-stroke: 1px fw.$orange-light
-                  color: #fff
-        dd
-          padding-top: 20px
-          background-color: #fff
-          a
-            display: block
-            p
-              margin-bottom: 30px
-              font-weight: 300
-              line-height: 1.7
-              transition: .3s
-            .read-more-link
-              +fw.read-more-link
-
-      .left-org-1
-        position: absolute
-        top: 0%
-        left: 2%
-        width: 300px
-        transform: rotate(147deg)
-      .right-org-2
-        position: absolute
-        top: 1.5%
-        right: 20%
-        transform: scale(100%) rotate(5deg)
-      .right-org-1
-        position: absolute
-        bottom: 35%
-        right: 0.5%
-      .left-org-2
-        position: absolute
-        top: -48%
-        left: -85%
-        width: unset
-        transform: rotate(-10deg) scale(5.5%)
-        z-index: 11
-      .left-yel-1
-        position: absolute
-        top: -52%
-        left: -90%
-        transform:  rotate(-3deg) scale(3%)
-        z-index: 11
+                  background-color: #333
+                  transform: scale(1, 1)
+                  transform-origin: nth(right right, 1) top
+                  transition: transform .3s
+            &:hover .content .read-more-link.hover-area::after
+              transform: scale(0, 1)
+              transform-origin: nth(right right, 2) top
 
     .information
       position: relative
@@ -358,7 +357,6 @@
                     left: -25px
                   &.clock-icon::before
                     +fw.fontAwesome("\f017", 1rem)
-
               dd
                 height: 150px
                 background-color: #fff
@@ -403,6 +401,7 @@
                   aspect-ratio: 1
                   background: url(./img/arrow-white.svg) no-repeat center
                   background-size: cover
+
       .about-us
         position: relative
         padding: 0 80px
@@ -660,48 +659,49 @@
           +fw.read-more-link
             font-size: .85rem
       .policy
-        grid-template-columns: 1fr
-        grid-template-rows: repeat(3, 1fr)
-        padding: 40px 20px 0
-        margin-top: 50px
-        border-radius: 50px 0 0 0
+        background-color: red
         > .item
           display: none
-        dl
-          dt
+        ul
+          grid-template-columns: 1fr
+          grid-template-rows: repeat(3, 1fr)
+          padding: 40px 20px 0
+          margin-top: 50px
+          border-radius: 50px 0 0 0
+          li
             a
-              .frame
-                aspect-ratio: 3/2.5
-                .bgimage
-                  border-radius: 12.5px
-              .catch-copy
-                flex-direction: column
-                top: unset
-                right: unset
-                left: 20px
-                bottom: 90px
+              .header
+                .frame
+                  aspect-ratio: 3/2.5
+                  .bgimage
+                    border-radius: 12.5px
+                .catch-copy
+                  flex-direction: column
+                  top: unset
+                  right: unset
+                  left: 20px
+                  bottom: 90px
+                  p
+                    display: block
+                    padding: 2px 8px
+                    font-size: 1.125rem
+                    writing-mode: horizontal-tb
+                .policy-title
+                  h3
+                    padding: 2rem 0 .5rem
+                    font-size: 1.2rem
+                    span
+                      right: 17px
+                      font-size: 2.35rem
+              .content
+                width: 80%
+                padding-top: 5px
                 p
-                  display: block
-                  padding: 2px 8px
-                  font-size: 1.125rem
-                  writing-mode: horizontal-tb
-              .policy-title
-                h3
-                  padding: 2rem 0 .5rem
-                  font-size: 1.2rem
-                  span
-                    right: 17px
-                    font-size: 2.35rem
-          dd
-            width: 80%
-            padding-top: 5px
-            a
-              p
-                margin-bottom: 20px
-                font-size: .825rem
-              .read-more-link.hover-area
-                +fw.read-more-link
-                  font-size: .85rem
+                  margin-bottom: 20px
+                  font-size: .825rem
+                .read-more-link.hover-area
+                  +fw.read-more-link
+                    font-size: .85rem
       .information
         margin-top: 60px
         .outpatient-care

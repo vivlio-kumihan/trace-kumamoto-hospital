@@ -693,6 +693,41 @@
   transform-origin: right top;
 }
 .home main .policy {
+  position: relative;
+}
+.home main .policy > .item {
+  position: absolute;
+  z-index: 1;
+}
+.home main .policy > .item.left-org-1 {
+  top: 0%;
+  left: 2%;
+  width: 300px;
+  transform: rotate(147deg);
+}
+.home main .policy > .item.right-org-2 {
+  top: 1.5%;
+  right: 20%;
+  transform: scale(100%) rotate(5deg);
+}
+.home main .policy > .item.right-org-1 {
+  bottom: 35%;
+  right: 0.5%;
+}
+.home main .policy > .item.left-org-2 {
+  top: -48%;
+  left: -85%;
+  width: unset;
+  transform: rotate(-10deg) scale(5.5%);
+  z-index: 3;
+}
+.home main .policy > .item.left-yel-1 {
+  top: -52%;
+  left: -90%;
+  transform: rotate(-3deg) scale(3%);
+  z-index: 3;
+}
+.home main .policy ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
@@ -702,67 +737,29 @@
   background-color: #fff;
   border-radius: 90px 0 0 0;
 }
-.home main .policy dl {
+.home main .policy ul li {
   position: relative;
-  z-index: 10;
+  z-index: 2;
 }
-.home main .policy dl:hover dt a .frame .bgimage {
+.home main .policy ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.home main .policy ul li a:hover .header .frame .bgimage {
   background-size: 110%;
 }
-.home main .policy dl:hover dd {
+.home main .policy ul li a:hover .content {
   color: #F87700;
 }
-.home main .policy dl dd a .read-more-link.hover-area {
-  display: inline-block;
-  position: relative;
-  margin-left: 26px;
-  font-size: 0.9rem;
-  font-weight: 500;
-  z-index: 10;
-  position: relative;
-  transition: 0.3s;
-}
-.home main .policy dl dd a .read-more-link.hover-area::after {
-  position: absolute;
-  display: block;
-  bottom: -5px;
-  left: 0;
-  width: 100%;
-  height: 1px;
-  content: "";
-  background-color: #333;
-  transform: scale(1, 1);
-  transform-origin: right top;
-  transition: transform 0.3s;
-}
-.home main .policy dl dd a .read-more-link.hover-area::before {
-  background-image: url(./img/arrow.svg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -26px;
-  width: 20px;
-  aspect-ratio: 1;
-  content: "";
-}
-.home main .policy dl:hover dd a .read-more-link.hover-area::after {
-  transform: scale(0, 1);
-  transform-origin: right top;
-}
-.home main .policy dl dt {
+.home main .policy ul li a .header {
   position: relative;
 }
-.home main .policy dl dt a {
-  display: block;
-}
-.home main .policy dl dt a .frame {
+.home main .policy ul li a .header .frame {
   width: 100%;
   aspect-ratio: 1/1.2;
 }
-.home main .policy dl dt a .frame .bgimage {
+.home main .policy ul li a .header .frame .bgimage {
   width: 100%;
   height: 100%;
   background: no-repeat center;
@@ -770,16 +767,16 @@
   border-radius: 20px;
   transition: 0.3s;
 }
-.home main .policy dl dt a .frame .outpatient {
+.home main .policy ul li a .header .frame .outpatient {
   background-image: url(img/kumamoto_introduction01.jpg);
 }
-.home main .policy dl dt a .frame .hospitalization {
+.home main .policy ul li a .header .frame .hospitalization {
   background-image: url(img/kumamoto_introduction02.jpg);
 }
-.home main .policy dl dt a .frame .treatment-sct {
+.home main .policy ul li a .header .frame .treatment-sct {
   background-image: url(img/kumamoto_introduction03.jpg);
 }
-.home main .policy dl dt a .catch-copy {
+.home main .policy ul li a .header .catch-copy {
   display: flex;
   align-items: flex-start;
   flex-direction: row-reverse;
@@ -788,7 +785,7 @@
   top: 30px;
   right: 25px;
 }
-.home main .policy dl dt a .catch-copy p {
+.home main .policy ul li a .header .catch-copy p {
   display: inline-block;
   padding: 10px 0;
   font-family: "M PLUS Rounded 1c", sans-serif;
@@ -800,15 +797,15 @@
   background-color: #fff;
   border-radius: 8px;
 }
-.home main .policy dl dt a .catch-copy p span {
+.home main .policy ul li a .header .catch-copy p span {
   color: #F87700;
 }
-.home main .policy dl dt a .policy-title {
+.home main .policy ul li a .header .policy-title {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
-.home main .policy dl dt a .policy-title h3 {
+.home main .policy ul li a .header .policy-title h3 {
   position: relative;
   font-family: "M PLUS Rounded 1c", sans-serif;
   padding-top: 2.5rem;
@@ -822,7 +819,7 @@
   background-color: #fff;
   border-top-right-radius: 25px;
 }
-.home main .policy dl dt a .policy-title h3::before {
+.home main .policy ul li a .header .policy-title h3::before {
   position: absolute;
   top: -19px;
   left: 0;
@@ -832,7 +829,7 @@
   background: url(./img/corner_introduction.svg) no-repeat center;
   background-size: cover;
 }
-.home main .policy dl dt a .policy-title h3::after {
+.home main .policy ul li a .header .policy-title h3::after {
   position: absolute;
   bottom: -1px;
   right: -20px;
@@ -843,7 +840,7 @@
   background-size: cover;
   z-index: 100;
 }
-.home main .policy dl dt a .policy-title h3 span {
+.home main .policy ul li a .header .policy-title h3 span {
   position: absolute;
   top: 10px;
   right: 25px;
@@ -853,20 +850,17 @@
   -webkit-text-stroke: 1px #FCBD83;
   color: #fff;
 }
-.home main .policy dl dd {
+.home main .policy ul li a .content {
   padding-top: 20px;
   background-color: #fff;
 }
-.home main .policy dl dd a {
-  display: block;
-}
-.home main .policy dl dd a p {
+.home main .policy ul li a .content p {
   margin-bottom: 30px;
   font-weight: 300;
   line-height: 1.7;
   transition: 0.3s;
 }
-.home main .policy dl dd a .read-more-link {
+.home main .policy ul li a .content .read-more-link {
   display: inline-block;
   position: relative;
   margin-left: 26px;
@@ -874,7 +868,7 @@
   font-weight: 500;
   z-index: 10;
 }
-.home main .policy dl dd a .read-more-link::before {
+.home main .policy ul li a .content .read-more-link::before {
   background-image: url(./img/arrow.svg);
   background-size: cover;
   background-position: center;
@@ -887,38 +881,45 @@
   aspect-ratio: 1;
   content: "";
 }
-.home main .policy .left-org-1 {
-  position: absolute;
-  top: 0%;
-  left: 2%;
-  width: 300px;
-  transform: rotate(147deg);
+.home main .policy ul li a .content .read-more-link.hover-area {
+  display: inline-block;
+  position: relative;
+  margin-left: 26px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  z-index: 10;
+  position: relative;
+  transition: 0.3s;
 }
-.home main .policy .right-org-2 {
+.home main .policy ul li a .content .read-more-link.hover-area::after {
   position: absolute;
-  top: 1.5%;
-  right: 20%;
-  transform: scale(100%) rotate(5deg);
+  display: block;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  content: "";
+  background-color: #333;
+  transform: scale(1, 1);
+  transform-origin: right top;
+  transition: transform 0.3s;
 }
-.home main .policy .right-org-1 {
+.home main .policy ul li a .content .read-more-link.hover-area::before {
+  background-image: url(./img/arrow.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   position: absolute;
-  bottom: 35%;
-  right: 0.5%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -26px;
+  width: 20px;
+  aspect-ratio: 1;
+  content: "";
 }
-.home main .policy .left-org-2 {
-  position: absolute;
-  top: -48%;
-  left: -85%;
-  width: unset;
-  transform: rotate(-10deg) scale(5.5%);
-  z-index: 11;
-}
-.home main .policy .left-yel-1 {
-  position: absolute;
-  top: -52%;
-  left: -90%;
-  transform: rotate(-3deg) scale(3%);
-  z-index: 11;
+.home main .policy ul li a:hover .content .read-more-link.hover-area::after {
+  transform: scale(0, 1);
+  transform-origin: right top;
 }
 .home main .information {
   position: relative;
@@ -1456,51 +1457,54 @@
     content: "";
   }
   .home main .policy {
+    background-color: red;
+  }
+  .home main .policy > .item {
+    display: none;
+  }
+  .home main .policy ul {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
     padding: 40px 20px 0;
     margin-top: 50px;
     border-radius: 50px 0 0 0;
   }
-  .home main .policy > .item {
-    display: none;
-  }
-  .home main .policy dl dt a .frame {
+  .home main .policy ul li a .header .frame {
     aspect-ratio: 3/2.5;
   }
-  .home main .policy dl dt a .frame .bgimage {
+  .home main .policy ul li a .header .frame .bgimage {
     border-radius: 12.5px;
   }
-  .home main .policy dl dt a .catch-copy {
+  .home main .policy ul li a .header .catch-copy {
     flex-direction: column;
     top: unset;
     right: unset;
     left: 20px;
     bottom: 90px;
   }
-  .home main .policy dl dt a .catch-copy p {
+  .home main .policy ul li a .header .catch-copy p {
     display: block;
     padding: 2px 8px;
     font-size: 1.125rem;
     writing-mode: horizontal-tb;
   }
-  .home main .policy dl dt a .policy-title h3 {
+  .home main .policy ul li a .header .policy-title h3 {
     padding: 2rem 0 0.5rem;
     font-size: 1.2rem;
   }
-  .home main .policy dl dt a .policy-title h3 span {
+  .home main .policy ul li a .header .policy-title h3 span {
     right: 17px;
     font-size: 2.35rem;
   }
-  .home main .policy dl dd {
+  .home main .policy ul li a .content {
     width: 80%;
     padding-top: 5px;
   }
-  .home main .policy dl dd a p {
+  .home main .policy ul li a .content p {
     margin-bottom: 20px;
     font-size: 0.825rem;
   }
-  .home main .policy dl dd a .read-more-link.hover-area {
+  .home main .policy ul li a .content .read-more-link.hover-area {
     display: inline-block;
     position: relative;
     margin-left: 26px;
@@ -1509,7 +1513,7 @@
     z-index: 10;
     font-size: 0.85rem;
   }
-  .home main .policy dl dd a .read-more-link.hover-area::before {
+  .home main .policy ul li a .content .read-more-link.hover-area::before {
     background-image: url(./img/arrow.svg);
     background-size: cover;
     background-position: center;
@@ -2205,51 +2209,51 @@
   color: #fff;
 }
 
-:root .contact {
+body.contact {
   width: min(100%, 1100px);
   margin: 0 auto;
 }
-:root .contact header {
+body.contact header {
   height: auto;
   padding: 80px 0;
   text-align: center;
   border-bottom: 1px solid #c4c4c4;
 }
-:root .contact header .logo {
+body.contact header .logo {
   margin: 0 auto;
 }
-:root .contact header .logo img {
+body.contact header .logo img {
   height: 130px;
 }
-:root .contact header h1 {
+body.contact header h1 {
   margin-top: 24px;
   font-size: 20px;
   font-weight: 600;
 }
-:root .contact main {
+body.contact main {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-:root .contact main p {
+body.contact main p {
   font-size: 1rem;
   font-weight: 500;
   line-height: 1.8;
 }
-:root .contact main p:first-of-type {
+body.contact main p:first-of-type {
   margin: 70px 0 15px;
 }
-:root .contact main p:last-of-type {
+body.contact main p:last-of-type {
   margin-bottom: 70px;
 }
-:root .contact main .form-wrapper {
-  width: 890px;
+body.contact main .form-wrapper {
+  max-width: 890px;
   padding: 45px;
   background-color: #fff;
   border-radius: 15px;
   box-shadow: 0 0 40px #dbdbdb;
 }
-:root .contact main .form-wrapper h2 {
+body.contact main .form-wrapper h2 {
   margin-bottom: 30px;
   padding: 24px;
   font-size: 1.1rem;
@@ -2257,20 +2261,20 @@
   background-color: #333;
   border-radius: 5px;
 }
-:root .contact main .form-wrapper .contact-form {
+body.contact main .form-wrapper .contact-form {
   display: grid;
   gap: 30px;
 }
-:root .contact main .form-wrapper .contact-form div dt p, :root .contact main .form-wrapper .contact-form div dd p {
+body.contact main .form-wrapper .contact-form div dt p, body.contact main .form-wrapper .contact-form div dd p {
   margin: 0;
   font-size: 0.9rem;
 }
-:root .contact main .form-wrapper .contact-form div dt {
+body.contact main .form-wrapper .contact-form div dt {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
-:root .contact main .form-wrapper .contact-form div dt p span {
+body.contact main .form-wrapper .contact-form div dt p span {
   margin-right: 12px;
   padding: 5px 8px;
   font-size: 12px;
@@ -2278,49 +2282,49 @@
   background-color: #D41515;
   border-radius: 3px;
 }
-:root .contact main .form-wrapper .contact-form div dd {
+body.contact main .form-wrapper .contact-form div dd {
   border: 1px solid #dbdbdb;
   border-radius: 5px;
   background-color: rgba(251, 251, 251, 0.6);
   transition: 0.3s;
 }
-:root .contact main .form-wrapper .contact-form div dd:hover {
+body.contact main .form-wrapper .contact-form div dd:hover {
   border: 1px solid #5A5A5A;
 }
-:root .contact main .form-wrapper .contact-form div dd p span input {
+body.contact main .form-wrapper .contact-form div dd p span input {
   padding: 15px;
   width: 100%;
   height: 100%;
   font-size: 1rem;
   font-weight: 300;
 }
-:root .contact main .form-wrapper .contact-form div dd p span input::-moz-placeholder {
+body.contact main .form-wrapper .contact-form div dd p span input::-moz-placeholder {
   color: #c4c4c4;
 }
-:root .contact main .form-wrapper .contact-form div dd p span input::placeholder {
+body.contact main .form-wrapper .contact-form div dd p span input::placeholder {
   color: #c4c4c4;
 }
-:root .contact main .form-wrapper .contact-form div dd p span input:focus {
+body.contact main .form-wrapper .contact-form div dd p span input:focus {
   outline: none;
   border: unset;
 }
-:root .contact main .form-wrapper .contact-form div dd.input-contents {
+body.contact main .form-wrapper .contact-form div dd.input-contents {
   height: 200px;
 }
-:root .contact main .form-wrapper .agreement {
+body.contact main .form-wrapper .agreement {
   margin-top: 50px;
   padding-top: 50px;
   border-top: 1px solid #c4c4c4;
 }
-:root .contact main .form-wrapper .agreement:first-of-type p br {
+body.contact main .form-wrapper .agreement:first-of-type p br {
   display: none;
 }
-:root .contact main .form-wrapper .agreement p {
+body.contact main .form-wrapper .agreement p {
   margin: 0;
   text-align: center;
   font-size: 0.85rem;
 }
-:root .contact main .form-wrapper .agreement p button {
+body.contact main .form-wrapper .agreement p button {
   display: inline-block;
   width: 80%;
   margin: 30px 0 10px;
@@ -2330,12 +2334,12 @@
   background-color: #333;
   border-radius: 4px;
 }
-:root .contact main .form-wrapper .agreement p:last-of-type {
+body.contact main .form-wrapper .agreement p:last-of-type {
   font-size: 0.9rem;
   font-weight: 300;
   color: #c1c1c1;
 }
-:root .contact footer.footer-contact {
+body.contact footer.footer-contact {
   padding: 60px 0 90px;
   text-align: center;
   font-size: 0.7rem;
@@ -2343,85 +2347,85 @@
 }
 
 @media screen and (max-width: 576px) {
-  :root .contact {
+  body.contact {
     padding: 20px;
   }
-  :root .contact header {
+  body.contact header {
     position: unset;
     padding: 27.5px 0 40px;
   }
-  :root .contact header .logo img {
+  body.contact header .logo img {
     height: 120px;
   }
-  :root .contact header h1 {
+  body.contact header h1 {
     font-size: 17px;
   }
-  :root .contact main p {
+  body.contact main p {
     padding: 0 30px;
     font-size: 0.775rem;
   }
-  :root .contact main p:first-of-type {
+  body.contact main p:first-of-type {
     margin: 30px 0 20px;
   }
-  :root .contact main p:last-of-type {
+  body.contact main p:last-of-type {
     margin-bottom: 37.5px;
   }
-  :root .contact main .form-wrapper {
+  body.contact main .form-wrapper {
     width: calc(100% - 7.5px);
     padding: 20px 0;
   }
-  :root .contact main .form-wrapper h2 {
+  body.contact main .form-wrapper h2 {
     margin: 10px 25px;
     padding: 15px;
     font-size: 0.875rem;
   }
-  :root .contact main .form-wrapper .contact-form {
+  body.contact main .form-wrapper .contact-form {
     gap: 20px;
     padding: 0 25px;
   }
-  :root .contact main .form-wrapper .contact-form div dt {
+  body.contact main .form-wrapper .contact-form div dt {
     justify-content: flex-start;
     margin-bottom: 7px;
   }
-  :root .contact main .form-wrapper .contact-form div dt p {
+  body.contact main .form-wrapper .contact-form div dt p {
     width: 100%;
     padding: 0;
     font-size: 1rem;
   }
-  :root .contact main .form-wrapper .contact-form div dt p span {
+  body.contact main .form-wrapper .contact-form div dt p span {
     margin-right: 8px;
     padding: 4px 8px;
     font-size: 0.6rem;
   }
-  :root .contact main .form-wrapper .contact-form div dd p span input {
+  body.contact main .form-wrapper .contact-form div dd p span input {
     font-size: 0.9rem;
   }
-  :root .contact main .form-wrapper .agreement {
+  body.contact main .form-wrapper .agreement {
     margin-top: 25px;
     padding-top: 25px;
   }
-  :root .contact main .form-wrapper .agreement p:first-of-type {
+  body.contact main .form-wrapper .agreement p:first-of-type {
     padding: 0 25px;
     font-size: 0.65rem;
     text-align: justify;
   }
-  :root .contact main .form-wrapper .agreement p:nth-of-type(2) {
+  body.contact main .form-wrapper .agreement p:nth-of-type(2) {
     margin: 20px 0;
     padding: 0;
   }
-  :root .contact main .form-wrapper .agreement p:nth-of-type(2) button {
+  body.contact main .form-wrapper .agreement p:nth-of-type(2) button {
     width: 100%;
     margin: 0;
     padding: 20px 0;
     font-size: 0.8rem;
     font-weight: 500;
   }
-  :root .contact main .form-wrapper .agreement p:last-of-type {
+  body.contact main .form-wrapper .agreement p:last-of-type {
     padding: 0 5px;
     font-size: 0.75rem;
     line-height: 1.5;
   }
-  :root .contact footer.footer-contact {
+  body.contact footer.footer-contact {
     padding: 35px 0 25px;
     font-size: 0.6rem;
   }
@@ -3431,8 +3435,6 @@ main .swiper-container .frame-divider {
   background-repeat: no-repeat;
   background-color: #fff;
   display: block;
-  width: 100%;
-  height: 100%;
   position: absolute;
   top: 0;
   left: 80px;

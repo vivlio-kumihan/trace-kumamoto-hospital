@@ -126,30 +126,30 @@ if (document.querySelector('body.home')) {
     })
   })
   
-  // sectionをフワッと出す。
-  const sections = ['policy', 
-                'outpatient-care-bg-image', 
-                'outpatient-care', 
-                'vansayplus-image', 
-                'vansayplus',
-                'wrapper-pick-up',
-                'wrapper-service'];
-  sections.forEach(elem => {
-    const sec = document.getElementById(elem)
-    gsap.fromTo(sec, 1, {
-      y: 100,
-      opacity: 0,
-    }, {
-      y: 0,
-      opacity: 1,
-      ease: 'power1.easeInOut',
-      scrollTrigger: {
-        trigger: sec,
-        start: 'top 90%',
-        // markers: true
-      }
-    });
-  });
+  // // sectionをフワッと出す。
+  // const sections = ['policy', 
+  //               'outpatient-care-bg-image', 
+  //               'outpatient-care', 
+  //               'vansayplus-image', 
+  //               'vansayplus',
+  //               'wrapper-pick-up',
+  //               'wrapper-service'];
+  // sections.forEach(elem => {
+  //   const sec = document.getElementById(elem)
+  //   gsap.fromTo(sec, 1, {
+  //     y: 100,
+  //     opacity: 0,
+  //   }, {
+  //     y: 0,
+  //     opacity: 1,
+  //     ease: 'power1.easeInOut',
+  //     scrollTrigger: {
+  //       trigger: sec,
+  //       start: 'top 90%',
+  //       // markers: true
+  //     }
+  //   });
+  // });
 }
 // .home only end
 

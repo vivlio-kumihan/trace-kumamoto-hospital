@@ -107,76 +107,68 @@
     <img class="item right-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange2_1.svg" alt="">
     <img class="item left-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
     <img class="item left-yel-1" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow_left.svg" alt="">
-    <!-- 修正　変更箇所　dlからulへ　サイト参考 -->
     <ul>
-      
-    </ul>
-    <dl>
-      <dt>
+      <li>
         <a href="<?php echo home_url('/outpatient') ?>">
-          <div class="frame">
-            <div class="bgimage outpatient"></div>
+          <div class="header">
+            <div class="frame">
+              <div class="bgimage outpatient"></div>
+            </div>
+            <div class="catch-copy">
+              <p><span>地域の皆さま</span>の</p>
+              <p>さまざまな症状を診察</p>
+            </div>
+            <div class="policy-title">
+              <h3><span>01</span>外来</h3>
+            </div>
           </div>
-          <div class="catch-copy">
-            <p><span>地域の皆さま</span>の</p>
-            <p>さまざまな症状を診察</p>
-          </div>
-          <div class="policy-title">
-            <h3><span>01</span>外来</h3>
+          <div class="content">
+            <p>診療時間・診療担当医・受診手続きについてご覧いただけます。</p>
+            <div class="read-more-link hover-area">詳しく見る</div>
           </div>
         </a>
-      </dt>
-      <dd>
-        <a href="<?php echo home_url('/outpatient') ?>">
-          <p>診療時間・診療担当医・受診手続きについてご覧いただけます。</p>
-          <div class="read-more-link hover-area">詳しく見る</div>
-        </a>
-      </dd>
-    </dl>
-    <dl>
-      <dt>
+      </li>
+      <li>
         <a href="<?php echo home_url('/hospitalization'); ?>">
-          <div class="frame">
-            <div class="bgimage hospitalization"></div>
+          <div class="header">
+            <div class="frame">
+              <div class="bgimage hospitalization"></div>
+            </div>
+            <div class="catch-copy">
+              <p><span>思いやりを大切に</span></p>
+              <p>患者さまの回復を支援</p>
+            </div>
+            <div class="policy-title">
+              <h3><span>02</span>入院</h3>
+            </div>
           </div>
-          <div class="catch-copy">
-            <p><span>思いやりを大切に</span></p>
-            <p>患者さまの回復を支援</p>
-          </div>
-          <div class="policy-title">
-            <h3><span>02</span>入院</h3>
+          <div class="content">
+            <p>入院手続き・入院中の過ごし方・施設設備についてご覧いただけます。</p>
+            <div class="read-more-link hover-area">詳しく見る</div>
           </div>
         </a>
-      </dt>
-      <dd>
-        <a href="<?php echo home_url('/hospitalization'); ?>">
-          <p>入院手続き・入院中の過ごし方・施設設備についてご覧いただけます。</p>
-          <div class="read-more-link hover-area">詳しく見る</div>
-        </a>
-      </dd>
-    </dl>
-    <dl>
-      <dt>
-        <a href="<?php echo home_url('/departments') ?>"></a>
-        <div class="frame">
-          <div class="bgimage treatment-sct"></div>
-        </div>
-        <div class="catch-copy">
-          <p><span>患者さま</span>に<span>寄り添う</span></p>
-          <p>適切な診療を提供</p>
-        </div>
-        <div class="policy-title">
-          <h3><span>03</span>診療科・部門</h3>
-        </div>
-
-      </dt>
-      <dd>
+      </li>
+      <li>
         <a href="<?php echo home_url('/departments') ?>">
-          <p>当院の診療部・看護部・事務部についてご覧いただけます。</p>
-          <div class="read-more-link hover-area">詳しく見る</div>
+          <div class="header">
+            <div class="frame">
+              <div class="bgimage treatment-sct"></div>
+            </div>
+            <div class="catch-copy">
+              <p><span>患者さま</span>に<span>寄り添う</span></p>
+              <p>適切な診療を提供</p>
+            </div>
+            <div class="policy-title">
+              <h3><span>03</span>診療科・部門</h3>
+            </div>
+          </div>
+          <div class="content">
+            <p>当院の診療部・看護部・事務部についてご覧いただけます。</p>
+            <div class="read-more-link hover-area">詳しく見る</div>
+          </div>
         </a>
-      </dd>
-    </dl>
+      </li>
+    </ul>
   </section>
 
   <section class="information">
