@@ -77,6 +77,25 @@ if (document.querySelector('body.home')) {
   const catList = document.querySelectorAll('#category-menu li a');
   console.log(catList)
   const postAll = document.querySelectorAll('#post-archive > li');
+
+  function adjustWrapperHeight(targetCategory = 'all') {
+    let wrapperHeight = 0
+    let addWrapperHeight = 0
+    // data-category="all"で付与したall
+    postAll.forEach(post => {
+      if (targetCategory !== 'all' && !post.classList.contains(targetCategory)) {
+        post.style.display = 'none'
+      } else {
+        if (addWrapperHeight < 3) {
+          wrapperHeight += post.clientHeight
+          addWrapperHeight++
+        }
+      }
+    })
+    document.getElementById('post-archive').style.height = `${wrapperHeight}px`
+  }
+  adjustWrapperHeight()
+
   catList.forEach(elem => {
     elem.addEventListener('click', (e) =>{
       // a要素の機能を無効化する。
@@ -103,14 +122,8 @@ if (document.querySelector('body.home')) {
       catList.forEach(a => a.classList.remove('active'))
   
       e.target.classList.add('active');
-      // data-category="all"で付与したall
-      if (targetCategory !== 'all') {
-        postAll.forEach(post => {
-          if (!post.classList.contains(targetCategory)) {
-            post.style.display = 'none'
-          }
-        })
-      }
+
+      adjustWrapperHeight(targetCategory)
     })
   })
   

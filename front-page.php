@@ -107,6 +107,7 @@
     <img class="item right-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange2_1.svg" alt="">
     <img class="item left-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
     <img class="item left-yel-1" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow_left.svg" alt="">
+    <!-- 修正　変更箇所　dlからulへ　サイト参考 -->
     <dl>
       <dt>
         <a href="<?php echo home_url('/outpatient') ?>">
@@ -151,21 +152,20 @@
         </a>
       </dd>
     </dl>
-    </a>
     <dl>
       <dt>
-        <a href="<?php echo home_url('/departments') ?>">
-          <div class="frame">
-            <div class="bgimage treatment-sct"></div>
-          </div>
-          <div class="catch-copy">
-            <p><span>患者さま</span>に<span>寄り添う</span></p>
-            <p>適切な診療を提供</p>
-          </div>
-          <div class="policy-title">
-            <h3><span>03</span>診療科・部門</h3>
-          </div>
-        </a>
+        <a href="<?php echo home_url('/departments') ?>"></a>
+        <div class="frame">
+          <div class="bgimage treatment-sct"></div>
+        </div>
+        <div class="catch-copy">
+          <p><span>患者さま</span>に<span>寄り添う</span></p>
+          <p>適切な診療を提供</p>
+        </div>
+        <div class="policy-title">
+          <h3><span>03</span>診療科・部門</h3>
+        </div>
+
       </dt>
       <dd>
         <a href="<?php echo home_url('/departments') ?>">
@@ -218,15 +218,21 @@
     <div class="about-us">
       <h3>当院について</h3>
       <div class="wrapper-about-us">
-        <a href="/philosophy/">
-          <div class="frame-about-us">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/_info_01_link_about (1).jpg" alt="">
-          </div>
-          <dl>
-            <dt>病院概要</dt>
-            <dd>当院の基本方針・患者様の権利についてご覧いただけます。</dd>
-          </dl>
-        </a>
+        <!-- 修正　変更箇所　dlからulへ　サイト参考 -->
+        <ul class="wrapper-about-us">
+          <li>
+            <a href="/philosophy/">
+              <div class="frame-about-us">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/_info_01_link_about (1).jpg" alt="">
+              </div>
+              <div>
+                <h4>病院概要</h4>
+                <p>当院の基本方針・患者様の権利についてご覧いただけます。</p>
+              </div>
+            </a>
+          </li>
+          <!-- 修正　変更箇所　dlからulへ　サイト参考 -->
+
         <a href="/result/">
           <div class="frame-about-us">
             <img src="<?php echo get_template_directory_uri(); ?>/img/_info_02_link_achievement (1).jpg" alt="">
@@ -272,7 +278,7 @@
             <dd>ご自身の経験を活かしてみませんか？仕事への意欲をお持ちの方をお待ちしています。</dd>
           </dl>
         </a>
-      </div>
+      </う>
     </div>
 
     <div id="vansayplus-image" class="vansayplus-image">VANSAY</div>
@@ -319,7 +325,7 @@
                       <div class="post-title"><?php the_title(); ?></div>
                     </a>
                   </div>
-                  <?php endwhile;
+              <?php endwhile;
               endif; ?>
             </div>
           </div>
@@ -332,11 +338,12 @@
         </div>
       </div>
     </div>
-    
+
     <div class="another-info">
       <div id="wrapper-pick-up" class="wrapper pick-up">
         <h3>ピックアップ</h3>
         <ul>
+          <!-- 修正　anchorぬけ -->
           <li class="nursing-dep">看護部</li>
           <li class="physical-exam">健康診断</li>
           <li class="book-tour">見学予約</li>
@@ -346,6 +353,7 @@
         <h3>関連施設・サービス</h3>
         <ul>
           <li>
+            <!-- 修正　anchorぬけ -->
             <div class="frame">
               <img src="<?php echo get_template_directory_uri(); ?>/img/link_koshi.jpg" alt="">
             </div>
