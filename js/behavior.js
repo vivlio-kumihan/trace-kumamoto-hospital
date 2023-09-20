@@ -52,7 +52,7 @@ if (document.querySelector('body.home')) {
         slidesPerView: 1,
       },
       700: {
-        slidesPerView: 2.2,
+        slidesPerView: 1.75,
         spaceBetween: 10,
       },
       1100: {
@@ -60,7 +60,7 @@ if (document.querySelector('body.home')) {
         spaceBetween: 10,
       },
       1500: {
-        slidesPerView: 2.8,
+        slidesPerView: 3.5,
         spaceBetween: 10,
       },
     },
