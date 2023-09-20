@@ -1,6 +1,6 @@
 // .home only start
 if (document.querySelector('body.home')) {
-  // swiper
+  // header下のスライダー
   const mainSwiper = new Swiper(".swiper.main-visual", {
     loop: true,
     // スライドの数に対して半分に設定しないと途中ですぐに止まる。
@@ -35,6 +35,8 @@ if (document.querySelector('body.home')) {
     // }
   });
   
+
+  // バンセイプラスのスライダー
   const vansayplusSwiper = new Swiper('.swiper.vansayplus-slide', {
     // Optional parameters
     loop: true,
@@ -126,12 +128,12 @@ if (document.querySelector('body.home')) {
   
   // sectionをフワッと出す。
   const sections = ['policy', 
-                'outpatient-care-bg-image', 
-                'outpatient-care', 
-                'vansayplus-image', 
-                'vansayplus',
-                'wrapper-pick-up',
-                'wrapper-service'];
+                    'outpatient-care-bg-image', 
+                    'outpatient-care', 
+                    'vansayplus-image', 
+                    'vansayplus',
+                    'wrapper-pick-up',
+                    'wrapper-service'];
   sections.forEach(elem => {
     const sec = document.getElementById(elem)
     gsap.fromTo(sec, 1, {
@@ -148,11 +150,34 @@ if (document.querySelector('body.home')) {
       }
     });
   });
+
+  // section policyのアニメーション
+  const policyBgGraphics = document.querySelectorAll(('#policy .item'))
+  gsap.from(policyBgGraphics, 3, {
+    y: -200,
+    opacity: 0,
+    ease: Elastic.easeOut.config(-1, 0.3),
+    stagger: .1,
+    scrollTrigger: {
+      trigger: policyBgGraphics,
+      start: 'top 20%',
+      markers: true,
+    }
+  })
+  const aboutUsBgGraphics = document.querySelectorAll(('#outpatient-care .item'))
+  gsap.from(aboutUsBgGraphics, 3, {
+    y: -200,
+    opacity: 0,
+    ease: Elastic.easeOut.config(-1, 0.3),
+    stagger: .1,
+    scrollTrigger: {
+      trigger: aboutUsBgGraphics,
+      start: 'top 60%',
+      markers: true,
+    }
+  })
 }
 // .home only end
-
-
-
 
 
 // パンくずリストのイレギュラーな処理
@@ -243,7 +268,6 @@ accordionMenuListBtn.forEach((btn, idx) => {
     accordionMenuList[idx].classList.toggle('plus-padding-bottom');
   });
 })
-
 
 
 // // 一文字ずつ現れるサンプル

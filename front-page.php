@@ -177,10 +177,10 @@
     <div id="outpatient-care" class="outpatient-care">
       <div class="wrapper-outpatient-care">
         <div class="wrapper-inner">
-          <img class="left-org" src="<?php echo get_template_directory_uri(); ?>/img/左org.svg"></img>
-          <img class="left-yel" src="<?php echo get_template_directory_uri(); ?>/img/左yel.svg"></img>
-          <img class="right-org" src="<?php echo get_template_directory_uri(); ?>/img/右org.svg"></img>
-          <img class="right-yel" src="<?php echo get_template_directory_uri(); ?>/img/右yel.svg"></img>
+          <img class="item left-org" src="<?php echo get_template_directory_uri(); ?>/img/左org.svg"></img>
+          <img class="item left-yel" src="<?php echo get_template_directory_uri(); ?>/img/左yel.svg"></img>
+          <img class="item right-org" src="<?php echo get_template_directory_uri(); ?>/img/右org.svg"></img>
+          <img class="item right-yel" src="<?php echo get_template_directory_uri(); ?>/img/右yel.svg"></img>
           <h3>外来受診のご案内</h3>
           <dl>
             <div>
