@@ -33,8 +33,8 @@
       <div class="catch-copy">その人らしさ<span>を</span></div>
       <div class="catch-copy">支える手</div>
       <div class="lead-copy">地域の皆さまの「その人らしい生き方」をささえる<br class="for-smp">ために、<br class="for-pc"> 手をおしまない医療、手厚い看護、<br class="for-smp">心をこめた介護を提供します。</div>
-      <a class="read-more-link" href="<?php echo home_url('/about') ?>">当院の特徴をみる</a>
     </div>
+    <a id="coverz-read-more-link" class="read-more-link" href="<?php echo home_url('/about') ?>">当院の特徴をみる</a>
   </div>
 
   <div class="cover-graphic">

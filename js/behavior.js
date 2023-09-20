@@ -4,28 +4,33 @@ if (document.querySelector('body.home')) {
   function loaded() {
     const loading = document.getElementById('loading');
     loading.classList.remove('keep');
+
     const items = document.getElementById('head-copy');
     const coverGraphicBgImgLeft = document.getElementById('cover-graphic-bg-img-left');
     const coverGraphicBgImgRight = document.getElementById('cover-graphic-bg-img-right');
     const tl = gsap.timeline();
-    tl.from(items.children, 1, {
+    tl
+      .from(items.children, 1, {
         y: 200,
         opacity: 0,
         ease: 'power3.inOut',
         stagger: .2
       })
-      .from(coverGraphicBgImgLeft.children, 3, {
+      .from(coverGraphicBgImgLeft.children, 4, {
         y: -200,
         opacity: 0,
         ease: Elastic.easeOut.config(1, 0.3),
         stagger: .2
-      })
-      .from(coverGraphicBgImgRight.children, 3, {
+      }, '-=1.5')
+      .from(coverGraphicBgImgRight.children, 4, {
         y: -500,
         opacity: 0,
         ease: Elastic.easeOut.config(1, 0.3),
         stagger: .2
       }, '<')
+
+    const coverzReadMoreLink = document.getElementById('coverz-read-more-link');
+    coverzReadMoreLink.classList.add('active');
   }
   // ウィンドウを読み込んで2秒後には次に遷移する。
   window.addEventListener('load', () => {

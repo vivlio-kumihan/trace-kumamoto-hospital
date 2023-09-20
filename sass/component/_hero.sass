@@ -40,10 +40,19 @@
       font-size: 0.9375rem
       font-weight: 300
       line-height: 1.9
-    .read-more-link
-      +fw.read-more-link
-      +fw.shrink-line
-      margin-top: 30px 
+  .read-more-link
+    +fw.read-more-link
+    +fw.shrink-line
+    margin-top: 30px
+    visibility: hidden
+    opacity: 0
+    transform: translateY(200px)
+    transition: 2s
+    &.active
+      visibility: visible
+      opacity: 1
+      transform: translateY(0)
+
 
 .cover-graphic
   display: flex
@@ -116,6 +125,7 @@
       .catch-copy span
         font-size: 1.875rem
       .lead-copy
+        margin-left: 10px
         font-size: 0.8125rem
         line-height: 1.7
       .read-more-link
@@ -123,4 +133,41 @@
           font-size: .875rem
         
 .cover-graphic
-  // display: none
+  +fw.media(sm)
+    .graphic
+      width: 50vw
+      &.left
+        .left-yel-1
+          top: 22%
+        .left-org-1
+          top: 25%
+          width: 175px
+          transform: rotate(-1deg)
+        .left-org-2
+          top: 25%
+          width: 275px
+          transform: rotate(-1deg)
+        .left-yel-2
+          top: 42%
+          left: 3px
+          width: 65px
+        .left-org-3
+          top: 40%
+          width: 177px
+      &.right
+        .right-org-1
+          top: 40%
+          right: -60px
+          width: 210px
+        .right-org-2
+          top: 45%
+          right: -80px
+          width: 262px
+        .right-yel-1
+          top: 60%
+          right: -25px
+          width: 87px
+
+
+
+  

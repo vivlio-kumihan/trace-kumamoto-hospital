@@ -3176,7 +3176,7 @@ body.contact footer.footer-contact {
   font-weight: 300;
   line-height: 1.9;
 }
-.hero .head-copy .read-more-link {
+.hero .read-more-link {
   display: inline-block;
   position: relative;
   margin-left: 26px;
@@ -3188,8 +3188,12 @@ body.contact footer.footer-contact {
   width: fit-content;
   transition: 0.3s;
   margin-top: 30px;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(200px);
+  transition: 2s;
 }
-.hero .head-copy .read-more-link::before {
+.hero .read-more-link::before {
   background-image: url(./img/arrow.svg);
   background-size: cover;
   background-position: center;
@@ -3202,10 +3206,10 @@ body.contact footer.footer-contact {
   aspect-ratio: 1;
   content: "";
 }
-.hero .head-copy .read-more-link:hover {
+.hero .read-more-link:hover {
   color: #F87700;
 }
-.hero .head-copy .read-more-link::after {
+.hero .read-more-link::after {
   position: absolute;
   display: block;
   bottom: -5px;
@@ -3218,9 +3222,14 @@ body.contact footer.footer-contact {
   transform-origin: right top;
   transition: transform 0.3s;
 }
-.hero .head-copy .read-more-link:hover::after {
+.hero .read-more-link:hover::after {
   transform: scale(0, 1);
   transform-origin: right top;
+}
+.hero .read-more-link.active {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .cover-graphic {
@@ -3308,6 +3317,7 @@ body.contact footer.footer-contact {
     font-size: 1.875rem;
   }
   .hero .head-copy .lead-copy {
+    margin-left: 10px;
     font-size: 0.8125rem;
     line-height: 1.7;
   }
@@ -3332,6 +3342,49 @@ body.contact footer.footer-contact {
     width: 20px;
     aspect-ratio: 1;
     content: "";
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .cover-graphic .graphic {
+    width: 50vw;
+  }
+  .cover-graphic .graphic.left .left-yel-1 {
+    top: 22%;
+  }
+  .cover-graphic .graphic.left .left-org-1 {
+    top: 25%;
+    width: 175px;
+    transform: rotate(-1deg);
+  }
+  .cover-graphic .graphic.left .left-org-2 {
+    top: 25%;
+    width: 275px;
+    transform: rotate(-1deg);
+  }
+  .cover-graphic .graphic.left .left-yel-2 {
+    top: 42%;
+    left: 3px;
+    width: 65px;
+  }
+  .cover-graphic .graphic.left .left-org-3 {
+    top: 40%;
+    width: 177px;
+  }
+  .cover-graphic .graphic.right .right-org-1 {
+    top: 40%;
+    right: -60px;
+    width: 210px;
+  }
+  .cover-graphic .graphic.right .right-org-2 {
+    top: 45%;
+    right: -80px;
+    width: 262px;
+  }
+  .cover-graphic .graphic.right .right-yel-1 {
+    top: 60%;
+    right: -25px;
+    width: 87px;
   }
 }
 
