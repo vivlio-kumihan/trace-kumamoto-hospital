@@ -15,7 +15,7 @@ if (document.querySelector('body.home')) {
         spaceBetween: 10,
       },
       1100: {
-        slidesPerView: 2.2,
+        slidesPerView: 2.5,
         spaceBetween: 10,
       },
       1500: {
@@ -37,7 +37,6 @@ if (document.querySelector('body.home')) {
   
   const vansayplusSwiper = new Swiper('.swiper.vansayplus-slide', {
     // Optional parameters
-    
     loop: true,
     slidesPerView: 'auto',
     spaceBetween: 25,
@@ -50,7 +49,6 @@ if (document.querySelector('body.home')) {
   
   
   // 当院からのお知らせ
-  
   // 当院からのお知らせのメニュー項目をアクティブ付けてアミを濃くする。
   const categoryMenu = document.getElementById('category-menu');
   const menuList = Array.from(categoryMenu.children);
@@ -126,32 +124,35 @@ if (document.querySelector('body.home')) {
     })
   })
   
-  // // sectionをフワッと出す。
-  // const sections = ['policy', 
-  //               'outpatient-care-bg-image', 
-  //               'outpatient-care', 
-  //               'vansayplus-image', 
-  //               'vansayplus',
-  //               'wrapper-pick-up',
-  //               'wrapper-service'];
-  // sections.forEach(elem => {
-  //   const sec = document.getElementById(elem)
-  //   gsap.fromTo(sec, 1, {
-  //     y: 100,
-  //     opacity: 0,
-  //   }, {
-  //     y: 0,
-  //     opacity: 1,
-  //     ease: 'power1.easeInOut',
-  //     scrollTrigger: {
-  //       trigger: sec,
-  //       start: 'top 90%',
-  //       // markers: true
-  //     }
-  //   });
-  // });
+  // sectionをフワッと出す。
+  const sections = ['policy', 
+                'outpatient-care-bg-image', 
+                'outpatient-care', 
+                'vansayplus-image', 
+                'vansayplus',
+                'wrapper-pick-up',
+                'wrapper-service'];
+  sections.forEach(elem => {
+    const sec = document.getElementById(elem)
+    gsap.fromTo(sec, 1, {
+      y: 100,
+      opacity: 0,
+    }, {
+      y: 0,
+      opacity: 1,
+      ease: 'power1.easeInOut',
+      scrollTrigger: {
+        trigger: sec,
+        start: 'top 90%',
+        // markers: true
+      }
+    });
+  });
 }
 // .home only end
+
+
+
 
 
 // パンくずリストのイレギュラーな処理
