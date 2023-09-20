@@ -1,6 +1,14 @@
 <?php get_header(); ?>
 
 <main>
+  <div id="loading" class="loading-wrapper keep">
+    <div class="loading">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
   <div class="swiper-container">
     <div class="swiper main-visual">
       <div class="swiper-wrapper">
@@ -30,14 +38,14 @@
   </div>
 
   <div class="cover-graphic">
-    <div class="graphic left">
+    <div id="cover-graphic-bg-img-left" class="graphic left">
       <img class="item left-yel-1" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow_left.svg" alt="">
       <img class="item left-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
       <img class="item left-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
       <img class="item left-yel-2" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow_left.svg" alt="">
       <img class="item left-org-3" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
     </div>
-    <div class="graphic right">
+    <div id="cover-graphic-bg-img-right" class="graphic right">
       <img class="item right-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange.svg" alt="">
       <img class="item right-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange.svg" alt="">
       <img class="item right-yel-1" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow.svg" alt="">
@@ -370,6 +378,16 @@
           </li>
         </ul>
       </div>
+    </div>
+  </section>
+
+  <section class="form-to-our-thoughts parallax-frame">
+    <div class="parallax-bg-img"></div>
+    <div class="border-circle">
+      <a href="<?php echo home_url('/contact') ?>">
+        <h2>Contact Us</h2>
+        <p>We stand by your side in the fight against illness.</p>
+      </a>
     </div>
   </section>
 </main>

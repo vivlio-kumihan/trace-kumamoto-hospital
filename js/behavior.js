@@ -1,5 +1,41 @@
 // .home only start
 if (document.querySelector('body.home')) {
+  // ローディング・アニメーション
+  function loaded() {
+    const loading = document.getElementById('loading');
+    loading.classList.remove('keep');
+    const items = document.getElementById('head-copy');
+    const coverGraphicBgImgLeft = document.getElementById('cover-graphic-bg-img-left');
+    const coverGraphicBgImgRight = document.getElementById('cover-graphic-bg-img-right');
+    const tl = gsap.timeline();
+    tl.from(items.children, 1, {
+        y: 200,
+        opacity: 0,
+        ease: 'power3.inOut',
+        stagger: .2
+      })
+      .from(coverGraphicBgImgLeft.children, 3, {
+        y: -200,
+        opacity: 0,
+        ease: Elastic.easeOut.config(1, 0.3),
+        stagger: .2
+      })
+      .from(coverGraphicBgImgRight.children, 3, {
+        y: -500,
+        opacity: 0,
+        ease: Elastic.easeOut.config(1, 0.3),
+        stagger: .2
+      }, '<')
+  }
+  // ウィンドウを読み込んで2秒後には次に遷移する。
+  window.addEventListener('load', () => {
+    setTimeout(loaded, 1500)
+  });
+
+  // // 最低でも５秒後には表示
+  // setTimeout(loaded, 5000)
+
+
   // header下のスライダー
   const mainSwiper = new Swiper(".swiper.main-visual", {
     loop: true,
@@ -161,7 +197,7 @@ if (document.querySelector('body.home')) {
     scrollTrigger: {
       trigger: policyBgGraphics,
       start: 'top 20%',
-      markers: true,
+      // markers: true,
     }
   })
   const aboutUsBgGraphics = document.querySelectorAll(('#outpatient-care .item'))
@@ -173,7 +209,7 @@ if (document.querySelector('body.home')) {
     scrollTrigger: {
       trigger: aboutUsBgGraphics,
       start: 'top 60%',
-      markers: true,
+      // markers: true,
     }
   })
 }
@@ -268,6 +304,56 @@ accordionMenuListBtn.forEach((btn, idx) => {
     accordionMenuList[idx].classList.toggle('plus-padding-bottom');
   });
 })
+
+// contact form7でフォームを確認した旨のインフォメーション画面を作る際に必要。
+// contact form7でフォームを送信したらできるインスタンス
+// その中にある情報からurlを抜き出し、あらかじめ作っておいた固定ページのurlに飛ぶ仕組み。
+document.addEventListener('wpcf7mailsent', function () {
+  window.location.href = location.protocol + '//' + location.hostname + '/thanks';
+});
+
+
+
+// footer前のcontact formへの導入
+let getRatio = (el) => {
+  return window.innerHeight / (window.innerHeight + el.offsetHeight);
+};
+
+document.querySelectorAll('.parallax-frame').forEach(section => {
+  const bg = section.querySelector('.parallax-bg-img');
+  gsap.fromTo(bg, {
+    backgroundPosition: `50% ${-window.innerHeight * getRatio(section)}px`
+  }, {
+    backgroundPosition: () => `50% ${ window.innerHeight * (1 - getRatio(section)) }px`,
+    ease: 'none',
+    scrollTrigger: {
+      trigger: section,
+      start: 'top bottom',
+      end: 'bottom top',
+      scrub: true,
+      invalidateOnRefresh: true,
+      // markers: true
+    }
+  })
+})
+
+
+// 設置延期
+// // サイドメニューを止めて、メインの読み物をスクロールさせる。
+// // サイドとメインの『2つのpin』を用意する。
+// // サイドをどこで止めるかを『start: 'top 10%'』で、
+// // サイドをどのタイミングでメインと同期させるかを、
+// // メインをpinにして決める。
+// ScrollTrigger.create({
+//   trigger: '.category-link-menu',
+//   start: 'top 10%',
+//   endTrigger: '.post-content',
+//   end: 'bottom bottom', 
+//   pin: true,
+//   markers: true,
+// })
+
+
 
 
 // // 一文字ずつ現れるサンプル

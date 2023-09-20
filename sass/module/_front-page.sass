@@ -136,13 +136,13 @@
           bottom: 35%
           right: 0.5%
         &.left-org-2
-          top: -48%
+          top: -40%
           left: -85%
           width: unset
           transform: rotate(-10deg) scale(5.5%)
           z-index: 3
         &.left-yel-1
-          top: -52%
+          top: -47%
           left: -90%
           transform:  rotate(-3deg) scale(3%)
           z-index: 3
@@ -401,7 +401,6 @@
                   aspect-ratio: 1
                   background: url(./img/arrow-white.svg) no-repeat center
                   background-size: cover
-
       .about-us
         position: relative
         padding: 0 80px
@@ -466,12 +465,13 @@
       .vansayplus-image
         position: relative
         z-index: 0
-        padding-right: 80px
         text-align: right
         font-family: fw.$rale
         font-size: 15rem
+        font-weight: 100
         line-height: 1
         letter-spacing: -0.075em
+        transform: scaleX(90%)
         color: rgba(215, 215, 215, 0.3)
 
       .vansayplus
@@ -631,12 +631,44 @@
                 &:hover img
                   scale: 115%
 
+    .form-to-our-thoughts.parallax-frame
+      position: relative
+      width: 100%
+      height: 45vh
+      .parallax-bg-img
+        +fw.background-image("./img/light-5315917_1920.jpg")
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+      .border-circle
+        +fw.positionAbsoluteCTL
+        font-family: fw.$rale
+        font-weight: 500
+        line-height: 1
+        text-align: center
+        color: #fff
+        mix-blend-mode: lighten
+        a
+          display: block
+          width: 100%
+          height: 10%
+          h2
+            margin-bottom: 10px
+            font-size: 4rem
+            font-weight: 100
+            text-transform: uppercase
+          p
+            font-size: 1.1rem
+
+
 .home
   +fw.media(sm)
     main
       .latest-info
         flex-direction: column
-        margin-top: 31vh
+        margin-top: 35vh
         padding: 15px
         h3
           width: 100%
@@ -652,12 +684,15 @@
                 padding: 8px 10px
           .post-archive
             > li
+              padding-right: 35px
               a
                 flex-direction: column
                 align-items: flex-start
                 gap: 12.5px
                 .header-sub
                   gap: 10px
+                &::after
+                  right: -15px
       .wrapper.to-archive
         .read-more-link
           +fw.read-more-link
@@ -668,7 +703,7 @@
         ul
           grid-template-columns: 1fr
           grid-template-rows: repeat(3, 1fr)
-          padding: 40px 20px 0
+          padding: 40px 20px
           margin-top: 50px
           border-radius: 50px 0 0 0
           li
@@ -706,7 +741,7 @@
                   +fw.read-more-link
                     font-size: .85rem
       .information
-        margin-top: 60px
+        margin-top: 40px
         .outpatient-care
           .wrapper-outpatient-care
             padding: 40px 20px
@@ -773,7 +808,7 @@
         .vansayplus
           display: flex
           flex-direction: column
-          gap: 30px
+          gap: 20px
           margin-top: 40px
           padding: 0
           &::after
@@ -785,8 +820,10 @@
             .catch-copy
               position: unset
               font-size: .8rem
+              p
+                margin-bottom: 10px
               img
-                width: 45%
+                width: 55%
           .content
             margin: 0
             background-color: fw.$orange
@@ -800,13 +837,23 @@
               font-weight: 300
               color: #fff
             .vansayplus-posts
+              .swiper.vansayplus-slide
+                .swiper-wrapper.post-archive
+                  .swiper-slide
+                    width: 270px
+                    a
+                      .frame
+                        border-radius: 10px
+              .wrapper-button
+                bottom: 115px
+                right: 15px
               .read-more-link
                 display: none
               .to-link
                 display: block
                 position: relative
                 width: fit-content
-                margin: 30px auto
+                margin: 100px auto 40px
                 padding: 20px 20px 20px 40px
                 font-size: .8rem
                 color: #fff
@@ -861,4 +908,17 @@
                 padding: 0
                 a
                   padding: 10px
-          
+      .form-to-our-thoughts.parallax-frame
+        height: 60vh
+        .parallax-bg-img
+          background-image: url(./img/light-5315917_1920_縦_2.jpg)
+          background-size: 110%
+        .border-circle
+          mix-blend-mode: lighten
+          a
+            h2
+              margin: 20px 0 2px
+              font-size: 2.25rem 
+            p
+              font-size: .9rem  
+              font-weight: 300     
