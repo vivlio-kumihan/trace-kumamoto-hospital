@@ -212,68 +212,74 @@
 
     <div class="about-us">
       <h3>当院について</h3>
-      <div class="wrapper-about-us">
-        <!-- 修正　変更箇所　dlからulへ　サイト参考 -->
-        <ul class="wrapper-about-us">
-          <li>
-            <a href="/philosophy/">
-              <div class="frame-about-us">
-                <img src="<?php echo get_template_directory_uri(); ?>/img/_info_01_link_about (1).jpg" alt="">
-              </div>
-              <div>
-                <h4>病院概要</h4>
-                <p>当院の基本方針・患者様の権利についてご覧いただけます。</p>
-              </div>
-            </a>
-          </li>
-          <!-- 修正　変更箇所　dlからulへ　サイト参考 -->
-
-        <a href="/result/">
-          <div class="frame-about-us">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/_info_02_link_achievement (1).jpg" alt="">
-          </div>
-          <dl>
-            <dt>治療実績・退院実績</dt>
-            <dd>当院の主な治療実績・退院実績についてご覧いただけます。</dd>
-          </dl>
-        </a>
-        <a href="/disaster/">
-          <div class="frame-about-us">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/_info_03_link_strong (1).jpg" alt="">
-          </div>
-          <dl>
-            <dt>災害に強い病院</dt>
-            <dd>当院の災害時のライフライン対策についてご覧いただけます。</dd>
-          </dl>
-        </a>
-        <a href="/message/">
-          <div class="frame-about-us">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/_info_04_link_greeting (1).jpg" alt="">
-          </div>
-          <dl>
-            <dt>ご挨拶</dt>
-            <dd>病院長メッセージをご覧いただけます。</dd>
-          </dl>
-        </a>
-        <a href="/introduction/">
-          <div class="frame-about-us">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/_info_05_link_concerned (1).jpg" alt="">
-          </div>
-          <dl>
-            <dt>医療関係の皆様へ</dt>
-            <dd>当院から医療関係の皆様へ向けたご案内・お知らせをご覧いただけます。</dd>
-          </dl>
-        </a>
-        <a href="/recruit/">
-          <div class="frame-about-us">
-            <img src="<?php echo get_template_directory_uri(); ?>/img/_info_06_link_recruit (1).jpg" alt="">
-          </div>
-          <dl>
-            <dt>当法人で働きたい方へ</dt>
-            <dd>ご自身の経験を活かしてみませんか？仕事への意欲をお持ちの方をお待ちしています。</dd>
-          </dl>
-        </a>
-      </う>
+      <ul class="wrapper-about-us">
+        <li>
+          <a href="/philosophy/">
+            <div class="frame-about-us">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/_info_01_link_about (1).jpg" alt="">
+            </div>
+            <dl>
+              <dt>病院概要</dt>
+              <dd>当院の基本方針・患者様の権利についてご覧いただけます。</dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="/result/">
+            <div class="frame-about-us">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/_info_02_link_achievement (1).jpg" alt="">
+            </div>
+            <dl>
+              <dt>治療実績・退院実績</dt>
+              <dd>当院の主な治療実績・退院実績についてご覧いただけます。</dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="/disaster/">
+            <div class="frame-about-us">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/_info_03_link_strong (1).jpg" alt="">
+            </div>
+            <dl>
+              <dt>災害に強い病院</dt>
+              <dd>当院の災害時のライフライン対策についてご覧いただけます。</dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="/message/">
+            <div class="frame-about-us">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/_info_04_link_greeting (1).jpg" alt="">
+            </div>
+            <dl>
+              <dt>ご挨拶</dt>
+              <dd>病院長メッセージをご覧いただけます。</dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="/introduction/">
+            <div class="frame-about-us">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/_info_05_link_concerned (1).jpg" alt="">
+            </div>
+            <dl>
+              <dt>医療関係の皆様へ</dt>
+              <dd>当院から医療関係の皆様へ向けたご案内・お知らせをご覧いただけます。</dd>
+            </dl>
+          </a>
+        </li>
+        <li>
+          <a href="/recruit/">
+            <div class="frame-about-us">
+              <img src="<?php echo get_template_directory_uri(); ?>/img/_info_06_link_recruit (1).jpg" alt="">
+            </div>
+            <dl>
+              <dt>当法人で働きたい方へ</dt>
+              <dd>ご自身の経験を活かしてみませんか？仕事への意欲をお持ちの方をお待ちしています。</dd>
+            </dl>
+          </a>
+        </li>
+      </ul>
     </div>
 
     <div id="vansayplus-image" class="vansayplus-image">VANSAY</div>
@@ -338,27 +344,29 @@
       <div id="wrapper-pick-up" class="wrapper pick-up">
         <h3>ピックアップ</h3>
         <ul>
-          <!-- 修正　anchorぬけ -->
-          <li class="nursing-dep">看護部</li>
-          <li class="physical-exam">健康診断</li>
-          <li class="book-tour">見学予約</li>
+          <li><a class="nursing-dep" href="<?php echo home_url('/nurse') ?>">看護部</a></li>
+          <li><a class="physical-exam" href="<?php echo home_url('/health') ?>">健康診断</a></li>
+          <li><a class="book-tour" href="<?php echo home_url('/contact') ?>">見学予約</a></li>
         </ul>
       </div>
       <div id="wrapper-service" class="wrapper service">
         <h3>関連施設・サービス</h3>
         <ul>
           <li>
-            <!-- 修正　anchorぬけ -->
-            <div class="frame">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/link_koshi.jpg" alt="">
-            </div>
-            合志第一病院
+            <a href="<?php echo home_url('/koshi-hospital') ?>">
+              <div class="frame">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/link_koshi.jpg" alt="">
+              </div>
+              合志第一病院
+            </a>
           </li>
           <li>
-            <div class="frame">
-              <img src="<?php echo get_template_directory_uri(); ?>/img/link_zaitaku.jpg" alt="">
-            </div>
-            在宅事業部
+            <a href="<?php echo home_url('/zaitaku') ?>">
+              <div class="frame">
+                <img src="<?php echo get_template_directory_uri(); ?>/img/link_zaitaku.jpg" alt="">
+              </div>
+              在宅事業部
+            </a>
           </li>
         </ul>
       </div>

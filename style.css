@@ -1084,7 +1084,6 @@
 .home main .information .about-us {
   position: relative;
   padding: 0 80px;
-  z-index: 100;
 }
 .home main .information .about-us h3 {
   margin-bottom: 40px;
@@ -1098,7 +1097,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
-.home main .information .about-us .wrapper-about-us a {
+.home main .information .about-us .wrapper-about-us li a {
   display: flex;
   align-items: center;
   width: 100%;
@@ -1107,25 +1106,25 @@
   border-radius: 20px;
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.08);
 }
-.home main .information .about-us .wrapper-about-us a .frame-about-us {
+.home main .information .about-us .wrapper-about-us li a .frame-about-us {
   width: 100px;
   aspect-ratio: 1;
   border-radius: 10px;
   overflow: hidden;
 }
-.home main .information .about-us .wrapper-about-us a .frame-about-us img {
+.home main .information .about-us .wrapper-about-us li a .frame-about-us img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   transition: 0.5s;
 }
-.home main .information .about-us .wrapper-about-us a dl {
+.home main .information .about-us .wrapper-about-us li a dl {
   position: relative;
   width: calc(100% - 200px);
   margin-left: 30px;
 }
-.home main .information .about-us .wrapper-about-us a dl::after {
+.home main .information .about-us .wrapper-about-us li a dl::after {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -1137,27 +1136,27 @@
   color: #dbdbdb;
   transition: 0.3s;
 }
-.home main .information .about-us .wrapper-about-us a dl dt {
+.home main .information .about-us .wrapper-about-us li a dl dt {
   margin-bottom: 10px;
   font-family: "M PLUS Rounded 1c", sans-serif;
   font-size: 1.25rem;
   font-weight: 400;
   color: #F87700;
 }
-.home main .information .about-us .wrapper-about-us a dl dd {
+.home main .information .about-us .wrapper-about-us li a dl dd {
   font-size: 0.875rem;
   font-weight: 300;
   line-height: 1.8;
   letter-spacing: 0.04em;
   transition: 0.3s;
 }
-.home main .information .about-us .wrapper-about-us a:hover .frame-about-us img {
+.home main .information .about-us .wrapper-about-us li a:hover .frame-about-us img {
   transform: scale(115%);
 }
-.home main .information .about-us .wrapper-about-us a:hover dd {
+.home main .information .about-us .wrapper-about-us li a:hover dd {
   color: #F87700;
 }
-.home main .information .about-us .wrapper-about-us a:hover dl::after {
+.home main .information .about-us .wrapper-about-us li a:hover dl::after {
   color: #F87700;
 }
 .home main .information .vansayplus-image {
@@ -1327,41 +1326,45 @@
   gap: 30px;
 }
 .home main .information .another-info .wrapper ul li {
-  display: grid;
-  place-content: center;
   position: relative;
   width: 100%;
+}
+.home main .information .another-info .wrapper ul li a {
+  display: block;
+  width: 100%;
   padding: 40px 0;
+  text-align: center;
   background-color: #fff;
   border-radius: 20px;
   transition: 0.3s;
 }
-.home main .information .another-info .wrapper ul li::before, .home main .information .another-info .wrapper ul li::after {
+.home main .information .another-info .wrapper ul li a::before, .home main .information .another-info .wrapper ul li a::after {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   transition: 0.3s;
-  z-index: 10;
 }
-.home main .information .another-info .wrapper ul li::before {
+.home main .information .another-info .wrapper ul li a::before {
+  z-index: 100;
   left: 30px;
   width: 34px;
   height: 34px;
+  color: black;
   content: "";
   background-color: #F87700;
   background: no-repeat center;
   background-size: contain;
 }
-.home main .information .another-info .wrapper ul li.nursing-dep::before {
+.home main .information .another-info .wrapper ul li a.nursing-dep::before {
   background-image: url(img/_icon_heart-orange.svg);
 }
-.home main .information .another-info .wrapper ul li.physical-exam::before {
+.home main .information .another-info .wrapper ul li a.physical-exam::before {
   background-image: url(img/_icon_health-orange.svg);
 }
-.home main .information .another-info .wrapper ul li.book-tour::before {
+.home main .information .another-info .wrapper ul li a.book-tour::before {
   background-image: url(img/_icon_hospital-orange.svg);
 }
-.home main .information .another-info .wrapper ul li::after {
+.home main .information .another-info .wrapper ul li a::after {
   content: "\f178";
   font-size: 1.25rem;
   font-family: "Font Awesome 6 Free";
@@ -1369,39 +1372,39 @@
   right: 30px;
   color: #dbdbdb;
 }
-.home main .information .another-info .wrapper.pick-up li:hover, .home main .information .another-info .wrapper.pick-up li:hover::after {
+.home main .information .another-info .wrapper.pick-up li a:hover, .home main .information .another-info .wrapper.pick-up li a:hover::after {
   color: #F87700;
 }
-.home main .information .another-info .wrapper.service ul li {
+.home main .information .another-info .wrapper.service ul li a {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 25px 0 25px 30px;
 }
-.home main .information .another-info .wrapper.service ul li .frame {
+.home main .information .another-info .wrapper.service ul li a .frame {
   width: 48px;
   margin-right: 15px;
   aspect-ratio: 1;
   border-radius: 10px;
   overflow: hidden;
 }
-.home main .information .another-info .wrapper.service ul li .frame img {
+.home main .information .another-info .wrapper.service ul li a .frame img {
   widows: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   transition: 0.3s;
 }
-.home main .information .another-info .wrapper.service ul li::after {
+.home main .information .another-info .wrapper.service ul li a::after {
   content: "\f08e";
   font-size: 0.9rem;
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
 }
-.home main .information .another-info .wrapper.service ul li:hover, .home main .information .another-info .wrapper.service ul li:hover::after {
+.home main .information .another-info .wrapper.service ul li a:hover, .home main .information .another-info .wrapper.service ul li a:hover::after {
   color: #F87700;
 }
-.home main .information .another-info .wrapper.service ul li:hover img {
+.home main .information .another-info .wrapper.service ul li a:hover img {
   scale: 115%;
 }
 
@@ -1455,9 +1458,6 @@
     width: 20px;
     aspect-ratio: 1;
     content: "";
-  }
-  .home main .policy {
-    background-color: red;
   }
   .home main .policy > .item {
     display: none;
@@ -1588,27 +1588,27 @@
     flex-direction: column;
     gap: 10px;
   }
-  .home main .information .about-us .wrapper-about-us a {
+  .home main .information .about-us .wrapper-about-us li a {
     align-items: flex-start;
     gap: 15px;
     padding: 20px;
   }
-  .home main .information .about-us .wrapper-about-us a .frame-about-us {
+  .home main .information .about-us .wrapper-about-us li a .frame-about-us {
     width: 60px;
   }
-  .home main .information .about-us .wrapper-about-us a dl {
+  .home main .information .about-us .wrapper-about-us li a dl {
     width: calc(100% - 100px);
     margin-left: 0;
   }
-  .home main .information .about-us .wrapper-about-us a dl::after {
+  .home main .information .about-us .wrapper-about-us li a dl::after {
     right: -30px;
   }
-  .home main .information .about-us .wrapper-about-us a dl dt {
+  .home main .information .about-us .wrapper-about-us li a dl dt {
     margin-top: 5px;
     font-size: 0.9rem;
     font-weight: 500;
   }
-  .home main .information .about-us .wrapper-about-us a dl dd {
+  .home main .information .about-us .wrapper-about-us li a dl dd {
     font-size: 0.8rem;
   }
   .home main .information .vansayplus-image {
@@ -1698,15 +1698,14 @@
     justify-content: flex-start;
     gap: 8px;
   }
-  .home main .information .another-info .wrapper ul li {
+  .home main .information .another-info .wrapper ul li a {
     display: flex;
-    place-content: unset;
     justify-content: flex-start;
     padding: 27.5px 0 27.5px 70px;
     font-size: 0.875rem;
     font-weight: 500;
   }
-  .home main .information .another-info .wrapper ul li::before {
+  .home main .information .another-info .wrapper ul li a::before {
     left: 20px;
     width: 30px;
   }
@@ -1715,6 +1714,12 @@
   }
   .home main .information .another-info .wrapper:last-of-type ul li {
     padding: 7.5px 0 7.5px 10px;
+  }
+  .home main .information .another-info .wrapper.service ul li {
+    padding: 0;
+  }
+  .home main .information .another-info .wrapper.service ul li a {
+    padding: 10px;
   }
 }
 

@@ -8,7 +8,7 @@
       <div class="hospital-address">
         <div class="site-title"><a href="<?php echo home_url('/') ?>"><span>特定医療法人 萬生会 熊本第一病院</span></a></div>
         <address>
-          〒862-0965 熊本市南区田迎町田井島224<br>
+          &#12306;862-0965 熊本市南区田迎町田井島224<br>
           電話：<a href="tel:0963707333">096-370-7333</a><br>
           FAX：096-370-7334
         </address>
