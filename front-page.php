@@ -38,14 +38,12 @@
   </div>
 
   <div class="cover-graphic">
-    <div id="cover-graphic-bg-img-left" class="graphic left">
+    <div id="cover-graphic-bg-img" class="graphic">
       <img class="item left-yel-1" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow_left.svg" alt="">
       <img class="item left-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
       <img class="item left-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
       <img class="item left-yel-2" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow_left.svg" alt="">
       <img class="item left-org-3" src="<?php echo get_template_directory_uri(); ?>/img/object_orange_left.svg" alt="">
-    </div>
-    <div id="cover-graphic-bg-img-right" class="graphic right">
       <img class="item right-org-2" src="<?php echo get_template_directory_uri(); ?>/img/object_orange.svg" alt="">
       <img class="item right-org-1" src="<?php echo get_template_directory_uri(); ?>/img/object_orange.svg" alt="">
       <img class="item right-yel-1" src="<?php echo get_template_directory_uri(); ?>/img/object_yellow.svg" alt="">

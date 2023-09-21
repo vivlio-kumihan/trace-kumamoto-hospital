@@ -6,8 +6,7 @@ if (document.querySelector('body.home')) {
     loading.classList.remove('keep');
 
     const items = document.getElementById('head-copy');
-    const coverGraphicBgImgLeft = document.getElementById('cover-graphic-bg-img-left');
-    const coverGraphicBgImgRight = document.getElementById('cover-graphic-bg-img-right');
+    const coverGraphicBgImg = document.getElementById('cover-graphic-bg-img');
     const tl = gsap.timeline();
     tl
       .from(items.children, 1, {
@@ -16,18 +15,12 @@ if (document.querySelector('body.home')) {
         ease: 'power3.inOut',
         stagger: .2
       })
-      .from(coverGraphicBgImgLeft.children, 4, {
+      .from(coverGraphicBgImg.children, 4, {
         y: -200,
         opacity: 0,
         ease: Elastic.easeOut.config(1, 0.3),
         stagger: .2
       }, '-=1.5')
-      .from(coverGraphicBgImgRight.children, 4, {
-        y: -500,
-        opacity: 0,
-        ease: Elastic.easeOut.config(1, 0.3),
-        stagger: .2
-      }, '<')
 
     const coverzReadMoreLink = document.getElementById('coverz-read-more-link');
     coverzReadMoreLink.classList.add('active');

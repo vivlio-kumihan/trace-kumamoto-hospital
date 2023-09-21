@@ -3250,58 +3250,59 @@ body.contact footer.footer-contact {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 750px;
+  height: 70vh;
   z-index: 0;
 }
 .cover-graphic .graphic {
   position: relative;
   width: 100vw;
+  height: 100%;
   overflow: hidden;
 }
 .cover-graphic .graphic .item {
   position: absolute;
 }
-.cover-graphic .graphic.left .left-yel-1 {
+.cover-graphic .graphic .item.left-yel-1 {
   top: 37%;
   left: -30px;
   width: 125px;
 }
-.cover-graphic .graphic.left .left-org-1 {
+.cover-graphic .graphic .item.left-org-1 {
   top: 44%;
   left: -60px;
   width: 280px;
   transform: rotate(8deg);
 }
-.cover-graphic .graphic.left .left-org-2 {
+.cover-graphic .graphic .item.left-org-2 {
   top: 51%;
   left: -125px;
   width: 325px;
   transform: rotate(-10deg) scaleY(75%);
 }
-.cover-graphic .graphic.left .left-yel-2 {
+.cover-graphic .graphic .item.left-yel-2 {
   top: 63%;
-  left: 10px;
+  left: -25px;
   width: 100px;
   transform: rotate(5deg) scaleY(90%);
 }
-.cover-graphic .graphic.left .left-org-3 {
+.cover-graphic .graphic .item.left-org-3 {
   top: 63%;
   left: -100px;
   width: 200px;
   transform: scaleY(90%);
 }
-.cover-graphic .graphic.right .right-org-1 {
+.cover-graphic .graphic .item.right-org-1 {
   top: 58%;
   right: -25px;
   width: 280px;
 }
-.cover-graphic .graphic.right .right-org-2 {
+.cover-graphic .graphic .item.right-org-2 {
   top: 67%;
   right: -30px;
   width: 350px;
   transform: scaleY(90%);
 }
-.cover-graphic .graphic.right .right-yel-1 {
+.cover-graphic .graphic .item.right-yel-1 {
   top: 80%;
   right: -20px;
   width: 150px;
@@ -3358,41 +3359,42 @@ body.contact footer.footer-contact {
 
 @media screen and (max-width: 576px) {
   .cover-graphic .graphic {
-    width: 50vw;
+    width: 100vw;
+    height: 110vh;
   }
-  .cover-graphic .graphic.left .left-yel-1 {
+  .cover-graphic .graphic .item.left-yel-1 {
     top: 22%;
   }
-  .cover-graphic .graphic.left .left-org-1 {
+  .cover-graphic .graphic .item.left-org-1 {
     top: 25%;
     width: 175px;
     transform: rotate(-1deg);
   }
-  .cover-graphic .graphic.left .left-org-2 {
+  .cover-graphic .graphic .item.left-org-2 {
     top: 25%;
     width: 275px;
     transform: rotate(-1deg);
   }
-  .cover-graphic .graphic.left .left-yel-2 {
+  .cover-graphic .graphic .item.left-yel-2 {
     top: 42%;
     left: 3px;
     width: 65px;
   }
-  .cover-graphic .graphic.left .left-org-3 {
+  .cover-graphic .graphic .item.left-org-3 {
     top: 40%;
     width: 177px;
   }
-  .cover-graphic .graphic.right .right-org-1 {
+  .cover-graphic .graphic .item.right-org-1 {
     top: 40%;
     right: -60px;
     width: 210px;
   }
-  .cover-graphic .graphic.right .right-org-2 {
+  .cover-graphic .graphic .item.right-org-2 {
     top: 45%;
     right: -80px;
     width: 262px;
   }
-  .cover-graphic .graphic.right .right-yel-1 {
+  .cover-graphic .graphic .item.right-yel-1 {
     top: 60%;
     right: -25px;
     width: 87px;

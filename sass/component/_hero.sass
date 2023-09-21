@@ -61,50 +61,49 @@
   top: 0
   left: 0
   width: 100vw
-  height: 750px
+  height: 70vh
   z-index: 0
   .graphic
     position: relative
     width: 100vw
+    height: 100%
     overflow: hidden
     .item
       position: absolute
-    &.left
-      .left-yel-1
+      &.left-yel-1
         top: 37%
         left: -30px
         width: 125px
-      .left-org-1
+      &.left-org-1
         top: 44%
         left: -60px
         width: 280px
         transform: rotate(8deg) // scaleY(75%)
-      .left-org-2
+      &.left-org-2
         top: 51%
         left: -125px
         width: 325px
         transform: rotate(-10deg) scaleY(75%)
-      .left-yel-2
+      &.left-yel-2
         top: 63%
-        left: 10px
+        left: -25px
         width: 100px
         transform: rotate(5deg) scaleY(90%)
-      .left-org-3
+      &.left-org-3
         top: 63%
         left: -100px
         width: 200px
         transform: scaleY(90%)
-    &.right
-      .right-org-1
+      &.right-org-1
         top: 58%
         right: -25px
         width: 280px
-      .right-org-2
+      &.right-org-2
         top: 67%
         right: -30px
         width: 350px
         transform: scaleY(90%)
-      .right-yel-1
+      &.right-yel-1
         top: 80%
         right: -20px
         width: 150px
@@ -135,39 +134,35 @@
 .cover-graphic
   +fw.media(sm)
     .graphic
-      width: 50vw
-      &.left
-        .left-yel-1
+      width: 100vw
+      height: 110vh
+      .item
+        &.left-yel-1
           top: 22%
-        .left-org-1
+        &.left-org-1
           top: 25%
           width: 175px
           transform: rotate(-1deg)
-        .left-org-2
+        &.left-org-2
           top: 25%
           width: 275px
           transform: rotate(-1deg)
-        .left-yel-2
+        &.left-yel-2
           top: 42%
           left: 3px
           width: 65px
-        .left-org-3
+        &.left-org-3
           top: 40%
           width: 177px
-      &.right
-        .right-org-1
+        &.right-org-1
           top: 40%
           right: -60px
           width: 210px
-        .right-org-2
+        &.right-org-2
           top: 45%
           right: -80px
           width: 262px
-        .right-yel-1
+        &.right-yel-1
           top: 60%
           right: -25px
           width: 87px
-
-
-
-  
