@@ -113,15 +113,15 @@ if (document.querySelector('body.home')) {
 
   function adjustWrapperHeight(targetCategory = 'all') {
     let wrapperHeight = 0
-    let addWrapperHeight = 0
+    let numOfLines = 0
     // data-category="all"で付与したall
     postAll.forEach(post => {
       if (targetCategory !== 'all' && !post.classList.contains(targetCategory)) {
         post.style.display = 'none'
       } else {
-        if (addWrapperHeight < 3) {
+        if (numOfLines < 3) {
           wrapperHeight += post.clientHeight
-          addWrapperHeight++
+          numOfLines++
         }
       }
     })
@@ -153,9 +153,7 @@ if (document.querySelector('body.home')) {
       postAll.forEach(post => post.style.display = '')
       // 前回つけた属性を解除する。
       catList.forEach(a => a.classList.remove('active'))
-  
       e.target.classList.add('active');
-
       adjustWrapperHeight(targetCategory)
     })
   })
