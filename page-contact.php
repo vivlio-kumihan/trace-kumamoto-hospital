@@ -10,7 +10,10 @@
 
   <div class="form-wrapper">
     <h2>メールフォームからお問い合わせ</h2>
-    <?php echo do_shortcode('[contact-form-7 id="c3c0b60" title="コンタクトフォーム"]') ?>
+    <!-- rel -->
+    <?php echo do_shortcode('[contact-form-7 id="6ecd0f5" title="コンタクトフォーム"]') ?>
+    <!-- dev -->
+    <!-- <?php echo do_shortcode('[contact-form-7 id="c3c0b60" title="コンタクトフォーム"]') ?> -->
   </div>
 </main>
 

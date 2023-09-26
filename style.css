@@ -3256,54 +3256,54 @@ body.contact footer.footer-contact {
 .cover-graphic .graphic {
   position: relative;
   width: 100vw;
-  height: 100%;
+  height: 130%;
   overflow: hidden;
 }
 .cover-graphic .graphic .item {
   position: absolute;
 }
 .cover-graphic .graphic .item.left-yel-1 {
-  top: 37%;
+  top: 29%;
   left: -30px;
   width: 125px;
 }
 .cover-graphic .graphic .item.left-org-1 {
-  top: 44%;
+  top: 34%;
   left: -60px;
   width: 280px;
   transform: rotate(8deg);
 }
 .cover-graphic .graphic .item.left-org-2 {
-  top: 51%;
+  top: 40%;
   left: -125px;
   width: 325px;
   transform: rotate(-10deg) scaleY(75%);
 }
 .cover-graphic .graphic .item.left-yel-2 {
-  top: 63%;
+  top: 50%;
   left: -25px;
   width: 100px;
   transform: rotate(5deg) scaleY(90%);
 }
 .cover-graphic .graphic .item.left-org-3 {
-  top: 63%;
+  top: 49%;
   left: -100px;
   width: 200px;
   transform: scaleY(90%);
 }
 .cover-graphic .graphic .item.right-org-1 {
-  top: 58%;
+  top: 45%;
   right: -25px;
   width: 280px;
 }
 .cover-graphic .graphic .item.right-org-2 {
-  top: 67%;
+  top: 48%;
   right: -30px;
   width: 350px;
   transform: scaleY(90%);
 }
 .cover-graphic .graphic .item.right-yel-1 {
-  top: 80%;
+  top: 58%;
   right: -20px;
   width: 150px;
 }
